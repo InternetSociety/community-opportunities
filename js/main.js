@@ -91,11 +91,56 @@ document.addEventListener('DOMContentLoaded', function() {
             const filterSection = document.getElementById('filter-section');
             
             if (toggle && filterSection) {
+                // Function to position the filter panel
+                const positionFilterPanel = () => {
+                    const buttonRect = toggle.getBoundingClientRect();
+                    const viewportHeight = window.innerHeight;
+                    const viewportWidth = window.innerWidth;
+                    
+                    // Calculate available space above the button (with minimum padding)
+                    const minPadding = 20;
+                    const spaceAbove = Math.max(buttonRect.top - minPadding, minPadding);
+                    const spaceBelow = viewportHeight - buttonRect.bottom - minPadding;
+                    
+                    // Set max height to be at least 300px but not more than 80vh
+                    const maxHeight = Math.min(
+                        Math.max(spaceAbove, 300), // At least 300px or available space above
+                        viewportHeight * 0.8,     // But no more than 80% of viewport height
+                        600                       // Absolute max of 600px
+                    );
+                    
+                    // Position the panel above the button with some spacing
+                    filterSection.style.maxHeight = `${maxHeight}px`;
+                    filterSection.style.minHeight = '200px'; // Ensure minimum height
+                    filterSection.style.bottom = `${window.innerHeight - buttonRect.top + 10}px`;
+                    
+                    // Ensure the panel stays within viewport bounds
+                    const panelWidth = Math.min(320, viewportWidth - 40);
+                    filterSection.style.width = `${panelWidth}px`;
+                    const rightPos = Math.max(minPadding, viewportWidth - buttonRect.right - buttonRect.width/2);
+                    filterSection.style.right = `${rightPos}px`;
+                };
+                
                 toggle.addEventListener('click', (e) => {
                     e.preventDefault();
                     const isExpanded = filterSection.style.display === 'block';
-                    filterSection.style.display = isExpanded ? 'none' : 'block';
+                    
+                    if (!isExpanded) {
+                        // Show the panel first to calculate dimensions
+                        filterSection.style.display = 'block';
+                        positionFilterPanel();
+                    } else {
+                        filterSection.style.display = 'none';
+                    }
+                    
                     toggle.classList.toggle('active', !isExpanded);
+                });
+                
+                // Re-position on window resize
+                window.addEventListener('resize', () => {
+                    if (filterSection.style.display === 'block') {
+                        positionFilterPanel();
+                    }
                 });
                 
                 // Show the toggle button after initialization
@@ -181,12 +226,45 @@ document.addEventListener('DOMContentLoaded', function() {
                 .map(el => el.dataset.value);
         }
         
+        // Get references to UI elements
+        const filterToggle = document.getElementById('filter-toggle');
+        const filterSection = document.getElementById('filter-section');
+        const activeFiltersIndicator = document.getElementById('active-filters-indicator');
+        
+        // Function to show active filters indicator
+        function showActiveFiltersIndicator() {
+            activeFiltersIndicator.classList.add('visible');
+            setTimeout(() => {
+                activeFiltersIndicator.classList.remove('visible');
+            }, 3000); // Hide after 3 seconds
+        }
+        
+        // Function to update active filters count
+        function updateActiveFiltersCount() {
+            const activeFilterCount = [filters.region, filters.issue, filters.who]
+                .filter(Boolean).length;
+                
+            const indicatorText = activeFilterCount > 0 
+                ? `${activeFilterCount} filter${activeFilterCount > 1 ? 's' : ''} applied`
+                : 'All filters cleared';
+                
+            activeFiltersIndicator.querySelector('span').textContent = indicatorText;
+        }
+        
         // Apply filters
         document.getElementById('apply-filters').addEventListener('click', () => {
             filters.region = selectedRegions.length ? selectedRegions : null;
             filters.issue = selectedIssues.length ? selectedIssues : null;
             filters.who = selectedRoles.length ? selectedRoles : null;
+            
+            // Close the filter dialog
+            filterSection.style.display = 'none';
+            filterToggle.classList.remove('active');
+            
+            // Apply filters and show visual feedback
             applyFilters();
+            updateActiveFiltersCount();
+            showActiveFiltersIndicator();
         });
         
         // Reset filters
@@ -200,7 +278,15 @@ document.addEventListener('DOMContentLoaded', function() {
             filters.region = null;
             filters.issue = null;
             filters.who = null;
+            
+            // Close the filter dialog
+            filterSection.style.display = 'none';
+            filterToggle.classList.remove('active');
+            
+            // Apply filters and show visual feedback
             applyFilters();
+            updateActiveFiltersCount();
+            showActiveFiltersIndicator();
         });
     }
 
@@ -309,7 +395,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
         return `
             <div class="action-card">
-                <h3>${o.title}</h3>
+                <h3>${o.link ? `<a href="${o.link}" target="_blank" rel="noopener noreferrer" class="card-title-link">${o.title}</a>` : o.title}</h3>
                 ${tagsHtml}
                 <ul>
                     ${deadline}
@@ -317,7 +403,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     ${whyItMatters}
                 </ul>
                 ${o.link ? `<a href="${o.link}" target="_blank" rel="noopener noreferrer" class="cta-button">
-                    <i class="icon ${o.action_text.toLowerCase().includes('sign') ? 'fa-pen-to-square' : 
+                    <i class="icon fa-solid ${o.action_text.toLowerCase().includes('sign') ? 'fa-pen-to-square' : 
                                      o.action_text.toLowerCase().includes('submit') ? 'fa-file-lines' : 
                                      o.action_text.toLowerCase().includes('apply') ? 'fa-user-plus' : 
                                      o.action_text.toLowerCase().includes('register') ? 'fa-right-to-bracket' : 
