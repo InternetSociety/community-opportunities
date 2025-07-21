@@ -246,6 +246,287 @@ color: #24366e;
     border-color: var(--isoc-blue);
 }
 
+/* View Toggle Styles */
+.view-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin: 0 0 20px 0;
+    padding: 10px 0;
+    position: sticky;
+    top: 60px;
+    background: var(--isoc-light-gray);
+    z-index: 10;
+    border-bottom: 1px solid var(--isoc-border-color);
+}
+
+.view-toggle {
+    display: flex;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--isoc-border-color);
+    box-shadow: 0 1px 3px var(--shadow-color);
+}
+
+.view-option {
+    padding: 8px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--isoc-gray);
+    transition: all 0.2s ease;
+    border-right: 1px solid var(--isoc-border-color);
+}
+
+.view-option:last-child {
+    border-right: none;
+}
+
+.view-option:hover {
+    background-color: var(--isoc-light-gray);
+}
+
+.view-option.active {
+    background-color: var(--isoc-blue);
+    color: white;
+}
+
+.view-option i {
+    font-size: 14px;
+}
+
+/* Section header */
+.section-header-container {
+    margin-bottom: 15px;
+}
+
+/* Table view styles */
+.view-table .card-grid {
+    display: none !important;
+}
+
+.view-table .table-container {
+    display: block !important;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.table-container {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card-grid {
+    display: grid;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.view-table .card-grid {
+    display: none !important;
+    opacity: 0;
+}
+
+.section-content {
+    margin-top: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .view-controls {
+        top: 50px;
+        padding: 8px 0;
+    }
+    
+    .view-option {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
+
+/* Table View Styles */
+.opportunity-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.opportunity-table th,
+.opportunity-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--isoc-border-color);
+}
+
+.opportunity-table th {
+    background-color: var(--isoc-blue);
+    color: white;
+    font-weight: 600;
+}
+
+.opportunity-table tr:last-child td {
+    border-bottom: none;
+}
+
+.opportunity-table tr:hover {
+    background-color: rgba(36, 54, 110, 0.03);
+}
+
+.opportunity-table .title-column {
+    font-weight: 600;
+    color: var(--isoc-blue);
+}
+
+.opportunity-table .action-link {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: var(--isoc-blue);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.opportunity-table .action-link:hover {
+    background-color: var(--isoc-dark-blue);
+}
+
+/* Table styles */
+.opportunity-table {
+    display: none;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9em;
+    table-layout: auto; /* Allow table to adjust column widths based on content */
+    min-width: 0; /* Allow table to be smaller than container */
+}
+
+/* Table container for horizontal scrolling */
+.table-container {
+    width: 100%;
+    margin: 20px 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Enable horizontal scrolling only on mobile */
+@media (max-width: 1024px) {
+    .table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+        margin-left: -15px;
+        margin-right: -15px;
+        padding: 0 15px;
+        width: calc(100% + 30px);
+    }
+    
+    /* Make sure the table takes full width when scrolling */
+    .opportunity-table {
+        min-width: 100%;
+    }
+}
+
+/* When table view is active */
+.view-table .opportunity-table {
+    display: table;
+    width: 100%;
+}
+
+/* Table header styles */
+.opportunity-table th {
+    background-color: var(--isoc-blue);
+    color: white;
+    text-align: left;
+    padding: 12px 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 0.5px;
+}
+
+/* Table cell styles */
+.opportunity-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e0e0;
+    vertical-align: top;
+    word-wrap: break-word; /* Ensure long words wrap */
+    overflow-wrap: break-word; /* For better word breaking */
+}
+
+/* Set specific widths for columns */
+.opportunity-table th:first-child,
+.opportunity-table td:first-child {
+    width: 20%;
+    min-width: 150px;
+    max-width: 250px;
+}
+
+.opportunity-table th:nth-child(2),
+.opportunity-table td:nth-child(2) {
+    width: auto; /* Let the description take remaining space */
+    min-width: 200px;
+}
+
+.opportunity-table th:nth-child(3),
+.opportunity-table td:nth-child(3) {
+    width: 15%;
+    min-width: 120px;
+    white-space: nowrap;
+}
+
+.opportunity-table th:last-child,
+.opportunity-table td:last-child {
+    width: 15%;
+    min-width: 100px;
+    white-space: nowrap;
+}
+
+/* Alternate row colors */
+.opportunity-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.opportunity-table tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 7px;
+    }
+    
+    .table-container {
+        margin: 0;
+        width: calc(100% + 30px);
+    }
+    
+    .opportunity-table {
+        margin: 0;
+    }
+    
+    .opportunity-table th,
+    .opportunity-table td {
+        padding: 10px 12px;
+        font-size: 0.85em;
+    }
+}
+
+.view-table .opportunities-grid {
+    display: none;
+}
+
 .filter-toggle.active i {
     transform: rotate(90deg);
 }

@@ -86,6 +86,9 @@ document.addEventListener('DOMContentLoaded', function() {
             renderFilters(opportunities);
             renderSectionsByType(opportunities);
             
+            // Initialize view toggle after sections are rendered
+            initializeViewToggle();
+            
             // Initialize the filter toggle after everything is rendered
             const toggle = document.getElementById('filter-toggle');
             const filterSection = document.getElementById('filter-section');
@@ -316,9 +319,73 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize the application when DOM is loaded
     init();
+    
+    function initializeViewToggle() {
+        const viewToggle = document.getElementById('view-toggle');
+        if (!viewToggle) return;
+        
+        // Function to update all sections based on view mode
+        const updateAllSections = (viewMode) => {
+            console.log('Updating view to:', viewMode);
+            
+            // Update sections visibility
+            const sections = document.querySelectorAll('.dynamic-section');
+            sections.forEach(section => {
+                if (viewMode === 'table') {
+                    section.classList.add('view-table');
+                    // Ensure table container is visible
+                    const tableContainer = section.querySelector('.table-container');
+                    if (tableContainer) {
+                        tableContainer.style.display = 'block';
+                    }
+                } else {
+                    section.classList.remove('view-table');
+                    // Ensure card grid is visible
+                    const cardGrid = section.querySelector('.card-grid');
+                    if (cardGrid) {
+                        cardGrid.style.display = 'grid';
+                    }
+                }
+            });
+            
+            // Update toggle button states
+            document.querySelectorAll('.view-option').forEach(opt => {
+                if (opt.dataset.view === viewMode) {
+                    opt.classList.add('active');
+                } else {
+                    opt.classList.remove('active');
+                }
+            });
+            
+            // Save preference to localStorage
+            localStorage.setItem('opportunitiesViewMode', viewMode);
+        };
+        
+        // Handle toggle clicks
+        viewToggle.addEventListener('click', function(e) {
+            const viewOption = e.target.closest('.view-option');
+            if (!viewOption) return;
+            
+            const viewMode = viewOption.dataset.view;
+            console.log('Toggle clicked, setting view to:', viewMode);
+            updateAllSections(viewMode);
+        });
+        
+        // Initialize with saved preference or default to 'cards'
+        const savedViewMode = localStorage.getItem('opportunitiesViewMode') || 'cards';
+        console.log('Initializing view with:', savedViewMode);
+        
+        // Force update to ensure consistent state
+        requestAnimationFrame(() => {
+            updateAllSections(savedViewMode);
+        });
+    }
 
-    // Render sections grouped by Type
+    // Render sections grouped by Type with support for both card and table views
     function renderSectionsByType(opps) {
+        // Get current view mode before removing anything
+        const currentViewMode = localStorage.getItem('opportunitiesViewMode') || 'cards';
+        
         // Remove old sections
         container.querySelectorAll('section.dynamic-section').forEach(e => e.remove());
         
@@ -334,21 +401,136 @@ document.addEventListener('DOMContentLoaded', function() {
         
         types.forEach(type => {
             const section = document.createElement('section');
-            section.className = 'dynamic-section';
+            section.className = `dynamic-section ${currentViewMode === 'table' ? 'view-table' : ''}`;
             section.id = slugify(type);
+            
+            // Get opportunities for this type
+            const typeOpportunities = opps.filter(o => o.Type === type);
+            
             // Determine icon based on section type
             const typeIcon = type.toLowerCase().includes('urgent') ? 'fa-triangle-exclamation' :
                            type.toLowerCase().includes('event') ? 'fa-calendar-day' :
                            type.toLowerCase().includes('survey') ? 'fa-clipboard-question' : 'fa-rocket';
             
+            // Create section header
             section.innerHTML = `
-                <h2 class="section-header"><i class="icon fa-solid ${typeIcon}"></i>${type}</h2>
-                <div class="card-grid">
-                    ${opps.filter(o => o.Type === type).map(renderOpportunityCard).join('')}
+                <div class="section-header-container">
+                    <h2 class="section-header"><i class="icon fa-solid ${typeIcon}"></i>${type}</h2>
+                </div>
+                <div class="section-content">
+                    <div class="card-grid" style="${currentViewMode === 'table' ? 'display: none;' : 'display: grid;'}">
+                        ${typeOpportunities.map(renderOpportunityCard).join('')}
+                    </div>
+                    <div class="table-container" style="${currentViewMode === 'table' ? 'display: block;' : 'display: none;'}"></div>
                 </div>
             `;
+            
+            // Append the section first
             container.appendChild(section);
+            
+            // Then render and append the table to its container
+            const tableContainer = section.querySelector('.table-container');
+            if (tableContainer) {
+                const table = renderOpportunityTable(typeOpportunities);
+                tableContainer.appendChild(table);
+            }
         });
+        
+        // Re-initialize the view toggle to ensure proper state
+        initializeViewToggle();
+    }
+    
+    // Format a date string into a human-readable format
+    function formatDeadline(dateString) {
+        if (!dateString) return '';
+        try {
+            const date = new Date(dateString);
+            if (isNaN(date.getTime())) return dateString; // Return original if invalid date
+            
+            return date.toLocaleDateString('en-US', { 
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+        } catch (e) {
+            return dateString; // Return original if any error
+        }
+    }
+    
+    // Render a table view for a list of opportunities
+    function renderOpportunityTable(opportunities) {
+        // Create container for the table with horizontal scrolling
+        const container = document.createElement('div');
+        container.className = 'table-container';
+        
+        const table = document.createElement('table');
+        table.className = 'opportunity-table';
+        
+        // Create table header
+        const thead = document.createElement('thead');
+        const headerRow = document.createElement('tr');
+        
+        ['Title', 'Description', 'Deadline', 'Action'].forEach(headerText => {
+            const th = document.createElement('th');
+            th.textContent = headerText;
+            headerRow.appendChild(th);
+        });
+        
+        thead.appendChild(headerRow);
+        table.appendChild(thead);
+        
+        // Create table body
+        const tbody = document.createElement('tbody');
+        
+        opportunities.forEach(opp => {
+            const row = document.createElement('tr');
+            
+            // Title column
+            const titleCell = document.createElement('td');
+            titleCell.className = 'title-column';
+            titleCell.textContent = opp.title;
+            row.appendChild(titleCell);
+            
+            // Description column (truncated)
+            const descCell = document.createElement('td');
+            const description = opp.opportunity_description || '';
+            descCell.textContent = description.length > 100 
+                ? description.substring(0, 100) + '...' 
+                : description;
+            row.appendChild(descCell);
+            
+            // Deadline column
+            const deadlineCell = document.createElement('td');
+            if (opp.deadline) {
+                deadlineCell.textContent = formatDeadline(opp.deadline) || 'No deadline';
+                if (new Date(opp.deadline) < new Date()) {
+                    deadlineCell.innerHTML += ' <span class="deadline-past">(Expired)</span>';
+                }
+            } else {
+                deadlineCell.textContent = 'Ongoing';
+            }
+            row.appendChild(deadlineCell);
+            
+            // Action column
+            const actionsCell = document.createElement('td');
+            if (opp.link) {
+                const actionLink = document.createElement('a');
+                actionLink.href = opp.link;
+                actionLink.className = 'action-link';
+                actionLink.textContent = opp.action_text || 'View';
+                actionLink.target = '_blank';
+                actionLink.rel = 'noopener noreferrer';
+                actionsCell.appendChild(actionLink);
+            }
+            row.appendChild(actionsCell);
+            
+            tbody.appendChild(row);
+        });
+        
+        table.appendChild(tbody);
+        container.appendChild(table);
+        
+        return container;
     }
 
     // Render a single opportunity card with icons, tags, and structure matching the static version
@@ -359,22 +541,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (o.internet_issue) tags.push(`<span class="tag tag-issue"><i class="fa-solid fa-globe"></i> ${o.internet_issue}</span>`);
         
         const tagsHtml = tags.length ? `<div class="card-tags">${tags.join('')}</div>` : '';
-        
-        // Format deadline if it exists
-        const formatDeadline = (dateString) => {
-            try {
-                const date = new Date(dateString);
-                if (isNaN(date.getTime())) return dateString; // Return original if invalid date
-                
-                return date.toLocaleDateString('en-US', { 
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric' // Adds the day of the month
-                });
-            } catch (e) {
-                return dateString; // Return original if any error
-            }
-        };
         
         const deadline = o.deadline ? 
             `<li class="deadline">
