@@ -1,5 +1,9 @@
 name: Hourly Smartsheet Export
 
+# Grant workflow permission to write back to repo
+permissions:
+  contents: write
+
 on:
   schedule:
     - cron: '0 * * * *'  # top of every hour
@@ -12,6 +16,9 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          # ensure the GITHUB_TOKEN is used for pushing
+          persist-credentials: true
 
       - name: Setup Python
         uses: actions/setup-python@v4
