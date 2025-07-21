@@ -18,6 +18,11 @@ jobs:
         with:
           python-version: '3.x'
 
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install smartsheet-python-sdk
+
       - name: Fetch sheet and write CSV + JSON
         env:
           SMARTSHEET_TOKEN: ${{ secrets.SMARTSHEET_TOKEN }}
@@ -25,46 +30,48 @@ jobs:
           python - <<'PYCODE'
           import os, csv, json, smartsheet
 
-          # Prepare
-          out_dir = "data"
+          # Prepare output directory
+          out_dir = 'data'
           os.makedirs(out_dir, exist_ok=True)
-          token = os.environ["SMARTSHEET_TOKEN"]
+
+          # Initialize Smartsheet client
+          token = os.environ['SMARTSHEET_TOKEN']
           ss = smartsheet.Smartsheet(token)
 
           # Fetch sheet
           sheet = ss.Sheets.get_sheet(3397443560361860)
           cols = [col.title for col in sheet.columns]
 
-          # Build rows as list-of-lists and list-of-dicts
+          # Build rows for CSV and JSON
           rows_list = []
           rows_json = []
           for row in sheet.rows:
               cell_map = {cell.column_id: cell.value for cell in row.cells}
-              row_vals = [ cell_map.get(col.id, "") for col in sheet.columns ]
+              row_vals = [cell_map.get(col.id, '') for col in sheet.columns]
               rows_list.append(row_vals)
-              rows_json.append({ cols[i]: row_vals[i] for i in range(len(cols)) })
+              rows_json.append({cols[i]: row_vals[i] for i in range(len(cols))})
 
           # Write CSV
-          csv_path = os.path.join(out_dir, "opportunities.csv")
-          with open(csv_path, "w", newline="", encoding="utf-8") as f:
+          csv_path = os.path.join(out_dir, 'opportunities.csv')
+          with open(csv_path, 'w', newline='', encoding='utf-8') as f:
               writer = csv.writer(f)
               writer.writerow(cols)
               writer.writerows(rows_list)
 
           # Write JSON
-          json_path = os.path.join(out_dir, "opportunities.json")
-          with open(json_path, "w", encoding="utf-8") as f:
+          json_path = os.path.join(out_dir, 'opportunities.json')
+          with open(json_path, 'w', encoding='utf-8') as f:
               json.dump(rows_json, f, ensure_ascii=False, indent=2)
           PYCODE
 
       - name: Commit & push if changed
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
           if [ -n "$(git status --porcelain data/)" ]; then
             git add data/
-            git commit -m "chore: hourly refresh of opportunities data"
+            git commit -m 'chore: hourly refresh of opportunities data'
             git push
           else
-            echo "No changes in data/; skipping commit"
+            echo 'No changes in data/; skipping commit'
           fi
