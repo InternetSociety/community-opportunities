@@ -34,7 +34,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 link: item["Link"] || item.link || '',
                 opportunity_description: item["Opportunity [Description]"] || item.opportunity_description || '',
                 why_it_matters: item["Why It Matters"] || item.why_it_matters || '',
-                who_can_get_involved: item["Who Can Get Involved"] || item.who_can_get_involved || '',
+                who_can_get_involved: (() => {
+                    const value = item["Who Can Get Involved"] || item.who_can_get_involved;
+                    if (!value) return [];
+                    if (Array.isArray(value)) return value;
+                    return value.split(',').map(s => s.trim()).filter(Boolean);
+                })(),
                 internet_issue: item["Internet Issue"] || item.internet_issue || '',
                 region: item["Region"] || item.region || '',
                 Type: item["Type"] || item.Type || '',
@@ -53,12 +58,19 @@ document.addEventListener('DOMContentLoaded', function() {
     function renderNavigation(opportunities) {
         if (!nav) return;
         
-        // Get unique types
+        // Get unique types and sort them with Urgent first and Ongoing last
         const types = [...new Set(opportunities.map(opp => opp.Type).filter(Boolean))];
+        types.sort((a, b) => {
+            if (a.toLowerCase().includes('urgent')) return -1;
+            if (b.toLowerCase().includes('urgent')) return 1;
+            if (a.toLowerCase().includes('ongoing')) return 1;
+            if (b.toLowerCase().includes('ongoing')) return -1;
+            return a.localeCompare(b);
+        });
         
-        // Generate navigation links
+        // Generate navigation links using the same slugify function as section IDs
         const navHtml = types.map(type => 
-            `<a href="#${type.toLowerCase().replace(/\s+/g, '-')}">${type}</a>`
+            `<a href="#${slugify(type)}">${type}</a>`
         ).join('');
         
         nav.innerHTML = navHtml;
@@ -207,11 +219,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     ? o.internet_issue.some(i => filters.issue.includes(i))
                     : filters.issue.includes(o.internet_issue));
             
-            // Check who can get involved filter
-            const whoMatch = !filters.who ||
-                (Array.isArray(o.who_can_get_involved)
-                    ? o.who_can_get_involved.some(w => filters.who.includes(w))
-                    : filters.who.includes(o.who_can_get_involved));
+            // Check who can get involved filter - now always an array
+            const whoMatch = !filters.who || 
+                o.who_can_get_involved.some(w => filters.who.includes(w));
             
             return regionMatch && issueMatch && whoMatch;
         });
@@ -225,7 +235,17 @@ document.addEventListener('DOMContentLoaded', function() {
     function renderSectionsByType(opps) {
         // Remove old sections
         container.querySelectorAll('section.dynamic-section').forEach(e => e.remove());
+        
+        // Get unique types and sort them with Urgent first and Ongoing last
         const types = Array.from(new Set(opps.map(o => o.Type))).filter(Boolean);
+        types.sort((a, b) => {
+            if (a.toLowerCase().includes('urgent')) return -1;
+            if (b.toLowerCase().includes('urgent')) return 1;
+            if (a.toLowerCase().includes('ongoing')) return 1;
+            if (b.toLowerCase().includes('ongoing')) return -1;
+            return a.localeCompare(b);
+        });
+        
         types.forEach(type => {
             const section = document.createElement('section');
             section.className = 'dynamic-section';
@@ -312,6 +332,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Helper to slugify Type for IDs/anchors
     function slugify(text) {
-        return text.toString().toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '');
+        // First encode the text to handle special characters like colons
+        let encoded = encodeURIComponent(text.toString().toLowerCase());
+        // Replace %20 with hyphens and remove any other percent-encoded sequences
+        return encoded.replace(/%20/g, '-').replace(/%[0-9A-F]{2}/gi, '').replace(/[^\w-]+/g, '');
     }
 });

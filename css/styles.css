@@ -301,6 +301,37 @@ section {
     border-radius: 4px 20px 4px 20px;
 }
 
+/* Audience Tags */
+.who-can-join {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--isoc-border-color);
+}
+
+.audience-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.audience-tag {
+    display: inline-block;
+    background-color: #e9f5ff;
+    color: var(--isoc-blue);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-weight: 500;
+    border: 1px solid rgba(0, 115, 184, 0.2);
+    transition: all 0.2s ease;
+}
+
+.audience-tag:hover {
+    background-color: #d0e9ff;
+    transform: translateY(-1px);
+}
+
 .filter-option.role {
     border-radius: 4px;
 }
