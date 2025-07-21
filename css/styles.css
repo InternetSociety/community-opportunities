@@ -26,7 +26,7 @@ body {
     color: var(--isoc-black);
     color: #24366e;
     margin: 0;
-    padding: 0;
+    padding: 0 0 6em 0;
     line-height: 1.6;
 }
 
@@ -66,7 +66,6 @@ body {
 header {
     text-align: center;
     margin: 40px 0;
-    padding-bottom: 20px;
 }
 
 header h1 {
@@ -89,12 +88,12 @@ section {
 }
 
 .section-header {
-    font-size: 1.6em;
+    font-size: 1.4em;
     font-weight: 600;
     margin-top: 40px;
     margin-bottom: 25px;
     padding-bottom: 10px;
-    border-bottom: 3px solid;
+    border-bottom: 1px solid var(--isoc-border-color);
     display: flex;
     align-items: center;
 }
@@ -257,7 +256,6 @@ color: #24366e;
     top: 60px;
     background: var(--isoc-light-gray);
     z-index: 10;
-    border-bottom: 1px solid var(--isoc-border-color);
 }
 
 .view-toggle {
@@ -427,7 +425,6 @@ color: #24366e;
         -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
         margin-left: -15px;
         margin-right: -15px;
-        padding: 0 15px;
         width: calc(100% + 30px);
     }
     
