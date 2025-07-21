@@ -24,5 +24,18 @@
     "Region": "Global",
     "Type": "Ongoing Opportunities",
     "Archived": null
+  },
+  {
+    "Outreach Activity [Title]": "Another example with longer title",
+    "Action [CTA]": "Organize an event today",
+    "Deadline": "2025-08-05",
+    "Link": "https://internetsociety.org",
+    "Opportunity [Description]": "Help influence your local government by showing you neighbors the risk of the new EU legislation",
+    "Why It Matters": "Privacy is at risk in Europe, if this legislation passes, privacy will be over",
+    "Who Can Get Involved": "Individual Members, Chapter Members, Chapter Leaders, Alumni",
+    "Internet Issue": "Privacy",
+    "Region": "Europe",
+    "Type": "Urgent: Upcoming Deadlines",
+    "Archived": null
   }
 ]
