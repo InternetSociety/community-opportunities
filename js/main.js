@@ -314,6 +314,19 @@ document.addEventListener('DOMContentLoaded', function() {
             
             return regionMatch && issueMatch && whoMatch;
         });
+        
+        // Show/hide filter badge based on active filters
+        const filterBadge = document.getElementById('filter-badge');
+        const hasActiveFilters = filters.region || filters.issue || filters.who;
+        
+        if (filterBadge) {
+            if (hasActiveFilters) {
+                filterBadge.style.display = 'block';
+            } else {
+                filterBadge.style.display = 'none';
+            }
+        }
+        
         renderSectionsByType(filteredOpportunities);
     }
     
