@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 internet_issue: item["Internet Issue"] || item.internet_issue || '',
                 region: item["Region"] || item.region || '',
                 Type: item["Type"] || item.Type || '',
-                deadline: item["Deadline"] || item.deadline || null,
+                date: item["Date"] || item.date || null,
                 archived: item["Archived"] || item.archived || null
             }))
             // Filter out archived or no-title
@@ -454,7 +454,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Format a date string into a human-readable format
-    function formatDeadline(dateString) {
+    function formatDate(dateString) {
         if (!dateString) return '';
         try {
             const date = new Date(dateString);
@@ -483,7 +483,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const thead = document.createElement('thead');
         const headerRow = document.createElement('tr');
         
-        ['Title', 'Description', 'Deadline', 'Action'].forEach(headerText => {
+        ['Title', 'Description', 'Date', 'Action'].forEach(headerText => {
             const th = document.createElement('th');
             th.textContent = headerText;
             headerRow.appendChild(th);
@@ -512,10 +512,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 : description;
             row.appendChild(descCell);
             
-            // Deadline column
+            // Date column
             const deadlineCell = document.createElement('td');
             if (opp.deadline) {
-                deadlineCell.textContent = formatDeadline(opp.deadline) || 'No deadline';
+                deadlineCell.textContent = formatDate(opp.date) || 'No date';
                 if (new Date(opp.deadline) < new Date()) {
                     deadlineCell.innerHTML += ' <span class="deadline-past">(Expired)</span>';
                 }
@@ -559,8 +559,8 @@ document.addEventListener('DOMContentLoaded', function() {
             `<li class="deadline">
                 <i class="icon fa-regular fa-calendar"></i>
                 <div>
-                    <strong>Deadline:</strong>
-                    <span class="deadline-date">${formatDeadline(o.deadline)}</span>
+                    <strong>Date:</strong>
+                    <span class="date-date">${formatDate(o.date)}</span>
                 </div>
             </li>` : '';
             
