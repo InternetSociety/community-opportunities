@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 internet_issue: item["Internet Issue"] || item.internet_issue || '',
                 region: item["Region"] || item.region || '',
                 Type: item["Type"] || item.Type || '',
-                date: item["Date"] || item.date || null,
+                date: item["Deadline"] || item["Date"] || item.date || null,
                 archived: item["Archived"] || item.archived || null
             }))
             // Filter out archived or no-title
@@ -513,16 +513,16 @@ document.addEventListener('DOMContentLoaded', function() {
             row.appendChild(descCell);
             
             // Date column
-            const deadlineCell = document.createElement('td');
-            if (opp.deadline) {
-                deadlineCell.textContent = formatDate(opp.date) || 'No date';
-                if (new Date(opp.deadline) < new Date()) {
-                    deadlineCell.innerHTML += ' <span class="deadline-past">(Expired)</span>';
+            const dateCell = document.createElement('td');
+            if (opp.date) {
+                dateCell.textContent = formatDate(opp.date) || 'No date';
+                if (new Date(opp.date) < new Date()) {
+                    dateCell.innerHTML += ' <span class="date-past">(Expired)</span>';
                 }
             } else {
-                deadlineCell.textContent = 'Ongoing';
+                dateCell.textContent = 'Ongoing';
             }
-            row.appendChild(deadlineCell);
+            row.appendChild(dateCell);
             
             // Action column
             const actionsCell = document.createElement('td');
@@ -555,8 +555,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const tagsHtml = tags.length ? `<div class="card-tags">${tags.join('')}</div>` : '';
         
-        const deadline = o.deadline ? 
-            `<li class="deadline">
+        const date = o.date ? 
+            `<li class="date">
                 <i class="icon fa-regular fa-calendar"></i>
                 <div>
                     <strong>Date:</strong>
@@ -577,7 +577,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <h3>${o.link ? `<a href="${o.link}" target="_blank" rel="noopener noreferrer" class="card-title-link">${o.title}</a>` : o.title}</h3>
                 ${tagsHtml}
                 <ul>
-                    ${deadline}
+                    ${date}
                     ${description}
                     ${whyItMatters}
                 </ul>

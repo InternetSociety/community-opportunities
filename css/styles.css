@@ -188,23 +188,23 @@ color: #24366e;
 }
 
 /* Date styles */
-.action-card .deadline {
+.action-card .date {
     display: flex;
     align-items: flex-start;
     gap: 10px;
     margin: 8px 0;
 }
 
-.action-card .deadline .icon {
+.action-card .date .icon {
     margin-top: 2px;
 }
 
-.action-card .deadline strong {
+.action-card .date strong {
     color: #333;
     margin-right: 4px;
 }
 
-.action-card .deadline .deadline-date {
+.action-card .date .date-date {
     color: inherit;
     font-weight: normal;
 }
