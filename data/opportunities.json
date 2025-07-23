@@ -3,7 +3,7 @@
     "Outreach Activity [Title]": "WSIS+20 Working Group",
     "Action [CTA]": "Join our WSIS+20 Working Group",
     "Deadline": "Ongoing",
-    "Link": null,
+    "Link": "https://community.internetsociety.org/s/group/0F9UO000000088r0AA/wsis20-2025-working-group",
     "Opportunity [Description]": "Join our WSIS+20 Working Group and help shape the future of the WSIS process. After the United Nations (UN) adopted the Global Digital Compact (GDC) last year, the World Summit on Information Society (WSIS)+20 review is the next big moment for digital development. Its results will define the UN's actions in the coming years, including how non-governmental stakeholders will be involved. The Internet Society will inform the intergovernmental deliberations with arguments that will defend the participation of all stakeholders, preserve the Internet as a force for good, and preserve its open, globally connected, secure, and trustworthy nature.",
     "Why It Matters": null,
     "Who Can Get Involved": null,
@@ -36,6 +36,19 @@
     "Internet Issue": "Privacy",
     "Region": "Europe",
     "Type": "Urgent: Upcoming Deadlines",
+    "Archived": null
+  },
+  {
+    "Outreach Activity [Title]": "Community Dialogue: The Evolution of the Internet Governance Forum (IGF)",
+    "Action [CTA]": "Join this interactive session with expert insights and lively discussion",
+    "Deadline": "2025-07-30",
+    "Link": "https://isoc.zoom.us/meeting/register/KXXmXzIrSXyRBfMY7ulxeA#/registration",
+    "Opportunity [Description]": "Hear from our community expert, Flávio Wagner from our Brazil Chapter, how the IGF has evolved over its 20 years of existence and join a lively discussion on which role the IGF should play in the future, and how.",
+    "Why It Matters": "The WSIS+20 review is a pivotal moment for the global community to take stock of two decades of progress toward achieving the WSIS vision, and the IGF mandate needs to be renewed by the UN again.",
+    "Who Can Get Involved": "Individual Members, Chapter Members, Chapter Leaders, Organization Members, Alumni",
+    "Internet Issue": "Internet Governance",
+    "Region": "Global",
+    "Type": "Events & Workshops",
     "Archived": null
   }
 ]
