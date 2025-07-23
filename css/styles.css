@@ -187,6 +187,12 @@ color: #24366e;
     color: #e65100;
 }
 
+.date-past {
+    color: #e65100;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
 /* Date styles */
 .action-card .date {
     display: flex;
@@ -397,9 +403,22 @@ color: #24366e;
     background-color: rgba(36, 54, 110, 0.03);
 }
 
-.opportunity-table .title-column {
+.opportunity-table td.title-column {
     font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.opportunity-table .title-link {
     color: var(--isoc-blue);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.opportunity-table .title-link:hover {
+    color: var(--isoc-dark-blue);
+    text-decoration: underline;
 }
 
 .opportunity-table .action-link {

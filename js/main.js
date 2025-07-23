@@ -498,10 +498,20 @@ document.addEventListener('DOMContentLoaded', function() {
         opportunities.forEach(opp => {
             const row = document.createElement('tr');
             
-            // Title column
+            // Title column with link
             const titleCell = document.createElement('td');
             titleCell.className = 'title-column';
-            titleCell.textContent = opp.title;
+            if (opp.link) {
+                const titleLink = document.createElement('a');
+                titleLink.href = opp.link;
+                titleLink.target = '_blank';
+                titleLink.rel = 'noopener noreferrer';
+                titleLink.textContent = opp.title;
+                titleLink.className = 'title-link';
+                titleCell.appendChild(titleLink);
+            } else {
+                titleCell.textContent = opp.title;
+            }
             row.appendChild(titleCell);
             
             // Description column (truncated)
