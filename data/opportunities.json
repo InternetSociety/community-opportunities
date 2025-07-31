@@ -89,5 +89,18 @@
     "Region": "Global",
     "Type": "Urgent: Upcoming Deadlines",
     "Archived": null
+  },
+  {
+    "Outreach Activity [Title]": "2025 Global Encryption Day Grants",
+    "Action [CTA]": "Apply for GEC grant",
+    "Date": "2025-08-28",
+    "Link": "https://www.globalencryption.org/global-encryption-day-2025-event-grants/",
+    "Opportunity [Description]": "The 2025 GEC grant applications will be accepted from 5 - 28 August (or until 50 grants have been distributed!). Applications are reviewed on a rolling basis by Internet Society staff. We encourage applicants to apply early as funds will be distributed on a first-come, first-served basis.",
+    "Why It Matters": "End-to-end encryption protects us all – we need to protect it!",
+    "Who Can Get Involved": "Chapter Leaders",
+    "Internet Issue": "Security",
+    "Region": "Global",
+    "Type": null,
+    "Archived": null
   }
 ]
