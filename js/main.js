@@ -520,7 +520,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const thead = document.createElement('thead');
         const headerRow = document.createElement('tr');
         
-        ['Title', 'Description', 'Date', 'Action'].forEach(headerText => {
+        ['Title', 'Description', 'Date'].forEach(headerText => {
             const th = document.createElement('th');
             th.textContent = headerText;
             headerRow.appendChild(th);
@@ -535,9 +535,15 @@ document.addEventListener('DOMContentLoaded', function() {
         opportunities.forEach(opp => {
             const row = document.createElement('tr');
             
-            // Title column with link
+            // Title column with link and categories
             const titleCell = document.createElement('td');
             titleCell.className = 'title-column';
+            
+            // Create title container
+            const titleContainer = document.createElement('div');
+            titleContainer.className = 'title-container';
+            
+            // Add title link
             if (opp.link) {
                 const titleLink = document.createElement('a');
                 titleLink.href = opp.link;
@@ -545,18 +551,48 @@ document.addEventListener('DOMContentLoaded', function() {
                 titleLink.rel = 'noopener noreferrer';
                 titleLink.textContent = opp.title;
                 titleLink.className = 'title-link';
-                titleCell.appendChild(titleLink);
+                titleContainer.appendChild(titleLink);
             } else {
-                titleCell.textContent = opp.title;
+                const titleSpan = document.createElement('span');
+                titleSpan.className = 'title-text';
+                titleSpan.textContent = opp.title;
+                titleContainer.appendChild(titleSpan);
             }
+            
+            // Add categories container
+            const categoriesContainer = document.createElement('div');
+            categoriesContainer.className = 'table-categories';
+            
+            // Add region if available
+            if (opp.region) {
+                const regionPill = document.createElement('span');
+                regionPill.className = 'table-category region';
+                regionPill.textContent = opp.region;
+                categoriesContainer.appendChild(regionPill);
+            }
+            
+            // Add internet issue if available
+            if (opp.internet_issue) {
+                const issuePill = document.createElement('span');
+                issuePill.className = 'table-category issue';
+                issuePill.textContent = opp.internet_issue;
+                categoriesContainer.appendChild(issuePill);
+            }
+            
+            // Removed who can get involved pills as per user request
+            
+            // Add categories container to title container
+            if (categoriesContainer.children.length > 0) {
+                titleContainer.appendChild(categoriesContainer);
+            }
+            
+            // Add title container to cell
+            titleCell.appendChild(titleContainer);
             row.appendChild(titleCell);
             
-            // Description column (truncated)
+            // Description column (full text)
             const descCell = document.createElement('td');
-            const description = opp.opportunity_description || '';
-            descCell.textContent = description.length > 100 
-                ? description.substring(0, 100) + '...' 
-                : description;
+            descCell.textContent = opp.opportunity_description || '';
             row.appendChild(descCell);
             
             // Date column
@@ -571,18 +607,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             row.appendChild(dateCell);
             
-            // Action column
-            const actionsCell = document.createElement('td');
-            if (opp.link) {
-                const actionLink = document.createElement('a');
-                actionLink.href = opp.link;
-                actionLink.className = 'action-link';
-                actionLink.textContent = opp.action_text || 'View';
-                actionLink.target = '_blank';
-                actionLink.rel = 'noopener noreferrer';
-                actionsCell.appendChild(actionLink);
-            }
-            row.appendChild(actionsCell);
+            // Action link is now part of the title
             
             tbody.appendChild(row);
         });
