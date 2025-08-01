@@ -741,6 +741,10 @@ color: #24366e;
         font-size: 13px;
     }
 
+    .action-card {
+        padding: 20px;
+    }
+
     .action-card h3 {
         font-size: 1.1em;
     }
@@ -1214,6 +1218,48 @@ color: #24366e;
 .action-card li strong {
     color: var(--isoc-black);
     font-weight: 600;
+}
+
+/* Card header with calendar icon */
+.action-card .card-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.action-card .card-header h3 {
+    margin: 0;
+    padding-right: 30px; /* Space for the calendar icon */
+}
+
+/* Calendar icon styles */
+.add-to-calendar {
+    position: absolute;
+    top: 4px;
+    right: -5px;
+    color: var(--isoc-blue);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+.add-to-calendar:hover {
+    color: var(--isoc-dark-blue);
+    background-color: rgba(36, 54, 110, 0.1);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.add-to-calendar i {
+    font-size: 20px;
 }
 
 /* Footer Styles */

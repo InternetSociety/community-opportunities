@@ -472,6 +472,77 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize the application when DOM is loaded
     init();
     
+    // Add event delegation for calendar links
+    document.addEventListener('click', function(e) {
+        if (e.target.closest('.add-to-calendar')) {
+            e.preventDefault();
+            const link = e.target.closest('.add-to-calendar');
+            const title = link.getAttribute('data-title');
+            const dateStr = link.getAttribute('data-date');
+            const description = link.getAttribute('data-description');
+            const whyItMatters = link.getAttribute('data-why-it-matters') || '';
+            const eventLink = link.getAttribute('data-link') || window.location.href;
+            
+            // Check if the date string includes a time component
+            const hasTime = /\d{1,2}:\d{2}/.test(dateStr);
+            
+            // Create .ics file content
+            const startDate = new Date(dateStr);
+            let icsDateFields = [];
+            
+            if (hasTime) {
+                // For events with specific time, set start and end times
+                const endDate = new Date(startDate);
+                endDate.setHours(startDate.getHours() + 1); // 1 hour event by default
+                
+                // Format dates with time for .ics
+                const formatDateTimeForICS = (date) => {
+                    return date.toISOString().replace(/[-:]/g, '').replace(/\..+/, '').replace('T', 'T') + 'Z';
+                };
+                
+                icsDateFields = [
+                    `DTSTART:${formatDateTimeForICS(startDate)}`,
+                    `DTEND:${formatDateTimeForICS(endDate)}`
+                ];
+            } else {
+                // For all-day events, use DATE only (without time)
+                const formatDateOnlyForICS = (date) => {
+                    return date.toISOString().split('T')[0].replace(/-/g, '');
+                };
+                
+                icsDateFields = [
+                    'DTSTART;VALUE=DATE:' + formatDateOnlyForICS(startDate),
+                    'DTEND;VALUE=DATE:' + formatDateOnlyForICS(new Date(startDate.getTime() + 24 * 60 * 60 * 1000)) // Next day
+                ];
+            }
+            
+            const icsContent = [
+                'BEGIN:VCALENDAR',
+                'VERSION:2.0',
+                'PRODID:-//Internet Society//Opportunities//EN',
+                'BEGIN:VEVENT',
+                `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').replace(/\..+/, '').replace('T', 'T')}Z`,
+                ...icsDateFields,
+                `SUMMARY:${title}`,
+                `DESCRIPTION:${description}${whyItMatters ? '\n\nWhy it matters: ' + whyItMatters : ''}\n\nMore info: ${eventLink}`,
+                `URL:${eventLink}`,
+                'END:VEVENT',
+                'END:VCALENDAR'
+            ].join('\r\n');
+            
+            // Create and trigger download
+            const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const linkEl = document.createElement('a');
+            linkEl.href = url;
+            linkEl.download = `event-${title.replace(/[^a-z0-9]/gi, '-').toLowerCase()}.ics`;
+            document.body.appendChild(linkEl);
+            linkEl.click();
+            document.body.removeChild(linkEl);
+            URL.revokeObjectURL(url);
+        }
+    });
+    
     function initializeViewToggle() {
         const viewToggle = document.getElementById('view-toggle');
         if (!viewToggle) return;
@@ -755,9 +826,23 @@ document.addEventListener('DOMContentLoaded', function() {
         const whyItMatters = o.why_it_matters ? 
             `<li><i class="icon fa-solid fa-lightbulb"></i><strong>Why It Matters:</strong> ${o.why_it_matters}</li>` : '';
             
+        // Add calendar icon only for event-type opportunities
+        const calendarIcon = (o.Type && o.Type.toLowerCase().includes('event') && o.date && o.date !== 'Ongoing') ? 
+            `<a href="#" class="add-to-calendar" 
+                data-title="${o.title}" 
+                data-date="${o.date}" 
+                data-description="${o.opportunity_description || ''}"
+                data-why-it-matters="${o.why_it_matters || ''}"
+                data-link="${o.link || ''}">
+                <i class="fas fa-calendar-plus" title="Add to calendar"></i>
+            </a>` : '';
+
         return `
             <div class="action-card">
-                <h3>${o.link ? `<a href="${o.link}" target="_blank" rel="noopener noreferrer" class="card-title-link">${o.title}</a>` : o.title}</h3>
+                <div class="card-header">
+                    <h3>${o.link ? `<a href="${o.link}" target="_blank" rel="noopener noreferrer" class="card-title-link">${o.title}</a>` : o.title}</h3>
+                    ${calendarIcon}
+                </div>
                 ${tagsHtml}
                 <ul>
                     ${date}
