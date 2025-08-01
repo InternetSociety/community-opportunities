@@ -95,15 +95,73 @@ document.addEventListener('DOMContentLoaded', function() {
             return a.localeCompare(b);
         });
         
-        // Generate navigation links using the same slugify function as section IDs
+        // Create the navigation HTML with hamburger menu
         const navHtml = `
             <a href="/" class="logo-link">
                 <img src="img/isoc-logo.png" alt="Internet Society" class="nav-logo">
             </a>
-            ${types.map(type => `<a href="#${slugify(type)}">${type}</a>`).join('')}
+            <button class="hamburger" aria-label="Menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-overlay"></div>
+            <div class="nav-links">
+                ${types.map(type => `<a href="#${slugify(type)}">${type}</a>`).join('')}
+            </div>
         `;
         
         nav.innerHTML = navHtml;
+        
+        // Get navigation elements
+        const hamburger = nav.querySelector('.hamburger');
+        const navLinks = nav.querySelector('.nav-links');
+        const overlay = nav.querySelector('.nav-overlay');
+        
+        // Function to close the menu
+        function closeMenu() {
+            hamburger.setAttribute('aria-expanded', 'false');
+            hamburger.querySelector('i').className = 'fas fa-bars';
+            navLinks.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = ''; // Re-enable scrolling
+        }
+        
+        // Function to open the menu
+        function openMenu() {
+            hamburger.setAttribute('aria-expanded', 'true');
+            hamburger.querySelector('i').className = 'fas fa-times';
+            navLinks.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+        }
+        
+        // Toggle menu on hamburger click
+        if (hamburger && navLinks && overlay) {
+            hamburger.addEventListener('click', function() {
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                if (isExpanded) {
+                    closeMenu();
+                } else {
+                    openMenu();
+                }
+            });
+            
+            // Close menu when clicking on overlay
+            overlay.addEventListener('click', closeMenu);
+            
+            // Close menu when clicking on a nav link
+            navLinks.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A' && window.innerWidth <= 1024) {
+                    closeMenu();
+                }
+            });
+            
+            // Close menu when pressing Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                    closeMenu();
+                }
+            });
+        }
     }
 
     // Initialize the application
