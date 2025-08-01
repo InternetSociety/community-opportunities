@@ -115,6 +115,20 @@ document.addEventListener('DOMContentLoaded', function() {
         const hamburger = nav.querySelector('.hamburger');
         const navLinks = nav.querySelector('.nav-links');
         const overlay = nav.querySelector('.nav-overlay');
+        const logoLink = nav.querySelector('.logo-link');
+        
+        // Add smooth scroll to top when clicking the logo
+        if (logoLink) {
+            logoLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+                // Close mobile menu if open
+                closeMenu();
+            });
+        }
         
         // Function to close the menu
         function closeMenu() {
