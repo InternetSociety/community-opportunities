@@ -91,12 +91,13 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Initialize the filter toggle after everything is rendered
             const toggle = document.getElementById('filter-toggle');
+            const headerFilterButton = document.getElementById('header-filter-button');
             const filterSection = document.getElementById('filter-section');
             
-            if (toggle && filterSection) {
+            if ((toggle || headerFilterButton) && filterSection) {
                 // Function to position the filter panel
-                const positionFilterPanel = () => {
-                    const buttonRect = toggle.getBoundingClientRect();
+                const positionFilterPanel = (referenceElement) => {
+                    const buttonRect = referenceElement.getBoundingClientRect();
                     const viewportHeight = window.innerHeight;
                     const viewportWidth = window.innerWidth;
                     
@@ -112,48 +113,84 @@ document.addEventListener('DOMContentLoaded', function() {
                         600                       // Absolute max of 600px
                     );
                     
-                    // Position the panel above the button with some spacing
+                    // Position the panel based on which button was clicked
                     filterSection.style.maxHeight = `${maxHeight}px`;
                     filterSection.style.minHeight = '200px'; // Ensure minimum height
-                    filterSection.style.bottom = `${window.innerHeight - buttonRect.top + 10}px`;
                     
-                    // Ensure the panel stays within viewport bounds
-                    const panelWidth = Math.min(320, viewportWidth - 40);
-                    filterSection.style.width = `${panelWidth}px`;
-                    const rightPos = Math.max(minPadding, viewportWidth - buttonRect.right - buttonRect.width/2);
-                    filterSection.style.right = `${rightPos}px`;
+                    if (referenceElement.id === 'header-filter-button') {
+                        // Position below the header button, centered
+                        filterSection.style.top = `${buttonRect.bottom + 10}px`;
+                        filterSection.style.bottom = 'auto';
+                        filterSection.style.left = '50%';
+                        filterSection.style.right = 'auto';
+                        filterSection.style.transform = 'translateX(-50%)';
+                    } else {
+                        // Position above the floating button (original positioning)
+                        filterSection.style.bottom = `${window.innerHeight - buttonRect.top + 10}px`;
+                        filterSection.style.top = 'auto';
+                        filterSection.style.left = 'auto';
+                        filterSection.style.transform = 'none';
+                        
+                        // Ensure the panel stays within viewport bounds
+                        const panelWidth = Math.min(320, viewportWidth - 40);
+                        filterSection.style.width = `${panelWidth}px`;
+                        const rightPos = Math.max(minPadding, viewportWidth - buttonRect.right - buttonRect.width/2);
+                        filterSection.style.right = `${rightPos}px`;
+                    }
                 };
                 
-                toggle.addEventListener('click', (e) => {
-                    e.preventDefault();
+                // Function to handle filter toggle
+                const handleFilterToggle = (referenceElement) => {
                     const isExpanded = filterSection.style.display === 'block';
                     
                     if (!isExpanded) {
                         // Show the panel first to calculate dimensions
                         filterSection.style.display = 'block';
-                        positionFilterPanel();
+                        positionFilterPanel(referenceElement);
                     } else {
                         filterSection.style.display = 'none';
                     }
                     
-                    toggle.classList.toggle('active', !isExpanded);
-                });
+                    // Update button states
+                    if (toggle) toggle.classList.toggle('active', !isExpanded);
+                };
+                
+                // Add event listeners to both buttons
+                if (toggle) {
+                    toggle.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        handleFilterToggle(toggle);
+                    });
+                }
+                
+                if (headerFilterButton) {
+                    headerFilterButton.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        handleFilterToggle(headerFilterButton);
+                    });
+                }
                 
                 // Re-position on window resize
                 window.addEventListener('resize', () => {
                     if (filterSection.style.display === 'block') {
-                        positionFilterPanel();
+                        // Find which button is currently active and reposition accordingly
+                        const activeButton = toggle && toggle.classList.contains('active') ? toggle : headerFilterButton;
+                        if (activeButton) {
+                            positionFilterPanel(activeButton);
+                        }
                     }
                 });
                 
                 // Show the toggle button after initialization
-                toggle.style.display = 'flex';
+                if (toggle) toggle.style.display = 'flex';
                 
                 // Close filter when clicking outside
                 document.addEventListener('click', (e) => {
-                    if (!filterSection.contains(e.target) && !toggle.contains(e.target)) {
+                    if (!filterSection.contains(e.target) && 
+                        (!toggle || !toggle.contains(e.target)) && 
+                        (!headerFilterButton || !headerFilterButton.contains(e.target))) {
                         filterSection.style.display = 'none';
-                        toggle.classList.remove('active');
+                        if (toggle) toggle.classList.remove('active');
                     }
                 });
             }

@@ -79,7 +79,34 @@ header p {
     font-size: 1.2em;
     color: var(--isoc-gray);
     max-width: 700px;
-    margin: 10px auto 0;
+    margin: 10px auto 20px;
+}
+
+.header-filter-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--isoc-blue);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.header-filter-button:hover {
+    background: var(--isoc-dark-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.header-filter-button i {
+    font-size: 1.1em;
 }
 
 section {
