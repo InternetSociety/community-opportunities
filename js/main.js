@@ -96,9 +96,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         // Generate navigation links using the same slugify function as section IDs
-        const navHtml = types.map(type => 
-            `<a href="#${slugify(type)}">${type}</a>`
-        ).join('');
+        const navHtml = `
+            <a href="/" class="logo-link">
+                <img src="img/isoc-logo.png" alt="Internet Society" class="nav-logo">
+            </a>
+            ${types.map(type => `<a href="#${slugify(type)}">${type}</a>`).join('')}
+        `;
         
         nav.innerHTML = navHtml;
     }

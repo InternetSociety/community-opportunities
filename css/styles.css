@@ -42,22 +42,65 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 10px 0;
-    text-align: center;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+/* Center navigation items on larger screens */
+@media (min-width: 1025px) {
+    .top-nav {
+        justify-content: center;
+    }
+    
+    /* Create space for the logo on the left */
+    .top-nav::before {
+        content: '';
+        position: absolute;
+        left: 20px;
+        width: 50px; /* Adjust based on your logo width */
+        height: 1px;
+    }
 }
 
 .top-nav a {
     color: var(--isoc-light-gray);
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
     font-weight: 600;
-    padding: 10px 15px;
-    margin: 0 5px;
     border-radius: 0.25rem;
     transition: color 0.2s ease, background-color 0.2s ease;
 }
 
+/* Logo styles */
+.top-nav .logo-link {
+    padding: 5px 0;
+}
+
+.top-nav .nav-logo {
+    height: 30px;
+    width: auto;
+    vertical-align: middle;
+}
+
+/* Navigation links */
+.top-nav > a:not(.logo-link) {
+    margin: 0 5px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.top-nav > a:not(.logo-link):hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
 .top-nav a:hover {
-    background-color: rgba(0, 115, 184, 0.1);
+    color: #fff;
 }
 
 header {
@@ -418,7 +461,7 @@ color: #24366e;
     }
     
     .view-controls {
-        top: 50px;
+        top: 60px;
         padding: 8px 0;
     }
     
