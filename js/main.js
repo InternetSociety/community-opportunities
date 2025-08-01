@@ -456,6 +456,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Get opportunities for this type
             const typeOpportunities = opps.filter(o => o.Type === type);
+            const isEventsSection = type.toLowerCase().includes('event');
             
             // Determine icon based on section type
             const typeIcon = type.toLowerCase().includes('urgent') ? 'fa-triangle-exclamation' :
@@ -472,6 +473,14 @@ document.addEventListener('DOMContentLoaded', function() {
                         ${typeOpportunities.map(renderOpportunityCard).join('')}
                     </div>
                     <div class="table-container" style="${currentViewMode === 'table' ? 'display: block;' : 'display: none;'}"></div>
+                    ${isEventsSection ? `
+                    <div class="discover-all-container">
+                        <a href="https://www.internetsociety.org/events/upcoming/" class="discover-all-button" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-calendar-alt"></i>
+                            Discover all upcoming events
+                        </a>
+                    </div>
+                    ` : ''}
                 </div>
             `;
             

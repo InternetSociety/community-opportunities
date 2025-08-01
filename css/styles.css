@@ -745,6 +745,53 @@ color: #24366e;
     margin-top: 8px;
 }
 
+/* Discover All Button */
+.discover-all-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 10px;
+    width: 100%;
+}
+
+.discover-all-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #3a4b8a; /* Lighter blue than --isoc-blue */
+    color: white;
+    border: none;
+    padding: 10px 24px 10px 22px;
+    border-radius: 6px;
+    font-size: 0.95em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.discover-all-button:hover {
+    background: #4a5b9a; /* Slightly darker on hover */
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.discover-all-button i {
+    font-size: 1em;
+    transition: transform 0.2s ease;
+}
+
+.discover-all-button:hover i {
+    transform: scale(1.05);
+}
+
+/* Table view specific styles */
+.table-container + .discover-all-container {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
 .audience-tag {
     display: inline-block;
     background-color: #e9f5ff;
