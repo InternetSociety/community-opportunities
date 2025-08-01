@@ -26,7 +26,7 @@ body {
     color: var(--isoc-black);
     color: #24366e;
     margin: 0;
-    padding: 0 0 6em 0;
+    padding: 0;
     line-height: 1.6;
 }
 
@@ -169,7 +169,7 @@ body {
         background-color: rgba(255, 255, 255, 0.1);
     }
 
-    section {
+   .section-header {
         padding-left: 10px;
     }
 }
@@ -1214,6 +1214,33 @@ color: #24366e;
 .action-card li strong {
     color: var(--isoc-black);
     font-weight: 600;
+}
+
+/* Footer Styles */
+.site-footer {
+    background-color: #0b1c2d;
+    padding: 20px 0 6em 0;
+    margin-top: 40px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.footer-content a {
+    color: #94a9bb;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-separator {
+    margin: 0 10px;
+    color: #94a9bb;
 }
 
 .cta-button {
