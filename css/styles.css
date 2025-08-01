@@ -168,6 +168,10 @@ body {
     .nav-links a:hover {
         background-color: rgba(255, 255, 255, 0.1);
     }
+
+    section {
+        padding-left: 10px;
+    }
 }
 
 /* Desktop Styles */
@@ -316,7 +320,6 @@ section {
 .section-header {
     font-size: 1.4em;
     font-weight: 600;
-    margin-top: 40px;
     margin-bottom: 25px;
     padding-bottom: 10px;
     border-bottom: 1px solid var(--isoc-border-color);
@@ -500,7 +503,7 @@ color: #24366e;
     display: flex;
     justify-content: flex-end;
     gap: 10px;
-    margin: 0 0 20px 0;
+    margin: 0;
     padding: 10px 0;
     position: sticky;
     top: 60px;
