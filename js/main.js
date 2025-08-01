@@ -22,6 +22,29 @@ document.addEventListener('DOMContentLoaded', function() {
         who: null
     };
 
+    // Check if a date string is in the past
+    function isDateInPast(dateString) {
+        if (!dateString || typeof dateString !== 'string') return false;
+        
+        // If it's "Ongoing", it's never in the past
+        if (dateString.trim().toLowerCase() === 'ongoing') return false;
+        
+        try {
+            // Try to parse the date
+            const date = new Date(dateString);
+            if (isNaN(date.getTime())) return false; // Invalid date
+            
+            // Create today's date at midnight for comparison
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            
+            return date < today;
+        } catch (e) {
+            console.warn('Error parsing date:', dateString, e);
+            return false; // If we can't parse it, don't filter it out
+        }
+    }
+
     // Fetch opportunities data
     async function fetchOpportunities() {
         try {
@@ -46,8 +69,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 date: item["Deadline"] || item["Date"] || item.date || null,
                 archived: item["Archived"] || item.archived || null
             }))
-            // Filter out archived or no-title
-            .filter(item => item.title && !item.archived);
+            // Filter out archived, no-title, or past-dated opportunities (unless marked as "Ongoing")
+            .filter(item => {
+                if (!item.title || item.archived) return false;
+                if (item.date && isDateInPast(item.date)) return false;
+                return true;
+            });
         } catch (error) {
             console.error('Error fetching opportunities:', error);
             throw error;
