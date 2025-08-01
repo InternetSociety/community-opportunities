@@ -414,7 +414,7 @@ color: #24366e;
 /* Responsive adjustments */
 @media (max-width: 768px) {
     section {
-        padding: 60px 5px;
+        padding: 5px;
     }
     
     .view-controls {
@@ -425,6 +425,18 @@ color: #24366e;
     .view-option {
         padding: 6px 12px;
         font-size: 13px;
+    }
+
+    .action-card h3 {
+        font-size: 1.1em;
+    }
+
+    .action-card li {
+        font-size: 0.9em;
+    }
+
+    .cta-button {
+        font-size: 0.9em;
     }
 }
 
