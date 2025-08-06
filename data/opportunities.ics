@@ -8,84 +8,143 @@ X-WR-TIMEZONE:UTC
 X-WR-CALDESC:Upcoming opportunities from Internet Society
 
 BEGIN:VEVENT
-UID:b65dadf7-bd64-4941-81ec-facd3400d49a
-DTSTAMP:20250806T151051Z
+UID:da5d671d-2678-4cc3-9f4d-8dc456a5da3f
+DTSTAMP:20250806T151635Z
 DTSTART;VALUE=DATE:20250901
 DTEND;VALUE=DATE:20250902
 SUMMARY:Expert Group for a Technology Roadmap on Encryption [European Commission]
-DESCRIPTION:The European Commission is forming an informal Expert Group to “focus on current and future technical challenges impacting lawful access to digital information in the context of criminal investigations”. It is looking for technically skilled professionals with domain-specific expertise\, especially in cybersecurity\, telecom\, big data analysis\, digital forensics\, fundamental rights\, and data technologies.\n\nType: Urgent: Upcoming Deadlines\nRegion: Europe\nInternet Issue: Security\nWho Can Get Involved: Individual Members\, Chapter Members\, Chapter Leaders\, Organization Members\, Alumni\n\nMore info: https://ec.europa.eu/transparency/expert-groups-register/screen/expert-groups/consult?lang=en&groupID=4005&fromCallsApplication=true
+DESCRIPTION:The European Commission is forming an informal Expert Group to “focus on cu
+ rrent and future technical challenges impacting lawful access to digital i
+ nformation in the context of criminal investigations”. It is looking for t
+ echnically skilled professionals with domain-specific expertise\, especial
+ ly in cybersecurity\, telecom\, big data analysis\, digital forensics\, fu
+ ndamental rights\, and data technologies.\n\nType: Urgent: Upcoming Deadli
+ nes\nRegion: Europe\nInternet Issue: Security\nWho Can Get Involved: Indiv
+ idual Members\, Chapter Members\, Chapter Leaders\, Organization Members\,
+  Alumni\n\nMore info: https://ec.europa.eu/transparency/expert-groups-regi
+ ster/screen/expert-groups/consult?lang=en&groupID=4005&fromCallsApplicatio
+ n=true
 URL:https://ec.europa.eu/transparency/expert-groups-register/screen/expert-groups/consult?lang=en&groupID=4005&fromCallsApplication=true
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
 
 BEGIN:VEVENT
-UID:fefccf69-9369-4e17-bcdb-96cdadf86c58
-DTSTAMP:20250806T151051Z
+UID:5d3dd9be-3f38-4853-a209-1622e61e1d0b
+DTSTAMP:20250806T151635Z
 DTSTART;VALUE=DATE:20250806
 DTEND;VALUE=DATE:20250807
 SUMMARY:Internet Society's New Advocacy Strategy – Session 1
-DESCRIPTION:Learn about our new Advocacy Strategy—a bold\, collaborative effort to strengthen our ability to influence the decisions that shape the Internet’s future. Whether you're a long-time advocate or just getting started\, your voice and actions matter. Join us to discover how you can play a key role in advancing our shared mission and defending what makes the Internet a force for good.\n\nType: Events & Workshops\nRegion: Global\nInternet Issue: Policy\nWho Can Get Involved: Individual Members\, Chapter Leaders\, Organization Members\, Alumni\n\nMore info: https://isoc.zoom.us/meeting/register/nmwbsthkT8qvSsLMhVUSTw#/registration
+DESCRIPTION:Learn about our new Advocacy Strategy—a bold\, collaborative effort to stre
+ ngthen our ability to influence the decisions that shape the Internet’s fu
+ ture. Whether you're a long-time advocate or just getting started\, your v
+ oice and actions matter. Join us to discover how you can play a key role i
+ n advancing our shared mission and defending what makes the Internet a for
+ ce for good.\n\nType: Events & Workshops\nRegion: Global\nInternet Issue: 
+ Policy\nWho Can Get Involved: Individual Members\, Chapter Leaders\, Organ
+ ization Members\, Alumni\n\nMore info: https://isoc.zoom.us/meeting/regist
+ er/nmwbsthkT8qvSsLMhVUSTw#/registration
 URL:https://isoc.zoom.us/meeting/register/nmwbsthkT8qvSsLMhVUSTw#/registration
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
 
 BEGIN:VEVENT
-UID:3808a177-f401-460d-ba14-f8ee1e198cb6
-DTSTAMP:20250806T151051Z
+UID:46c8aeb7-22f4-4b66-b2b8-05267e6f2157
+DTSTAMP:20250806T151635Z
 DTSTART;VALUE=DATE:20250807
 DTEND;VALUE=DATE:20250808
 SUMMARY:Internet Society's New Advocacy Strategy – Session 2
-DESCRIPTION:Learn about our new Advocacy Strategy—a bold\, collaborative effort to strengthen our ability to influence the decisions that shape the Internet’s future. Whether you're a long-time advocate or just getting started\, your voice and actions matter. Join us to discover how you can play a key role in advancing our shared mission and defending what makes the Internet a force for good.\n\nType: Events & Workshops\nRegion: Global\nInternet Issue: Policy\nWho Can Get Involved: Individual Members\, Chapter Leaders\, Organization Members\, Alumni\n\nMore info: https://isoc.zoom.us/meeting/register/qPhFqyaFShiI9xpowJ5fkQ#/registration
+DESCRIPTION:Learn about our new Advocacy Strategy—a bold\, collaborative effort to stre
+ ngthen our ability to influence the decisions that shape the Internet’s fu
+ ture. Whether you're a long-time advocate or just getting started\, your v
+ oice and actions matter. Join us to discover how you can play a key role i
+ n advancing our shared mission and defending what makes the Internet a for
+ ce for good.\n\nType: Events & Workshops\nRegion: Global\nInternet Issue: 
+ Policy\nWho Can Get Involved: Individual Members\, Chapter Leaders\, Organ
+ ization Members\, Alumni\n\nMore info: https://isoc.zoom.us/meeting/regist
+ er/qPhFqyaFShiI9xpowJ5fkQ#/registration
 URL:https://isoc.zoom.us/meeting/register/qPhFqyaFShiI9xpowJ5fkQ#/registration
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
 
 BEGIN:VEVENT
-UID:8ff5b02e-9248-4005-96c3-cd524fdd351c
-DTSTAMP:20250806T151051Z
+UID:526a6e4e-7473-452d-af80-3c23d122f98b
+DTSTAMP:20250806T151635Z
 DTSTART;VALUE=DATE:20250831
 DTEND;VALUE=DATE:20250901
 SUMMARY:Endorse the Internet Society’s Contribution to the WSIS+20 Elements Paper
-DESCRIPTION:Thank you to those who have already endorsed our written contribution to the WSIS+20 Elements Paper. We have submitted our document to the United Nations and listed the initial endorsers on our website. The opportunity to endorse this contribution will remain open for a few days while we wait for the co-facilitators to release the WSIS+20 Zero Draft\, which will be the next document in this process. You can endorse the contribution on behalf of your organization or in your personal capacity.\n\nType: Urgent: Upcoming Deadlines\nRegion: Global\nInternet Issue: Internet Governance\nWho Can Get Involved: Individual Members\, Chapter Members\, Chapter Leaders\, Organization Members\, Alumni\, Internet Pioneers\n\nMore info: https://www.internetsociety.org/our-work/internet-governance/world-summit-on-the-information-society-wsis/wsis20-elements-paper/
+DESCRIPTION:Thank you to those who have already endorsed our written contribution to th
+ e WSIS+20 Elements Paper. We have submitted our document to the United Nat
+ ions and listed the initial endorsers on our website. The opportunity to e
+ ndorse this contribution will remain open for a few days while we wait for
+  the co-facilitators to release the WSIS+20 Zero Draft\, which will be the
+  next document in this process. You can endorse the contribution on behalf
+  of your organization or in your personal capacity.\n\nType: Urgent: Upcom
+ ing Deadlines\nRegion: Global\nInternet Issue: Internet Governance\nWho Ca
+ n Get Involved: Individual Members\, Chapter Members\, Chapter Leaders\, O
+ rganization Members\, Alumni\, Internet Pioneers\n\nMore info: https://www
+ .internetsociety.org/our-work/internet-governance/world-summit-on-the-info
+ rmation-society-wsis/wsis20-elements-paper/
 URL:https://www.internetsociety.org/our-work/internet-governance/world-summit-on-the-information-society-wsis/wsis20-elements-paper/
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
 
 BEGIN:VEVENT
-UID:31405f7e-9fdf-461c-9b93-9dd71f84a869
-DTSTAMP:20250806T151051Z
+UID:b3f89048-d24c-49c6-8189-97742265bed7
+DTSTAMP:20250806T151635Z
 DTSTART;VALUE=DATE:20250828
 DTEND;VALUE=DATE:20250829
 SUMMARY:2025 Global Encryption Day Grants
-DESCRIPTION:The 2025 GEC grant applications will be accepted from 5 - 28 August (or until 50 grants have been distributed!). Applications are reviewed on a rolling basis by Internet Society staff. We encourage applicants to apply early as funds will be distributed on a first-come\, first-served basis.\n\nType: Funding & Support\nRegion: Global\nInternet Issue: Security\nWho Can Get Involved: Chapter Leaders\n\nMore info: https://www.globalencryption.org/global-encryption-day-2025-event-grants/
+DESCRIPTION:The 2025 GEC grant applications will be accepted from 5 - 28 August (or unt
+ il 50 grants have been distributed!). Applications are reviewed on a rolli
+ ng basis by Internet Society staff. We encourage applicants to apply early
+  as funds will be distributed on a first-come\, first-served basis.\n\nTyp
+ e: Funding & Support\nRegion: Global\nInternet Issue: Security\nWho Can Ge
+ t Involved: Chapter Leaders\n\nMore info: https://www.globalencryption.org
+ /global-encryption-day-2025-event-grants/
 URL:https://www.globalencryption.org/global-encryption-day-2025-event-grants/
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
 
 BEGIN:VEVENT
-UID:fd7a372a-12aa-4701-889a-fdf366b5696e
-DTSTAMP:20250806T151051Z
+UID:8c3165b7-3650-49ff-8555-8bfe47e79d2b
+DTSTAMP:20250806T151635Z
 DTSTART;VALUE=DATE:20250822
 DTEND;VALUE=DATE:20250823
-SUMMARY:Serve on the Internet Society Board of Trustees Nominations and Elections Committees
-DESCRIPTION:The Internet Society requests that the Chapters Advisory Council (ChAC) identify one (1) volunteer to serve on the ISOC Nominations Committee AND one (1) volunteer to serve on the ISOC Elections Committee for the 2025-2026 nominations and elections cycle.\n\nFind the volunteer requirements\, time commitments\, and more details about what each committee’s remit is below.\n\nType: Urgent: Upcoming Deadlines\nRegion: Global\nInternet Issue: Community\nWho Can Get Involved: Chapter Leaders\n\nMore info: https://isoc.app.box.com/notes/1918440663962?s=1e0cuy48w68flmmbhqp6jqr58pq48aja
+SUMMARY:Serve on the Internet Society Board of Trustees Nominations and Elections C
+ ommittees
+DESCRIPTION:The Internet Society requests that the Chapters Advisory Council (ChAC) ide
+ ntify one (1) volunteer to serve on the ISOC Nominations Committee AND one
+  (1) volunteer to serve on the ISOC Elections Committee for the 2025-2026 
+ nominations and elections cycle.\n\nFind the volunteer requirements\, time
+  commitments\, and more details about what each committee’s remit is below
+ .\n\nType: Urgent: Upcoming Deadlines\nRegion: Global\nInternet Issue: Com
+ munity\nWho Can Get Involved: Chapter Leaders\n\nMore info: https://isoc.a
+ pp.box.com/notes/1918440663962?s=1e0cuy48w68flmmbhqp6jqr58pq48aja
 URL:https://isoc.app.box.com/notes/1918440663962?s=1e0cuy48w68flmmbhqp6jqr58pq48aja
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
 
 BEGIN:VEVENT
-UID:9129b7a6-3ea8-48fc-bef6-25e7097ea3fe
-DTSTAMP:20250806T151051Z
+UID:3a029eb9-33c4-4d38-a990-9a3931e1bdcb
+DTSTAMP:20250806T151635Z
 DTSTART;VALUE=DATE:20250821
 DTEND;VALUE=DATE:20250822
 SUMMARY:Sustainable Peering Infrastructure Funding Program
-DESCRIPTION:Funding availability varies based on the needs of the IXP or organization. Grants are available up to USD $70\,000\, and projects can run for up to 12 months.\n\nEligible funded activities include IXP equipment\, reasonable operational\, governance\, and business development costs\, IP transit capacity to promote local CDN cache content distribution\, and technical\, policy\, and best practice capacity-building and workshops.\n\nType: Funding & Support\nRegion: Global\nInternet Issue: Connectivity\nWho Can Get Involved: Chapter Leaders\n\nMore info: https://www.internetsociety.org/funding-areas/sustainable-peering-ixp/
+DESCRIPTION:Funding availability varies based on the needs of the IXP or organization. 
+ Grants are available up to USD $70\,000\, and projects can run for up to 1
+ 2 months.\n\nEligible funded activities include IXP equipment\, reasonable
+  operational\, governance\, and business development costs\, IP transit ca
+ pacity to promote local CDN cache content distribution\, and technical\, p
+ olicy\, and best practice capacity-building and workshops.\n\nType: Fundin
+ g & Support\nRegion: Global\nInternet Issue: Connectivity\nWho Can Get Inv
+ olved: Chapter Leaders\n\nMore info: https://www.internetsociety.org/fundi
+ ng-areas/sustainable-peering-ixp/
 URL:https://www.internetsociety.org/funding-areas/sustainable-peering-ixp/
 STATUS:CONFIRMED
 TRANSP:OPAQUE
