@@ -22,6 +22,36 @@ document.addEventListener('DOMContentLoaded', function() {
         who: null
     };
 
+    // Load filters from localStorage
+    function loadFilters() {
+        const savedFilters = localStorage.getItem('opportunityFilters');
+        if (savedFilters) {
+            try {
+                const parsed = JSON.parse(savedFilters);
+                // Only load filters that match our expected structure
+                if (parsed.region || parsed.issue || parsed.who) {
+                    return {
+                        region: parsed.region || null,
+                        issue: parsed.issue || null,
+                        who: parsed.who || null
+                    };
+                }
+            } catch (e) {
+                console.warn('Failed to parse saved filters', e);
+            }
+        }
+        return { region: null, issue: null, who: null };
+    }
+
+    // Save filters to localStorage
+    function saveFilters() {
+        try {
+            localStorage.setItem('opportunityFilters', JSON.stringify(filters));
+        } catch (e) {
+            console.warn('Failed to save filters', e);
+        }
+    }
+
     // Check if a date string is in the past
     function isDateInPast(dateString) {
         if (!dateString || typeof dateString !== 'string') return false;
@@ -184,9 +214,22 @@ document.addEventListener('DOMContentLoaded', function() {
             const opportunities = await fetchOpportunities();
             allOpportunities = opportunities;
             filteredOpportunities = [...allOpportunities];
+            
+            // Load saved filters before rendering
+            filters = loadFilters();
+            
             renderNavigation(opportunities);
             renderFilters(opportunities);
-            renderSectionsByType(opportunities);
+            
+            // Apply any saved filters
+            if (filters.region || filters.issue || filters.who) {
+                applyFilters();
+                // Show filter badge immediately if filters are active
+                const filterBadge = document.getElementById('filter-badge');
+                if (filterBadge) filterBadge.style.display = 'block';
+            } else {
+                renderSectionsByType(opportunities);
+            }
             
             // Initialize view toggle after sections are rendered
             initializeViewToggle();
@@ -318,6 +361,31 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             return [...new Set(values)].filter(Boolean).sort();
         };
+        
+        // Select filter options based on saved filters
+        function selectSavedFilters() {
+            if (filters.region) {
+                filters.region.forEach(value => {
+                    const option = document.querySelector(`.region-filters .filter-option[data-value="${value}"]`);
+                    if (option) option.classList.add('selected');
+                });
+            }
+            if (filters.issue) {
+                filters.issue.forEach(value => {
+                    const option = document.querySelector(`.issue-filters .filter-option[data-value="${value}"]`);
+                    if (option) option.classList.add('selected');
+                });
+            }
+            if (filters.who) {
+                filters.who.forEach(value => {
+                    const option = document.querySelector(`.role-filters .filter-option[data-value="${value}"]`);
+                    if (option) option.classList.add('selected');
+                });
+            }
+            
+            // Update the selected arrays to match the UI
+            updateActiveFilters();
+        }
 
         // Get all unique values for filters
         const regions = unique(opps, 'region');
@@ -357,6 +425,9 @@ document.addEventListener('DOMContentLoaded', function() {
         roles.forEach(role => {
             roleContainer.appendChild(createFilterOption(role, 'role'));
         });
+        
+        // Select any saved filters after populating the UI
+        selectSavedFilters();
         
         // Update active filters
         function updateActiveFilters() {
@@ -399,6 +470,9 @@ document.addEventListener('DOMContentLoaded', function() {
             filters.issue = selectedIssues.length ? selectedIssues : null;
             filters.who = selectedRoles.length ? selectedRoles : null;
             
+            // Save filters to localStorage
+            saveFilters();
+            
             // Close the filter dialog
             filterSection.style.display = 'none';
             filterToggle.classList.remove('active');
@@ -420,6 +494,9 @@ document.addEventListener('DOMContentLoaded', function() {
             filters.region = null;
             filters.issue = null;
             filters.who = null;
+            
+            // Clear saved filters
+            localStorage.removeItem('opportunityFilters');
             
             // Close the filter dialog
             filterSection.style.display = 'none';
@@ -611,6 +688,63 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Remove old sections
         container.querySelectorAll('section.dynamic-section').forEach(e => e.remove());
+        
+        // Check if there are no opportunities to display
+        if (opps.length === 0) {
+            const noResults = document.createElement('div');
+            noResults.className = 'no-results';
+            noResults.innerHTML = `
+                <div class="no-results-content">
+                    <h3>No opportunities match your current preferences</h3>
+                    <button id="reset-filters-btn" class="btn btn-primary">
+                        <i class="fas fa-filter"></i> Reset filters
+                    </button>
+                </div>
+            `;
+            container.appendChild(noResults);
+            
+            // Add event listener to the reset button
+            const resetBtn = document.getElementById('reset-filters-btn');
+            if (resetBtn) {
+                resetBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    // Remove the no-results message
+                    const noResults = document.querySelector('.no-results');
+                    if (noResults) {
+                        noResults.remove();
+                    }
+                    
+                    // Find and click the actual reset button in the filter panel
+                    const resetButton = document.getElementById('reset-filters');
+                    if (resetButton) {
+                        resetButton.click();
+                    } else {
+                        // Fallback: manually reset filters if button not found
+                        document.querySelectorAll('.filter-option.selected').forEach(opt => opt.classList.remove('selected'));
+                        filters.region = null;
+                        filters.issue = null;
+                        filters.who = null;
+                        localStorage.removeItem('opportunityFilters');
+                        // Re-render all opportunities
+                        filteredOpportunities = [...allOpportunities];
+                        renderSectionsByType(filteredOpportunities);
+                    }
+                });
+            }
+            
+            // Show the filter badge to indicate active filters are causing no results
+            const filterBadge = document.getElementById('filter-badge');
+            if (filterBadge) {
+                filterBadge.style.display = 'block';
+                // Update the badge count to show number of active filters
+                const activeFilterCount = [filters.region, filters.issue, filters.who].filter(Boolean).length;
+                if (filterBadge.querySelector('span')) {
+                    filterBadge.querySelector('span').textContent = activeFilterCount;
+                }
+            }
+            
+            return; // Exit early since there are no opportunities to display
+        }
         
         // Get unique types and sort them with Urgent first and Ongoing last
         const types = Array.from(new Set(opps.map(o => o.Type))).filter(Boolean);
