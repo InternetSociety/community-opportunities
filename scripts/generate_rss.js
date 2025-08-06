@@ -65,10 +65,15 @@ async function generateRSS() {
 
         // Generate RSS items
         const items = opportunities.map(opp => {
-            const pubDate = opp.date === 'Ongoing' 
-                ? new Date().toUTCString() 
-                : new Date(opp.date).toUTCString();
-                
+            let pubDate;
+            if (opp.date === 'Ongoing') {
+                pubDate = new Date().toUTCString();
+            } else {
+                // Ensure the date is valid and in the future
+                const date = new Date(opp.date);
+                pubDate = date > new Date() ? date.toUTCString() : new Date().toUTCString();
+            }
+            
             const description = `
                 <p>${opp.description || 'No description available.'}</p>
                 ${opp.type ? `<p><strong>Type:</strong> ${opp.type}</p>` : ''}
@@ -80,8 +85,8 @@ async function generateRSS() {
             return `
                 <item>
                     <title><![CDATA[${opp.title}]]></title>
-                    <link>${opp.link}</link>
-                    <guid>${opp.link}</guid>
+                    <link>${opp.link.replace(/&/g, '&amp;')}</link>
+                    <guid>${opp.link.replace(/&/g, '&amp;')}</guid>
                     <pubDate>${pubDate}</pubDate>
                     <description><![CDATA[${description}]]></description>
                 </item>
