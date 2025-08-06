@@ -7,14 +7,32 @@ const OPPORTUNITIES_JSON = path.join(__dirname, '../data/opportunities.json');
 const OUTPUT_FILE = path.join(__dirname, '../data/opportunities.ics');
 const SITE_URL = 'https://opportunities.internetsociety.org';
 
-// Helper function to escape special characters in iCal text
+// Helper function to escape special characters in iCal text and ensure proper line folding
 function escapeICalText(text) {
     if (!text) return '';
-    return String(text)
+    
+    // First escape special characters
+    let escaped = String(text)
         .replace(/\\/g, '\\\\')
         .replace(/\n/g, '\\n')
         .replace(/;/g, '\\;')
         .replace(/,/g, '\\,');
+    
+    // Split into lines and fold long lines according to iCal spec (75 chars max per line)
+    const lines = [];
+    while (escaped.length > 0) {
+        if (lines.length > 0) {
+            // For continuation lines, add a space at the beginning
+            lines.push(' ' + escaped.substring(0, 74));
+            escaped = escaped.substring(74);
+        } else {
+            // First line doesn't need leading space
+            lines.push(escaped.substring(0, 75));
+            escaped = escaped.substring(75);
+        }
+    }
+    
+    return lines.join('\r\n');
 }
 
 // Helper function to check if a date string has time components
@@ -111,17 +129,13 @@ async function generateICal() {
             if (opp.Link) description += `\n\nMore info: ${opp.Link}`;
             
             // Format the event with appropriate DTSTART/DTEND based on whether it's an all-day event
-            let event = `
-BEGIN:VEVENT
-UID:${uid}
-DTSTAMP:${created}
-`;
+            let event = `\r\nBEGIN:VEVENT\r\nUID:${uid}\r\nDTSTAMP:${created}\r\n`;
 
             // Add DTSTART with or without time based on isAllDay
             if (startDate.isAllDay) {
-                event += `DTSTART;VALUE=DATE:${startDate.value}\n`;
+                event += `DTSTART;VALUE=DATE:${startDate.value}\r\n`;
             } else {
-                event += `DTSTART:${startDate.value}\n`;
+                event += `DTSTART:${startDate.value}\r\n`;
             }
 
             // Add DTEND with or without time based on isAllDay
@@ -132,34 +146,18 @@ DTSTAMP:${created}
                 const yyyy = endDateObj.getUTCFullYear();
                 const mm = String(endDateObj.getUTCMonth() + 1).padStart(2, '0');
                 const dd = String(endDateObj.getUTCDate()).padStart(2, '0');
-                event += `DTEND;VALUE=DATE:${yyyy}${mm}${dd}\n`;
+                event += `DTEND;VALUE=DATE:${yyyy}${mm}${dd}\r\n`;
             } else {
-                event += `DTEND:${endDate.value}\n`;
+                event += `DTEND:${endDate.value}\r\n`;
             }
 
-            event += `SUMMARY:${escapeICalText(opp["Outreach Activity [Title]"])}
-DESCRIPTION:${escapeICalText(description)}
-URL:${opp.Link || SITE_URL}
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-END:VEVENT
-            `.trim();
+            event += `SUMMARY:${escapeICalText(opp["Outreach Activity [Title]"])}\r\nDESCRIPTION:${escapeICalText(description)}\r\nURL:${opp.Link || SITE_URL}\r\nSTATUS:CONFIRMED\r\nTRANSP:OPAQUE\r\nEND:VEVENT`.trim();
             
             return event;
-        }).join('\n');
+        }).join('\r\n');
 
-        // Generate the full iCal file
-        const ical = `BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Internet Society//NONSGML Opportunities Calendar//EN
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:Internet Society Opportunities
-X-WR-TIMEZONE:UTC
-X-WR-CALDESC:Upcoming opportunities from Internet Society
-${events}
-END:VCALENDAR
-        `.trim();
+        // Generate the full iCal file with proper CRLF line endings
+        const ical = `BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Internet Society//NONSGML Opportunities Calendar//EN\r\nCALSCALE:GREGORIAN\r\nMETHOD:PUBLISH\r\nX-WR-CALNAME:Internet Society Opportunities\r\nX-WR-TIMEZONE:UTC\r\nX-WR-CALDESC:Upcoming opportunities from Internet Society\r\n${events}\r\nEND:VCALENDAR`.trim();
 
         // Write the iCal file
         fs.writeFileSync(OUTPUT_FILE, ical);
