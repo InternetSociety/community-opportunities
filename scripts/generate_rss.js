@@ -49,6 +49,7 @@ async function generateRSS() {
                 description: item["Opportunity [Description]"],
                 link: item.Link,
                 date: item.Date,
+                creationDate: item["Creation date"],
                 type: item.Type,
                 region: item.Region,
                 issue: item["Internet Issue"],
@@ -65,14 +66,8 @@ async function generateRSS() {
 
         // Generate RSS items
         const items = opportunities.map(opp => {
-            let pubDate;
-            if (opp.date === 'Ongoing') {
-                pubDate = new Date().toUTCString();
-            } else {
-                // Ensure the date is valid and in the future
-                const date = new Date(opp.date);
-                pubDate = date > new Date() ? date.toUTCString() : new Date().toUTCString();
-            }
+            // Use the creation date for the pubDate field
+            const pubDate = new Date(opp.creationDate).toUTCString();
             
             const description = `
                 <p>${opp.description || 'No description available.'}</p>
