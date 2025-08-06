@@ -1,0 +1,53 @@
+name: Update RSS and iCal Feeds
+
+# Grant workflow permission to write back to repo
+permissions:
+    contents: write
+
+on:
+  schedule:
+    # Run every hour
+    - cron: '5 * * * *'
+  # Also run on push to main branch for testing
+  push:
+    branches: [ main ]
+  # Allow manual triggering
+  workflow_dispatch:
+
+jobs:
+  update-feeds:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm install date-fns uuid
+    
+    - name: Create data directory if it doesn't exist
+      run: mkdir -p data
+    
+    - name: Generate RSS feed
+      run: node scripts/generate_rss.js
+    
+    - name: Generate iCal feed
+      run: node scripts/generate_ical.js
+    
+    - name: Commit and push if changes
+      run: |
+        git config --global user.name 'GitHub Actions'
+        git config --global user.email 'actions@github.com'
+        git add data/opportunities.rss data/opportunities.ics
+        git diff --quiet && git diff --staged --quiet || (
+          git commit -m "chore: update RSS and iCal feeds [skip ci]"
+          git push
+        )
+      env:
+        # This token allows pushing to the repository
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
