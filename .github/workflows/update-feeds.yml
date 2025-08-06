@@ -2,7 +2,7 @@ name: Update RSS and iCal Feeds
 
 # Grant workflow permission to write back to repo
 permissions:
-    contents: write
+  contents: write
 
 on:
   schedule:
@@ -10,41 +10,45 @@ on:
     - cron: '5 * * * *'
   # Allow manual triggering
   workflow_dispatch:
-
+  
 jobs:
   update-feeds:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v3
-    
+    - uses: actions/checkout@v4
+      
     - name: Set up Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: '18'
         cache: 'npm'
-    
+      
     - name: Install dependencies
       run: npm install date-fns uuid
-    
+      
     - name: Create data directory if it doesn't exist
       run: mkdir -p data
-    
+      
     - name: Generate RSS feed
       run: node scripts/generate_rss.js
-    
+      
     - name: Generate iCal feed
       run: node scripts/generate_ical.js
-    
+      
     - name: Commit and push if changes
       run: |
-        git config --global user.name 'GitHub Actions'
-        git config --global user.email 'actions@github.com'
-        git add data/opportunities.rss data/opportunities.ics
-        git diff --quiet && git diff --staged --quiet || (
-          git commit -m "chore: update RSS and iCal feeds [skip ci]"
-          git push
-        )
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+          git add data/opportunities.rss data/opportunities.ics
+          # This command checks if there are any staged changes.
+          # If there are, it commits and pushes. Otherwise, it does nothing.
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: update RSS and iCal feeds [skip ci]"
+            git push
+          else
+            echo "No changes to commit."
+          fi
       env:
-        # This token allows pushing to the repository
+        # This token is automatically provided by GitHub Actions
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

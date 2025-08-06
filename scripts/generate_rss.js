@@ -6,43 +6,21 @@ const { format } = require('date-fns');
 const OPPORTUNITIES_JSON = path.join(__dirname, '../data/opportunities.json');
 const OUTPUT_FILE = path.join(__dirname, '../data/opportunities.rss');
 const SITE_URL = 'https://opportunities.internetsociety.org';
-
-// Helper function to check if a date is in the past
-function isDateInPast(dateString) {
-    if (!dateString || typeof dateString !== 'string') return false;
-    if (dateString.trim().toLowerCase() === 'ongoing') return false;
-    
-    try {
-        const date = new Date(dateString);
-        if (isNaN(date.getTime())) return false;
-        
-        const today = new Date();
-        today.setHours(0, 0, 0, 0);
-        return date < today;
-    } catch (e) {
-        console.warn('Error parsing date:', dateString, e);
-        return false;
-    }
-}
+const FEED_ITEM_LIMIT = 100;
 
 // Generate RSS feed
 async function generateRSS() {
     try {
-        // Read and parse opportunities data
+        // Use the modification time of the source file. This is the only thing
+        // that will change the <lastBuildDate> and ensures idempotency.
+        const sourceFileStats = fs.statSync(OPPORTUNITIES_JSON);
+        const lastBuildDate = sourceFileStats.mtime;
+
         const data = JSON.parse(fs.readFileSync(OPPORTUNITIES_JSON, 'utf8'));
         
-        // Filter and normalize opportunities
         const opportunities = data
             .filter(item => {
-                // Skip if no title or archived
-                if (!item["Outreach Activity [Title]"]) return false;
-                if (item.Archived) return false;
-                
-                // Skip past dates unless it's "Ongoing"
-                const date = item.Date;
-                if (date && isDateInPast(date)) return false;
-                
-                return true;
+                return item["Outreach Activity [Title]"] && !item.Archived;
             })
             .map(item => ({
                 title: item["Outreach Activity [Title]"],
@@ -55,20 +33,14 @@ async function generateRSS() {
                 issue: item["Internet Issue"],
                 who: item["Who Can Get Involved"]
             }))
-            .sort((a, b) => {
-                // Sort by date (if available), with "Ongoing" at the end
-                if (a.date === 'Ongoing') return 1;
-                if (b.date === 'Ongoing') return -1;
-                if (!a.date) return 1;
-                if (!b.date) return -1;
-                return new Date(a.date) - new Date(b.date);
-            });
+            // Sort by creation date in descending order (newest first).
+            .sort((a, b) => new Date(b.creationDate) - new Date(a.creationDate))
+            // Limit the feed to the most recent items.
+            .slice(0, FEED_ITEM_LIMIT);
 
         // Generate RSS items
         const items = opportunities.map(opp => {
-            // Use the creation date for the pubDate field
             const pubDate = new Date(opp.creationDate).toUTCString();
-            
             const description = `
                 <p>${opp.description || 'No description available.'}</p>
                 ${opp.type ? `<p><strong>Type:</strong> ${opp.type}</p>` : ''}
@@ -88,6 +60,7 @@ async function generateRSS() {
             `.trim();
         }).join('\n');
 
+
         // Generate the full RSS feed
         const rss = `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -96,7 +69,7 @@ async function generateRSS() {
         <link>${SITE_URL}</link>
         <description>Latest opportunities to get involved with Internet Society initiatives</description>
         <language>en-us</language>
-        <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
+        <lastBuildDate>${lastBuildDate.toUTCString()}</lastBuildDate>
         <atom:link href="${SITE_URL}/data/opportunities.rss" rel="self" type="application/rss+xml" />
         ${items}
     </channel>
@@ -107,7 +80,8 @@ async function generateRSS() {
         fs.writeFileSync(OUTPUT_FILE, rss);
         console.log(`RSS feed generated successfully at ${OUTPUT_FILE}`);
         
-    } catch (error) {
+    } catch (error)
+    {
         console.error('Error generating RSS feed:', error);
         process.exit(1);
     }
