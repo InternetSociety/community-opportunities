@@ -17,24 +17,40 @@ function escapeICalText(text) {
         .replace(/,/g, '\\,');
 }
 
+// Helper function to check if a date string has time components
+function hasTimeComponent(dateString) {
+    if (!dateString) return false;
+    // Check if the date string includes a time component (HH:MM or HH:MM:SS)
+    return /\d{1,2}:\d{2}(:\d{2})?/.test(dateString);
+}
+
 // Helper function to format date for iCal
 function formatDateForICal(dateString, isStart = true) {
     if (!dateString || dateString.toLowerCase() === 'ongoing') {
         // For ongoing events, set a date far in the future
         const date = new Date();
         date.setFullYear(date.getFullYear() + 10); // 10 years from now
-        return date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+        return { value: date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z', isAllDay: false };
     }
     
     try {
         const date = new Date(dateString);
-        if (isNaN(date.getTime())) return '';
+        if (isNaN(date.getTime())) return { value: '', isAllDay: false };
         
-        // Format as YYYYMMDDTHHmmssZ (UTC)
-        return date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+        // If the date string doesn't have time components, treat as all-day event
+        if (!hasTimeComponent(dateString)) {
+            // Format as YYYYMMDD for all-day events
+            const yyyy = date.getUTCFullYear();
+            const mm = String(date.getUTCMonth() + 1).padStart(2, '0');
+            const dd = String(date.getUTCDate()).padStart(2, '0');
+            return { value: `${yyyy}${mm}${dd}`, isAllDay: true };
+        }
+        
+        // Format as YYYYMMDDTHHmmssZ (UTC) for timed events
+        return { value: date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z', isAllDay: false };
     } catch (e) {
         console.warn('Error formatting date for iCal:', dateString, e);
-        return '';
+        return { value: '', isAllDay: false };
     }
 }
 
@@ -78,8 +94,8 @@ async function generateICal() {
             const uid = uuidv4();
             const now = new Date();
             const created = now.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
-            const startDate = opp.Date;
-            const endDate = opp.Date; // Same as start date if not specified
+            const startDate = formatDateForICal(opp.Date, true);
+            const endDate = formatDateForICal(opp.Date, false); // Same as start date if not specified
             
             // Create event description with additional details
             let description = opp["Opportunity [Description]"] || 'No description available.';
@@ -94,19 +110,42 @@ async function generateICal() {
             }
             if (opp.Link) description += `\n\nMore info: ${opp.Link}`;
             
-            return `
+            // Format the event with appropriate DTSTART/DTEND based on whether it's an all-day event
+            let event = `
 BEGIN:VEVENT
 UID:${uid}
 DTSTAMP:${created}
-DTSTART:${formatDateForICal(startDate)}
-DTEND:${formatDateForICal(endDate, false)}
-SUMMARY:${escapeICalText(opp["Outreach Activity [Title]"])}
+`;
+
+            // Add DTSTART with or without time based on isAllDay
+            if (startDate.isAllDay) {
+                event += `DTSTART;VALUE=DATE:${startDate.value}\n`;
+            } else {
+                event += `DTSTART:${startDate.value}\n`;
+            }
+
+            // Add DTEND with or without time based on isAllDay
+            if (endDate.isAllDay) {
+                // For all-day events, DTEND is exclusive, so we add one day
+                const endDateObj = new Date(opp.Date);
+                endDateObj.setDate(endDateObj.getDate() + 1);
+                const yyyy = endDateObj.getUTCFullYear();
+                const mm = String(endDateObj.getUTCMonth() + 1).padStart(2, '0');
+                const dd = String(endDateObj.getUTCDate()).padStart(2, '0');
+                event += `DTEND;VALUE=DATE:${yyyy}${mm}${dd}\n`;
+            } else {
+                event += `DTEND:${endDate.value}\n`;
+            }
+
+            event += `SUMMARY:${escapeICalText(opp["Outreach Activity [Title]"])}
 DESCRIPTION:${escapeICalText(description)}
 URL:${opp.Link || SITE_URL}
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
             `.trim();
+            
+            return event;
         }).join('\n');
 
         // Generate the full iCal file
