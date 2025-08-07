@@ -65,10 +65,22 @@ jobs:
               writer.writerow(cols)
               writer.writerows(rows_list)
 
-          # Write JSON
+          # Write JSON with consistent sorting
           json_path = os.path.join(out_dir, 'opportunities.json')
-          with open(json_path, 'w', encoding='utf-8') as f:
-              json.dump(rows_json, f, ensure_ascii=False, indent=2)
+          # Convert to JSON string with consistent key ordering and indentation
+          new_json = json.dumps(rows_json, ensure_ascii=False, indent=2, sort_keys=True)
+          
+          # Only write if the content has changed
+          if os.path.exists(json_path):
+              with open(json_path, 'r', encoding='utf-8') as f:
+                  current_json = f.read()
+              if json.loads(current_json) == json.loads(new_json):
+                  print('No changes in data, skipping JSON write')
+                  new_json = None
+          
+          if new_json is not None:
+              with open(json_path, 'w', encoding='utf-8') as f:
+                  f.write(new_json)
           PYCODE
 
       - name: Commit & push if changed
