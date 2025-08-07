@@ -1392,3 +1392,155 @@ color: #24366e;
     header h1 { font-size: 2.2em; }
     .card-grid { grid-template-columns: 1fr; }
 }
+
+/* Audience link and modal styles */
+.action-card .card-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(36, 54, 110, 0.1);
+}
+
+.audience-link-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.audience-link {
+    background: none;
+    border: none;
+    color: #6c757d;
+    font-size: 0.8em;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.audience-link:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+    color: var(--isoc-blue);
+}
+
+.audience-link i {
+    font-size: 0.9em;
+}
+
+/* Modal styles */
+.audience-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10000; /* Ensure it's above other content */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.audience-modal.show {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.audience-modal * {
+    box-sizing: border-box;
+}
+
+/* Ensure the modal is always on top */
+.audience-modal {
+    position: fixed !important;
+}
+
+.audience-modal-content {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    max-width: 90%;
+    width: 400px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    animation: modalFadeIn 0.2s ease-out;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.audience-modal h3 {
+    margin-top: 0;
+    color: var(--isoc-blue);
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.audience-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.audience-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+    margin: 0;
+    padding-left: 0;
+}
+
+.audience-list li:last-child {
+    border-bottom: none;
+}
+
+.audience-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.2s ease;
+}
+
+.audience-modal-close:hover {
+    color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .audience-link span {
+        display: none;
+    }
+    
+    .audience-link i {
+        margin-right: 0;
+    }
+    
+    .audience-modal-content {
+        width: 90%;
+        padding: 20px 15px;
+    }
+}

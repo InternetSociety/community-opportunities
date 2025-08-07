@@ -936,6 +936,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Render a single opportunity card with icons, tags, and structure matching the static version
     function renderOpportunityCard(o) {
+        // Generate a unique ID for the modal
+        const modalId = `audience-modal-${Math.random().toString(36).substr(2, 9)}`;
+        
         // Format tags for region and internet issue
         const tags = [];
         if (o.region) tags.push(`<span class="tag tag-region"><i class="fa-solid fa-map-marker-alt"></i> ${o.region}</span>`);
@@ -983,16 +986,35 @@ document.addEventListener('DOMContentLoaded', function() {
                     ${description}
                     ${whyItMatters}
                 </ul>
-                ${o.link ? `<a href="${o.link}" target="_blank" rel="noopener noreferrer" class="cta-button">
-                    <i class="icon fa-solid ${o.action_text.toLowerCase().includes('sign') ? 'fa-pen-to-square' : 
-                                     o.action_text.toLowerCase().includes('submit') ? 'fa-file-lines' : 
-                                     o.action_text.toLowerCase().includes('apply') ? 'fa-user-plus' : 
-                                     o.action_text.toLowerCase().includes('register') ? 'fa-right-to-bracket' : 
-                                     o.action_text.toLowerCase().includes('learn') ? 'fa-circle-info' : 
-                                     o.action_text.toLowerCase().includes('express') ? 'fa-handshake-angle' : 
-                                     o.action_text.toLowerCase().includes('nominate') ? 'fa-award' : 
-                                     'fa-arrow-right'}"></i>${o.action_text || 'Learn More'}
-                </a>` : ''}
+                <div class="card-footer">
+                    ${o.link ? `<a href="${o.link}" target="_blank" rel="noopener noreferrer" class="cta-button">
+                        <i class="icon fa-solid ${o.action_text.toLowerCase().includes('sign') ? 'fa-pen-to-square' : 
+                                         o.action_text.toLowerCase().includes('submit') ? 'fa-file-lines' : 
+                                         o.action_text.toLowerCase().includes('apply') ? 'fa-user-plus' : 
+                                         o.action_text.toLowerCase().includes('register') ? 'fa-right-to-bracket' : 
+                                         o.action_text.toLowerCase().includes('learn') ? 'fa-circle-info' : 
+                                         o.action_text.toLowerCase().includes('express') ? 'fa-handshake-angle' : 
+                                         o.action_text.toLowerCase().includes('nominate') ? 'fa-award' : 
+                                         'fa-arrow-right'}"></i>${o.action_text || 'Learn More'}
+                    </a>` : ''}
+                    ${o.who_can_get_involved && o.who_can_get_involved.length > 0 ? `
+                        <div class="audience-link-container">
+                            <button class="audience-link" data-modal="${modalId}">
+                                <i class="fa-solid fa-users"></i> Who can participate?
+                            </button>
+                        </div>` : ''}
+                    ${o.who_can_get_involved && o.who_can_get_involved.length > 0 ? `
+                        <div id="${modalId}" class="audience-modal" style="display: none;">
+                            <div class="audience-modal-content">
+                                <span class="audience-modal-close">&times;</span>
+                                <h3>This opportunity is for</h3>
+                                <ul class="audience-list">
+                                    ${o.who_can_get_involved.map(audience => `<li>${audience}</li>`).join('')}
+                                </ul>
+                            </div>
+                        </div>
+                    ` : ''}
+                </div>
             </div>
         `;
     }
@@ -1003,5 +1025,84 @@ document.addEventListener('DOMContentLoaded', function() {
         let encoded = encodeURIComponent(text.toString().toLowerCase());
         // Replace %20 with hyphens and remove any other percent-encoded sequences
         return encoded.replace(/%20/g, '-').replace(/%[0-9A-F]{2}/gi, '').replace(/[^\w-]+/g, '');
+    }
+
+    // Handle audience modal functionality
+    document.addEventListener('click', function handleModalClicks(e) {
+        // Only handle left mouse button clicks
+        if (e.button !== 0) return;
+        
+        const target = e.target;
+        
+        // Open modal when clicking on audience link
+        const audienceLink = target.closest('.audience-link');
+        if (audienceLink) {
+            e.preventDefault();
+            const modalId = audienceLink.getAttribute('data-modal');
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                // Close any open modals first
+                document.querySelectorAll('.audience-modal.show').forEach(m => {
+                    closeModal(m);
+                });
+                
+                // Move modal to body to ensure proper positioning
+                if (modal.parentNode !== document.body) {
+                    document.body.appendChild(modal);
+                }
+                
+                // Show the modal
+                modal.style.display = 'flex';
+                // Small delay to allow display to update before adding show class
+                requestAnimationFrame(() => {
+                    modal.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
+            return;
+        }
+        
+        // Close modal when clicking on close button
+        if (target.closest('.audience-modal-close')) {
+            e.preventDefault();
+            const modal = target.closest('.audience-modal');
+            if (modal) {
+                closeModal(modal);
+            }
+            return;
+        }
+        
+        // Close modal when clicking on the overlay (outside content)
+        if (target.classList.contains('audience-modal')) {
+            const modalContent = target.querySelector('.audience-modal-content');
+            if (modalContent && !modalContent.contains(target)) {
+                closeModal(target);
+            }
+        }
+    });
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            const openModal = document.querySelector('.audience-modal.show');
+            if (openModal) {
+                closeModal(openModal);
+            }
+        }
+    });
+    
+    // Function to handle modal closing with proper cleanup
+    function closeModal(modal) {
+        if (!modal) return;
+        
+        modal.classList.remove('show');
+        // Wait for the transition to complete before hiding
+        setTimeout(() => {
+            modal.style.display = 'none';
+            // Only re-enable scrolling if no other modals are open
+            if (!document.querySelector('.audience-modal.show')) {
+                document.body.style.overflow = '';
+            }
+        }, 200);
     }
 });
