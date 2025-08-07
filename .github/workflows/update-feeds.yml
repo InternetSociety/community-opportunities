@@ -6,10 +6,15 @@ permissions:
 
 on:
   schedule:
-    # Run every hour
+    # Run every hour at minute 5
     - cron: '5 * * * *'
   # Allow manual triggering
   workflow_dispatch:
+
+# Prevent multiple concurrent runs of this workflow
+concurrency:
+  group: update-feeds-${{ github.ref }}
+  cancel-in-progress: true
   
 jobs:
   update-feeds:
@@ -25,16 +30,18 @@ jobs:
         cache: 'npm'
       
     - name: Install dependencies
-      run: npm install date-fns uuid
+      run: npm ci  # Clean install based on package-lock.json
       
     - name: Create data directory if it doesn't exist
       run: mkdir -p data
       
     - name: Generate RSS feed
       run: node scripts/generate_rss.js
+      continue-on-error: true
       
     - name: Generate iCal feed
       run: node scripts/generate_ical.js
+      continue-on-error: true
       
     - name: Commit and push if changes
       run: |

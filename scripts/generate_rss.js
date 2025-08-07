@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { format } = require('date-fns');
+const crypto = require('crypto');
 
 // Configuration
 const OPPORTUNITIES_JSON = path.join(__dirname, '../data/opportunities.json');
@@ -8,15 +8,46 @@ const OUTPUT_FILE = path.join(__dirname, '../data/opportunities.rss');
 const SITE_URL = 'https://opportunities.internetsociety.org';
 const FEED_ITEM_LIMIT = 100;
 
+// Helper function to generate a stable string representation of the data
+function getDataFingerprint(data) {
+    return JSON.stringify(data.map(item => ({
+        title: item["Outreach Activity [Title]"],
+        description: item["Opportunity [Description]"],
+        link: item.Link,
+        date: item.Date,
+        creationDate: item["Creation date"],
+        type: item.Type,
+        region: item.Region,
+        issue: item["Internet Issue"],
+        who: item["Who Can Get Involved"],
+        Archived: item.Archived
+    })));
+}
+
 // Generate RSS feed
 async function generateRSS() {
     try {
-        // Use the modification time of the source file. This is the only thing
-        // that will change the <lastBuildDate> and ensures idempotency.
-        const sourceFileStats = fs.statSync(OPPORTUNITIES_JSON);
-        const lastBuildDate = sourceFileStats.mtime;
-
         const data = JSON.parse(fs.readFileSync(OPPORTUNITIES_JSON, 'utf8'));
+        
+        // Check if the RSS file already exists and get its lastBuildDate
+        let lastBuildDate = new Date();
+        
+        if (fs.existsSync(OUTPUT_FILE)) {
+            const rssContent = fs.readFileSync(OUTPUT_FILE, 'utf8');
+            const lastBuildMatch = rssContent.match(/<lastBuildDate>([^<]+)<\/lastBuildDate>/i);
+            if (lastBuildMatch && lastBuildMatch[1]) {
+                lastBuildDate = new Date(lastBuildMatch[1]);
+            }
+            
+            // Check if the data has actually changed
+            const currentFingerprint = getDataFingerprint(data);
+            const previousFingerprint = rssContent.match(/<!-- DATA_FINGERPRINT:([a-f0-9]+) -->/);
+            
+            if (previousFingerprint && previousFingerprint[1] === crypto.createHash('md5').update(currentFingerprint).digest('hex')) {
+                console.log('No changes in data, keeping existing RSS file');
+                return; // Exit if no changes
+            }
+        }
         
         const opportunities = data
             .filter(item => {
@@ -61,8 +92,14 @@ async function generateRSS() {
         }).join('\n');
 
 
+        // Generate a fingerprint of the current data
+        const dataFingerprint = crypto.createHash('md5')
+            .update(getDataFingerprint(data))
+            .digest('hex');
+            
         // Generate the full RSS feed
         const rss = `<?xml version="1.0" encoding="UTF-8" ?>
+<!-- DATA_FINGERPRINT:${dataFingerprint} -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Opportunities</title>
