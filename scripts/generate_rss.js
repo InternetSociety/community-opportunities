@@ -24,10 +24,31 @@ function getDataFingerprint(data) {
     })));
 }
 
+// Helper function to sanitize text for XML/HTML
+function sanitizeText(text) {
+    if (!text || typeof text !== 'string') return '';
+    return text
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
 // Generate RSS feed
 async function generateRSS() {
     try {
+        // Validate input file exists
+        if (!fs.existsSync(OPPORTUNITIES_JSON)) {
+            throw new Error(`Opportunities data file not found: ${OPPORTUNITIES_JSON}`);
+        }
+        
         const data = JSON.parse(fs.readFileSync(OPPORTUNITIES_JSON, 'utf8'));
+        
+        // Validate data structure
+        if (!Array.isArray(data)) {
+            throw new Error('Invalid data format: expected array of opportunities');
+        }
         
         // Check if the RSS file already exists and get its lastBuildDate
         let lastBuildDate = new Date();
@@ -117,8 +138,7 @@ async function generateRSS() {
         fs.writeFileSync(OUTPUT_FILE, rss);
         console.log(`RSS feed generated successfully at ${OUTPUT_FILE}`);
         
-    } catch (error)
-    {
+    } catch (error) {
         console.error('Error generating RSS feed:', error);
         process.exit(1);
     }
