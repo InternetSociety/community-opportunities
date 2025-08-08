@@ -224,9 +224,11 @@ document.addEventListener('DOMContentLoaded', function() {
             // Apply any saved filters
             if (filters.region || filters.issue || filters.who) {
                 applyFilters();
-                // Show filter badge immediately if filters are active
+                // Show filter badges immediately if filters are active
                 const filterBadge = document.getElementById('filter-badge');
+                const headerFilterBadge = document.getElementById('header-filter-badge');
                 if (filterBadge) filterBadge.style.display = 'block';
+                if (headerFilterBadge) headerFilterBadge.style.display = 'block';
             } else {
                 renderSectionsByType(opportunities);
             }
@@ -531,8 +533,9 @@ document.addEventListener('DOMContentLoaded', function() {
             return regionMatch && issueMatch && whoMatch;
         });
         
-        // Show/hide filter badge based on active filters
+        // Show/hide filter badges based on active filters
         const filterBadge = document.getElementById('filter-badge');
+        const headerFilterBadge = document.getElementById('header-filter-badge');
         const hasActiveFilters = filters.region || filters.issue || filters.who;
         
         if (filterBadge) {
@@ -540,6 +543,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 filterBadge.style.display = 'block';
             } else {
                 filterBadge.style.display = 'none';
+            }
+        }
+        
+        if (headerFilterBadge) {
+            if (hasActiveFilters) {
+                headerFilterBadge.style.display = 'block';
+            } else {
+                headerFilterBadge.style.display = 'none';
             }
         }
         
@@ -732,8 +743,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
             
-            // Show the filter badge to indicate active filters are causing no results
+            // Show the filter badges to indicate active filters are causing no results
             const filterBadge = document.getElementById('filter-badge');
+            const headerFilterBadge = document.getElementById('header-filter-badge');
             if (filterBadge) {
                 filterBadge.style.display = 'block';
                 // Update the badge count to show number of active filters
@@ -741,6 +753,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (filterBadge.querySelector('span')) {
                     filterBadge.querySelector('span').textContent = activeFilterCount;
                 }
+            }
+            if (headerFilterBadge) {
+                headerFilterBadge.style.display = 'block';
             }
             
             return; // Exit early since there are no opportunities to display
