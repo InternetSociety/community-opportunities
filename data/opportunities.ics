@@ -29,25 +29,6 @@ STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:ff8745e5-b048-555b-8901-c1a1e4871d02
-DTSTAMP:20250723T095952Z
-DTSTART;VALUE=DATE:20250807
-DTEND;VALUE=DATE:20250808
-SUMMARY:Internet Society's New Advocacy Strategy – Session 2
-DESCRIPTION:Learn about our new Advocacy Strategy—a bold\, collaborative effort to s
- trengthen our ability to influence the decisions that shape the Internet
- ’s future. Whether you're a long-time advocate or just getting started\,
-  your voice and actions matter. Join us to discover how you can play a k
- ey role in advancing our shared mission and defending what makes the Int
- ernet a force for good.\\n\\nType: Events & Workshops\\nRegion: Global\\
- nInternet Issue: Policy\\nWho Can Get Involved: Individual Members\, Cha
- pter Leaders\, Organization Members\, Alumni\\n\\nMore info: https://iso
- c.zoom.us/meeting/register/qPhFqyaFShiI9xpowJ5fkQ#/registration
-URL:https://isoc.zoom.us/meeting/register/qPhFqyaFShiI9xpowJ5fkQ#/registration
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
 UID:482a6822-c85f-508c-bdcf-c5b9ebee96f8
 DTSTAMP:20250730T091239Z
 DTSTART;VALUE=DATE:20250831
