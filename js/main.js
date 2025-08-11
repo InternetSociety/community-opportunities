@@ -560,8 +560,22 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize the application when DOM is loaded
     init();
     
-    // Add event delegation for calendar links
+    // Add event delegation for subscription links
     document.addEventListener('click', function(e) {
+        // Handle subscription dialog links
+        if (e.target.closest('.subscription-link')) {
+            e.preventDefault();
+            const link = e.target.closest('.subscription-link');
+            const feedType = link.getAttribute('data-feed-type');
+            const feedUrl = link.getAttribute('data-feed-url');
+            
+            // Convert relative URL to absolute URL
+            const absoluteUrl = feedUrl.startsWith('http') ? feedUrl : new URL(feedUrl, window.location.origin).href;
+            
+            showSubscriptionDialog(feedType, absoluteUrl);
+            return;
+        }
+        
         if (e.target.closest('.add-to-calendar')) {
             e.preventDefault();
             const link = e.target.closest('.add-to-calendar');
@@ -1115,9 +1129,203 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
             modal.style.display = 'none';
             // Only re-enable scrolling if no other modals are open
-            if (!document.querySelector('.audience-modal.show')) {
+            if (!document.querySelector('.audience-modal.show, .subscription-modal.show')) {
                 document.body.style.overflow = '';
             }
         }, 200);
     }
+    
+    // Subscription dialog functionality
+    function showSubscriptionDialog(feedType, feedUrl) {
+        // Remove any existing subscription modal
+        const existingModal = document.getElementById('subscription-modal');
+        if (existingModal) {
+            existingModal.remove();
+        }
+        
+        // Create modal HTML
+        const modal = document.createElement('div');
+        modal.id = 'subscription-modal';
+        modal.className = 'subscription-modal';
+        
+        const isRSS = feedType === 'rss';
+        const feedTitle = isRSS ? 'RSS Feed' : 'Calendar Feed (iCal)';
+        const feedDescription = isRSS 
+            ? 'Stay updated with the latest Internet Society opportunities'
+            : 'Add upcoming Internet Society events to your calendar';
+        
+        // Popular RSS readers and calendar apps with verified subscription URLs
+        const popularApps = isRSS ? [
+            { name: 'Feedly', url: `https://feedly.com/i/subscription/feed/${encodeURIComponent(feedUrl)}`, icon: 'fas fa-rss' },
+            { name: 'Inoreader', url: `https://www.inoreader.com/feed/${encodeURIComponent(feedUrl)}`, icon: 'fas fa-rss' },
+            { name: 'The Old Reader', url: `https://theoldreader.com/feeds/subscribe?url=${encodeURIComponent(feedUrl)}`, icon: 'fas fa-rss' }
+        ] : [
+            { name: 'Google Calendar', url: `https://calendar.google.com/calendar/u/0/r?cid=${encodeURIComponent(feedUrl)}`, icon: 'fab fa-google' },
+            { name: 'Apple Calendar', url: `webcal://${feedUrl.replace(/^https?:\/\//, '')}`, icon: 'fab fa-apple' }
+        ];
+        
+        modal.innerHTML = `
+            <div class="subscription-modal-content">
+                <span class="subscription-modal-close">&times;</span>
+                <div class="subscription-header">
+                    <div class="subscription-icon">
+                        <i class="${isRSS ? 'fas fa-rss' : 'fas fa-calendar-alt'}"></i>
+                    </div>
+                    <h3>Subscribe to ${feedTitle}</h3>
+                    <p class="subscription-description">${feedDescription}</p>
+                </div>
+                
+                <div class="subscription-section">
+                    <h4><i class="fas fa-copy"></i> Copy Feed URL</h4>
+                    <div class="url-copy-container">
+                        <input type="text" class="feed-url-input" value="${feedUrl}" readonly>
+                        <button class="copy-url-btn" data-url="${feedUrl}">
+                            <i class="fas fa-copy"></i>
+                            <span class="copy-text">Copy</span>
+                        </button>
+                    </div>
+                    <p class="copy-instruction">Copy this URL and paste it into your preferred ${isRSS ? 'RSS reader' : 'calendar app'}.</p>
+                </div>
+                
+                <div class="subscription-section">
+                    <h4><i class="fas fa-external-link-alt"></i> Quick Subscribe</h4>
+                    <p class="quick-subscribe-description">Click on your preferred app to subscribe directly:</p>
+                    <div class="popular-apps">
+                        ${popularApps.map(app => `
+                            <a href="${app.url}" target="_blank" rel="noopener noreferrer" class="app-link">
+                                <i class="${app.icon}"></i>
+                                <span>${app.name}</span>
+                            </a>
+                        `).join('')}
+                    </div>
+                </div>
+                
+                <div class="subscription-section manual-instructions">
+                    <h4><i class="fas fa-info-circle"></i> Manual Instructions</h4>
+                    <div class="instruction-content">
+                        ${isRSS ? `
+                            <p><strong>For most RSS readers:</strong></p>
+                            <ol>
+                                <li>Open your RSS reader app</li>
+                                <li>Look for "Add feed", "Subscribe", or "+" button</li>
+                                <li>Paste the copied URL</li>
+                                <li>Confirm the subscription</li>
+                            </ol>
+                        ` : `
+                            <p><strong>For most calendar apps:</strong></p>
+                            <ol>
+                                <li>Open your calendar application</li>
+                                <li>Look for "Add calendar" or "Subscribe to calendar"</li>
+                                <li>Paste the copied URL</li>
+                                <li>The events will appear in your calendar</li>
+                            </ol>
+                        `}
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        // Add modal to body
+        document.body.appendChild(modal);
+        
+        // Show modal with animation
+        requestAnimationFrame(() => {
+            modal.style.display = 'flex';
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        // Add event listeners for modal
+        const closeBtn = modal.querySelector('.subscription-modal-close');
+        const copyBtn = modal.querySelector('.copy-url-btn');
+        const urlInput = modal.querySelector('.feed-url-input');
+        
+        // Close modal handlers
+        closeBtn.addEventListener('click', () => closeSubscriptionModal(modal));
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeSubscriptionModal(modal);
+            }
+        });
+        
+        // Copy URL functionality
+        copyBtn.addEventListener('click', () => {
+            urlInput.select();
+            urlInput.setSelectionRange(0, 99999); // For mobile devices
+            
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    // Show success feedback
+                    const originalText = copyBtn.querySelector('.copy-text').textContent;
+                    const copyIcon = copyBtn.querySelector('i');
+                    
+                    copyBtn.querySelector('.copy-text').textContent = 'Copied!';
+                    copyIcon.className = 'fas fa-check';
+                    copyBtn.classList.add('copied');
+                    
+                    setTimeout(() => {
+                        copyBtn.querySelector('.copy-text').textContent = originalText;
+                        copyIcon.className = 'fas fa-copy';
+                        copyBtn.classList.remove('copied');
+                    }, 2000);
+                } else {
+                    throw new Error('Copy command failed');
+                }
+            } catch (err) {
+                // Fallback for modern browsers
+                if (navigator.clipboard) {
+                    navigator.clipboard.writeText(feedUrl).then(() => {
+                        const originalText = copyBtn.querySelector('.copy-text').textContent;
+                        const copyIcon = copyBtn.querySelector('i');
+                        
+                        copyBtn.querySelector('.copy-text').textContent = 'Copied!';
+                        copyIcon.className = 'fas fa-check';
+                        copyBtn.classList.add('copied');
+                        
+                        setTimeout(() => {
+                            copyBtn.querySelector('.copy-text').textContent = originalText;
+                            copyIcon.className = 'fas fa-copy';
+                            copyBtn.classList.remove('copied');
+                        }, 2000);
+                    }).catch(() => {
+                        // Show fallback message
+                        alert('Please manually copy the URL from the text field above.');
+                    });
+                } else {
+                    alert('Please manually copy the URL from the text field above.');
+                }
+            }
+        });
+        
+        // Allow clicking on input to select all
+        urlInput.addEventListener('click', () => {
+            urlInput.select();
+        });
+    }
+    
+    function closeSubscriptionModal(modal) {
+        modal.classList.remove('show');
+        setTimeout(() => {
+            modal.style.display = 'none';
+            if (!document.querySelector('.audience-modal.show, .subscription-modal.show')) {
+                document.body.style.overflow = '';
+            }
+            modal.remove();
+        }, 200);
+    }
+    
+    // Close subscription modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            const openModal = document.querySelector('.audience-modal.show');
+            const openSubscriptionModal = document.querySelector('.subscription-modal.show');
+            if (openModal) {
+                closeModal(openModal);
+            }
+            if (openSubscriptionModal) {
+                closeSubscriptionModal(openSubscriptionModal);
+            }
+        }
+    });
 });
