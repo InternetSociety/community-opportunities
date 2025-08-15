@@ -92,8 +92,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:7d4efd2b-79d3-5bd5-ace6-0efbd630b49c
 DTSTAMP:20250806T104015Z
-DTSTART;VALUE=DATE:20250821
-DTEND;VALUE=DATE:20250822
+DTSTART;VALUE=DATE:20250904
+DTEND;VALUE=DATE:20250905
 SUMMARY:Sustainable Peering Infrastructure Funding Program
 DESCRIPTION:Funding availability varies based on the needs of the IXP or organizatio
  n. Grants are available up to USD $70\,000\, and projects can run for up
