@@ -99,6 +99,7 @@ async function generateRSS() {
                 ${opp.region ? `<p><strong>Region:</strong> ${opp.region}</p>` : ''}
                 ${opp.issue ? `<p><strong>Internet Issue:</strong> ${opp.issue}</p>` : ''}
                 ${opp.who ? `<p><strong>Who can get involved:</strong> ${Array.isArray(opp.who) ? opp.who.join(', ') : opp.who}</p>` : ''}
+                ${opp.date ? `<p><strong>Date:</strong> ${opp.date}</p>` : ''}
             `.trim();
 
             return `
