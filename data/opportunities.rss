@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:717342da1c2f18ebd398e6cbef0d5f8a -->
+<!-- DATA_FINGERPRINT:1c2b1d9dd6ad8e3e89bd754510f02bf5 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Opportunities</title>
@@ -9,6 +9,17 @@
         <lastBuildDate>Thu, 07 Aug 2025 16:11:03 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/data/opportunities.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title><![CDATA[Beyond the Net Grant Program]]></title>
+                    <link>https://www.isocfoundation.org/grant-programme/beyond-the-net-grant-program/</link>
+                    <guid>https://www.isocfoundation.org/grant-programme/beyond-the-net-grant-program/</guid>
+                    <pubDate>Mon, 18 Aug 2025 12:52:44 GMT</pubDate>
+                    <description><![CDATA[<p>The Internet Society Foundation’s Beyond the Net Grant Program offers funding to support Internet Society Chapters to implement innovative projects that make a local impact by providing meaningful access to an open, trusted, and globally-connected Internet, as well as strengthening the Chapters’ presence in the surrounding community.</p>
+                <p><strong>Type:</strong> Funding & Support</p>
+                <p><strong>Region:</strong> Global</p>
+                <p><strong>Internet Issue:</strong> Community</p>
+                <p><strong>Who can get involved:</strong> Chapter Leaders</p>]]></description>
+                </item>
+<item>
                     <title><![CDATA[Sustainable Peering Infrastructure Funding Program]]></title>
                     <link>https://www.internetsociety.org/funding-areas/sustainable-peering-ixp/</link>
                     <guid>https://www.internetsociety.org/funding-areas/sustainable-peering-ixp/</guid>

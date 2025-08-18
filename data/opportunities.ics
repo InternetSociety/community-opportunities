@@ -108,4 +108,22 @@ URL:https://www.internetsociety.org/funding-areas/sustainable-peering-ixp/
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
+BEGIN:VEVENT
+UID:1eb07715-d06d-5515-88d1-58d37b83b373
+DTSTAMP:20250818T125244Z
+DTSTART;VALUE=DATE:20251015
+DTEND;VALUE=DATE:20251016
+SUMMARY:Beyond the Net Grant Program
+DESCRIPTION:The Internet Society Foundation’s Beyond the Net Grant Program offers fu
+ nding to support Internet Society Chapters to implement innovative proje
+ cts that make a local impact by providing meaningful access to an open\,
+  trusted\, and globally-connected Internet\, as well as strengthening th
+ e Chapters’ presence in the surrounding community.\\n\\nType: Funding & 
+ Support\\nRegion: Global\\nInternet Issue: Community\\nWho Can Get Invol
+ ved: Chapter Leaders\\n\\nMore info: https://www.isocfoundation.org/gran
+ t-programme/beyond-the-net-grant-program/
+URL:https://www.isocfoundation.org/grant-programme/beyond-the-net-grant-program/
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
 END:VCALENDAR
