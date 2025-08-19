@@ -74,6 +74,24 @@ document.addEventListener('DOMContentLoaded', function() {
             return false; // If we can't parse it, don't filter it out
         }
     }
+    
+    // Check if an opportunity is new (added within the past 6 days)
+    function isOpportunityNew(creationDateString) {
+        if (!creationDateString || typeof creationDateString !== 'string') return false;
+        
+        try {
+            const creationDate = new Date(creationDateString);
+            if (isNaN(creationDate.getTime())) return false; // Invalid date
+            
+            const now = new Date();
+            const sixDaysAgo = new Date(now.getTime() - (6 * 24 * 60 * 60 * 1000));
+            
+            return creationDate >= sixDaysAgo;
+        } catch (e) {
+            console.warn('Error parsing creation date:', creationDateString, e);
+            return false;
+        }
+    }
 
     // Fetch opportunities data
     async function fetchOpportunities() {
@@ -97,7 +115,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 region: item["Region"] || item.region || '',
                 Type: item["Type"] || item.Type || '',
                 date: item["Deadline"] || item["Date"] || item.date || null,
-                archived: item["Archived"] || item.archived || null
+                archived: item["Archived"] || item.archived || null,
+                creation_date: item["Creation date"] || item.creation_date || null
             }))
             // Filter out archived, no-title, or past-dated opportunities (unless marked as "Ongoing")
             .filter(item => {
@@ -888,7 +907,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const titleContainer = document.createElement('div');
             titleContainer.className = 'title-container';
             
-            // Add title link
+            // Check if this opportunity is new and create NEW pill
+            const isNew = isOpportunityNew(opp.creation_date);
+            
+            // Add title link or span
             if (opp.link) {
                 const titleLink = document.createElement('a');
                 titleLink.href = opp.link;
@@ -902,6 +924,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 titleSpan.className = 'title-text';
                 titleSpan.textContent = opp.title;
                 titleContainer.appendChild(titleSpan);
+            }
+            
+            // Add NEW pill if the opportunity is new
+            if (isNew) {
+                const newPill = document.createElement('span');
+                newPill.className = 'new-pill';
+                newPill.textContent = 'NEW';
+                titleContainer.appendChild(newPill);
             }
             
             // Add categories container
@@ -968,6 +998,10 @@ document.addEventListener('DOMContentLoaded', function() {
         // Generate a unique ID for the modal
         const modalId = `audience-modal-${Math.random().toString(36).substr(2, 9)}`;
         
+        // Check if this opportunity is new (within 6 days)
+        const isNew = isOpportunityNew(o.creation_date);
+        const newPill = isNew ? '<span class="new-pill">NEW</span>' : '';
+        
         // Format tags for region and internet issue
         const tags = [];
         if (o.region) tags.push(`<span class="tag tag-region"><i class="fa-solid fa-map-marker-alt"></i> ${o.region}</span>`);
@@ -1006,7 +1040,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return `
             <div class="action-card">
                 <div class="card-header">
-                    <h3>${o.link ? `<a href="${o.link}" target="_blank" rel="noopener noreferrer" class="card-title-link">${o.title}</a>` : o.title}</h3>
+                    <h3>${o.link ? `<a href="${o.link}" target="_blank" rel="noopener noreferrer" class="card-title-link">${o.title}</a>` : o.title}${newPill}</h3>
                     ${calendarIcon}
                 </div>
                 ${tagsHtml}
