@@ -918,20 +918,30 @@ document.addEventListener('DOMContentLoaded', function() {
                 titleLink.rel = 'noopener noreferrer';
                 titleLink.textContent = opp.title;
                 titleLink.className = 'title-link';
+                
+                // Add NEW pill if the opportunity is new
+                if (isNew) {
+                    const newPill = document.createElement('span');
+                    newPill.className = 'new-pill';
+                    newPill.textContent = 'NEW';
+                    titleLink.appendChild(newPill);
+                }
+                
                 titleContainer.appendChild(titleLink);
             } else {
                 const titleSpan = document.createElement('span');
                 titleSpan.className = 'title-text';
                 titleSpan.textContent = opp.title;
+                
+                // Add NEW pill if the opportunity is new
+                if (isNew) {
+                    const newPill = document.createElement('span');
+                    newPill.className = 'new-pill';
+                    newPill.textContent = 'NEW';
+                    titleSpan.appendChild(newPill);
+                }
+                
                 titleContainer.appendChild(titleSpan);
-            }
-            
-            // Add NEW pill if the opportunity is new
-            if (isNew) {
-                const newPill = document.createElement('span');
-                newPill.className = 'new-pill';
-                newPill.textContent = 'NEW';
-                titleContainer.appendChild(newPill);
             }
             
             // Add categories container

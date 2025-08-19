@@ -923,7 +923,9 @@ color: #24366e;
 .title-container .title-link,
 .title-container .title-text {
     font-weight: 600;
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
     color: var(--isoc-blue);
     text-decoration: none;
     line-height: 1.3;
