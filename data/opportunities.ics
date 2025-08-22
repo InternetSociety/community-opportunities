@@ -109,4 +109,21 @@ URL:https://www.isocfoundation.org/grant-programme/beyond-the-net-grant-program/
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
+BEGIN:VEVENT
+UID:e23fbbc7-22e9-5ecb-b120-cd622a39264f
+DTSTAMP:20250822T140002Z
+DTSTART;VALUE=DATE:20250902
+DTEND;VALUE=DATE:20250903
+SUMMARY:Working session: Internet Society's Advocacy Strategy
+DESCRIPTION:Join us for our first working session on the Internet Society's Advocacy
+  Strategy. During this interactive session\, we will work together to id
+ entify a roadmap and concrete steps for the community to implement Objec
+ tive 1\, with a special focus on developing effective tactics.\\n\\nType
+ : Events & Workshops\\nRegion: Global\\nInternet Issue: Internet Governa
+ nce\\nWho Can Get Involved: Individual Members\\n\\nMore info: https://i
+ soc.zoom.us/meeting/register/eho6Qk5ETgOsSzcWboP1Fw
+URL:https://isoc.zoom.us/meeting/register/eho6Qk5ETgOsSzcWboP1Fw
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
 END:VCALENDAR
