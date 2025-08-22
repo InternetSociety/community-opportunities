@@ -53,23 +53,6 @@ STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:90fb9d63-71dc-570d-b3b8-e5cab8078b45
-DTSTAMP:20250731T073748Z
-DTSTART;VALUE=DATE:20250828
-DTEND;VALUE=DATE:20250829
-SUMMARY:2025 Global Encryption Day Grants
-DESCRIPTION:The 2025 GEC grant applications will be accepted from 5 - 28 August (or 
- until 50 grants have been distributed!). Applications are reviewed on a 
- rolling basis by Internet Society staff. We encourage applicants to appl
- y early as funds will be distributed on a first-come\, first-served basi
- s.\\n\\nType: Funding & Support\\nRegion: Global\\nInternet Issue: Secur
- ity\\nWho Can Get Involved: Chapter Leaders\\n\\nMore info: https://www.
- globalencryption.org/global-encryption-day-2025-event-grants/
-URL:https://www.globalencryption.org/global-encryption-day-2025-event-grants/
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
 UID:ca43507e-7b09-5eb4-9e71-b6a58bb96a4e
 DTSTAMP:20250806T101001Z
 DTSTART;VALUE=DATE:20250822
