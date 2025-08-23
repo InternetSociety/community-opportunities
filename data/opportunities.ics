@@ -53,26 +53,6 @@ STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:ca43507e-7b09-5eb4-9e71-b6a58bb96a4e
-DTSTAMP:20250806T101001Z
-DTSTART;VALUE=DATE:20250822
-DTEND;VALUE=DATE:20250823
-SUMMARY:Serve on the Internet Society Board of Trustees Nominations and Election
- s Committees
-DESCRIPTION:The Internet Society requests that the Chapters Advisory Council (ChAC) 
- identify one (1) volunteer to serve on the ISOC Nominations Committee AN
- D one (1) volunteer to serve on the ISOC Elections Committee for the 202
- 5-2026 nominations and elections cycle.\n\nFind the volunteer requiremen
- ts\, time commitments\, and more details about what each committee’s rem
- it is below.\\n\\nType: Urgent: Upcoming Deadlines\\nRegion: Global\\nIn
- ternet Issue: Community\\nWho Can Get Involved: Chapter Leaders\\n\\nMor
- e info: https://isoc.app.box.com/notes/1918440663962?s=1e0cuy48w68flmmbh
- qp6jqr58pq48aja
-URL:https://isoc.app.box.com/notes/1918440663962?s=1e0cuy48w68flmmbhqp6jqr58pq48aja
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
 UID:7d4efd2b-79d3-5bd5-ace6-0efbd630b49c
 DTSTAMP:20250806T104015Z
 DTSTART;VALUE=DATE:20250904
