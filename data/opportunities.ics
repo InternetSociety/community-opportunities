@@ -29,30 +29,6 @@ STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:482a6822-c85f-508c-bdcf-c5b9ebee96f8
-DTSTAMP:20250730T091239Z
-DTSTART;VALUE=DATE:20250831
-DTEND;VALUE=DATE:20250901
-SUMMARY:Endorse the Internet Society’s Contribution to the WSIS+20 Elements Pape
- r
-DESCRIPTION:Thank you to those who have already endorsed our written contribution to
-  the WSIS+20 Elements Paper. We have submitted our document to the Unite
- d Nations and listed the initial endorsers on our website. The opportuni
- ty to endorse this contribution will remain open for a few days while we
-  wait for the co-facilitators to release the WSIS+20 Zero Draft\, which 
- will be the next document in this process. You can endorse the contribut
- ion on behalf of your organization or in your personal capacity.\\n\\nTy
- pe: Urgent: Upcoming Deadlines\\nRegion: Global\\nInternet Issue: Intern
- et Governance\\nWho Can Get Involved: Individual Members\, Chapter Membe
- rs\, Chapter Leaders\, Organization Members\, Alumni\, Internet Pioneers
- \\n\\nMore info: https://www.internetsociety.org/our-work/internet-gover
- nance/world-summit-on-the-information-society-wsis/wsis20-elements-paper
- /
-URL:https://www.internetsociety.org/our-work/internet-governance/world-summit-on-the-information-society-wsis/wsis20-elements-paper/
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
 UID:7d4efd2b-79d3-5bd5-ace6-0efbd630b49c
 DTSTAMP:20250806T104015Z
 DTSTART;VALUE=DATE:20250904
