@@ -82,4 +82,44 @@ URL:https://isoc.zoom.us/meeting/register/eho6Qk5ETgOsSzcWboP1Fw
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
+BEGIN:VEVENT
+UID:663b856d-f73b-5048-a416-6ca3e54cc317
+DTSTAMP:20250901T092325Z
+DTSTART;VALUE=DATE:20250904
+DTEND;VALUE=DATE:20250905
+SUMMARY:WSIS+20 Zero Draft - Open Door Session (10AM UTC)
+DESCRIPTION:Be ready to join these interactive sessions. Together\, we’ll shape the 
+ ideas and language we’ll use to defend the Internet and help make our vi
+ sion a reality. Please circulate this invitation among your chapters and
+  invite your colleagues to register for any of the two sessions. We sche
+ duled them to cover different time zones\; please choose the session tha
+ t better accommodates your schedule.\\n\\nType: Events & Workshops\\nReg
+ ion: Global\\nInternet Issue: Internet Governance\\nWho Can Get Involved
+ : Individual Members\, Chapter Members\, Chapter Leaders\, Organization 
+ Members\, Alumni\\n\\nMore info: https://isoc.zoom.us/meeting/register/n
+ 8v6W86rSHuu3KI8atXaSw#/registration
+URL:https://isoc.zoom.us/meeting/register/n8v6W86rSHuu3KI8atXaSw#/registration
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:4f5c1f38-317c-56fd-8775-d52358b45f9f
+DTSTAMP:20250901T092325Z
+DTSTART;VALUE=DATE:20250904
+DTEND;VALUE=DATE:20250905
+SUMMARY:WSIS+20 Zero Draft - Open Door Session (10PM UTC)
+DESCRIPTION:Be ready to join these interactive sessions. Together\, we’ll shape the 
+ ideas and language we’ll use to defend the Internet and help make our vi
+ sion a reality. Please circulate this invitation among your chapters and
+  invite your colleagues to register for any of the two sessions. We sche
+ duled them to cover different time zones\; please choose the session tha
+ t better accommodates your schedule.\\n\\nType: Events & Workshops\\nReg
+ ion: Global\\nInternet Issue: Internet Governance\\nWho Can Get Involved
+ : Individual Members\, Chapter Members\, Chapter Leaders\, Organization 
+ Members\, Alumni\\n\\nMore info: https://isoc.zoom.us/meeting/register/2
+ JEgAWRBQniBfioSRbxmnA#/registration
+URL:https://isoc.zoom.us/meeting/register/2JEgAWRBQniBfioSRbxmnA#/registration
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
 END:VCALENDAR
