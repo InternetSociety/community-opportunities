@@ -7,28 +7,6 @@ X-WR-CALNAME:Internet Society Opportunities
 X-WR-TIMEZONE:UTC
 X-WR-CALDESC:Upcoming opportunities from Internet Society
 BEGIN:VEVENT
-UID:01cb40c6-244b-58dd-9e3d-7cad7037e30c
-DTSTAMP:20250723T094723Z
-DTSTART;VALUE=DATE:20250901
-DTEND;VALUE=DATE:20250902
-SUMMARY:Expert Group for a Technology Roadmap on Encryption [European Commission
- ]
-DESCRIPTION:The European Commission is forming an informal Expert Group to “focus on
-  current and future technical challenges impacting lawful access to digi
- tal information in the context of criminal investigations”. It is lookin
- g for technically skilled professionals with domain-specific expertise\,
-  especially in cybersecurity\, telecom\, big data analysis\, digital for
- ensics\, fundamental rights\, and data technologies.\\n\\nType: Urgent: 
- Upcoming Deadlines\\nRegion: Europe\\nInternet Issue: Security\\nWho Can
-  Get Involved: Individual Members\, Chapter Members\, Chapter Leaders\, 
- Organization Members\, Alumni\\n\\nMore info: https://ec.europa.eu/trans
- parency/expert-groups-register/screen/expert-groups/consult?lang=en&grou
- pID=4005&fromCallsApplication=true
-URL:https://ec.europa.eu/transparency/expert-groups-register/screen/expert-groups/consult?lang=en&groupID=4005&fromCallsApplication=true
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
 UID:7d4efd2b-79d3-5bd5-ace6-0efbd630b49c
 DTSTAMP:20250806T104015Z
 DTSTART;VALUE=DATE:20250904
