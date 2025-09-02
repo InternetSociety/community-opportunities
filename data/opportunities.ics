@@ -100,4 +100,39 @@ URL:https://isoc.zoom.us/meeting/register/2JEgAWRBQniBfioSRbxmnA#/registration
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
+BEGIN:VEVENT
+UID:90457c85-4920-56bf-8b32-e43bece99965
+DTSTAMP:20250902T095424Z
+DTSTART;VALUE=DATE:20250925
+DTEND;VALUE=DATE:20250926
+SUMMARY:Special Interest Group (SIG) Selection Process Q&A Open House #1
+DESCRIPTION:SIG topic leadership team provides an overview of the topic\, campaigns 
+ for support and answers questions regarding their proposals with the Int
+ ernet Society community.\\n\\nType: Events & Workshops\\nRegion: Global\
+ \nInternet Issue: Community\\nWho Can Get Involved: Individual Members\,
+  Chapter Members\, Chapter Leaders\, Alumni\\n\\nMore info: https://isoc
+ .zoom.us/meeting/register/StdTBqLtSIyJZ6DEgldU4Q#/registration
+URL:https://isoc.zoom.us/meeting/register/StdTBqLtSIyJZ6DEgldU4Q#/registration
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:4e38f332-d7e1-51cb-800d-dc0b14746596
+DTSTAMP:20250902T095848Z
+DTSTART;VALUE=DATE:20250910
+DTEND;VALUE=DATE:20250911
+SUMMARY:Early Career Fellowship Symposium 2025
+DESCRIPTION:Join us at the Symposium for our exciting panels grouped around the most
+  pressing Internet challenges we face today. The Fellows will share thei
+ r amazing projects and their expertise on wider Internet issues\, showca
+ sing all they have learned throughout the program and beyond.\\n\\nType:
+  Events & Workshops\\nRegion: Global\\nInternet Issue: Community\\nWho C
+ an Get Involved: Individual Members\, Chapter Members\, Chapter Leaders\
+ , Alumni\, Fellows\\n\\nMore info: https://events.zoom.us/ev/AuwwvFHDqkF
+ 7kQ2IkF6wcoecIXl_CWHJF98TZMm2nxtijScP6Ksi~AuUbAO_VW0xGgd1oInc4BXyeAm5IcH
+ BVXflMevYhQKlD9hrwWsPOxOzX0w
+URL:https://events.zoom.us/ev/AuwwvFHDqkF7kQ2IkF6wcoecIXl_CWHJF98TZMm2nxtijScP6Ksi~AuUbAO_VW0xGgd1oInc4BXyeAm5IcHBVXflMevYhQKlD9hrwWsPOxOzX0w
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
 END:VCALENDAR
