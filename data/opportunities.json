@@ -23,7 +23,7 @@
     "Opportunity [Description]": "Hear from our community expert, Flávio Wagner from our Brazil Chapter, how the IGF has evolved over its 20 years of existence and join a lively discussion on which role the IGF should play in the future, and how.",
     "Outreach Activity [Title]": "Community Dialogue: The Evolution of the Internet Governance Forum (IGF)",
     "Region": "Global",
-    "Type": "Events & Workshops",
+    "Type": "Events & Working Sessions",
     "Who Can Get Involved": "Individual Members, Chapter Members, Chapter Leaders, Organization Members, Alumni",
     "Why It Matters": "The global community is taking stock of two decades of progress toward achieving the WSIS vision and the IGF mandate is up for renewal."
   },
@@ -65,7 +65,7 @@
     "Opportunity [Description]": "Learn about our new Advocacy Strategy—a bold, collaborative effort to strengthen our ability to influence the decisions that shape the Internet’s future. Whether you're a long-time advocate or just getting started, your voice and actions matter. Join us to discover how you can play a key role in advancing our shared mission and defending what makes the Internet a force for good.",
     "Outreach Activity [Title]": "Internet Society's New Advocacy Strategy – Session 1",
     "Region": "Global",
-    "Type": "Events & Workshops",
+    "Type": "Events & Working Sessions",
     "Who Can Get Involved": "Individual Members, Chapter Leaders, Organization Members, Alumni",
     "Why It Matters": "As threats to an open, globally connected Internet grow, our collective voice and strategic action are more critical than ever."
   },
@@ -79,7 +79,7 @@
     "Opportunity [Description]": "Learn about our new Advocacy Strategy—a bold, collaborative effort to strengthen our ability to influence the decisions that shape the Internet’s future. Whether you're a long-time advocate or just getting started, your voice and actions matter. Join us to discover how you can play a key role in advancing our shared mission and defending what makes the Internet a force for good.",
     "Outreach Activity [Title]": "Internet Society's New Advocacy Strategy – Session 2",
     "Region": "Global",
-    "Type": "Events & Workshops",
+    "Type": "Events & Working Sessions",
     "Who Can Get Involved": "Individual Members, Chapter Leaders, Organization Members, Alumni",
     "Why It Matters": "As threats to an open, globally connected Internet grow, our collective voice and strategic action are more critical than ever."
   },
@@ -177,7 +177,7 @@
     "Opportunity [Description]": "Join us for our first working session on the Internet Society's Advocacy Strategy. During this interactive session, we will work together to identify a roadmap and concrete steps for the community to implement Objective 1, with a special focus on developing effective tactics.",
     "Outreach Activity [Title]": "Working session: Internet Society's Advocacy Strategy",
     "Region": "Global",
-    "Type": "Events & Workshops",
+    "Type": "Events & Working Sessions",
     "Who Can Get Involved": "Individual Members",
     "Why It Matters": "Help shape the Internet Society's advocacy strategy."
   },
@@ -191,7 +191,7 @@
     "Opportunity [Description]": "Be ready to join these interactive sessions. Together, we’ll shape the ideas and language we’ll use to defend the Internet and help make our vision a reality. Please circulate this invitation among your chapters and invite your colleagues to register for any of the two sessions. We scheduled them to cover different time zones; please choose the session that better accommodates your schedule.",
     "Outreach Activity [Title]": "WSIS+20 Zero Draft - Open Door Session (10AM UTC)",
     "Region": "Global",
-    "Type": "Events & Workshops",
+    "Type": "Events & Working Sessions",
     "Who Can Get Involved": "Individual Members, Chapter Members, Chapter Leaders, Organization Members, Alumni",
     "Why It Matters": "This Zero Draft is crucial because it contains the first set of proposed language that government delegations will use in their negotiations. The objective is to agree on a final document to be adopted in December during the WSIS+20 High-Level Meeting."
   },
@@ -205,7 +205,7 @@
     "Opportunity [Description]": "Be ready to join these interactive sessions. Together, we’ll shape the ideas and language we’ll use to defend the Internet and help make our vision a reality. Please circulate this invitation among your chapters and invite your colleagues to register for any of the two sessions. We scheduled them to cover different time zones; please choose the session that better accommodates your schedule.",
     "Outreach Activity [Title]": "WSIS+20 Zero Draft - Open Door Session (10PM UTC)",
     "Region": "Global",
-    "Type": "Events & Workshops",
+    "Type": "Events & Working Sessions",
     "Who Can Get Involved": "Individual Members, Chapter Members, Chapter Leaders, Organization Members, Alumni",
     "Why It Matters": "This Zero Draft is crucial because it contains the first set of proposed language that government delegations will use in their negotiations. The objective is to agree on a final document to be adopted in December during the WSIS+20 High-Level Meeting."
   },
@@ -219,7 +219,7 @@
     "Opportunity [Description]": "SIG topic leadership team provides an overview of the topic, campaigns for support and answers questions regarding their proposals with the Internet Society community.",
     "Outreach Activity [Title]": "Special Interest Group (SIG) Selection Process Q&A Open House #1",
     "Region": "Global",
-    "Type": "Events & Workshops",
+    "Type": "Events & Working Sessions",
     "Who Can Get Involved": "Individual Members, Chapter Members, Chapter Leaders, Alumni",
     "Why It Matters": "Let your voice be heard, ask questions and be ready to vote on your favorite Special Interest Groups."
   },
@@ -233,8 +233,22 @@
     "Opportunity [Description]": "Join us at the Symposium for our exciting panels grouped around the most pressing Internet challenges we face today. The Fellows will share their amazing projects and their expertise on wider Internet issues, showcasing all they have learned throughout the program and beyond.",
     "Outreach Activity [Title]": "Early Career Fellowship Symposium 2025",
     "Region": "Global",
-    "Type": "Events & Workshops",
+    "Type": "Events & Working Sessions",
     "Who Can Get Involved": "Individual Members, Chapter Members, Chapter Leaders, Alumni, Fellows",
     "Why It Matters": "The Internet Society Early Career Fellowship aims to empower the next generation of Internet champions around the globe who will advocate for the Internet to be for everyone, everywhere."
+  },
+  {
+    "Action [CTA]": "Contact your MEP (Member of the European Parliament)",
+    "Archived": null,
+    "Creation date": "2025-09-03T11:50:45Z",
+    "Date": "2025-09-12",
+    "Internet Issue": "Privacy",
+    "Link": "https://fightchatcontrol.eu/#contact-tool",
+    "Opportunity [Description]": "Take part in a coordinated European effort to stop a new EU proposal that would break end-to-end encryption. Fight Chat Control, a citizen-led initiative, provides resources and support to contact your national governments and media to prevent the passage of this harmful \"Chat Control\" regulation.",
+    "Outreach Activity [Title]": "Protect European digital privacy",
+    "Region": "Europe",
+    "Type": "External (Non-ISOC)",
+    "Who Can Get Involved": "Individual Members, Chapter Members, Chapter Leaders, Alumni",
+    "Why It Matters": "The \"Chat Control\" proposal would mandate scanning of all private digital communications, including encrypted messages and photos. This threatens fundamental privacy rights and digital security for all EU citizens."
   }
 ]
