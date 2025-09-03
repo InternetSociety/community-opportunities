@@ -54,11 +54,11 @@ DESCRIPTION:Be ready to join these interactive sessions. Together\, we’ll shap
  sion a reality. Please circulate this invitation among your chapters and
   invite your colleagues to register for any of the two sessions. We sche
  duled them to cover different time zones\; please choose the session tha
- t better accommodates your schedule.\\n\\nType: Events & Workshops\\nReg
- ion: Global\\nInternet Issue: Internet Governance\\nWho Can Get Involved
- : Individual Members\, Chapter Members\, Chapter Leaders\, Organization 
- Members\, Alumni\\n\\nMore info: https://isoc.zoom.us/meeting/register/n
- 8v6W86rSHuu3KI8atXaSw#/registration
+ t better accommodates your schedule.\\n\\nType: Events & Working Session
+ s\\nRegion: Global\\nInternet Issue: Internet Governance\\nWho Can Get I
+ nvolved: Individual Members\, Chapter Members\, Chapter Leaders\, Organi
+ zation Members\, Alumni\\n\\nMore info: https://isoc.zoom.us/meeting/reg
+ ister/n8v6W86rSHuu3KI8atXaSw#/registration
 URL:https://isoc.zoom.us/meeting/register/n8v6W86rSHuu3KI8atXaSw#/registration
 STATUS:CONFIRMED
 TRANSP:OPAQUE
@@ -74,11 +74,11 @@ DESCRIPTION:Be ready to join these interactive sessions. Together\, we’ll shap
  sion a reality. Please circulate this invitation among your chapters and
   invite your colleagues to register for any of the two sessions. We sche
  duled them to cover different time zones\; please choose the session tha
- t better accommodates your schedule.\\n\\nType: Events & Workshops\\nReg
- ion: Global\\nInternet Issue: Internet Governance\\nWho Can Get Involved
- : Individual Members\, Chapter Members\, Chapter Leaders\, Organization 
- Members\, Alumni\\n\\nMore info: https://isoc.zoom.us/meeting/register/2
- JEgAWRBQniBfioSRbxmnA#/registration
+ t better accommodates your schedule.\\n\\nType: Events & Working Session
+ s\\nRegion: Global\\nInternet Issue: Internet Governance\\nWho Can Get I
+ nvolved: Individual Members\, Chapter Members\, Chapter Leaders\, Organi
+ zation Members\, Alumni\\n\\nMore info: https://isoc.zoom.us/meeting/reg
+ ister/2JEgAWRBQniBfioSRbxmnA#/registration
 URL:https://isoc.zoom.us/meeting/register/2JEgAWRBQniBfioSRbxmnA#/registration
 STATUS:CONFIRMED
 TRANSP:OPAQUE
@@ -91,10 +91,10 @@ DTEND;VALUE=DATE:20250926
 SUMMARY:Special Interest Group (SIG) Selection Process Q&A Open House #1
 DESCRIPTION:SIG topic leadership team provides an overview of the topic\, campaigns 
  for support and answers questions regarding their proposals with the Int
- ernet Society community.\\n\\nType: Events & Workshops\\nRegion: Global\
- \nInternet Issue: Community\\nWho Can Get Involved: Individual Members\,
-  Chapter Members\, Chapter Leaders\, Alumni\\n\\nMore info: https://isoc
- .zoom.us/meeting/register/StdTBqLtSIyJZ6DEgldU4Q#/registration
+ ernet Society community.\\n\\nType: Events & Working Sessions\\nRegion: 
+ Global\\nInternet Issue: Community\\nWho Can Get Involved: Individual Me
+ mbers\, Chapter Members\, Chapter Leaders\, Alumni\\n\\nMore info: https
+ ://isoc.zoom.us/meeting/register/StdTBqLtSIyJZ6DEgldU4Q#/registration
 URL:https://isoc.zoom.us/meeting/register/StdTBqLtSIyJZ6DEgldU4Q#/registration
 STATUS:CONFIRMED
 TRANSP:OPAQUE
@@ -109,12 +109,30 @@ DESCRIPTION:Join us at the Symposium for our exciting panels grouped around the 
   pressing Internet challenges we face today. The Fellows will share thei
  r amazing projects and their expertise on wider Internet issues\, showca
  sing all they have learned throughout the program and beyond.\\n\\nType:
-  Events & Workshops\\nRegion: Global\\nInternet Issue: Community\\nWho C
- an Get Involved: Individual Members\, Chapter Members\, Chapter Leaders\
- , Alumni\, Fellows\\n\\nMore info: https://events.zoom.us/ev/AuwwvFHDqkF
- 7kQ2IkF6wcoecIXl_CWHJF98TZMm2nxtijScP6Ksi~AuUbAO_VW0xGgd1oInc4BXyeAm5IcH
- BVXflMevYhQKlD9hrwWsPOxOzX0w
+  Events & Working Sessions\\nRegion: Global\\nInternet Issue: Community\
+ \nWho Can Get Involved: Individual Members\, Chapter Members\, Chapter L
+ eaders\, Alumni\, Fellows\\n\\nMore info: https://events.zoom.us/ev/Auww
+ vFHDqkF7kQ2IkF6wcoecIXl_CWHJF98TZMm2nxtijScP6Ksi~AuUbAO_VW0xGgd1oInc4BXy
+ eAm5IcHBVXflMevYhQKlD9hrwWsPOxOzX0w
 URL:https://events.zoom.us/ev/AuwwvFHDqkF7kQ2IkF6wcoecIXl_CWHJF98TZMm2nxtijScP6Ksi~AuUbAO_VW0xGgd1oInc4BXyeAm5IcHBVXflMevYhQKlD9hrwWsPOxOzX0w
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:b98adfca-7cb8-58b2-9b4f-e1be34f9bd58
+DTSTAMP:20250903T115045Z
+DTSTART;VALUE=DATE:20250912
+DTEND;VALUE=DATE:20250913
+SUMMARY:Protect European digital privacy
+DESCRIPTION:Take part in a coordinated European effort to stop a new EU proposal tha
+ t would break end-to-end encryption. Fight Chat Control\, a citizen-led 
+ initiative\, provides resources and support to contact your national gov
+ ernments and media to prevent the passage of this harmful "Chat Control"
+  regulation.\\n\\nType: External (Non-ISOC)\\nRegion: Europe\\nInternet 
+ Issue: Privacy\\nWho Can Get Involved: Individual Members\, Chapter Memb
+ ers\, Chapter Leaders\, Alumni\\n\\nMore info: https://fightchatcontrol.
+ eu/#contact-tool
+URL:https://fightchatcontrol.eu/#contact-tool
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
