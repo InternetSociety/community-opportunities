@@ -242,7 +242,7 @@
     "Archived": null,
     "Creation date": "2025-09-03T11:50:45Z",
     "Date": "2025-09-12",
-    "Internet Issue": "Privacy",
+    "Internet Issue": "Privacy, Security",
     "Link": "https://fightchatcontrol.eu/#contact-tool",
     "Opportunity [Description]": "Take part in a coordinated European effort to stop a new EU proposal that would break end-to-end encryption. Fight Chat Control, a citizen-led initiative, provides resources and support to contact your national governments and media to prevent the passage of this harmful \"Chat Control\" regulation.",
     "Outreach Activity [Title]": "Protect European digital privacy",
@@ -250,5 +250,19 @@
     "Type": "External (Non-ISOC)",
     "Who Can Get Involved": "Individual Members, Chapter Members, Chapter Leaders, Alumni",
     "Why It Matters": "The \"Chat Control\" proposal would mandate scanning of all private digital communications, including encrypted messages and photos. This threatens fundamental privacy rights and digital security for all EU citizens."
+  },
+  {
+    "Action [CTA]": "Join the Coalition",
+    "Archived": null,
+    "Creation date": "2025-09-04T07:11:29Z",
+    "Date": "Ongoing",
+    "Internet Issue": "Privacy, Security",
+    "Link": "https://www.globalencryption.org/join/",
+    "Opportunity [Description]": "Some governments and organizations are pushing to weaken encryption, which would create a dangerous precedent that compromises the security of billions of people worldwide. Actions in one country that undermine encryption threaten all of us.\n\nWith over 400 members distributed across 103 countries, the Global Encryption Coalition promotes and defends encryption in key countries and multilateral fora where it is under threat. It also supports efforts by companies to offer encrypted services to their users.",
+    "Outreach Activity [Title]": "Join the Global Encryption Coalition",
+    "Region": "Global",
+    "Type": "Ongoing Opportunities",
+    "Who Can Get Involved": "Individual Members, Chapter Members, Chapter Leaders, Organization Members, Alumni",
+    "Why It Matters": "Strong encryption is the foundation for the security of people, information and the Internet’s infrastructure."
   }
 ]
