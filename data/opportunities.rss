@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:e6a067cd70d64f6f389a41996ef186db -->
+<!-- DATA_FINGERPRINT:6ca07fe24fabcb94f9abc97599dfd23c -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Opportunities</title>
@@ -9,6 +9,18 @@
         <lastBuildDate>Thu, 07 Aug 2025 16:11:03 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/data/opportunities.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title><![CDATA[Internet Society Board Meeting No. 190]]></title>
+                    <link>https://www.internetsociety.org/board-of-trustees/meetings/190-2/</link>
+                    <guid>https://www.internetsociety.org/board-of-trustees/meetings/190-2/</guid>
+                    <pubDate>Fri, 05 Sep 2025 06:46:08 GMT</pubDate>
+                    <description><![CDATA[<p>The Board of Trustees invites the Internet Society community to join public sessions of its meetings as observers. These sessions enable attendees to listen in, but not participate in the discussion. See the agenda for the board meeting to determine which sessions are open to observers. Executive Sessions are closed meetings.</p>
+                <p><strong>Type:</strong> Events & Working Sessions</p>
+                <p><strong>Region:</strong> Global</p>
+                <p><strong>Internet Issue:</strong> Community</p>
+                <p><strong>Who can get involved:</strong> Individual Members, Chapter Members, Chapter Leaders, Organization Members, Alumni</p>
+                <p><strong>Date:</strong> 2025-09-07</p>]]></description>
+                </item>
+<item>
                     <title><![CDATA[Join the Global Encryption Coalition]]></title>
                     <link>https://www.globalencryption.org/join/</link>
                     <guid>https://www.globalencryption.org/join/</guid>

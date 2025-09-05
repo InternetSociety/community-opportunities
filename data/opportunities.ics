@@ -77,4 +77,23 @@ URL:https://fightchatcontrol.eu/#contact-tool
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
+BEGIN:VEVENT
+UID:c3f89d37-e8bf-5fb1-801e-a1a6717b972a
+DTSTAMP:20250905T064608Z
+DTSTART;VALUE=DATE:20250907
+DTEND;VALUE=DATE:20250908
+SUMMARY:Internet Society Board Meeting No. 190
+DESCRIPTION:The Board of Trustees invites the Internet Society community to join pub
+ lic sessions of its meetings as observers. These sessions enable attende
+ es to listen in\, but not participate in the discussion. See the agenda 
+ for the board meeting to determine which sessions are open to observers.
+  Executive Sessions are closed meetings.\\n\\nType: Events & Working Ses
+ sions\\nRegion: Global\\nInternet Issue: Community\\nWho Can Get Involve
+ d: Individual Members\, Chapter Members\, Chapter Leaders\, Organization
+  Members\, Alumni\\n\\nMore info: https://www.internetsociety.org/board-
+ of-trustees/meetings/190-2/
+URL:https://www.internetsociety.org/board-of-trustees/meetings/190-2/
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
 END:VCALENDAR
