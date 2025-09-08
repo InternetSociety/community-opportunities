@@ -41,6 +41,22 @@ STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
+UID:7766a6e3-0d2a-5711-aca8-09fe2afca118
+DTSTAMP:20250908T121019Z
+DTSTART;VALUE=DATE:20251016
+DTEND;VALUE=DATE:20251017
+SUMMARY:Special Interest Group (SIG) Selection Process Q&A Open House #2
+DESCRIPTION:SIG topic leadership team provides an overview of the topic\, campaigns 
+ for support and answers questions regarding their proposals with the Int
+ ernet Society community.\\n\\nType: Events & Working Sessions\\nRegion: 
+ Global\\nInternet Issue: Community\\nWho Can Get Involved: Individual Me
+ mbers\, Chapter Members\, Chapter Leaders\, Alumni\\n\\nMore info: https
+ ://isoc.zoom.us/meeting/register/6M5fb319RmKZMiKVzLgD7w#/registration
+URL:https://isoc.zoom.us/meeting/register/6M5fb319RmKZMiKVzLgD7w#/registration
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
 UID:4e38f332-d7e1-51cb-800d-dc0b14746596
 DTSTAMP:20250902T095848Z
 DTSTART;VALUE=DATE:20250910
