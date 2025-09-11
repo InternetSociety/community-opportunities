@@ -57,25 +57,6 @@ STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:4e38f332-d7e1-51cb-800d-dc0b14746596
-DTSTAMP:20250902T095848Z
-DTSTART;VALUE=DATE:20250910
-DTEND;VALUE=DATE:20250911
-SUMMARY:Early Career Fellowship Symposium 2025
-DESCRIPTION:Join us at the Symposium for our exciting panels grouped around the most
-  pressing Internet challenges we face today. The Fellows will share thei
- r amazing projects and their expertise on wider Internet issues\, showca
- sing all they have learned throughout the program and beyond.\\n\\nType:
-  Events & Working Sessions\\nRegion: Global\\nInternet Issue: Community\
- \nWho Can Get Involved: Individual Members\, Chapter Members\, Chapter L
- eaders\, Alumni\, Fellows\\n\\nMore info: https://events.zoom.us/ev/Auww
- vFHDqkF7kQ2IkF6wcoecIXl_CWHJF98TZMm2nxtijScP6Ksi~AuUbAO_VW0xGgd1oInc4BXy
- eAm5IcHBVXflMevYhQKlD9hrwWsPOxOzX0w
-URL:https://events.zoom.us/ev/AuwwvFHDqkF7kQ2IkF6wcoecIXl_CWHJF98TZMm2nxtijScP6Ksi~AuUbAO_VW0xGgd1oInc4BXyeAm5IcHBVXflMevYhQKlD9hrwWsPOxOzX0w
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
 UID:b98adfca-7cb8-58b2-9b4f-e1be34f9bd58
 DTSTAMP:20250903T115045Z
 DTSTART;VALUE=DATE:20250912
