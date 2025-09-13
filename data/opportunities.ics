@@ -57,24 +57,6 @@ STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:b98adfca-7cb8-58b2-9b4f-e1be34f9bd58
-DTSTAMP:20250903T115045Z
-DTSTART;VALUE=DATE:20250912
-DTEND;VALUE=DATE:20250913
-SUMMARY:Protect European digital privacy
-DESCRIPTION:Take part in a coordinated European effort to stop a new EU proposal tha
- t would break end-to-end encryption. Fight Chat Control\, a citizen-led 
- initiative\, provides resources and support to contact your national gov
- ernments and media to prevent the passage of this harmful "Chat Control"
-  regulation.\\n\\nType: External (Non-ISOC)\\nRegion: Europe\\nInternet 
- Issue: Privacy\, Security\\nWho Can Get Involved: Individual Members\, C
- hapter Members\, Chapter Leaders\, Alumni\\n\\nMore info: https://fightc
- hatcontrol.eu/#contact-tool
-URL:https://fightchatcontrol.eu/#contact-tool
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
 UID:994f77b2-4ab4-5f90-85ba-1fad531380e7
 DTSTAMP:20250909T202304Z
 DTSTART;VALUE=DATE:20250926
