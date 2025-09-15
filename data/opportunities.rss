@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:8ee491fcfd5ffed9b1c66350f7b38307 -->
+<!-- DATA_FINGERPRINT:ebcc2c0e3cca436905061a19daace3c2 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Opportunities</title>
@@ -9,6 +9,18 @@
         <lastBuildDate>Thu, 07 Aug 2025 16:11:03 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/data/opportunities.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title><![CDATA[Working Session: Internet Society Advocacy Strategy]]></title>
+                    <link>https://isoc.zoom.us/meeting/register/fmKIrJleQrqO1WmZsaps2Q#/registration</link>
+                    <guid>https://isoc.zoom.us/meeting/register/fmKIrJleQrqO1WmZsaps2Q#/registration</guid>
+                    <pubDate>Mon, 15 Sep 2025 08:24:07 GMT</pubDate>
+                    <description><![CDATA[<p>This second working session will focus on Objective 2 of the Internet Society Advocacy Strategy: Promote Affordable, Reliable, and Resilient Access: Create an environment that enables people and communities to connect themselves and promote an Internet that is affordable, reliable, and resilient. We will work together to identify a roadmap and concrete steps for our community to implement Objective 2, with a special focus on developing effective tactics.</p>
+                <p><strong>Type:</strong> Events & Working Sessions</p>
+                <p><strong>Region:</strong> Global</p>
+                <p><strong>Internet Issue:</strong> Connectivity, How the Internet Works</p>
+                <p><strong>Who can get involved:</strong> Individual Members, Chapter Members, Chapter Leaders, Organization Members, Alumni</p>
+                <p><strong>Date:</strong> 2025-10-01</p>]]></description>
+                </item>
+<item>
                     <title><![CDATA[Input on Age Verification and Online Safety Policy Brief]]></title>
                     <link>https://app.smartsheet.com/b/form/90a611e458c1424fbd4d35dc0c1cb0cf</link>
                     <guid>https://app.smartsheet.com/b/form/90a611e458c1424fbd4d35dc0c1cb0cf</guid>
@@ -140,7 +152,7 @@ With over 400 members distributed across 103 countries, the Global Encryption Co
                 <p><strong>Region:</strong> Global</p>
                 <p><strong>Internet Issue:</strong> Community</p>
                 <p><strong>Who can get involved:</strong> Chapter Leaders</p>
-                <p><strong>Date:</strong> 2025-10-15</p>]]></description>
+                <p><strong>Date:</strong> 2025-09-09</p>]]></description>
                 </item>
 <item>
                     <title><![CDATA[Sustainable Peering Infrastructure Funding Program]]></title>

@@ -7,24 +7,6 @@ X-WR-CALNAME:Internet Society Opportunities
 X-WR-TIMEZONE:UTC
 X-WR-CALDESC:Upcoming opportunities from Internet Society
 BEGIN:VEVENT
-UID:1eb07715-d06d-5515-88d1-58d37b83b373
-DTSTAMP:20250818T125244Z
-DTSTART;VALUE=DATE:20251015
-DTEND;VALUE=DATE:20251016
-SUMMARY:Beyond the Net Grant Program
-DESCRIPTION:The Internet Society Foundation’s Beyond the Net Grant Program offers fu
- nding to support Internet Society Chapters to implement innovative proje
- cts that make a local impact by providing meaningful access to an open\,
-  trusted\, and globally-connected Internet\, as well as strengthening th
- e Chapters’ presence in the surrounding community.\\n\\nType: Funding & 
- Support\\nRegion: Global\\nInternet Issue: Community\\nWho Can Get Invol
- ved: Chapter Leaders\\n\\nMore info: https://www.isocfoundation.org/gran
- t-programme/beyond-the-net-grant-program/
-URL:https://www.isocfoundation.org/grant-programme/beyond-the-net-grant-program/
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
 UID:90457c85-4920-56bf-8b32-e43bece99965
 DTSTAMP:20250902T095424Z
 DTSTART;VALUE=DATE:20250925
@@ -71,6 +53,27 @@ DESCRIPTION:We look to the Internet Society community for comments and feedback 
  tion Members\, Alumni\\n\\nMore info: https://app.smartsheet.com/b/form/
  90a611e458c1424fbd4d35dc0c1cb0cf
 URL:https://app.smartsheet.com/b/form/90a611e458c1424fbd4d35dc0c1cb0cf
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:35626915-f6a6-59fb-84fc-05f99ab6b422
+DTSTAMP:20250915T082407Z
+DTSTART;VALUE=DATE:20251001
+DTEND;VALUE=DATE:20251002
+SUMMARY:Working Session: Internet Society Advocacy Strategy
+DESCRIPTION:This second working session will focus on Objective 2 of the Internet So
+ ciety Advocacy Strategy: Promote Affordable\, Reliable\, and Resilient A
+ ccess: Create an environment that enables people and communities to conn
+ ect themselves and promote an Internet that is affordable\, reliable\, a
+ nd resilient. We will work together to identify a roadmap and concrete s
+ teps for our community to implement Objective 2\, with a special focus o
+ n developing effective tactics.\\n\\nType: Events & Working Sessions\\nR
+ egion: Global\\nInternet Issue: Connectivity\, How the Internet Works\\n
+ Who Can Get Involved: Individual Members\, Chapter Members\, Chapter Lea
+ ders\, Organization Members\, Alumni\\n\\nMore info: https://isoc.zoom.u
+ s/meeting/register/fmKIrJleQrqO1WmZsaps2Q#/registration
+URL:https://isoc.zoom.us/meeting/register/fmKIrJleQrqO1WmZsaps2Q#/registration
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
