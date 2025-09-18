@@ -41,8 +41,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:994f77b2-4ab4-5f90-85ba-1fad531380e7
 DTSTAMP:20250909T202304Z
-DTSTART;VALUE=DATE:20250926
-DTEND;VALUE=DATE:20250927
+DTSTART;VALUE=DATE:20251002
+DTEND;VALUE=DATE:20251003
 SUMMARY:Input on Age Verification and Online Safety Policy Brief
 DESCRIPTION:We look to the Internet Society community for comments and feedback on h
  ow to make the brief most useful for policymakers in their region and to
