@@ -60,8 +60,18 @@ document.addEventListener('DOMContentLoaded', function() {
         if (dateString.trim().toLowerCase() === 'ongoing') return false;
         
         try {
-            // Try to parse the date
-            const date = new Date(dateString);
+            let date;
+            
+            // For date strings in YYYY-MM-DD format, parse them as local dates
+            // to avoid timezone conversion issues
+            if (/^\d{4}-\d{2}-\d{2}$/.test(dateString)) {
+                const [year, month, day] = dateString.split('-').map(Number);
+                date = new Date(year, month - 1, day); // month is 0-indexed
+            } else {
+                // For other date formats, use the original logic
+                date = new Date(dateString);
+            }
+            
             if (isNaN(date.getTime())) return false; // Invalid date
             
             // Create today's date at midnight for comparison
@@ -607,8 +617,16 @@ document.addEventListener('DOMContentLoaded', function() {
             // Check if the date string includes a time component
             const hasTime = /\d{1,2}:\d{2}/.test(dateStr);
             
-            // Create .ics file content
-            const startDate = new Date(dateStr);
+            // Create .ics file content with proper date parsing
+            let startDate;
+            if (/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) {
+                // For YYYY-MM-DD format, parse as local date
+                const [year, month, day] = dateStr.split('-').map(Number);
+                startDate = new Date(year, month - 1, day);
+            } else {
+                // For other formats, use original parsing
+                startDate = new Date(dateStr);
+            }
             let icsDateFields = [];
             
             if (hasTime) {
@@ -858,6 +876,20 @@ document.addEventListener('DOMContentLoaded', function() {
     function formatDate(dateString) {
         if (!dateString) return '';
         try {
+            // For date strings in YYYY-MM-DD format, parse them as local dates
+            // to avoid timezone conversion issues
+            if (/^\d{4}-\d{2}-\d{2}$/.test(dateString)) {
+                const [year, month, day] = dateString.split('-').map(Number);
+                const date = new Date(year, month - 1, day); // month is 0-indexed
+                
+                return date.toLocaleDateString('en-US', { 
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+            }
+            
+            // For other date formats, use the original logic
             const date = new Date(dateString);
             if (isNaN(date.getTime())) return dateString; // Return original if invalid date
             
@@ -984,7 +1016,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const dateCell = document.createElement('td');
             if (opp.date) {
                 dateCell.textContent = formatDate(opp.date) || 'No date';
-                if (new Date(opp.date) < new Date()) {
+                // Use the same date parsing logic for consistency
+                if (isDateInPast(opp.date)) {
                     dateCell.innerHTML += ' <span class="date-past">(Expired)</span>';
                 }
             } else {
