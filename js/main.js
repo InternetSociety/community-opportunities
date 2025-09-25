@@ -121,7 +121,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (Array.isArray(value)) return value;
                     return value.split(',').map(s => s.trim()).filter(Boolean);
                 })(),
-                internet_issue: item["Internet Issue"] || item.internet_issue || '',
+                internet_issue: (() => {
+                    const value = item["Internet Issue"] || item.internet_issue;
+                    if (!value) return [];
+                    if (Array.isArray(value)) return value;
+                    return value.split(',').map(s => s.trim()).filter(Boolean);
+                })(),
                 region: item["Region"] || item.region || '',
                 Type: item["Type"] || item.Type || '',
                 date: item["Deadline"] || item["Date"] || item.date || null,
@@ -989,11 +994,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             // Add internet issue if available
-            if (opp.internet_issue) {
-                const issuePill = document.createElement('span');
-                issuePill.className = 'table-category issue';
-                issuePill.textContent = opp.internet_issue;
-                categoriesContainer.appendChild(issuePill);
+            if (opp.internet_issue && opp.internet_issue.length > 0) {
+                opp.internet_issue.forEach(issue => {
+                    const issuePill = document.createElement('span');
+                    issuePill.className = 'table-category issue';
+                    issuePill.textContent = issue;
+                    categoriesContainer.appendChild(issuePill);
+                });
             }
             
             // Removed who can get involved pills as per user request
@@ -1048,7 +1055,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // Format tags for region and internet issue
         const tags = [];
         if (o.region) tags.push(`<span class="tag tag-region"><i class="fa-solid fa-map-marker-alt"></i> ${o.region}</span>`);
-        if (o.internet_issue) tags.push(`<span class="tag tag-issue"><i class="fa-solid fa-globe"></i> ${o.internet_issue}</span>`);
+        if (o.internet_issue && o.internet_issue.length > 0) {
+            o.internet_issue.forEach(issue => {
+                tags.push(`<span class="tag tag-issue"><i class="fa-solid fa-globe"></i> ${issue}</span>`);
+            });
+        }
         
         const tagsHtml = tags.length ? `<div class="card-tags">${tags.join('')}</div>` : '';
         
