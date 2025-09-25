@@ -97,4 +97,20 @@ URL:https://isoc.zoom.us/meeting/register/Bs3d-gdUTvGn2bBa1mHjOA#/registration
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
+BEGIN:VEVENT
+UID:4dd140af-367e-57a6-8796-930c1a6e24ee
+DTSTAMP:20250925T084941Z
+DTSTART;VALUE=DATE:20251016
+DTEND;VALUE=DATE:20251017
+SUMMARY:Input on Submarine Cable Resilience Policy Brief
+DESCRIPTION:We look to the Internet Society community for comments and feedback on h
+ ow to make the brief most useful and relevant in your regional contexts.
+ \\n\\nType: Consultations & Surveys\\nRegion: Global\\nInternet Issue: C
+ onnectivity\\nWho Can Get Involved: Individual Members\, Chapter Members
+ \, Chapter Leaders\, Organization Members\, Alumni\\n\\nMore info: https
+ ://app.smartsheet.com/b/form/01997ba6bad17599bc7e90b7e0212f59
+URL:https://app.smartsheet.com/b/form/01997ba6bad17599bc7e90b7e0212f59
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
 END:VCALENDAR
