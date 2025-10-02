@@ -41,27 +41,6 @@ STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:35626915-f6a6-59fb-84fc-05f99ab6b422
-DTSTAMP:20250915T082407Z
-DTSTART;VALUE=DATE:20251001
-DTEND;VALUE=DATE:20251002
-SUMMARY:Working Session: Internet Society Advocacy Strategy
-DESCRIPTION:This second working session will focus on Objective 2 of the Internet So
- ciety Advocacy Strategy: Promote Affordable\, Reliable\, and Resilient A
- ccess: Create an environment that enables people and communities to conn
- ect themselves and promote an Internet that is affordable\, reliable\, a
- nd resilient. We will work together to identify a roadmap and concrete s
- teps for our community to implement Objective 2\, with a special focus o
- n developing effective tactics.\\n\\nType: Events & Working Sessions\\nR
- egion: Global\\nInternet Issue: Connectivity\, How the Internet Works\\n
- Who Can Get Involved: Individual Members\, Chapter Members\, Chapter Lea
- ders\, Organization Members\, Alumni\\n\\nMore info: https://isoc.zoom.u
- s/meeting/register/fmKIrJleQrqO1WmZsaps2Q#/registration
-URL:https://isoc.zoom.us/meeting/register/fmKIrJleQrqO1WmZsaps2Q#/registration
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
 UID:207f6f7e-d9a3-5867-94c8-f88b85f7ec8e
 DTSTAMP:20250918T074519Z
 DTSTART;VALUE=DATE:20251015
