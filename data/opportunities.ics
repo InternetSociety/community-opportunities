@@ -23,24 +23,6 @@ STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-UID:994f77b2-4ab4-5f90-85ba-1fad531380e7
-DTSTAMP:20250909T202304Z
-DTSTART;VALUE=DATE:20251002
-DTEND;VALUE=DATE:20251003
-SUMMARY:Input on Age Verification and Online Safety Policy Brief
-DESCRIPTION:We look to the Internet Society community for comments and feedback on h
- ow to make the brief most useful for policymakers in their region and to
-  ensure the brief sufficiently addresses the risks and potential benefit
- s of age check requirements.\\n\\nType: Consultations & Surveys\\nRegion
- : Global\\nInternet Issue: Policy\, Privacy\, Security\\nWho Can Get Inv
- olved: Individual Members\, Chapter Members\, Chapter Leaders\, Organiza
- tion Members\, Alumni\\n\\nMore info: https://app.smartsheet.com/b/form/
- 90a611e458c1424fbd4d35dc0c1cb0cf
-URL:https://app.smartsheet.com/b/form/90a611e458c1424fbd4d35dc0c1cb0cf
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
 UID:207f6f7e-d9a3-5867-94c8-f88b85f7ec8e
 DTSTAMP:20250918T074519Z
 DTSTART;VALUE=DATE:20251015
