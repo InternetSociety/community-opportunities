@@ -58,22 +58,4 @@ URL:https://app.smartsheet.com/b/form/01997ba6bad17599bc7e90b7e0212f59
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
-BEGIN:VEVENT
-UID:019176a2-6abd-5698-806b-0b6ea0a07787
-DTSTAMP:20251001T073210Z
-DTSTART;VALUE=DATE:20251008
-DTEND;VALUE=DATE:20251009
-SUMMARY:Open Letter: Irish Communications (Interception and Lawful Access) Bill
-DESCRIPTION:We are looking for organizations\, companies\, associations\, and cybers
- ecurity experts from around the world to sign on and demand that the Iri
- sh government protect strong encryption. Please share the call to sign o
- n with your networks.\\n\\nType: Urgent: Upcoming Deadlines\\nRegion: Gl
- obal\\nInternet Issue: Privacy\, Security\\nWho Can Get Involved: Indivi
- dual Members\, Chapter Leaders\, Organization Members\, Alumni\\n\\nMore
-  info: https://docs.google.com/document/d/1kdAuk4Th3rgqYXGHIP7gBvulEjFhr
- OOr9tOA9dDQalg/edit?usp=sharing
-URL:https://docs.google.com/document/d/1kdAuk4Th3rgqYXGHIP7gBvulEjFhrOOr9tOA9dDQalg/edit?usp=sharing
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-END:VEVENT
 END:VCALENDAR
