@@ -118,4 +118,50 @@ URL:https://isoc.zoom.us/meeting/register/_ZVG5_F-TNmbWnnp5K7Xdg#/registration
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
+BEGIN:VEVENT
+UID:24cb449a-99a7-550a-af73-29c0885d5a23
+DTSTAMP:20251013T092707Z
+DTSTART;VALUE=DATE:20251021
+DTEND;VALUE=DATE:20251022
+SUMMARY:Global Encryption Day 2025 - Join Events Organized Worldwide
+DESCRIPTION:In the global movement to protect encryption\, our voices matter and hav
+ e impact. When we raise our voices together\, we inspire and enable othe
+ rs\, including those in power\, to make the choice to address security a
+ nd safety issues without breaking the technologies that billions of peop
+ le rely on every day. \n\nThe threat to encryption has never been greate
+ r. Yet\, the power of our shared voices to protect encryption is stronge
+ r than ever. Encryption faced numerous significant threats in 2025\, but
+  thanks to the efforts of the Internet Society\, along with the Global E
+ ncryption Coalition and other advocates\, we were able to mitigate those
+  threats.\\n\\nType: Events & Working Sessions\\nRegion: Global\\nIntern
+ et Issue: Privacy\, Security\\nWho Can Get Involved: Individual Members\
+ , Chapter Members\, Chapter Leaders\, Organization Members\, Alumni\\n\\
+ nMore info: https://www.globalencryption.org/events/ged/ged-2025/events/
+URL:https://www.globalencryption.org/events/ged/ged-2025/events/
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:da9ed440-47d7-5272-a638-3856b688774c
+DTSTAMP:20251013T092920Z
+DTSTART;VALUE=DATE:20251021
+DTEND;VALUE=DATE:20251022
+SUMMARY:Global Encryption Day 2025 - Organize an Event
+DESCRIPTION:In the global movement to protect encryption\, our voices matter and hav
+ e impact. When we raise our voices together\, we inspire and enable othe
+ rs\, including those in power\, to make the choice to address security a
+ nd safety issues without breaking the technologies that billions of peop
+ le rely on every day. \n\nThe threat to encryption has never been greate
+ r. Yet\, the power of our shared voices to protect encryption is stronge
+ r than ever. Encryption faced numerous significant threats in 2025\, but
+  thanks to the efforts of the Internet Society\, along with the Global E
+ ncryption Coalition and other advocates\, we were able to mitigate those
+  threats.\\n\\nType: Urgent: Upcoming Deadlines\\nRegion: Global\\nInter
+ net Issue: Privacy\, Security\\nWho Can Get Involved: Chapter Leaders\\n
+ \\nMore info: https://www.globalencryption.org/events/ged/ged-2025/event
+ -registration/
+URL:https://www.globalencryption.org/events/ged/ged-2025/event-registration/
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
 END:VCALENDAR
