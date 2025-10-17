@@ -7,38 +7,6 @@ X-WR-CALNAME:Internet Society Opportunities
 X-WR-TIMEZONE:UTC
 X-WR-CALDESC:Upcoming opportunities from Internet Society
 BEGIN:VEVENT
-UID:7766a6e3-0d2a-5711-aca8-09fe2afca118
-DTSTAMP:20250908T121019Z
-DTSTART;VALUE=DATE:20251016
-DTEND;VALUE=DATE:20251017
-SUMMARY:Special Interest Group (SIG) Selection Process Q&A Open House #2
-DESCRIPTION:SIG topic leadership team provides an overview of the topic\, campaigns 
- for support and answers questions regarding their proposals with the Int
- ernet Society community.\\n\\nType: Events & Working Sessions\\nRegion: 
- Global\\nInternet Issue: Community\\nWho Can Get Involved: Individual Me
- mbers\, Chapter Members\, Chapter Leaders\, Alumni\\n\\nMore info: https
- ://isoc.zoom.us/meeting/register/6M5fb319RmKZMiKVzLgD7w#/registration
-URL:https://isoc.zoom.us/meeting/register/6M5fb319RmKZMiKVzLgD7w#/registration
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-UID:4dd140af-367e-57a6-8796-930c1a6e24ee
-DTSTAMP:20250925T084941Z
-DTSTART;VALUE=DATE:20251016
-DTEND;VALUE=DATE:20251017
-SUMMARY:Input on Submarine Cable Resilience Policy Brief
-DESCRIPTION:We look to the Internet Society community for comments and feedback on h
- ow to make the brief most useful and relevant in your regional contexts.
- \\n\\nType: Consultations & Surveys\\nRegion: Global\\nInternet Issue: C
- onnectivity\\nWho Can Get Involved: Individual Members\, Chapter Members
- \, Chapter Leaders\, Organization Members\, Alumni\\n\\nMore info: https
- ://app.smartsheet.com/b/form/01997ba6bad17599bc7e90b7e0212f59
-URL:https://app.smartsheet.com/b/form/01997ba6bad17599bc7e90b7e0212f59
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
 UID:1dd679dc-5a2f-50d2-a20c-764fed46a06e
 DTSTAMP:20251013T074130Z
 DTSTART;VALUE=DATE:20251103
