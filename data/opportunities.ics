@@ -134,4 +134,22 @@ URL:https://docs.google.com/document/d/155TA4jHGSm_JtC-GKdCBKInFFJuJP4an-0K9czX3
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
+BEGIN:VEVENT
+UID:23dc7c28-459a-57b0-a1d9-fef3e8d90480
+DTSTAMP:20251021T075138Z
+DTSTART;VALUE=DATE:20251031
+DTEND;VALUE=DATE:20251101
+SUMMARY:Use our Global Encryption Day Social Toolkit
+DESCRIPTION:This toolkit provides guidance on how to talk about the Global Encryptio
+ n Coalition on social media in the lead-up. It helps you promote and sha
+ re Global Encryption Day on your own social media channels to let the wo
+ rld know that encryption makes people powerful.\\n\\nType: Urgent: Upcom
+ ing Deadlines\\nRegion: Global\\nInternet Issue: Privacy\, Security\\nWh
+ o Can Get Involved: Individual Members\, Chapter Members\, Chapter Leade
+ rs\, Alumni\\n\\nMore info: https://www.globalencryption.org/events/ged/
+ ged-2025/social-toolkit/
+URL:https://www.globalencryption.org/events/ged/ged-2025/social-toolkit/
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
 END:VCALENDAR
