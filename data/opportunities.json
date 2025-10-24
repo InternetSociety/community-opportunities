@@ -460,5 +460,19 @@
     "Type": "Urgent: Upcoming Deadlines",
     "Who Can Get Involved": "Individual Members, Chapter Members, Chapter Leaders, Alumni",
     "Why It Matters": "Without encryption, nothing stays private."
+  },
+  {
+    "Action [CTA]": "Apply to the fellowship",
+    "Archived": null,
+    "Creation date": "2025-10-24T09:27:48Z",
+    "Date": "2025-11-17",
+    "Internet Issue": "Security",
+    "Link": "https://www.internetsociety.org/fellowships/ndss-symposium/",
+    "Opportunity [Description]": "The NDSS Fellowship 2026 will take 20 fellows to the NDSS Symposium in San Diego, California, taking place from 23 to 27 February. The fellowship helps to nurture the next generation of Internet security researchers and practitioners to defend the future of the Internet.",
+    "Outreach Activity [Title]": "Applications are open: NDSS Symposium Fellowship",
+    "Region": "Global",
+    "Type": "Urgent: Upcoming Deadlines",
+    "Who Can Get Involved": "Individual Members",
+    "Why It Matters": "The NDSS Symposium facilitates collaborative sharing of top-tier research on systems security to identify and mitigate potential new security attacks and vulnerabilities."
   }
 ]
