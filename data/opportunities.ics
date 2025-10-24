@@ -106,4 +106,21 @@ URL:https://www.globalencryption.org/events/ged/ged-2025/social-toolkit/
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
+BEGIN:VEVENT
+UID:538f51e9-18da-5201-8500-21de7da0b0d5
+DTSTAMP:20251024T092748Z
+DTSTART;VALUE=DATE:20251117
+DTEND;VALUE=DATE:20251118
+SUMMARY:Applications are open: NDSS Symposium Fellowship
+DESCRIPTION:The NDSS Fellowship 2026 will take 20 fellows to the NDSS Symposium in S
+ an Diego\, California\, taking place from 23 to 27 February. The fellows
+ hip helps to nurture the next generation of Internet security researcher
+ s and practitioners to defend the future of the Internet.\\n\\nType: Urg
+ ent: Upcoming Deadlines\\nRegion: Global\\nInternet Issue: Security\\nWh
+ o Can Get Involved: Individual Members\\n\\nMore info: https://www.inter
+ netsociety.org/fellowships/ndss-symposium/
+URL:https://www.internetsociety.org/fellowships/ndss-symposium/
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
 END:VCALENDAR

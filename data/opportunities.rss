@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:931880a726897e7f7b0f449ea513a4b2 -->
+<!-- DATA_FINGERPRINT:398d49d16396578c7d9b1a74259a6655 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Opportunities</title>
@@ -9,6 +9,18 @@
         <lastBuildDate>Thu, 07 Aug 2025 16:11:03 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/data/opportunities.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title><![CDATA[Applications are open: NDSS Symposium Fellowship]]></title>
+                    <link>https://www.internetsociety.org/fellowships/ndss-symposium/</link>
+                    <guid>https://www.internetsociety.org/fellowships/ndss-symposium/</guid>
+                    <pubDate>Fri, 24 Oct 2025 09:27:48 GMT</pubDate>
+                    <description><![CDATA[<p>The NDSS Fellowship 2026 will take 20 fellows to the NDSS Symposium in San Diego, California, taking place from 23 to 27 February. The fellowship helps to nurture the next generation of Internet security researchers and practitioners to defend the future of the Internet.</p>
+                <p><strong>Type:</strong> Urgent: Upcoming Deadlines</p>
+                <p><strong>Region:</strong> Global</p>
+                <p><strong>Internet Issue:</strong> Security</p>
+                <p><strong>Who can get involved:</strong> Individual Members</p>
+                <p><strong>Date:</strong> 2025-11-17</p>]]></description>
+                </item>
+<item>
                     <title><![CDATA[Use our Global Encryption Day Social Toolkit]]></title>
                     <link>https://www.globalencryption.org/events/ged/ged-2025/social-toolkit/</link>
                     <guid>https://www.globalencryption.org/events/ged/ged-2025/social-toolkit/</guid>
