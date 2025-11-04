@@ -62,4 +62,20 @@ URL:https://www.internetsociety.org/fellowships/ndss-symposium/
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
+BEGIN:VEVENT
+UID:0c5ca49c-60fb-58fa-addd-a396f0c75c52
+DTSTAMP:20251104T110159Z
+DTSTART;VALUE=DATE:20251231
+DTEND;VALUE=DATE:20260101
+SUMMARY:Donate: Let's work together to build the Internet we want!
+DESCRIPTION:Help bridge the digital divide and defend a global\, open Internet for e
+ veryone by giving a donation today.\\n\\nType: Urgent: Upcoming Deadline
+ s\\nRegion: Global\\nInternet Issue: About the Internet Society\\nWho Ca
+ n Get Involved: Individual Members\, Chapter Leaders\, Organization Memb
+ ers\, Alumni\\n\\nMore info: https://donorportal.internetsociety.org/-/X
+ CCANBKT
+URL:https://donorportal.internetsociety.org/-/XCCANBKT
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
 END:VCALENDAR

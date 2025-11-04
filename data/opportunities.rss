@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:951faa99aa5d30d9ed2c69780236fcc4 -->
+<!-- DATA_FINGERPRINT:de14809410cda7ddb582614754b6b712 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Opportunities</title>
@@ -9,6 +9,18 @@
         <lastBuildDate>Thu, 07 Aug 2025 16:11:03 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/data/opportunities.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title><![CDATA[Donate: Let's work together to build the Internet we want!]]></title>
+                    <link>https://donorportal.internetsociety.org/-/XCCANBKT</link>
+                    <guid>https://donorportal.internetsociety.org/-/XCCANBKT</guid>
+                    <pubDate>Tue, 04 Nov 2025 11:01:59 GMT</pubDate>
+                    <description><![CDATA[<p>Help bridge the digital divide and defend a global, open Internet for everyone by giving a donation today.</p>
+                <p><strong>Type:</strong> Urgent: Upcoming Deadlines</p>
+                <p><strong>Region:</strong> Global</p>
+                <p><strong>Internet Issue:</strong> About the Internet Society</p>
+                <p><strong>Who can get involved:</strong> Individual Members, Chapter Leaders, Organization Members, Alumni</p>
+                <p><strong>Date:</strong> 2025-12-31</p>]]></description>
+                </item>
+<item>
                     <title><![CDATA[Applications are open: NDSS Symposium Fellowship]]></title>
                     <link>https://www.internetsociety.org/fellowships/ndss-symposium/</link>
                     <guid>https://www.internetsociety.org/fellowships/ndss-symposium/</guid>
