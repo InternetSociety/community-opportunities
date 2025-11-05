@@ -7,27 +7,6 @@ X-WR-CALNAME:Internet Society Opportunities
 X-WR-TIMEZONE:UTC
 X-WR-CALDESC:Upcoming opportunities from Internet Society
 BEGIN:VEVENT
-UID:f162b42a-4f8f-525a-8c0b-01d12663d20a
-DTSTAMP:20251013T074130Z
-DTSTART;VALUE=DATE:20251104
-DTEND;VALUE=DATE:20251105
-SUMMARY:Join Briefing Session on the Policy Framework for Internet Intermediarie
- s and Content  [Session 2 / 4AM UTC]
-DESCRIPTION:Join a 60-minute briefing on our Policy Framework for Internet Intermedi
- aries and Content\, which outlines the roles of intermediaries\, the imp
- ortance of liability protections\, and key policy recommendations. The s
- ession offers a chance to deepen your understanding\, ask questions\, an
- d exchange ideas to strengthen collective advocacy. (Two time-zone optio
- ns available.)\\n\\nType: Events & Working Sessions\\nRegion: Global\\nI
- nternet Issue: Policy\\nWho Can Get Involved: Individual Members\, Chapt
- er Members\, Chapter Leaders\, Organization Members\, Alumni\\n\\nMore i
- nfo: https://isoc.zoom.us/meeting/register/jggxFZY1QKujbq8mzc9PXw#/regis
- tration
-URL:https://isoc.zoom.us/meeting/register/jggxFZY1QKujbq8mzc9PXw#/registration
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
 UID:8cfd7e7f-8985-516d-b25f-3adb04a2330b
 DTSTAMP:20251013T080434Z
 DTSTART;VALUE=DATE:20251112
