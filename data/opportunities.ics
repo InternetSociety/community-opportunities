@@ -7,24 +7,6 @@ X-WR-CALNAME:Internet Society Opportunities
 X-WR-TIMEZONE:UTC
 X-WR-CALDESC:Upcoming opportunities from Internet Society
 BEGIN:VEVENT
-UID:8cfd7e7f-8985-516d-b25f-3adb04a2330b
-DTSTAMP:20251013T080434Z
-DTSTART;VALUE=DATE:20251112
-DTEND;VALUE=DATE:20251113
-SUMMARY:Join Working Session: Internet Society Advocacy Strategy
-DESCRIPTION:Join our third and final co-creation session — Ensure a Healthy\, Safe\,
-  and Secure Internet — where we’ll collaborate on ideas and tactics to h
- elp protect people online and ensure that policy and business decisions 
- contribute to a trusted Internet.\\n\\nType: Events & Working Sessions\\
- nRegion: Global\\nInternet Issue: Privacy\, Security\\nWho Can Get Invol
- ved: Individual Members\, Chapter Members\, Chapter Leaders\, Organizati
- on Members\, Alumni\\n\\nMore info: https://isoc.zoom.us/meeting/registe
- r/_ZVG5_F-TNmbWnnp5K7Xdg#/registration
-URL:https://isoc.zoom.us/meeting/register/_ZVG5_F-TNmbWnnp5K7Xdg#/registration
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
 UID:538f51e9-18da-5201-8500-21de7da0b0d5
 DTSTAMP:20251024T092748Z
 DTSTART;VALUE=DATE:20251117
@@ -56,44 +38,6 @@ DESCRIPTION:What sets the Internet Society apart is that we do more than advocat
  ers\, Organization Members\, Alumni\\n\\nMore info: https://donorportal.
  internetsociety.org/-/XCCANBKT
 URL:https://donorportal.internetsociety.org/-/XCCANBKT
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-UID:b72fad50-5fe1-5eb9-9404-c689b3239b39
-DTSTAMP:20251105T132645Z
-DTSTART;VALUE=DATE:20251112
-DTEND;VALUE=DATE:20251113
-SUMMARY:Open Door Session 1: WSIS+20 Review (11am UTC)
-DESCRIPTION:The revised outcome document (Rev1) for the WSIS+20 review is expected t
- o be released by 7 November\, and the co-facilitators will hold a virtua
- l stakeholder consultation on 14 November. We invite you to come share y
- our views and highlight key aspects you believe should be included in ou
- r collective Internet Society remarks.\\n\\nType: Events & Working Sessi
- ons\\nRegion: Global\\nInternet Issue: Internet Governance\\nWho Can Get
-  Involved: Individual Members\, Chapter Leaders\, Organization Members\\
- n\\nMore info: https://isoc.zoom.us/webinar/register/WN_BsM4pd26T42PVUM7
- mo2WAQ#/registration
-URL:https://isoc.zoom.us/webinar/register/WN_BsM4pd26T42PVUM7mo2WAQ#/registration
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-UID:43821598-d110-53d0-89e8-81cab590d9fd
-DTSTAMP:20251105T132645Z
-DTSTART;VALUE=DATE:20251112
-DTEND;VALUE=DATE:20251113
-SUMMARY:Open Door Session 2: WSIS+20 Review (11pm UTC)
-DESCRIPTION:The revised outcome document (Rev1) for the WSIS+20 review is expected t
- o be released by 7 November\, and the co-facilitators will hold a virtua
- l stakeholder consultation on 14 November. We invite you to come share y
- our views and highlight key aspects you believe should be included in ou
- r collective Internet Society remarks.\\n\\nType: Events & Working Sessi
- ons\\nRegion: Global\\nInternet Issue: Internet Governance\\nWho Can Get
-  Involved: Individual Members\, Chapter Leaders\, Organization Members\\
- n\\nMore info: https://isoc.zoom.us/webinar/register/WN_8eKuT4v0QJmhhQM2
- 0_aLtA#/registration
-URL:https://isoc.zoom.us/webinar/register/WN_8eKuT4v0QJmhhQM20_aLtA#/registration
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
