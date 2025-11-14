@@ -59,4 +59,22 @@ URL:https://events.zoom.us/ev/AkhVFH4Ltw9nuj7H_E-I87UozDRRjr8XNHBT5k1Bn0TbdfL8jq
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
+BEGIN:VEVENT
+UID:1a3fa249-cc39-5da2-9ff6-85175c8c0c5a
+DTSTAMP:20251114T102929Z
+DTSTART;VALUE=DATE:20251203
+DTEND;VALUE=DATE:20251204
+SUMMARY:Community Day Latin America and the Caribbean
+DESCRIPTION:This session will take a strategic look at how community-led efforts hav
+ e transformed the Internet ecosystem in four key areas: Connectivity\, O
+ nline safety\, Technical Community\, Accesibility and Public Policy.\\n\
+ \nType: Events & Working Sessions\\nRegion: Global\\nInternet Issue: Com
+ munity\\nWho Can Get Involved: Individual Members\, Chapter Members\, Ch
+ apter Leaders\, Organization Members\, Alumni\\n\\nMore info: https://ev
+ ents.zoom.us/ev/Au5TmShdER2hiwJsvmoWYlgngPoDAwCQD0cNXl9NctvPY_xN1dEO~Ahw
+ EJ-6x_T1PLQPwpKbvIPg4GGxljiFvMzO2Ql1CJuOimJAjbHLCSxIBiA
+URL:https://events.zoom.us/ev/Au5TmShdER2hiwJsvmoWYlgngPoDAwCQD0cNXl9NctvPY_xN1dEO~AhwEJ-6x_T1PLQPwpKbvIPg4GGxljiFvMzO2Ql1CJuOimJAjbHLCSxIBiA
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
 END:VCALENDAR
