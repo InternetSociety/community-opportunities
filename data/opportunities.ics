@@ -41,4 +41,22 @@ URL:https://donorportal.internetsociety.org/-/XCCANBKT
 STATUS:CONFIRMED
 TRANSP:OPAQUE
 END:VEVENT
+BEGIN:VEVENT
+UID:94cfe1e6-5d0f-5d07-85f3-2d11833dd406
+DTSTAMP:20251114T102929Z
+DTSTART;VALUE=DATE:20251125
+DTEND;VALUE=DATE:20251126
+SUMMARY:2025 Global Alumni Event
+DESCRIPTION:You will hear directly from alumni who are creating a safer and more acc
+ essible Internet\, and learn more about how the Internet Society Alumni 
+ Network fosters their personal and professional growth.\\n\\nType: Event
+ s & Working Sessions\\nRegion: Global\\nInternet Issue: Community\\nWho 
+ Can Get Involved: Individual Members\, Chapter Members\, Chapter Leaders
+ \, Organization Members\, Alumni\\n\\nMore info: https://events.zoom.us/
+ ev/AkhVFH4Ltw9nuj7H_E-I87UozDRRjr8XNHBT5k1Bn0TbdfL8jq2t~Ai0M0kgXGpEb6Fjz
+ 2iaaoj8EEJb5Pt7vy9yk6z8kwKbD0yypD6X5ASpPzg
+URL:https://events.zoom.us/ev/AkhVFH4Ltw9nuj7H_E-I87UozDRRjr8XNHBT5k1Bn0TbdfL8jq2t~Ai0M0kgXGpEb6Fjz2iaaoj8EEJb5Pt7vy9yk6z8kwKbD0yypD6X5ASpPzg
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
 END:VCALENDAR
