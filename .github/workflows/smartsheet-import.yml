@@ -92,7 +92,7 @@ jobs:
           for sheet_info in SHEETS:
               print(f"Processing sheet {sheet_info['id']}")
               sheet = ss.Sheets.get_sheet(sheet_info['id'])
-              cols = [col.title for col in sheet.columns]
+              cols = [col.title for col in sheet.columns if col.title != 'organizer_email']
 
               rows_csv = []
               rows_json = []
@@ -108,8 +108,21 @@ jobs:
                       skipped_rows += 1
                       continue
                       
-                  # Only include columns that exist in the sheet
-                  row_data = [cell_map.get(col.id, '') for col in sheet.columns]
+                  # Only include approved events for community events
+                  if sheet_info['id'] == 4160691104599940:  # Community events sheet
+                      if row_dict.get('approved') != True:
+                          skipped_rows += 1
+                          continue
+                      
+                  # Remove organizer_email field (don't export to JSON)
+                  if 'organizer_email' in row_dict:
+                      del row_dict['organizer_email']
+                      
+                  # Only include columns that exist in the sheet (excluding organizer_email)
+                  row_data = []
+                  for col in sheet.columns:
+                      if col.title != 'organizer_email':
+                          row_data.append(cell_map.get(col.id, ''))
                   rows_csv.append(row_data)
                   rows_json.append(row_dict)
                   
