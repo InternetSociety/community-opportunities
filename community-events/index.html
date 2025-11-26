@@ -408,6 +408,91 @@
             color: white;
         }
 
+        /* Modal Dialog Styles */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            max-width: 90vw;
+            max-height: 90vh;
+            width: 800px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .modal-close-outside {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: white;
+            border: 1px solid #ddd;
+            font-size: 1em;
+            color: #666;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 50%;
+            transition: all 0.2s;
+            z-index: 10;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-close-outside:hover {
+            background-color: #f8f9fa;
+            border-color: #999;
+            color: var(--isoc-black);
+        }
+
+        .modal-body {
+            padding: 0;
+            height: 650px;
+            overflow: hidden;
+        }
+
+        .modal-body iframe {
+            border: none;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Mobile responsive for modal */
+        @media (max-width: 768px) {
+            .modal-content {
+                width: 95vw;
+                max-height: 95vh;
+            }
+            
+            .modal-close-outside {
+                top: 12px;
+                right: 12px;
+                padding: 6px;
+                font-size: 0.9em;
+                width: 28px;
+                height: 28px;
+            }
+            
+            .modal-body {
+                height: 550px;
+            }
+        }
+
         /* Fix action column header to match other headers */
         .event-table th:last-child {
             background-color: var(--isoc-blue);
@@ -473,6 +558,27 @@
             <button class="sub-btn subscription-link" data-feed-type="ical" data-feed-url="data/events.ics">
                 <i class="fas fa-calendar-alt"></i> Calendar
             </button>
+            <button id="add-event-btn" class="sub-btn">
+                <i class="fas fa-plus"></i> Add your event
+            </button>
+        </div>
+
+        <!-- Modal Dialog for Smartsheet Form -->
+        <div id="event-form-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <button class="modal-close-outside" id="close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="modal-body">
+                    <iframe 
+                        src="https://app.smartsheet.com/b/form/dce8f6c15f1c4a3488952e2d670e4582" 
+                        width="100%" 
+                        height="600px" 
+                        frameborder="0"
+                        title="Add your event form">
+                    </iframe>
+                </div>
+            </div>
         </div>
 
         <div id="events-container">

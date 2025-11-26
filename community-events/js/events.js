@@ -725,5 +725,42 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    // Modal functionality for Add Event button
+    const addEventBtn = document.getElementById('add-event-btn');
+    const modal = document.getElementById('event-form-modal');
+    const closeModalBtn = document.getElementById('close-modal');
+
+    if (addEventBtn && modal) {
+        // Open modal when Add Event button is clicked
+        addEventBtn.addEventListener('click', function() {
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        });
+
+        // Close modal when close button is clicked
+        if (closeModalBtn) {
+            closeModalBtn.addEventListener('click', function() {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Restore scrolling
+            });
+        }
+
+        // Close modal when clicking outside the modal content
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Restore scrolling
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.style.display === 'flex') {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Restore scrolling
+            }
+        });
+    }
+
     init();
 });
