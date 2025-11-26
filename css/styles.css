@@ -1571,6 +1571,41 @@ color: #24366e;
     color: #333;
 }
 
+/* Subscription Button Styles */
+.subscription-controls {
+    max-width: 1024px;
+    margin: 0 auto 15px auto;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.sub-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: white;
+    color: var(--isoc-blue);
+    border: 1px solid var(--isoc-border-color);
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.sub-btn:hover {
+    background-color: #f0f7ff;
+    border-color: var(--isoc-blue);
+    transform: translateY(-1px);
+}
+
+.sub-btn i {
+    font-size: 1em;
+}
+
 /* Subscription Modal Styles */
 .subscription-modal {
     position: fixed;
