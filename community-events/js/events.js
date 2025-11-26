@@ -819,7 +819,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Filter toggle functionality
-    const filterToggleBtn = document.querySelector('.filter-toggle-btn');
+    const filterToggleBtn = document.getElementById('filter-toggle-btn');
     const filtersSection = document.querySelector('.filters-section');
     
     if (filterToggleBtn && filtersSection) {
