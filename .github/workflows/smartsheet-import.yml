@@ -37,67 +37,97 @@ jobs:
           python -m pip install --upgrade pip
           pip install --no-cache-dir smartsheet-python-sdk
 
-      - name: Fetch sheet and write CSV + JSON
+      - name: Fetch sheets and write CSV + JSON
         env:
           SMARTSHEET_TOKEN: ${{ secrets.SMARTSHEET_TOKEN }}
         run: |
           python - <<'PYCODE'
           import os, csv, json, smartsheet
 
-          # Prepare output directory
-          out_dir = 'data'
-          os.makedirs(out_dir, exist_ok=True)
+          SHEETS = [
+              {
+                  'id': 3397443560361860,
+                  'csv': os.path.join('data', 'opportunities.csv'),
+                  'json': os.path.join('data', 'opportunities.json')
+              },
+              {
+                  'id': 4160691104599940,
+                  'csv': os.path.join('community-events', 'data', 'events.csv'),
+                  'json': os.path.join('community-events', 'data', 'events.json')
+              }
+          ]
+
+          def ensure_parent(path):
+              directory = os.path.dirname(path)
+              if directory and not os.path.exists(directory):
+                  os.makedirs(directory, exist_ok=True)
+                  
+          def is_valid_row(row_dict, required_fields):
+              return all(bool(row_dict.get(field)) for field in required_fields if field in row_dict)
+
+          def write_csv(path, columns, rows):
+              ensure_parent(path)
+              with open(path, 'w', newline='', encoding='utf-8') as f:
+                  writer = csv.writer(f)
+                  writer.writerow(columns)
+                  writer.writerows(rows)
+
+          def write_json(path, rows):
+              ensure_parent(path)
+              write_required = True
+              if os.path.exists(path):
+                  with open(path, 'r', encoding='utf-8') as f:
+                      current_data = json.load(f)
+                  if current_data == rows:
+                      print(f'No changes in {path}, skipping JSON write')
+                      write_required = False
+              if write_required:
+                  with open(path, 'w', encoding='utf-8') as f:
+                      json.dump(rows, f, ensure_ascii=False, indent=2, sort_keys=True)
 
           # Initialize Smartsheet client
           token = os.environ['SMARTSHEET_TOKEN']
           ss = smartsheet.Smartsheet(token)
 
-          # Fetch sheet
-          sheet = ss.Sheets.get_sheet(3397443560361860)
-          cols = [col.title for col in sheet.columns]
+          for sheet_info in SHEETS:
+              print(f"Processing sheet {sheet_info['id']}")
+              sheet = ss.Sheets.get_sheet(sheet_info['id'])
+              cols = [col.title for col in sheet.columns]
 
-          # Build rows for CSV and JSON
-          rows_list = []
-          rows_json = []
-          for row in sheet.rows:
-              cell_map = {cell.column_id: cell.value for cell in row.cells}
-              row_vals = [cell_map.get(col.id, '') for col in sheet.columns]
-              rows_list.append(row_vals)
-              rows_json.append({cols[i]: row_vals[i] for i in range(len(cols))})
+              rows_csv = []
+              rows_json = []
+              skipped_rows = 0
+              required_fields = ['title', 'startDate', 'region', 'type', 'category', 'format']
+              
+              for row in sheet.rows:
+                  cell_map = {cell.column_id: cell.value for cell in row.cells}
+                  row_dict = {col.title: cell_map.get(col.id, '') for col in sheet.columns}
+                  
+                  # Skip row if any required field is empty or None
+                  if not is_valid_row(row_dict, required_fields):
+                      skipped_rows += 1
+                      continue
+                      
+                  # Only include columns that exist in the sheet
+                  row_data = [cell_map.get(col.id, '') for col in sheet.columns]
+                  rows_csv.append(row_data)
+                  rows_json.append(row_dict)
+                  
+              if skipped_rows > 0:
+                  print(f"Skipped {skipped_rows} rows with missing required fields")
 
-          # Write CSV
-          csv_path = os.path.join(out_dir, 'opportunities.csv')
-          with open(csv_path, 'w', newline='', encoding='utf-8') as f:
-              writer = csv.writer(f)
-              writer.writerow(cols)
-              writer.writerows(rows_list)
-
-          # Write JSON with consistent sorting
-          json_path = os.path.join(out_dir, 'opportunities.json')
-          # Convert to JSON string with consistent key ordering and indentation
-          new_json = json.dumps(rows_json, ensure_ascii=False, indent=2, sort_keys=True)
-          
-          # Only write if the content has changed
-          if os.path.exists(json_path):
-              with open(json_path, 'r', encoding='utf-8') as f:
-                  current_json = f.read()
-              if json.loads(current_json) == json.loads(new_json):
-                  print('No changes in data, skipping JSON write')
-                  new_json = None
-          
-          if new_json is not None:
-              with open(json_path, 'w', encoding='utf-8') as f:
-                  f.write(new_json)
+              write_csv(sheet_info['csv'], cols, rows_csv)
+              write_json(sheet_info['json'], rows_json)
           PYCODE
-
       - name: Commit & push if changed
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-          if [ -n "$(git status --porcelain data/)" ]; then
-            git add data/
-            git commit -m 'chore: hourly refresh of opportunities data'
+          CHANGED=$(git status --porcelain data/ community-events/data/)
+          if [ -n "$CHANGED" ]; then
+            git add data/ community-events/data/
+            git commit -m 'chore: hourly refresh of data feeds'
             git push
           else
-            echo 'No changes in data/; skipping commit'
+            echo 'No changes in data directories; skipping commit'
           fi

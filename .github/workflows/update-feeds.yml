@@ -47,7 +47,7 @@ jobs:
       run: |
           git config --global user.name 'GitHub Actions'
           git config --global user.email 'actions@github.com'
-          git add data/opportunities.rss data/opportunities.ics
+          git add data/opportunities.rss data/opportunities.ics community-events/data/events.rss community-events/data/events.ics
           # This command checks if there are any staged changes.
           # If there are, it commits and pushes. Otherwise, it does nothing.
           if ! git diff --staged --quiet; then

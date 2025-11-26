@@ -4,7 +4,9 @@ const crypto = require('crypto');
 
 // Configuration
 const OPPORTUNITIES_JSON = path.join(__dirname, '../data/opportunities.json');
-const OUTPUT_FILE = path.join(__dirname, '../data/opportunities.rss');
+const EVENTS_JSON = path.join(__dirname, '../community-events/data/events.json');
+const OPPORTUNITIES_OUTPUT_FILE = path.join(__dirname, '../data/opportunities.rss');
+const EVENTS_OUTPUT_FILE = path.join(__dirname, '../community-events/data/events.rss');
 const SITE_URL = 'https://opportunities.internetsociety.org';
 const FEED_ITEM_LIMIT = 100;
 
@@ -35,88 +37,93 @@ function sanitizeText(text) {
         .replace(/'/g, '&#39;');
 }
 
-// Generate RSS feed
-async function generateRSS() {
+// Process opportunities data
+function processOpportunities(opportunities) {
+    return opportunities.map(opp => ({
+        title: opp['Outreach Activity [Title]'] || 'Untitled Opportunity',
+        description: opp['Opportunity [Description]'] || '',
+        link: opp.Link || SITE_URL,
+        date: opp.Date,
+        type: opp.Type || '',
+        region: opp.Region || '',
+        creationDate: opp['Creation date'],
+        isEvent: false
+    }));
+}
+
+// Process events data
+function processEvents(events) {
+    return events.map(event => ({
+        title: event.title || 'Untitled Event',
+        description: event.description || '',
+        link: event.registrationUrl || SITE_URL,
+        date: event.startDate,
+        type: event.type || '',
+        region: event.region || '',
+        isEvent: true
+    }));
+}
+
+// Generate RSS feed for a specific data type
+async function generateRSSFeed(items, outputFile, feedTitle, feedDescription, selfLink) {
     try {
-        // Validate input file exists
-        if (!fs.existsSync(OPPORTUNITIES_JSON)) {
-            throw new Error(`Opportunities data file not found: ${OPPORTUNITIES_JSON}`);
-        }
-        
-        const data = JSON.parse(fs.readFileSync(OPPORTUNITIES_JSON, 'utf8'));
-        
-        // Validate data structure
-        if (!Array.isArray(data)) {
-            throw new Error('Invalid data format: expected array of opportunities');
-        }
-        
-        // Check if the RSS file already exists and get its lastBuildDate
-        let lastBuildDate = new Date();
-        
-        if (fs.existsSync(OUTPUT_FILE)) {
-            const rssContent = fs.readFileSync(OUTPUT_FILE, 'utf8');
-            const lastBuildMatch = rssContent.match(/<lastBuildDate>([^<]+)<\/lastBuildDate>/i);
-            if (lastBuildMatch && lastBuildMatch[1]) {
-                lastBuildDate = new Date(lastBuildMatch[1]);
-            }
+        // Filter valid items (include "Ongoing" and future dates)
+        const now = new Date();
+        const validItems = items.filter(item => {
+            if (!item.date) return false;
             
-            // Check if the data has actually changed
-            const currentFingerprint = getDataFingerprint(data);
-            const previousFingerprint = rssContent.match(/<!-- DATA_FINGERPRINT:([a-f0-9]+) -->/);
+            // Include "Ongoing" opportunities
+            if (item.date.toLowerCase() === 'ongoing') return true;
             
-            if (previousFingerprint && previousFingerprint[1] === crypto.createHash('md5').update(currentFingerprint).digest('hex')) {
-                console.log('No changes in data, keeping existing RSS file');
-                return; // Exit if no changes
+            try {
+                const itemDate = new Date(item.date);
+                return !isNaN(itemDate.getTime()) && itemDate >= now;
+            } catch (e) {
+                return false;
             }
-        }
+        });
         
-        const opportunities = data
-            .filter(item => {
-                return item["Outreach Activity [Title]"] && !item.Archived;
-            })
-            .map(item => ({
-                title: item["Outreach Activity [Title]"],
-                description: item["Opportunity [Description]"],
-                link: item.Link,
-                date: item.Date,
-                creationDate: item["Creation date"],
-                type: item.Type,
-                region: item.Region,
-                issue: item["Internet Issue"],
-                who: item["Who Can Get Involved"]
-            }))
-            // Sort by creation date in descending order (newest first).
-            .sort((a, b) => new Date(b.creationDate) - new Date(a.creationDate))
-            // Limit the feed to the most recent items.
-            .slice(0, FEED_ITEM_LIMIT);
-
+        // Sort by creation date (newest first)
+        validItems.sort((a, b) => {
+            const aDate = a.creationDate ? new Date(a.creationDate) : new Date(0);
+            const bDate = b.creationDate ? new Date(b.creationDate) : new Date(0);
+            return bDate - aDate;
+        });
+        
+        // Limit number of items
+        const limitedItems = validItems.slice(0, FEED_ITEM_LIMIT);
+        
+        // Always use current date for lastBuildDate
+        const lastBuildDate = new Date();
+        
         // Generate RSS items
-        const items = opportunities.map(opp => {
-            const pubDate = new Date(opp.creationDate).toUTCString();
-            const description = `
-                <p>${opp.description || 'No description available.'}</p>
-                ${opp.type ? `<p><strong>Type:</strong> ${opp.type}</p>` : ''}
-                ${opp.region ? `<p><strong>Region:</strong> ${opp.region}</p>` : ''}
-                ${opp.issue ? `<p><strong>Internet Issue:</strong> ${opp.issue}</p>` : ''}
-                ${opp.who ? `<p><strong>Who can get involved:</strong> ${Array.isArray(opp.who) ? opp.who.join(', ') : opp.who}</p>` : ''}
-                ${opp.date ? `<p><strong>Date:</strong> ${opp.date}</p>` : ''}
-            `.trim();
-
+        const rssItems = limitedItems.map(item => {
+            // Always use creation date for pubDate, fallback to current date if missing
+            const pubDate = item.creationDate ? new Date(item.creationDate).toUTCString() : new Date().toUTCString();
+            
+            // Create a unique ID based on content and date
+            const id = crypto
+                .createHash('md5')
+                .update(JSON.stringify(item))
+                .digest('hex');
+                
             return `
                 <item>
-                    <title><![CDATA[${opp.title}]]></title>
-                    <link>${opp.link.replace(/&/g, '&amp;')}</link>
-                    <guid>${opp.link.replace(/&/g, '&amp;')}</guid>
+                    <title>${sanitizeText(item.title)}</title>
+                    <link>${sanitizeText(item.link)}</link>
+                    <description>${sanitizeText(item.description)}</description>
                     <pubDate>${pubDate}</pubDate>
-                    <description><![CDATA[${description}]]></description>
+                    <guid isPermaLink="false">${id}</guid>
+                    <category>${sanitizeText(item.isEvent ? 'Event' : 'Opportunity')}</category>
+                    <category>${sanitizeText(item.type)}</category>
+                    <category>${sanitizeText(item.region)}</category>
                 </item>
             `.trim();
         }).join('\n');
-
-
+        
         // Generate a fingerprint of the current data
         const dataFingerprint = crypto.createHash('md5')
-            .update(getDataFingerprint(data))
+            .update(JSON.stringify(validItems))
             .digest('hex');
             
         // Generate the full RSS feed
@@ -124,23 +131,70 @@ async function generateRSS() {
 <!-- DATA_FINGERPRINT:${dataFingerprint} -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Internet Society Opportunities</title>
+        <title>${feedTitle}</title>
         <link>${SITE_URL}</link>
-        <description>Latest opportunities to get involved with Internet Society initiatives</description>
+        <description>${feedDescription}</description>
         <language>en-us</language>
         <lastBuildDate>${lastBuildDate.toUTCString()}</lastBuildDate>
-        <atom:link href="${SITE_URL}/data/opportunities.rss" rel="self" type="application/rss+xml" />
-        ${items}
+        <atom:link href="${selfLink}" rel="self" type="application/rss+xml" />
+        ${rssItems}
     </channel>
 </rss>
         `.trim();
 
         // Write the RSS feed to file
-        fs.writeFileSync(OUTPUT_FILE, rss);
-        console.log(`RSS feed generated successfully at ${OUTPUT_FILE}`);
+        console.log(`Found ${validItems.length} valid items for ${feedTitle}`);
+        console.log(`Including ${limitedItems.length} items in the feed`);
+        console.log(`Writing RSS feed to ${outputFile}`);
+        fs.writeFileSync(outputFile, rss);
+        console.log(`RSS feed generated successfully at ${outputFile}`);
+        
+        return { validItems: validItems.length, includedItems: limitedItems.length };
         
     } catch (error) {
-        console.error('Error generating RSS feed:', error);
+        console.error(`Error generating RSS feed for ${feedTitle}:`, error);
+        throw error;
+    }
+}
+
+// Generate RSS feeds
+async function generateRSS() {
+    try {
+        // Read and process opportunities
+        console.log(`Reading opportunities from ${OPPORTUNITIES_JSON}`);
+        const opportunities = JSON.parse(fs.readFileSync(OPPORTUNITIES_JSON, 'utf8'));
+        const processedOpps = processOpportunities(opportunities);
+        
+        // Read and process events
+        console.log(`Reading events from ${EVENTS_JSON}`);
+        const events = JSON.parse(fs.readFileSync(EVENTS_JSON, 'utf8'));
+        const processedEvents = processEvents(events);
+        
+        // Generate opportunities RSS feed
+        console.log('\n=== Generating Opportunities RSS Feed ===');
+        await generateRSSFeed(
+            processedOpps,
+            OPPORTUNITIES_OUTPUT_FILE,
+            'Internet Society Opportunities',
+            'Latest opportunities to get involved with Internet Society initiatives',
+            `${SITE_URL}/data/opportunities.rss`
+        );
+        
+        // Generate events RSS feed
+        console.log('\n=== Generating Events RSS Feed ===');
+        await generateRSSFeed(
+            processedEvents,
+            EVENTS_OUTPUT_FILE,
+            'Internet Society Events',
+            'Latest events to get involved with Internet Society initiatives',
+            `${SITE_URL}/community-events/data/events.rss`
+        );
+        
+        console.log('\n=== RSS Generation Complete ===');
+        console.log(`Generated feeds for ${processedOpps.length} opportunities and ${processedEvents.length} events`);
+        
+    } catch (error) {
+        console.error('Error generating RSS feeds:', error);
         process.exit(1);
     }
 }

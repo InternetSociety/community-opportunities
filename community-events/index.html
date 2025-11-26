@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Society: Community Events</title>
+    <link rel="icon"
+        href="https://www.internetsociety.org/wp-content/themes/isoc/dist/images/favicon/android-icon-192x192.png">
+
+    <!-- Font Awesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts: Inter (as used by internetsociety.org) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        /* Event card specific styles to match the screenshot */
+        .event-card {
+            display: flex;
+            gap: 0;
+            padding: 0;
+            overflow: hidden;
+            position: relative;
+            max-width: 100%;
+        }
+
+        .event-date-badge {
+            background-color: #f5f7fa;
+            padding: 12px 8px;
+            text-align: center;
+            min-width: 70px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid var(--isoc-border-color);
+        }
+
+        .event-month {
+            font-size: 0.75em;
+            font-weight: 600;
+            color: #666;
+            letter-spacing: 0.5px;
+        }
+
+        .event-day {
+            font-size: 2em;
+            font-weight: 700;
+            color: var(--isoc-blue);
+            line-height: 1;
+            margin-top: 2px;
+        }
+
+        .event-content {
+            flex: 1;
+            padding: 16px;
+            padding-bottom: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            min-width: 0;
+            position: relative;
+        }
+
+        .event-badges {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .event-type-badge {
+            background-color: #0066aa;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 3px;
+            font-size: 0.7em;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .event-title {
+            margin: 0;
+            font-size: 1.1em;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .event-title a {
+            color: var(--isoc-black);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .event-title a:hover {
+            color: var(--isoc-blue);
+        }
+
+        .event-description {
+            color: #555;
+            font-size: 0.9em;
+            line-height: 1.4;
+            margin: 0;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .event-meta-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .event-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .event-meta-item i {
+            color: #0066aa;
+            font-size: 1em;
+        }
+
+        .event-organizer {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .event-organizer i {
+            color: #0066aa;
+        }
+
+        .event-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-top: auto;
+        }
+
+        .event-register-btn {
+            background-color: #008996;
+            color: white;
+            padding: 10px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95em;
+            transition: background-color 0.2s;
+            display: inline-block;
+        }
+
+        .event-register-btn:hover {
+            background-color: #006d7a;
+        }
+
+        .event-calendar-btn {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            background: white;
+            border: 1px solid #ddd;
+            color: #666;
+            padding: 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.9em;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 36px;
+            height: 36px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .event-calendar-btn:hover {
+            background-color: #f0f7ff;
+            border-color: var(--isoc-blue);
+            color: var(--isoc-blue);
+        }
+
+        .event-calendar-btn i {
+            font-size: 1em;
+            display: block;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .event-card {
+                flex-direction: column;
+            }
+
+            .event-date-badge {
+                flex-direction: row;
+                border-right: none;
+                border-bottom: 1px solid var(--isoc-border-color);
+                padding: 10px 15px;
+                min-width: auto;
+                gap: 8px;
+            }
+
+            .event-month {
+                font-size: 0.85em;
+            }
+
+            .event-day {
+                font-size: 1.5em;
+            }
+        }
+
+        /* 3-column grid override for community events */
+        #community-events .card-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        @media (max-width: 1200px) {
+            #community-events .card-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            #community-events .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Filters section */
+        .filters-section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+            margin: 0 auto 30px auto;
+            max-width: 1024px;
+            box-sizing: border-box;
+        }
+
+        .filters-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .filter-col label {
+            display: block;
+            font-size: 0.85em;
+            font-weight: 600;
+            color: #0066aa;
+            margin-bottom: 6px;
+        }
+
+        .filter-col label i {
+            margin-right: 5px;
+        }
+
+        .event-filter {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid var(--isoc-border-color);
+            border-radius: 4px;
+            font-size: 0.95em;
+            background-color: white;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+
+        .event-filter:focus {
+            outline: none;
+            border-color: var(--isoc-blue);
+        }
+
+        .event-count {
+            font-size: 0.9em;
+            color: #777;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .filters-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Subscription buttons */
+        .subscription-controls {
+            max-width: 1024px;
+            margin: 0 auto 15px auto;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        .sub-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background-color: white;
+            color: var(--isoc-blue);
+            border: 1px solid var(--isoc-border-color);
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+
+        .sub-btn:hover {
+            background-color: #f0f7ff;
+            border-color: var(--isoc-blue);
+            transform: translateY(-1px);
+        }
+
+        .sub-btn i {
+            font-size: 1em;
+        }
+
+        /* Event table specific styles for cleaner UX */
+        .event-table td {
+            padding: 16px 12px;
+        }
+
+        .event-name-cell {
+            min-width: 250px;
+        }
+
+        .event-name {
+            font-weight: 600;
+            font-size: 1em;
+            margin-bottom: 4px;
+            line-height: 1.4;
+        }
+
+        .event-name a {
+            color: var(--isoc-blue);
+            text-decoration: none;
+        }
+
+        .event-name a:hover {
+            text-decoration: underline;
+        }
+
+        .event-metadata {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 4px;
+        }
+
+        .event-when-cell {
+            min-width: 140px;
+            white-space: nowrap;
+        }
+
+        .event-when-cell div:first-child {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .event-time {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 2px;
+        }
+
+        .event-where-cell {
+            min-width: 150px;
+            color: #555;
+        }
+
+        .event-action-cell {
+            text-align: right;
+            min-width: 100px;
+        }
+
+        .table-register-link {
+            display: inline-block;
+            background-color: white;
+            color: var(--isoc-blue);
+            border: 1px solid var(--isoc-blue);
+            padding: 6px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9em;
+            transition: all 0.2s;
+        }
+
+        .table-register-link:hover {
+            background-color: var(--isoc-blue);
+            color: white;
+        }
+
+        /* Fix action column header to match other headers */
+        .event-table th:last-child {
+            background-color: var(--isoc-blue);
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="top-nav">
+        <a href="/" class="logo-link">
+            <img src="../img/isoc-logo.png" alt="Internet Society" class="nav-logo">
+        </a>
+        <div class="nav-links">
+            <a href="/">Opportunities</a>
+            <a href="#" class="active">Community Events</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Community Events</h1>
+            <p>Discover events organized by the Internet Society community</p>
+        </header>
+
+        <!-- Filter Section -->
+        <div class="filters-section">
+            <div class="filters-row">
+                <div class="filter-col">
+                    <label for="region-filter"><i class="fa-solid fa-globe"></i> Region</label>
+                    <select id="region-filter" class="event-filter">
+                        <option value="">All Regions</option>
+                    </select>
+                </div>
+                <div class="filter-col">
+                    <label for="type-filter"><i class="fa-solid fa-calendar-day"></i> Event Type</label>
+                    <select id="type-filter" class="event-filter">
+                        <option value="">All Types</option>
+                    </select>
+                </div>
+                <div class="filter-col">
+                    <label for="category-filter"><i class="fa-solid fa-tag"></i> Category</label>
+                    <select id="category-filter" class="event-filter">
+                        <option value="">All Categories</option>
+                    </select>
+                </div>
+                <div class="filter-col">
+                    <label for="format-filter"><i class="fa-solid fa-desktop"></i> Format</label>
+                    <select id="format-filter" class="event-filter">
+                        <option value="">All Formats</option>
+                    </select>
+                </div>
+            </div>
+            <div class="event-count" id="event-count">Showing 0 upcoming events</div>
+        </div>
+
+        <div class="subscription-controls">
+            <button class="sub-btn subscription-link" data-feed-type="rss" data-feed-url="data/events.rss">
+                <i class="fas fa-rss"></i> RSS
+            </button>
+            <button class="sub-btn subscription-link" data-feed-type="ical" data-feed-url="data/events.ics">
+                <i class="fas fa-calendar-alt"></i> Calendar
+            </button>
+        </div>
+
+        <div id="events-container">
+            <!-- Events will be dynamically generated here -->
+        </div>
+    </div>
+
+    <script src="js/events.js"></script>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <a href="https://github.com/InternetSociety/community-opportunities" target="_blank"
+                rel="noopener noreferrer">View code</a>
+            <span class="footer-separator">•</span>
+            <a href="https://app.smartsheet.com/b/form/780c07c3b1a04c58ba04a44a07fc3823" target="_blank"
+                rel="noopener noreferrer">Feedback about this page</a>
+        </div>
+    </footer>
+</body>
+
+</html>
