@@ -240,28 +240,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Build card content matching screenshot style
             card.innerHTML = `
-                ${dateObj ? `
-                <div class="event-date-badge">
-                    <div class="event-month">${monthStr}</div>
-                    <div class="event-day">${dayStr}</div>
-                </div>
-                ` : ''}
-                <div class="event-content">
-                    <div class="event-badges">
-                        ${event.type ? `<span class="event-type-badge">${event.type.toUpperCase()}</span>` : ''}
-                        ${event.category ? `<span class="event-type-badge" style="background-color: #555;">${event.category.toUpperCase()}</span>` : ''}
+                ${event.startDate && event.startDate !== 'Ongoing' ? `<button class="event-calendar-btn add-to-calendar" data-title="${event.title}" data-date="${event.startDate}" data-time="${event.startTime || ''}" data-timezone="${event.timeZone || ''}" data-description="${event.description || ''}" data-link="${event.registrationUrl || ''}" title="Add to calendar" onclick="event.stopPropagation();"><i class="fa-solid fa-calendar-plus"></i></button>` : ''}
+                <div class="event-card-header"${event.registrationUrl ? ` onclick="window.open('${event.registrationUrl}', '_blank')" style="cursor: pointer;"` : ''}>
+                    ${dateObj ? `
+                    <div class="event-date-badge">
+                        <div class="event-month">${monthStr}</div>
+                        <div class="event-day">${dayStr}</div>
                     </div>
-                    <h3 class="event-title">${event.registrationUrl ? `<a href="${event.registrationUrl}" target="_blank" rel="noopener noreferrer">${event.title}</a>` : event.title}</h3>
-                    <p class="event-description">${event.description || ''}</p>
-                    <div class="event-meta-info">
-                        ${timeStr ? `<div class="event-meta-item"><i class="fa-regular fa-clock"></i> ${timeStr}</div>` : ''}
-                        ${event.region ? `<div class="event-meta-item"><i class="fa-solid fa-location-dot"></i> ${event.region}${event.format === 'Online' ? ' (Online)' : ''}</div>` : ''}
+                    ` : ''}
+                    <div class="event-content">
+                        <div class="event-badges">
+                            ${event.type ? `<span class="event-type-badge">${event.type.toUpperCase()}</span>` : ''}
+                            ${event.category ? `<span class="event-type-badge" style="background-color: #555;">${event.category.toUpperCase()}</span>` : ''}
+                        </div>
+                        <h3 class="event-title">${event.registrationUrl ? `<a href="${event.registrationUrl}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">${event.title}</a>` : event.title}</h3>
+                        <p class="event-description">${event.description || ''}</p>
+                        <div class="event-meta-info">
+                            ${timeStr ? `<div class="event-meta-item"><i class="fa-regular fa-clock"></i> ${timeStr}</div>` : ''}
+                            ${event.region ? `<div class="event-meta-item"><i class="fa-solid fa-location-dot"></i> ${event.region}${event.format === 'Online' ? ' (Online)' : ''}</div>` : ''}
+                        </div>
+                        ${event.organizer ? `<div class="event-organizer"><i class="fa-solid fa-users"></i> ${event.organizer}</div>` : ''}
                     </div>
-                    ${event.organizer ? `<div class="event-organizer"><i class="fa-solid fa-users"></i> ${event.organizer}</div>` : ''}
-                    <div class="event-actions">
-                        ${event.registrationUrl ? `<a href="${event.registrationUrl}" target="_blank" rel="noopener noreferrer" class="event-register-btn">Register</a>` : ''}
-                    </div>
-                    ${event.startDate && event.startDate !== 'Ongoing' ? `<button class="event-calendar-btn add-to-calendar" data-title="${event.title}" data-date="${event.startDate}" data-time="${event.startTime || ''}" data-timezone="${event.timeZone || ''}" data-description="${event.description || ''}" data-link="${event.registrationUrl || ''}" title="Add to calendar"><i class="fa-solid fa-calendar-plus"></i></button>` : ''}
                 </div>
             `;
             cardGrid.appendChild(card);
@@ -286,7 +285,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const thead = document.createElement('thead');
         const headerRow = document.createElement('tr');
 
-        ['Event', 'When', 'Where', ''].forEach(headerText => {
+        ['Event', 'When', 'Where'].forEach(headerText => {
             const th = document.createElement('th');
             th.textContent = headerText;
             headerRow.appendChild(th);
@@ -373,22 +372,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
             whereCell.textContent = whereParts.join(' • ') || '—';
             row.appendChild(whereCell);
-
-            // Action column - register button
-            const actionCell = document.createElement('td');
-            actionCell.className = 'event-action-cell';
-
-            if (event.registrationUrl) {
-                const registerLink = document.createElement('a');
-                registerLink.href = event.registrationUrl;
-                registerLink.target = '_blank';
-                registerLink.rel = 'noopener noreferrer';
-                registerLink.className = 'table-register-link';
-                registerLink.textContent = 'Register';
-                actionCell.appendChild(registerLink);
-            }
-
-            row.appendChild(actionCell);
 
             tbody.appendChild(row);
         });
