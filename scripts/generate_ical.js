@@ -145,6 +145,9 @@ function generateEventsICal(events) {
         return 'BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Internet Society//Events//EN\r\nCALSCALE:GREGORIAN\r\nMETHOD:PUBLISH\r\nEND:VCALENDAR';
     }
 
+    // Use a stable timestamp for DTSTAMP - only update when content changes
+    const stableTimestamp = '20240101T000000Z'; // Fixed timestamp for stability
+
     // Get unique timezones from events
     const timezones = new Set();
     events.forEach(event => {
@@ -223,7 +226,7 @@ function generateEventsICal(events) {
             
             ical += 'BEGIN:VEVENT\r\n' +
                    `UID:${uid}\r\n` +
-                   `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').split('.')[0]}Z\r\n` +
+                   `DTSTAMP:${stableTimestamp}\r\n` +
                    `SUMMARY:${escapeICalText(summary)}\r\n`;
             
             if (description || url) {
@@ -296,17 +299,39 @@ function processEvents(events) {
     }));
 }
 
+// Helper function to generate hash of content
+function generateHash(content) {
+    const crypto = require('crypto');
+    return crypto.createHash('md5').update(content).digest('hex');
+}
+
+// Helper function to check if file content has changed
+function hasContentChanged(filePath, newContent) {
+    try {
+        if (!fs.existsSync(filePath)) {
+            return true; // File doesn't exist, so it's a change
+        }
+        const existingContent = fs.readFileSync(filePath, 'utf-8');
+        const existingHash = generateHash(existingContent);
+        const newHash = generateHash(newContent);
+        return existingHash !== newHash;
+    } catch (error) {
+        console.error('Error checking content changes:', error);
+        return true; // If we can't check, assume it changed
+    }
+}
+
 // Generate iCal file
 function generateICal() {
     try {
         // Read and process opportunities
         console.log(`Reading opportunities from ${OPPORTUNITIES_JSON}`);
-        const opportunities = JSON.parse(fs.readFileSync(OPPORTUNITIES_JSON, 'utf8'));
+        const opportunities = JSON.parse(fs.readFileSync(OPPORTUNITIES_JSON, 'utf-8'));
         const processedOpps = processOpportunities(opportunities);
         
         // Read and process events
         console.log(`Reading events from ${EVENTS_JSON}`);
-        const events = JSON.parse(fs.readFileSync(EVENTS_JSON, 'utf8'));
+        const events = JSON.parse(fs.readFileSync(EVENTS_JSON, 'utf-8'));
         const processedEvents = processEvents(events);
         
         // Combine items
@@ -324,6 +349,9 @@ function generateICal() {
             }
             return isValid;
         });
+
+        // Use a stable timestamp for DTSTAMP - only update when content changes
+        const stableTimestamp = '20240101T000000Z'; // Fixed timestamp for stability
 
         let ical = 'BEGIN:VCALENDAR\r\n' +
                   'VERSION:2.0\r\n' +
@@ -364,7 +392,7 @@ function generateICal() {
                    `UID:${uid}\r\n` +
                    `SUMMARY:${escapeICalText(summary)}\r\n` +
                    `DESCRIPTION:${escapeICalText(description)}${url}\r\n` +
-                   `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').split('.')[0]}Z\r\n`;
+                   `DTSTAMP:${stableTimestamp}\r\n`;
             
             if (startDate.isAllDay) {
                 ical += `DTSTART;VALUE=DATE:${startDate.value}\r\n`;
@@ -379,9 +407,14 @@ function generateICal() {
 
         ical += 'END:VCALENDAR';
 
-        // Write combined iCal with CRLF line endings
+        // Write combined iCal with CRLF line endings only if content changed
         const crlfContent = ical.replace(/\r?\n/g, '\r\n');
-        fs.writeFileSync(OPPORTUNITIES_ICAL, crlfContent, { encoding: 'utf-8' });
+        if (hasContentChanged(OPPORTUNITIES_ICAL, crlfContent)) {
+            fs.writeFileSync(OPPORTUNITIES_ICAL, crlfContent, { encoding: 'utf-8' });
+            console.log(`Updated opportunities iCal at ${OPPORTUNITIES_ICAL}`);
+        } else {
+            console.log(`No changes to opportunities iCal, skipping update`);
+        }
         
         // Generate and write events-only iCal
         console.log('Processing events for iCal:', JSON.stringify(processedEvents, null, 2));
@@ -389,12 +422,14 @@ function generateICal() {
         ensureParent(EVENTS_ICAL);
         // Force CRLF line endings
         const eventsCrlfContent = eventsIcal.replace(/\r?\n/g, '\r\n');
-        fs.writeFileSync(EVENTS_ICAL, eventsCrlfContent, { encoding: 'utf-8' });
-        console.log('Generated events.ics content:', eventsIcal);
+        if (hasContentChanged(EVENTS_ICAL, eventsCrlfContent)) {
+            fs.writeFileSync(EVENTS_ICAL, eventsCrlfContent, { encoding: 'utf-8' });
+            console.log(`Updated events iCal at ${EVENTS_ICAL}`);
+        } else {
+            console.log(`No changes to events iCal, skipping update`);
+        }
         
         console.log(`Found ${validItems.length} valid items (${processedOpps.length} opportunities, ${processedEvents.length} events)`);
-        console.log(`Writing opportunities iCal to ${OPPORTUNITIES_ICAL}`);
-        console.log(`Writing events iCal to ${EVENTS_ICAL}`);
         
     } catch (error) {
         console.error('Error generating iCal file:', error);

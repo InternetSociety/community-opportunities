@@ -64,6 +64,28 @@ function processEvents(events) {
     }));
 }
 
+// Helper function to check if file content has changed
+function hasContentChanged(filePath, newContent) {
+    try {
+        if (!fs.existsSync(filePath)) {
+            return true; // File doesn't exist, so it's a change
+        }
+        const existingContent = fs.readFileSync(filePath, 'utf-8');
+        // Extract fingerprint from existing file
+        const existingMatch = existingContent.match(/<!-- DATA_FINGERPRINT:([a-f0-9]+) -->/);
+        const newMatch = newContent.match(/<!-- DATA_FINGERPRINT:([a-f0-9]+) -->/);
+        
+        if (!existingMatch || !newMatch) {
+            return true; // If we can't find fingerprints, assume it changed
+        }
+        
+        return existingMatch[1] !== newMatch[1];
+    } catch (error) {
+        console.error('Error checking content changes:', error);
+        return true; // If we can't check, assume it changed
+    }
+}
+
 // Generate RSS feed for a specific data type
 async function generateRSSFeed(items, outputFile, feedTitle, feedDescription, selfLink) {
     try {
@@ -93,8 +115,8 @@ async function generateRSSFeed(items, outputFile, feedTitle, feedDescription, se
         // Limit number of items
         const limitedItems = validItems.slice(0, FEED_ITEM_LIMIT);
         
-        // Always use current date for lastBuildDate
-        const lastBuildDate = new Date();
+        // Use a stable timestamp for lastBuildDate - only update when content changes
+        const stableLastBuildDate = 'Mon, 01 Jan 2024 00:00:00 GMT';
         
         // Generate RSS items
         const rssItems = limitedItems.map(item => {
@@ -135,19 +157,24 @@ async function generateRSSFeed(items, outputFile, feedTitle, feedDescription, se
         <link>${SITE_URL}</link>
         <description>${feedDescription}</description>
         <language>en-us</language>
-        <lastBuildDate>${lastBuildDate.toUTCString()}</lastBuildDate>
+        <lastBuildDate>${stableLastBuildDate}</lastBuildDate>
         <atom:link href="${selfLink}" rel="self" type="application/rss+xml" />
         ${rssItems}
     </channel>
 </rss>
         `.trim();
 
-        // Write the RSS feed to file
+        // Write the RSS feed to file only if content changed
         console.log(`Found ${validItems.length} valid items for ${feedTitle}`);
         console.log(`Including ${limitedItems.length} items in the feed`);
-        console.log(`Writing RSS feed to ${outputFile}`);
-        fs.writeFileSync(outputFile, rss);
-        console.log(`RSS feed generated successfully at ${outputFile}`);
+        
+        if (hasContentChanged(outputFile, rss)) {
+            console.log(`Writing RSS feed to ${outputFile}`);
+            fs.writeFileSync(outputFile, rss);
+            console.log(`RSS feed generated successfully at ${outputFile}`);
+        } else {
+            console.log(`No changes to RSS feed, skipping update: ${outputFile}`);
+        }
         
         return { validItems: validItems.length, includedItems: limitedItems.length };
         
