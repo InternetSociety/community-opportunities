@@ -36,5 +36,24 @@
     "timeZone": "UTC",
     "title": "Event with a longer name",
     "type": "Training"
+  },
+  {
+    "approved": true,
+    "category": "How the Internet Works",
+    "creationDate": "2025-11-26T17:19:52Z",
+    "description": "This event takes place during multiple days",
+    "endDate": "2025-12-06",
+    "endTime": "18:30",
+    "format": "Hybrid",
+    "language": "Spanish",
+    "modificationDate": "2025-11-26T17:19:52Z",
+    "organizer": "SIG",
+    "region": "Latin America & Caribbean",
+    "registrationUrl": "https://internetsociety.org",
+    "startDate": "2025-12-01",
+    "startTime": "12:00",
+    "timeZone": "UTC",
+    "title": "Multiple days",
+    "type": "Conference"
   }
 ]
