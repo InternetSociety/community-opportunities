@@ -302,6 +302,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <div class="event-badges">
                             ${event.type ? `<span class="event-type-badge">${event.type.toUpperCase()}</span>` : ''}
                             ${event.category ? `<span class="event-type-badge" style="background-color: #555;">${event.category.toUpperCase()}</span>` : ''}
+                            ${event.language ? `<span class="event-type-badge" style="background-color: #6c757d;">${event.language.toUpperCase()}</span>` : ''}
                         </div>
                         <h3 class="event-title">${event.registrationUrl ? `<a href="${event.registrationUrl}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">${event.title}</a>` : event.title}</h3>
                         <p class="event-description">${event.description || ''}</p>
@@ -370,13 +371,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
             eventCell.appendChild(eventName);
 
-            // Add type and organizer as subtle metadata
-            if (event.type || event.organizer) {
+            // Add type, category, language, and organizer as subtle metadata
+            if (event.type || event.category || event.language || event.organizer) {
                 const metadata = document.createElement('div');
                 metadata.className = 'event-metadata';
                 const parts = [];
                 if (event.type) parts.push(event.type);
                 if (event.category) parts.push(event.category);
+                if (event.language) parts.push(event.language);
                 if (event.organizer) parts.push(event.organizer);
                 metadata.textContent = parts.join(' • ');
                 eventCell.appendChild(metadata);
