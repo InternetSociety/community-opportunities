@@ -240,7 +240,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Build card content matching screenshot style
             card.innerHTML = `
-                ${event.startDate && event.startDate !== 'Ongoing' ? `<button class="event-calendar-btn add-to-calendar" data-title="${event.title}" data-date="${event.startDate}" data-time="${event.startTime || ''}" data-timezone="${event.timeZone || ''}" data-description="${event.description || ''}" data-link="${event.registrationUrl || ''}" title="Add to calendar" onclick="event.stopPropagation();"><i class="fa-solid fa-calendar-plus"></i></button>` : ''}
+                ${event.startDate && event.startDate !== 'Ongoing' ? `<button class="event-calendar-btn add-to-calendar" data-title="${event.title}" data-date="${event.startDate}" data-time="${event.startTime || ''}" data-timezone="${event.timeZone || ''}" data-description="${event.description || ''}" data-link="${event.registrationUrl || ''}" title="Add to calendar"><i class="fa-solid fa-calendar-plus"></i></button>` : ''}
                 <div class="event-card-header"${event.registrationUrl ? ` onclick="window.open('${event.registrationUrl}', '_blank')" style="cursor: pointer;"` : ''}>
                     ${dateObj ? `
                     <div class="event-date-badge">
@@ -385,6 +385,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('click', function (e) {
         if (e.target.closest('.add-to-calendar')) {
             e.preventDefault();
+            e.stopPropagation();
             const button = e.target.closest('.add-to-calendar');
             const title = button.getAttribute('data-title');
             const dateStr = button.getAttribute('data-date');
