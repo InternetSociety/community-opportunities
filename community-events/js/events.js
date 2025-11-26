@@ -49,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function () {
             const data = await response.json();
             return data;
         } catch (error) {
-            console.error('Error fetching events:', error);
             container.innerHTML = '<p>Error loading events. Please try again later.</p>';
             return [];
         }
@@ -747,28 +746,21 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Filter toggle functionality
-    const filterToggleBtn = document.getElementById('filter-toggle-btn');
+    const filterToggleBtn = document.querySelector('.filter-toggle-btn');
     const filtersSection = document.querySelector('.filters-section');
-    
-    console.log('Filter button found:', filterToggleBtn);
-    console.log('Filters section found:', filtersSection);
     
     if (filterToggleBtn && filtersSection) {
         // Set initial state - hidden by default
         filtersSection.classList.remove('show');
-        console.log('Initial state set - filters hidden');
         
         // Handle toggle click
         filterToggleBtn.addEventListener('click', function(e) {
-            console.log('Filter button clicked!');
             e.preventDefault();
             e.stopPropagation();
             if (filtersSection.classList.contains('show')) {
                 filtersSection.classList.remove('show');
-                console.log('Filters hidden');
             } else {
                 filtersSection.classList.add('show');
-                console.log('Filters shown');
             }
         });
         
@@ -776,7 +768,6 @@ document.addEventListener('DOMContentLoaded', function () {
         document.addEventListener('click', function(e) {
             if (!filtersSection.contains(e.target) && e.target !== filterToggleBtn && !filterToggleBtn.contains(e.target)) {
                 filtersSection.classList.remove('show');
-                console.log('Filters closed by outside click');
             }
         });
         
@@ -784,8 +775,6 @@ document.addEventListener('DOMContentLoaded', function () {
         filtersSection.addEventListener('click', function(e) {
             e.stopPropagation();
         });
-    } else {
-        console.error('Filter button or section not found!');
     }
 
     init();
