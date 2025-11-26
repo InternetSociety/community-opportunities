@@ -1,65 +1,43 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Internet Society//NONSGML Opportunities Calendar//EN
+PRODID:-//Internet Society//Opportunities//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:Internet Society Opportunities
-X-WR-TIMEZONE:UTC
-X-WR-CALDESC:Upcoming opportunities from Internet Society
 BEGIN:VEVENT
-UID:0c5ca49c-60fb-58fa-addd-a396f0c75c52
-DTSTAMP:20251104T110159Z
-DTSTART;VALUE=DATE:20251231
-DTEND;VALUE=DATE:20260101
+UID:e8a36a52-a853-5f0e-93d4-356db407c9cd
 SUMMARY:Donate: Let's work together to build the Internet we want!
 DESCRIPTION:What sets the Internet Society apart is that we do more than advocate. W
  e build. We defend the Internet’s core infrastructure\, expand access in
   real communities\, and protect the technologies that keep it open and s
- ecure. Your donation supports that unique\, hands-on work.\\n\\nType: Ur
- gent: Upcoming Deadlines\\nRegion: Global\\nInternet Issue: About the In
- ternet Society\\nWho Can Get Involved: Individual Members\, Chapter Lead
- ers\, Organization Members\, Alumni\\n\\nMore info: https://donorportal.
- internetsociety.org/-/XCCANBKT
+ ecure. Your donation supports that unique\, hands-on work.
 URL:https://donorportal.internetsociety.org/-/XCCANBKT
-STATUS:CONFIRMED
-TRANSP:OPAQUE
+DTSTAMP:20251126T140302Z
+DTSTART;VALUE=DATE:20251231
+DTEND;VALUE=DATE:20251231
 END:VEVENT
 BEGIN:VEVENT
-UID:1a3fa249-cc39-5da2-9ff6-85175c8c0c5a
-DTSTAMP:20251114T102929Z
-DTSTART;VALUE=DATE:20251203
-DTEND;VALUE=DATE:20251204
+UID:39c4b903-f052-56ae-8a65-66570dd1b260
 SUMMARY:Community Day Latin America and the Caribbean
 DESCRIPTION:This session will take a strategic look at how community-led efforts hav
  e transformed the Internet ecosystem in four key areas: Connectivity\, O
- nline safety\, Technical Community\, Accesibility and Public Policy.\\n\
- \nType: Events & Working Sessions\\nRegion: Global\\nInternet Issue: Com
- munity\\nWho Can Get Involved: Individual Members\, Chapter Members\, Ch
- apter Leaders\, Organization Members\, Alumni\\n\\nMore info: https://ev
- ents.zoom.us/ev/Au5TmShdER2hiwJsvmoWYlgngPoDAwCQD0cNXl9NctvPY_xN1dEO~Ahw
- EJ-6x_T1PLQPwpKbvIPg4GGxljiFvMzO2Ql1CJuOimJAjbHLCSxIBiA
+ nline safety\, Technical Community\, Accesibility and Public Policy.
 URL:https://events.zoom.us/ev/Au5TmShdER2hiwJsvmoWYlgngPoDAwCQD0cNXl9NctvPY_xN1dEO~AhwEJ-6x_T1PLQPwpKbvIPg4GGxljiFvMzO2Ql1CJuOimJAjbHLCSxIBiA
-STATUS:CONFIRMED
-TRANSP:OPAQUE
+DTSTAMP:20251126T140302Z
+DTSTART;VALUE=DATE:20251203
+DTEND;VALUE=DATE:20251203
 END:VEVENT
 BEGIN:VEVENT
-UID:706ecf55-6231-5835-9b24-658800fa48f9
-DTSTAMP:20251118T140043Z
-DTSTART;VALUE=DATE:20251231
-DTEND;VALUE=DATE:20260101
+UID:5a9f01f3-0d49-5b31-a9bb-e474620c19f7
 SUMMARY:Endorse ISOC Analysis of WSIS+20 Rev. 1
 DESCRIPTION:In preparation for the WSIS+20 High-Level Meeting of the UN General Asse
  mbly (16-17 Dec)\, the Co-Facilitators of the WSIS+20 process United Nat
  ions is inviting contributions from all stakeholders to inform the proce
  ss that follows the indicative roadmap shared by the WSIS+20 Co-Facilita
  tors. It will guide the intergovernmental negotiations and the participa
- tion of other stakeholders.\\n\\nType: Urgent: Upcoming Deadlines\\nRegi
- on: Global\\nInternet Issue: Internet Governance\\nWho Can Get Involved:
-  Individual Members\, Chapter Members\, Chapter Leaders\, Organization M
- embers\, Alumni\\n\\nMore info: https://www.internetsociety.org/issues/i
- nternet-governance/wsis/endorse-contribution-to-wsis-20-rev-1/
+ tion of other stakeholders.
 URL:https://www.internetsociety.org/issues/internet-governance/wsis/endorse-contribution-to-wsis-20-rev-1/
-STATUS:CONFIRMED
-TRANSP:OPAQUE
+DTSTAMP:20251126T140302Z
+DTSTART;VALUE=DATE:20251231
+DTEND;VALUE=DATE:20251231
 END:VEVENT
 END:VCALENDAR

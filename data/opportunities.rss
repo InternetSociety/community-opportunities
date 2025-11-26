@@ -1,508 +1,64 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:b3d0d4e299bff5460511da1a6525cc1e -->
+<!-- DATA_FINGERPRINT:e3a82b223b66e4c5448cb68bec26ae88 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Opportunities</title>
         <link>https://opportunities.internetsociety.org</link>
         <description>Latest opportunities to get involved with Internet Society initiatives</description>
         <language>en-us</language>
-        <lastBuildDate>Thu, 07 Aug 2025 16:11:03 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 26 Nov 2025 14:03:02 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/data/opportunities.rss" rel="self" type="application/rss+xml" />
         <item>
-                    <title><![CDATA[Endorse ISOC Analysis of WSIS+20 Rev. 1]]></title>
+                    <title>Endorse ISOC Analysis of WSIS+20 Rev. 1</title>
                     <link>https://www.internetsociety.org/issues/internet-governance/wsis/endorse-contribution-to-wsis-20-rev-1/</link>
-                    <guid>https://www.internetsociety.org/issues/internet-governance/wsis/endorse-contribution-to-wsis-20-rev-1/</guid>
+                    <description>In preparation for the WSIS+20 High-Level Meeting of the UN General Assembly (16-17 Dec), the Co-Facilitators of the WSIS+20 process United Nations is inviting contributions from all stakeholders to inform the process that follows the indicative roadmap shared by the WSIS+20 Co-Facilitators. It will guide the intergovernmental negotiations and the participation of other stakeholders.</description>
                     <pubDate>Tue, 18 Nov 2025 14:00:43 GMT</pubDate>
-                    <description><![CDATA[<p>In preparation for the WSIS+20 High-Level Meeting of the UN General Assembly (16-17 Dec), the Co-Facilitators of the WSIS+20 process United Nations is inviting contributions from all stakeholders to inform the process that follows the indicative roadmap shared by the WSIS+20 Co-Facilitators. It will guide the intergovernmental negotiations and the participation of other stakeholders.</p>
-                <p><strong>Type:</strong> Urgent: Upcoming Deadlines</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Internet Governance</p>
-                <p><strong>Who can get involved:</strong> Individual Members, Chapter Members, Chapter Leaders, Organization Members, Alumni</p>
-                <p><strong>Date:</strong> 2025-12-31</p>]]></description>
+                    <guid isPermaLink="false">f10437772211c7879c2203bf65b52621</guid>
+                    <category>Opportunity</category>
+                    <category>Urgent: Upcoming Deadlines</category>
+                    <category>Global</category>
                 </item>
 <item>
-                    <title><![CDATA[2025 Global Alumni Event]]></title>
-                    <link>https://events.zoom.us/ev/AkhVFH4Ltw9nuj7H_E-I87UozDRRjr8XNHBT5k1Bn0TbdfL8jq2t~Ai0M0kgXGpEb6Fjz2iaaoj8EEJb5Pt7vy9yk6z8kwKbD0yypD6X5ASpPzg</link>
-                    <guid>https://events.zoom.us/ev/AkhVFH4Ltw9nuj7H_E-I87UozDRRjr8XNHBT5k1Bn0TbdfL8jq2t~Ai0M0kgXGpEb6Fjz2iaaoj8EEJb5Pt7vy9yk6z8kwKbD0yypD6X5ASpPzg</guid>
-                    <pubDate>Fri, 14 Nov 2025 10:29:29 GMT</pubDate>
-                    <description><![CDATA[<p>You will hear directly from alumni who are creating a safer and more accessible Internet, and learn more about how the Internet Society Alumni Network fosters their personal and professional growth.</p>
-                <p><strong>Type:</strong> Events & Working Sessions</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Community</p>
-                <p><strong>Who can get involved:</strong> Individual Members, Chapter Members, Chapter Leaders, Organization Members, Alumni</p>
-                <p><strong>Date:</strong> 2025-11-25</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[Community Day Latin America and the Caribbean]]></title>
+                    <title>Community Day Latin America and the Caribbean</title>
                     <link>https://events.zoom.us/ev/Au5TmShdER2hiwJsvmoWYlgngPoDAwCQD0cNXl9NctvPY_xN1dEO~AhwEJ-6x_T1PLQPwpKbvIPg4GGxljiFvMzO2Ql1CJuOimJAjbHLCSxIBiA</link>
-                    <guid>https://events.zoom.us/ev/Au5TmShdER2hiwJsvmoWYlgngPoDAwCQD0cNXl9NctvPY_xN1dEO~AhwEJ-6x_T1PLQPwpKbvIPg4GGxljiFvMzO2Ql1CJuOimJAjbHLCSxIBiA</guid>
+                    <description>This session will take a strategic look at how community-led efforts have transformed the Internet ecosystem in four key areas: Connectivity, Online safety, Technical Community, Accesibility and Public Policy.</description>
                     <pubDate>Fri, 14 Nov 2025 10:29:29 GMT</pubDate>
-                    <description><![CDATA[<p>This session will take a strategic look at how community-led efforts have transformed the Internet ecosystem in four key areas: Connectivity, Online safety, Technical Community, Accesibility and Public Policy.</p>
-                <p><strong>Type:</strong> Events & Working Sessions</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Community</p>
-                <p><strong>Who can get involved:</strong> Individual Members, Chapter Members, Chapter Leaders, Organization Members, Alumni</p>
-                <p><strong>Date:</strong> 2025-12-03</p>]]></description>
+                    <guid isPermaLink="false">04c71bf741d27586c6eb9bbf9fead323</guid>
+                    <category>Opportunity</category>
+                    <category>Events &amp; Working Sessions</category>
+                    <category>Global</category>
                 </item>
 <item>
-                    <title><![CDATA[Open Door Session 1: WSIS+20 Review (11am UTC)]]></title>
-                    <link>https://isoc.zoom.us/webinar/register/WN_BsM4pd26T42PVUM7mo2WAQ#/registration</link>
-                    <guid>https://isoc.zoom.us/webinar/register/WN_BsM4pd26T42PVUM7mo2WAQ#/registration</guid>
-                    <pubDate>Wed, 05 Nov 2025 13:26:45 GMT</pubDate>
-                    <description><![CDATA[<p>The revised outcome document (Rev1) for the WSIS+20 review is expected to be released by 7 November, and the co-facilitators will hold a virtual stakeholder consultation on 14 November. We invite you to come share your views and highlight key aspects you believe should be included in our collective Internet Society remarks.</p>
-                <p><strong>Type:</strong> Events & Working Sessions</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Internet Governance</p>
-                <p><strong>Who can get involved:</strong> Individual Members, Chapter Leaders, Organization Members</p>
-                <p><strong>Date:</strong> 2025-11-12</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[Open Door Session 2: WSIS+20 Review (11pm UTC)]]></title>
-                    <link>https://isoc.zoom.us/webinar/register/WN_8eKuT4v0QJmhhQM20_aLtA#/registration</link>
-                    <guid>https://isoc.zoom.us/webinar/register/WN_8eKuT4v0QJmhhQM20_aLtA#/registration</guid>
-                    <pubDate>Wed, 05 Nov 2025 13:26:45 GMT</pubDate>
-                    <description><![CDATA[<p>The revised outcome document (Rev1) for the WSIS+20 review is expected to be released by 7 November, and the co-facilitators will hold a virtual stakeholder consultation on 14 November. We invite you to come share your views and highlight key aspects you believe should be included in our collective Internet Society remarks.</p>
-                <p><strong>Type:</strong> Events & Working Sessions</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Internet Governance</p>
-                <p><strong>Who can get involved:</strong> Individual Members, Chapter Leaders, Organization Members</p>
-                <p><strong>Date:</strong> 2025-11-12</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[Donate: Let's work together to build the Internet we want!]]></title>
+                    <title>Donate: Let&#39;s work together to build the Internet we want!</title>
                     <link>https://donorportal.internetsociety.org/-/XCCANBKT</link>
-                    <guid>https://donorportal.internetsociety.org/-/XCCANBKT</guid>
+                    <description>What sets the Internet Society apart is that we do more than advocate. We build. We defend the Internet’s core infrastructure, expand access in real communities, and protect the technologies that keep it open and secure. Your donation supports that unique, hands-on work.</description>
                     <pubDate>Tue, 04 Nov 2025 11:01:59 GMT</pubDate>
-                    <description><![CDATA[<p>What sets the Internet Society apart is that we do more than advocate. We build. We defend the Internet’s core infrastructure, expand access in real communities, and protect the technologies that keep it open and secure. Your donation supports that unique, hands-on work.</p>
-                <p><strong>Type:</strong> Urgent: Upcoming Deadlines</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> About the Internet Society</p>
-                <p><strong>Who can get involved:</strong> Individual Members, Chapter Leaders, Organization Members, Alumni</p>
-                <p><strong>Date:</strong> 2025-12-31</p>]]></description>
+                    <guid isPermaLink="false">accbce368d40286a7825f61c405cf1b8</guid>
+                    <category>Opportunity</category>
+                    <category>Urgent: Upcoming Deadlines</category>
+                    <category>Global</category>
                 </item>
 <item>
-                    <title><![CDATA[Applications are open: NDSS Symposium Fellowship]]></title>
-                    <link>https://www.internetsociety.org/fellowships/ndss-symposium/</link>
-                    <guid>https://www.internetsociety.org/fellowships/ndss-symposium/</guid>
-                    <pubDate>Fri, 24 Oct 2025 09:27:48 GMT</pubDate>
-                    <description><![CDATA[<p>The NDSS Fellowship 2026 will take 20 fellows to the NDSS Symposium in San Diego, California, taking place from 23 to 27 February. The fellowship helps to nurture the next generation of Internet security researchers and practitioners to defend the future of the Internet.</p>
-                <p><strong>Type:</strong> Urgent: Upcoming Deadlines</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Security</p>
-                <p><strong>Who can get involved:</strong> Individual Members</p>
-                <p><strong>Date:</strong> 2025-11-17</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[Use our Global Encryption Day Social Toolkit]]></title>
-                    <link>https://www.globalencryption.org/events/ged/ged-2025/social-toolkit/</link>
-                    <guid>https://www.globalencryption.org/events/ged/ged-2025/social-toolkit/</guid>
-                    <pubDate>Tue, 21 Oct 2025 07:51:38 GMT</pubDate>
-                    <description><![CDATA[<p>This toolkit provides guidance on how to talk about the Global Encryption Coalition on social media in the lead-up. It helps you promote and share Global Encryption Day on your own social media channels to let the world know that encryption makes people powerful.</p>
-                <p><strong>Type:</strong> Urgent: Upcoming Deadlines</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Privacy, Security</p>
-                <p><strong>Who can get involved:</strong> Individual Members, Chapter Members, Chapter Leaders, Alumni</p>
-                <p><strong>Date:</strong> 2025-10-31</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[Endorse Ten Steps to Strengthen Stakeholder Engagement in the WSIS+20 Intergovernmental Phase]]></title>
-                    <link>https://docs.google.com/document/d/155TA4jHGSm_JtC-GKdCBKInFFJuJP4an-0K9czX345I/edit?tab=t.0</link>
-                    <guid>https://docs.google.com/document/d/155TA4jHGSm_JtC-GKdCBKInFFJuJP4an-0K9czX345I/edit?tab=t.0</guid>
-                    <pubDate>Mon, 13 Oct 2025 12:25:52 GMT</pubDate>
-                    <description><![CDATA[<p>Global Partners Digital and other stakeholders have drafted a new statement recommending ten actions to advance meaningful stakeholder engagement in the intergovernmental phase of the WSIS process. 
-
-Earlier this year, many of you endorsed the group’s previous statement, Eight Practical Recommendations.
-
-While the organizers are initially accepting endorsements until 13 October at 12 pm UTC, Global Partners Digital has confirmed that later signatures will also be accepted.</p>
-                <p><strong>Type:</strong> Urgent: Upcoming Deadlines</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Internet Governance</p>
-                <p><strong>Who can get involved:</strong> Chapter Leaders, Organization Members</p>
-                <p><strong>Date:</strong> 2025-10-31</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[Organize a Global Encryption Day 2025 Event]]></title>
-                    <link>https://www.globalencryption.org/events/ged/ged-2025/event-registration/</link>
-                    <guid>https://www.globalencryption.org/events/ged/ged-2025/event-registration/</guid>
-                    <pubDate>Mon, 13 Oct 2025 09:29:20 GMT</pubDate>
-                    <description><![CDATA[<p>In the global movement to protect encryption, our voices matter and have impact. When we raise our voices together, we inspire and enable others, including those in power, to make the choice to address security and safety issues without breaking the technologies that billions of people rely on every day. 
-
-The threat to encryption has never been greater. Yet, the power of our shared voices to protect encryption is stronger than ever. Encryption faced numerous significant threats in 2025, but thanks to the efforts of the Internet Society, along with the Global Encryption Coalition and other advocates, we were able to mitigate those threats.</p>
-                <p><strong>Type:</strong> Urgent: Upcoming Deadlines</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Privacy, Security</p>
-                <p><strong>Who can get involved:</strong> Chapter Leaders</p>
-                <p><strong>Date:</strong> 2025-10-21</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[Join Global Encryption Day 2025 Events Organized Worldwide]]></title>
-                    <link>https://www.globalencryption.org/events/ged/ged-2025/events/</link>
-                    <guid>https://www.globalencryption.org/events/ged/ged-2025/events/</guid>
-                    <pubDate>Mon, 13 Oct 2025 09:27:07 GMT</pubDate>
-                    <description><![CDATA[<p>In the global movement to protect encryption, our voices matter and have impact. When we raise our voices together, we inspire and enable others, including those in power, to make the choice to address security and safety issues without breaking the technologies that billions of people rely on every day. 
-
-The threat to encryption has never been greater. Yet, the power of our shared voices to protect encryption is stronger than ever. Encryption faced numerous significant threats in 2025, but thanks to the efforts of the Internet Society, along with the Global Encryption Coalition and other advocates, we were able to mitigate those threats.</p>
-                <p><strong>Type:</strong> Events & Working Sessions</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Privacy, Security</p>
-                <p><strong>Who can get involved:</strong> Individual Members, Chapter Members, Chapter Leaders, Organization Members, Alumni</p>
-                <p><strong>Date:</strong> 2025-10-21</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[Join Working Session: Internet Society Advocacy Strategy]]></title>
-                    <link>https://isoc.zoom.us/meeting/register/_ZVG5_F-TNmbWnnp5K7Xdg#/registration</link>
-                    <guid>https://isoc.zoom.us/meeting/register/_ZVG5_F-TNmbWnnp5K7Xdg#/registration</guid>
-                    <pubDate>Mon, 13 Oct 2025 08:04:34 GMT</pubDate>
-                    <description><![CDATA[<p>Join our third and final co-creation session — Ensure a Healthy, Safe, and Secure Internet — where we’ll collaborate on ideas and tactics to help protect people online and ensure that policy and business decisions contribute to a trusted Internet.</p>
-                <p><strong>Type:</strong> Events & Working Sessions</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Privacy, Security</p>
-                <p><strong>Who can get involved:</strong> Individual Members, Chapter Members, Chapter Leaders, Organization Members, Alumni</p>
-                <p><strong>Date:</strong> 2025-11-12</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[Join Briefing Session on the Policy Framework for Internet Intermediaries and Content  [Session 1 / 2PM UTC]]]></title>
-                    <link>https://isoc.zoom.us/meeting/register/7qlJ8Y9DRsqg9KaDMrr1cQ#/registration</link>
-                    <guid>https://isoc.zoom.us/meeting/register/7qlJ8Y9DRsqg9KaDMrr1cQ#/registration</guid>
-                    <pubDate>Mon, 13 Oct 2025 07:41:30 GMT</pubDate>
-                    <description><![CDATA[<p>Join a 60-minute briefing on our Policy Framework for Internet Intermediaries and Content, which outlines the roles of intermediaries, the importance of liability protections, and key policy recommendations. The session offers a chance to deepen your understanding, ask questions, and exchange ideas to strengthen collective advocacy. (Two time-zone options available.)</p>
-                <p><strong>Type:</strong> Events & Working Sessions</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Policy</p>
-                <p><strong>Who can get involved:</strong> Individual Members, Chapter Members, Chapter Leaders, Organization Members, Alumni</p>
-                <p><strong>Date:</strong> 2025-11-03</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[Join Briefing Session on the Policy Framework for Internet Intermediaries and Content  [Session 2 / 4AM UTC]]]></title>
-                    <link>https://isoc.zoom.us/meeting/register/jggxFZY1QKujbq8mzc9PXw#/registration</link>
-                    <guid>https://isoc.zoom.us/meeting/register/jggxFZY1QKujbq8mzc9PXw#/registration</guid>
-                    <pubDate>Mon, 13 Oct 2025 07:41:30 GMT</pubDate>
-                    <description><![CDATA[<p>Join a 60-minute briefing on our Policy Framework for Internet Intermediaries and Content, which outlines the roles of intermediaries, the importance of liability protections, and key policy recommendations. The session offers a chance to deepen your understanding, ask questions, and exchange ideas to strengthen collective advocacy. (Two time-zone options available.)</p>
-                <p><strong>Type:</strong> Events & Working Sessions</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Policy</p>
-                <p><strong>Who can get involved:</strong> Individual Members, Chapter Members, Chapter Leaders, Organization Members, Alumni</p>
-                <p><strong>Date:</strong> 2025-11-04</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[Sign Open Letter: Irish Communications (Interception and Lawful Access) Bill]]></title>
-                    <link>https://docs.google.com/document/d/1kdAuk4Th3rgqYXGHIP7gBvulEjFhrOOr9tOA9dDQalg/edit?usp=sharing</link>
-                    <guid>https://docs.google.com/document/d/1kdAuk4Th3rgqYXGHIP7gBvulEjFhrOOr9tOA9dDQalg/edit?usp=sharing</guid>
-                    <pubDate>Wed, 01 Oct 2025 07:32:10 GMT</pubDate>
-                    <description><![CDATA[<p>We are looking for organizations, companies, associations, and cybersecurity experts from around the world to sign on and demand that the Irish government protect strong encryption. Please share the call to sign on with your networks.</p>
-                <p><strong>Type:</strong> Urgent: Upcoming Deadlines</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Privacy, Security</p>
-                <p><strong>Who can get involved:</strong> Individual Members, Chapter Leaders, Organization Members, Alumni</p>
-                <p><strong>Date:</strong> 2025-10-08</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[Provide Input on Submarine Cable Resilience Policy Brief]]></title>
-                    <link>https://app.smartsheet.com/b/form/01997ba6bad17599bc7e90b7e0212f59</link>
-                    <guid>https://app.smartsheet.com/b/form/01997ba6bad17599bc7e90b7e0212f59</guid>
-                    <pubDate>Thu, 25 Sep 2025 08:49:41 GMT</pubDate>
-                    <description><![CDATA[<p>We look to the Internet Society community for comments and feedback on how to make the brief most useful and relevant in your regional contexts.</p>
-                <p><strong>Type:</strong> Consultations & Surveys</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Connectivity</p>
-                <p><strong>Who can get involved:</strong> Individual Members, Chapter Members, Chapter Leaders, Organization Members, Alumni</p>
-                <p><strong>Date:</strong> 2025-10-16</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[Join Co-Creation Session: Designing a Community Hub [Online Trust & Safety]]]></title>
-                    <link>https://isoc.zoom.us/meeting/register/Bs3d-gdUTvGn2bBa1mHjOA#/registration</link>
-                    <guid>https://isoc.zoom.us/meeting/register/Bs3d-gdUTvGn2bBa1mHjOA#/registration</guid>
-                    <pubDate>Thu, 18 Sep 2025 07:45:19 GMT</pubDate>
-                    <description><![CDATA[<p>We will work together on designing a Community Hub, exploring how it can serve as a space to strengthen collaboration, knowledge exchange, and support among our communities. During this session:
-
-We will review the main goals and opportunities for building a Hub; co-create the design and structure of the hub focusing on its value for our communities; identify next steps to move this idea forward collectively.</p>
-                <p><strong>Type:</strong> Events & Working Sessions</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Policy, Privacy</p>
-                <p><strong>Who can get involved:</strong> Individual Members, Chapter Members, Chapter Leaders, Alumni</p>
-                <p><strong>Date:</strong> 2025-10-15</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[Working Session: Internet Society Advocacy Strategy]]></title>
-                    <link>https://isoc.zoom.us/meeting/register/fmKIrJleQrqO1WmZsaps2Q#/registration</link>
-                    <guid>https://isoc.zoom.us/meeting/register/fmKIrJleQrqO1WmZsaps2Q#/registration</guid>
-                    <pubDate>Mon, 15 Sep 2025 08:24:07 GMT</pubDate>
-                    <description><![CDATA[<p>This second working session will focus on Objective 2 of the Internet Society Advocacy Strategy: Promote Affordable, Reliable, and Resilient Access: Create an environment that enables people and communities to connect themselves and promote an Internet that is affordable, reliable, and resilient. We will work together to identify a roadmap and concrete steps for our community to implement Objective 2, with a special focus on developing effective tactics.</p>
-                <p><strong>Type:</strong> Events & Working Sessions</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Connectivity, How the Internet Works</p>
-                <p><strong>Who can get involved:</strong> Individual Members, Chapter Members, Chapter Leaders, Organization Members, Alumni</p>
-                <p><strong>Date:</strong> 2025-10-01</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[Input on Age Verification and Online Safety Policy Brief]]></title>
-                    <link>https://app.smartsheet.com/b/form/90a611e458c1424fbd4d35dc0c1cb0cf</link>
-                    <guid>https://app.smartsheet.com/b/form/90a611e458c1424fbd4d35dc0c1cb0cf</guid>
-                    <pubDate>Tue, 09 Sep 2025 20:23:04 GMT</pubDate>
-                    <description><![CDATA[<p>We look to the Internet Society community for comments and feedback on how to make the brief most useful for policymakers in their region and to ensure the brief sufficiently addresses the risks and potential benefits of age check requirements.</p>
-                <p><strong>Type:</strong> Consultations & Surveys</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Policy, Privacy, Security</p>
-                <p><strong>Who can get involved:</strong> Individual Members, Chapter Members, Chapter Leaders, Organization Members, Alumni</p>
-                <p><strong>Date:</strong> 2025-10-02</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[Special Interest Group (SIG) Selection Process Q&A Open House #2]]></title>
-                    <link>https://isoc.zoom.us/meeting/register/6M5fb319RmKZMiKVzLgD7w#/registration</link>
-                    <guid>https://isoc.zoom.us/meeting/register/6M5fb319RmKZMiKVzLgD7w#/registration</guid>
-                    <pubDate>Mon, 08 Sep 2025 12:10:19 GMT</pubDate>
-                    <description><![CDATA[<p>SIG topic leadership team provides an overview of the topic, campaigns for support and answers questions regarding their proposals with the Internet Society community.</p>
-                <p><strong>Type:</strong> Events & Working Sessions</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Community</p>
-                <p><strong>Who can get involved:</strong> Individual Members, Chapter Members, Chapter Leaders, Alumni</p>
-                <p><strong>Date:</strong> 2025-10-16</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[Internet Society Board Meeting No. 190]]></title>
-                    <link>https://www.internetsociety.org/board-of-trustees/meetings/190-2/</link>
-                    <guid>https://www.internetsociety.org/board-of-trustees/meetings/190-2/</guid>
-                    <pubDate>Fri, 05 Sep 2025 06:46:08 GMT</pubDate>
-                    <description><![CDATA[<p>The Board of Trustees invites the Internet Society community to join public sessions of its meetings as observers. These sessions enable attendees to listen in, but not participate in the discussion. See the agenda for the board meeting to determine which sessions are open to observers. Executive Sessions are closed meetings.</p>
-                <p><strong>Type:</strong> Events & Working Sessions</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Community</p>
-                <p><strong>Who can get involved:</strong> Individual Members, Chapter Members, Chapter Leaders, Organization Members, Alumni</p>
-                <p><strong>Date:</strong> 2025-09-07</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[Join the Global Encryption Coalition]]></title>
+                    <title>Join the Global Encryption Coalition</title>
                     <link>https://www.globalencryption.org/join/</link>
-                    <guid>https://www.globalencryption.org/join/</guid>
+                    <description>Some governments and organizations are pushing to weaken encryption, which would create a dangerous precedent that compromises the security of billions of people worldwide. Actions in one country that undermine encryption threaten all of us.
+
+With over 400 members distributed across 103 countries, the Global Encryption Coalition promotes and defends encryption in key countries and multilateral fora where it is under threat. It also supports efforts by companies to offer encrypted services to their users.</description>
                     <pubDate>Thu, 04 Sep 2025 07:11:29 GMT</pubDate>
-                    <description><![CDATA[<p>Some governments and organizations are pushing to weaken encryption, which would create a dangerous precedent that compromises the security of billions of people worldwide. Actions in one country that undermine encryption threaten all of us.
-
-With over 400 members distributed across 103 countries, the Global Encryption Coalition promotes and defends encryption in key countries and multilateral fora where it is under threat. It also supports efforts by companies to offer encrypted services to their users.</p>
-                <p><strong>Type:</strong> Ongoing Opportunities</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Privacy, Security</p>
-                <p><strong>Who can get involved:</strong> Individual Members, Chapter Members, Chapter Leaders, Organization Members, Alumni</p>
-                <p><strong>Date:</strong> Ongoing</p>]]></description>
+                    <guid isPermaLink="false">2a134b02ad2e360080e050cf5b37f0ae</guid>
+                    <category>Opportunity</category>
+                    <category>Ongoing Opportunities</category>
+                    <category>Global</category>
                 </item>
 <item>
-                    <title><![CDATA[Protect European digital privacy]]></title>
-                    <link>https://fightchatcontrol.eu/#contact-tool</link>
-                    <guid>https://fightchatcontrol.eu/#contact-tool</guid>
-                    <pubDate>Wed, 03 Sep 2025 11:50:45 GMT</pubDate>
-                    <description><![CDATA[<p>Take part in a coordinated European effort to stop a new EU proposal that would break end-to-end encryption. Fight Chat Control, a citizen-led initiative, provides resources and support to contact your national governments and media to prevent the passage of this harmful "Chat Control" regulation.</p>
-                <p><strong>Type:</strong> External (Non-ISOC)</p>
-                <p><strong>Region:</strong> Europe</p>
-                <p><strong>Internet Issue:</strong> Privacy, Security</p>
-                <p><strong>Who can get involved:</strong> Individual Members, Chapter Members, Chapter Leaders, Alumni</p>
-                <p><strong>Date:</strong> 2025-09-12</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[Early Career Fellowship Symposium 2025]]></title>
-                    <link>https://events.zoom.us/ev/AuwwvFHDqkF7kQ2IkF6wcoecIXl_CWHJF98TZMm2nxtijScP6Ksi~AuUbAO_VW0xGgd1oInc4BXyeAm5IcHBVXflMevYhQKlD9hrwWsPOxOzX0w</link>
-                    <guid>https://events.zoom.us/ev/AuwwvFHDqkF7kQ2IkF6wcoecIXl_CWHJF98TZMm2nxtijScP6Ksi~AuUbAO_VW0xGgd1oInc4BXyeAm5IcHBVXflMevYhQKlD9hrwWsPOxOzX0w</guid>
-                    <pubDate>Tue, 02 Sep 2025 09:58:48 GMT</pubDate>
-                    <description><![CDATA[<p>Join us at the Symposium for our exciting panels grouped around the most pressing Internet challenges we face today. The Fellows will share their amazing projects and their expertise on wider Internet issues, showcasing all they have learned throughout the program and beyond.</p>
-                <p><strong>Type:</strong> Events & Working Sessions</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Community</p>
-                <p><strong>Who can get involved:</strong> Individual Members, Chapter Members, Chapter Leaders, Alumni, Fellows</p>
-                <p><strong>Date:</strong> 2025-09-10</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[Special Interest Group (SIG) Selection Process Q&A Open House #1]]></title>
-                    <link>https://isoc.zoom.us/meeting/register/StdTBqLtSIyJZ6DEgldU4Q#/registration</link>
-                    <guid>https://isoc.zoom.us/meeting/register/StdTBqLtSIyJZ6DEgldU4Q#/registration</guid>
-                    <pubDate>Tue, 02 Sep 2025 09:54:24 GMT</pubDate>
-                    <description><![CDATA[<p>SIG topic leadership team provides an overview of the topic, campaigns for support and answers questions regarding their proposals with the Internet Society community.</p>
-                <p><strong>Type:</strong> Events & Working Sessions</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Community</p>
-                <p><strong>Who can get involved:</strong> Individual Members, Chapter Members, Chapter Leaders, Alumni</p>
-                <p><strong>Date:</strong> 2025-09-25</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[WSIS+20 Zero Draft - Open Door Session (10AM UTC)]]></title>
-                    <link>https://isoc.zoom.us/meeting/register/n8v6W86rSHuu3KI8atXaSw#/registration</link>
-                    <guid>https://isoc.zoom.us/meeting/register/n8v6W86rSHuu3KI8atXaSw#/registration</guid>
-                    <pubDate>Mon, 01 Sep 2025 09:23:25 GMT</pubDate>
-                    <description><![CDATA[<p>Be ready to join these interactive sessions. Together, we’ll shape the ideas and language we’ll use to defend the Internet and help make our vision a reality. Please circulate this invitation among your chapters and invite your colleagues to register for any of the two sessions. We scheduled them to cover different time zones; please choose the session that better accommodates your schedule.</p>
-                <p><strong>Type:</strong> Events & Working Sessions</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Internet Governance</p>
-                <p><strong>Who can get involved:</strong> Individual Members, Chapter Members, Chapter Leaders, Organization Members, Alumni</p>
-                <p><strong>Date:</strong> 2025-09-04</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[WSIS+20 Zero Draft - Open Door Session (10PM UTC)]]></title>
-                    <link>https://isoc.zoom.us/meeting/register/2JEgAWRBQniBfioSRbxmnA#/registration</link>
-                    <guid>https://isoc.zoom.us/meeting/register/2JEgAWRBQniBfioSRbxmnA#/registration</guid>
-                    <pubDate>Mon, 01 Sep 2025 09:23:25 GMT</pubDate>
-                    <description><![CDATA[<p>Be ready to join these interactive sessions. Together, we’ll shape the ideas and language we’ll use to defend the Internet and help make our vision a reality. Please circulate this invitation among your chapters and invite your colleagues to register for any of the two sessions. We scheduled them to cover different time zones; please choose the session that better accommodates your schedule.</p>
-                <p><strong>Type:</strong> Events & Working Sessions</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Internet Governance</p>
-                <p><strong>Who can get involved:</strong> Individual Members, Chapter Members, Chapter Leaders, Organization Members, Alumni</p>
-                <p><strong>Date:</strong> 2025-09-04</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[Working session: Internet Society's Advocacy Strategy]]></title>
-                    <link>https://isoc.zoom.us/meeting/register/eho6Qk5ETgOsSzcWboP1Fw</link>
-                    <guid>https://isoc.zoom.us/meeting/register/eho6Qk5ETgOsSzcWboP1Fw</guid>
-                    <pubDate>Fri, 22 Aug 2025 14:00:02 GMT</pubDate>
-                    <description><![CDATA[<p>Join us for our first working session on the Internet Society's Advocacy Strategy. During this interactive session, we will work together to identify a roadmap and concrete steps for the community to implement Objective 1, with a special focus on developing effective tactics.</p>
-                <p><strong>Type:</strong> Events & Working Sessions</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Internet Governance</p>
-                <p><strong>Who can get involved:</strong> Individual Members</p>
-                <p><strong>Date:</strong> 2025-09-02</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[Beyond the Net Grant Program]]></title>
-                    <link>https://www.isocfoundation.org/grant-programme/beyond-the-net-grant-program/</link>
-                    <guid>https://www.isocfoundation.org/grant-programme/beyond-the-net-grant-program/</guid>
-                    <pubDate>Mon, 18 Aug 2025 12:52:44 GMT</pubDate>
-                    <description><![CDATA[<p>The Internet Society Foundation’s Beyond the Net Grant Program offers funding to support Internet Society Chapters to implement innovative projects that make a local impact by providing meaningful access to an open, trusted, and globally-connected Internet, as well as strengthening the Chapters’ presence in the surrounding community.</p>
-                <p><strong>Type:</strong> Funding & Support</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Community</p>
-                <p><strong>Who can get involved:</strong> Chapter Leaders</p>
-                <p><strong>Date:</strong> 2025-09-09</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[Sustainable Peering Infrastructure Funding Program]]></title>
-                    <link>https://www.internetsociety.org/funding-areas/sustainable-peering-ixp/</link>
-                    <guid>https://www.internetsociety.org/funding-areas/sustainable-peering-ixp/</guid>
-                    <pubDate>Wed, 06 Aug 2025 10:40:15 GMT</pubDate>
-                    <description><![CDATA[<p>Funding availability varies based on the needs of the IXP or organization. Grants are available up to USD $70,000, and projects can run for up to 12 months.
-
-Eligible funded activities include IXP equipment, reasonable operational, governance, and business development costs, IP transit capacity to promote local CDN cache content distribution, and technical, policy, and best practice capacity-building and workshops.</p>
-                <p><strong>Type:</strong> Funding & Support</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Connectivity</p>
-                <p><strong>Who can get involved:</strong> Chapter Leaders</p>
-                <p><strong>Date:</strong> 2025-09-04</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[Serve on the Internet Society Board of Trustees Nominations and Elections Committees]]></title>
-                    <link>https://isoc.app.box.com/notes/1918440663962?s=1e0cuy48w68flmmbhqp6jqr58pq48aja</link>
-                    <guid>https://isoc.app.box.com/notes/1918440663962?s=1e0cuy48w68flmmbhqp6jqr58pq48aja</guid>
-                    <pubDate>Wed, 06 Aug 2025 10:10:01 GMT</pubDate>
-                    <description><![CDATA[<p>The Internet Society requests that the Chapters Advisory Council (ChAC) identify one (1) volunteer to serve on the ISOC Nominations Committee AND one (1) volunteer to serve on the ISOC Elections Committee for the 2025-2026 nominations and elections cycle.
-
-Find the volunteer requirements, time commitments, and more details about what each committee’s remit is below.</p>
-                <p><strong>Type:</strong> Urgent: Upcoming Deadlines</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Community</p>
-                <p><strong>Who can get involved:</strong> Chapter Leaders</p>
-                <p><strong>Date:</strong> 2025-08-22</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[Fundraising and Financial Sustainability Training Series]]></title>
-                    <link>https://nonprofitbuilder.org/isoc-npb-capacity-strengthening-program-2025/page</link>
-                    <guid>https://nonprofitbuilder.org/isoc-npb-capacity-strengthening-program-2025/page</guid>
-                    <pubDate>Thu, 31 Jul 2025 13:02:15 GMT</pubDate>
-                    <description><![CDATA[<p>This training series is designed to support your chapter in exploring new funding options beyond ISOC support, strengthening your financial resilience, and putting in place clear, actionable systems for resource mobilisation.</p>
-                <p><strong>Type:</strong> Funding & Support</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Community</p>
-                <p><strong>Who can get involved:</strong> Chapter Leaders</p>
-                <p><strong>Date:</strong> 2025-08-05</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[2025 Global Encryption Day Grants]]></title>
-                    <link>https://www.globalencryption.org/global-encryption-day-2025-event-grants/</link>
-                    <guid>https://www.globalencryption.org/global-encryption-day-2025-event-grants/</guid>
-                    <pubDate>Thu, 31 Jul 2025 07:37:48 GMT</pubDate>
-                    <description><![CDATA[<p>The 2025 GEC grant applications will be accepted from 5 - 28 August (or until 50 grants have been distributed!). Applications are reviewed on a rolling basis by Internet Society staff. We encourage applicants to apply early as funds will be distributed on a first-come, first-served basis.</p>
-                <p><strong>Type:</strong> Funding & Support</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Security</p>
-                <p><strong>Who can get involved:</strong> Chapter Leaders</p>
-                <p><strong>Date:</strong> 2025-08-21</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[Endorse the Internet Society’s Contribution to the WSIS+20 Elements Paper]]></title>
-                    <link>https://www.internetsociety.org/our-work/internet-governance/world-summit-on-the-information-society-wsis/wsis20-elements-paper/</link>
-                    <guid>https://www.internetsociety.org/our-work/internet-governance/world-summit-on-the-information-society-wsis/wsis20-elements-paper/</guid>
-                    <pubDate>Wed, 30 Jul 2025 09:12:39 GMT</pubDate>
-                    <description><![CDATA[<p>Thank you to those who have already endorsed our written contribution to the WSIS+20 Elements Paper. We have submitted our document to the United Nations and listed the initial endorsers on our website. The opportunity to endorse this contribution will remain open for a few days while we wait for the co-facilitators to release the WSIS+20 Zero Draft, which will be the next document in this process. You can endorse the contribution on behalf of your organization or in your personal capacity.</p>
-                <p><strong>Type:</strong> Urgent: Upcoming Deadlines</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Internet Governance</p>
-                <p><strong>Who can get involved:</strong> Individual Members, Chapter Members, Chapter Leaders, Organization Members, Alumni, Internet Pioneers</p>
-                <p><strong>Date:</strong> 2025-08-31</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[Internet Society's New Advocacy Strategy – Session 1]]></title>
-                    <link>https://isoc.zoom.us/meeting/register/nmwbsthkT8qvSsLMhVUSTw#/registration</link>
-                    <guid>https://isoc.zoom.us/meeting/register/nmwbsthkT8qvSsLMhVUSTw#/registration</guid>
-                    <pubDate>Wed, 23 Jul 2025 09:59:52 GMT</pubDate>
-                    <description><![CDATA[<p>Learn about our new Advocacy Strategy—a bold, collaborative effort to strengthen our ability to influence the decisions that shape the Internet’s future. Whether you're a long-time advocate or just getting started, your voice and actions matter. Join us to discover how you can play a key role in advancing our shared mission and defending what makes the Internet a force for good.</p>
-                <p><strong>Type:</strong> Events & Working Sessions</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Policy</p>
-                <p><strong>Who can get involved:</strong> Individual Members, Chapter Leaders, Organization Members, Alumni</p>
-                <p><strong>Date:</strong> 2025-08-06</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[Internet Society's New Advocacy Strategy – Session 2]]></title>
-                    <link>https://isoc.zoom.us/meeting/register/qPhFqyaFShiI9xpowJ5fkQ#/registration</link>
-                    <guid>https://isoc.zoom.us/meeting/register/qPhFqyaFShiI9xpowJ5fkQ#/registration</guid>
-                    <pubDate>Wed, 23 Jul 2025 09:59:52 GMT</pubDate>
-                    <description><![CDATA[<p>Learn about our new Advocacy Strategy—a bold, collaborative effort to strengthen our ability to influence the decisions that shape the Internet’s future. Whether you're a long-time advocate or just getting started, your voice and actions matter. Join us to discover how you can play a key role in advancing our shared mission and defending what makes the Internet a force for good.</p>
-                <p><strong>Type:</strong> Events & Working Sessions</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Policy</p>
-                <p><strong>Who can get involved:</strong> Individual Members, Chapter Leaders, Organization Members, Alumni</p>
-                <p><strong>Date:</strong> 2025-08-07</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[Expert Group for a Technology Roadmap on Encryption [European Commission]]]></title>
-                    <link>https://ec.europa.eu/transparency/expert-groups-register/screen/expert-groups/consult?lang=en&amp;groupID=4005&amp;fromCallsApplication=true</link>
-                    <guid>https://ec.europa.eu/transparency/expert-groups-register/screen/expert-groups/consult?lang=en&amp;groupID=4005&amp;fromCallsApplication=true</guid>
-                    <pubDate>Wed, 23 Jul 2025 09:47:23 GMT</pubDate>
-                    <description><![CDATA[<p>The European Commission is forming an informal Expert Group to “focus on current and future technical challenges impacting lawful access to digital information in the context of criminal investigations”. It is looking for technically skilled professionals with domain-specific expertise, especially in cybersecurity, telecom, big data analysis, digital forensics, fundamental rights, and data technologies.</p>
-                <p><strong>Type:</strong> Urgent: Upcoming Deadlines</p>
-                <p><strong>Region:</strong> Europe</p>
-                <p><strong>Internet Issue:</strong> Security</p>
-                <p><strong>Who can get involved:</strong> Individual Members, Chapter Members, Chapter Leaders, Organization Members, Alumni</p>
-                <p><strong>Date:</strong> 2025-09-01</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[WSIS+20 Five-Point Plan Follow-up: Eight Practical Recommendations]]></title>
-                    <link>https://www.gp-digital.org/wsis20-five-point-plan-follow-up-eight-practical-recommendations/</link>
-                    <guid>https://www.gp-digital.org/wsis20-five-point-plan-follow-up-eight-practical-recommendations/</guid>
-                    <pubDate>Wed, 23 Jul 2025 09:44:00 GMT</pubDate>
-                    <description><![CDATA[<p>With Global Partners Digital (GPD) and a group of cross-stakeholders we have drafted Eight Practical Recommendations for the WSIS review with the aim of presenting tangible recommendations on how the WSIS co-facilitators can facilitate a transparent and inclusive process for the WSIS review.</p>
-                <p><strong>Type:</strong> Urgent: Upcoming Deadlines</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Internet Governance</p>
-                <p><strong>Who can get involved:</strong> Individual Members, Chapter Leaders, Organization Members</p>
-                <p><strong>Date:</strong> 2025-07-31</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[Community Dialogue: The Evolution of the Internet Governance Forum (IGF)]]></title>
-                    <link>https://isoc.zoom.us/meeting/register/KXXmXzIrSXyRBfMY7ulxeA#/registration</link>
-                    <guid>https://isoc.zoom.us/meeting/register/KXXmXzIrSXyRBfMY7ulxeA#/registration</guid>
-                    <pubDate>Wed, 23 Jul 2025 07:49:32 GMT</pubDate>
-                    <description><![CDATA[<p>Hear from our community expert, Flávio Wagner from our Brazil Chapter, how the IGF has evolved over its 20 years of existence and join a lively discussion on which role the IGF should play in the future, and how.</p>
-                <p><strong>Type:</strong> Events & Working Sessions</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Internet Governance</p>
-                <p><strong>Who can get involved:</strong> Individual Members, Chapter Members, Chapter Leaders, Organization Members, Alumni</p>
-                <p><strong>Date:</strong> 2025-07-30</p>]]></description>
-                </item>
-<item>
-                    <title><![CDATA[WSIS+20 Working Group]]></title>
+                    <title>WSIS+20 Working Group</title>
                     <link>https://community.internetsociety.org/s/group/0F9UO000000088r0AA/wsis20-2025-working-group</link>
-                    <guid>https://community.internetsociety.org/s/group/0F9UO000000088r0AA/wsis20-2025-working-group</guid>
+                    <description>Join our WSIS+20 Working Group and help shape the future of our Internet vision and global policy. The WSIS+20 review is a key moment for digital development. Its outcomes will guide future UN action and stakeholder involvement.</description>
                     <pubDate>Mon, 21 Jul 2025 09:08:14 GMT</pubDate>
-                    <description><![CDATA[<p>Join our WSIS+20 Working Group and help shape the future of our Internet vision and global policy. The WSIS+20 review is a key moment for digital development. Its outcomes will guide future UN action and stakeholder involvement.</p>
-                <p><strong>Type:</strong> Ongoing Opportunities</p>
-                <p><strong>Region:</strong> Global</p>
-                <p><strong>Internet Issue:</strong> Internet Governance</p>
-                <p><strong>Who can get involved:</strong> Individual Members, Chapter Members, Chapter Leaders, Alumni</p>
-                <p><strong>Date:</strong> Ongoing</p>]]></description>
+                    <guid isPermaLink="false">a4a97017d711e8ad1c60f5a2c4246bae</guid>
+                    <category>Opportunity</category>
+                    <category>Ongoing Opportunities</category>
+                    <category>Global</category>
                 </item>
     </channel>
 </rss>
