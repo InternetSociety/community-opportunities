@@ -1,5 +1,6 @@
 [
   {
+    "approved": true,
     "category": "Community",
     "description": "This is the description of the event",
     "endDate": null,
@@ -14,5 +15,22 @@
     "timeZone": "CET",
     "title": "Test event",
     "type": "Webinar"
+  },
+  {
+    "approved": true,
+    "category": "Internet Governance",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+    "endDate": null,
+    "endTime": "16:00",
+    "format": "Hybrid",
+    "language": "English",
+    "organizer": "Test SIG",
+    "region": "Asia Pacific",
+    "registrationUrl": "https://internetsociety.org",
+    "startDate": "2025-12-01",
+    "startTime": "09:00",
+    "timeZone": "UTC",
+    "title": "Event with a longer name",
+    "type": "Training"
   }
 ]
