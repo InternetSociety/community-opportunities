@@ -1,22 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:1afad6ffc87d813af3a4b517df2dad90 -->
+<!-- DATA_FINGERPRINT:a4b99fc1b4e33c0d75a546be8f6b9538 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Events</title>
         <link>https://opportunities.internetsociety.org</link>
         <description>Latest events to get involved with Internet Society initiatives</description>
         <language>en-us</language>
-        <lastBuildDate>Wed, 26 Nov 2025 14:10:07 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 26 Nov 2025 15:09:53 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/community-events/data/events.rss" rel="self" type="application/rss+xml" />
         <item>
                     <title>Test event</title>
                     <link>https://internetsociety.org</link>
                     <description>This is the description of the event</description>
-                    <pubDate>Wed, 26 Nov 2025 14:10:07 GMT</pubDate>
+                    <pubDate>Wed, 26 Nov 2025 15:09:53 GMT</pubDate>
                     <guid isPermaLink="false">6f857dd53cbd24da62aa9f511bf69997</guid>
                     <category>Event</category>
                     <category>Webinar</category>
                     <category>Europe</category>
+                </item>
+<item>
+                    <title>Event with a longer name</title>
+                    <link>https://internetsociety.org</link>
+                    <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</description>
+                    <pubDate>Wed, 26 Nov 2025 15:09:53 GMT</pubDate>
+                    <guid isPermaLink="false">162ca4a90aca543231cc811042f07647</guid>
+                    <category>Event</category>
+                    <category>Training</category>
+                    <category>Asia Pacific</category>
                 </item>
     </channel>
 </rss>
