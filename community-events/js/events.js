@@ -176,6 +176,13 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
+        // Sort events chronologically by start date
+        const sortedEvents = [...events].sort((a, b) => {
+            if (!a.startDate) return 1;
+            if (!b.startDate) return -1;
+            return new Date(a.startDate) - new Date(b.startDate);
+        });
+
         // Create section for events
         const section = document.createElement('section');
         section.className = 'dynamic-section';
@@ -216,7 +223,30 @@ document.addEventListener('DOMContentLoaded', function () {
         const tableContainer = document.createElement('div');
         tableContainer.className = 'table-container';
 
-        events.forEach(event => {
+        let lastMonth = '';
+        let lastYear = '';
+
+        sortedEvents.forEach(event => {
+            // Check if we need to add a month divider
+            if (event.startDate) {
+                const [year, month] = event.startDate.split('-').map(Number);
+                const dateObj = new Date(year, month - 1, 1);
+                const currentMonth = dateObj.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+                
+                if (currentMonth !== lastMonth) {
+                    // Add subtle month divider
+                    const monthDivider = document.createElement('div');
+                    monthDivider.className = 'month-divider';
+                    monthDivider.innerHTML = `
+                        <div class="month-divider-line"></div>
+                        <div class="month-divider-label">${currentMonth}</div>
+                        <div class="month-divider-line"></div>
+                    `;
+                    cardGrid.appendChild(monthDivider);
+                    lastMonth = currentMonth;
+                }
+            }
+
             // Card View - matching the screenshot style
             const card = document.createElement('div');
             card.className = 'action-card event-card';

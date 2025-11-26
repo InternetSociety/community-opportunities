@@ -337,11 +337,14 @@
     }
 }
 
-/* 3-column grid override for community events */
+/* Responsive 2-column grid for community events */
 #community-events .card-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 24px;
     align-items: stretch;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 #community-events .card-grid .event-card {
@@ -350,15 +353,21 @@
     height: 100%;
 }
 
-@media (max-width: 1200px) {
+/* Responsive adjustments */
+@media (max-width: 900px) {
     #community-events .card-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 600px;
     }
 }
 
-@media (max-width: 768px) {
+/* Ultra-wide screens - maintain 2 columns but allow wider cards */
+@media (min-width: 1400px) {
     #community-events .card-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+        max-width: 1400px;
     }
 }
 
@@ -650,4 +659,44 @@
 .event-table th:last-child {
     background-color: var(--isoc-blue);
     color: white;
+}
+
+/* Month divider styles */
+.month-divider {
+    display: flex;
+    align-items: center;
+    margin: 24px 0 16px 0;
+    padding: 0 16px;
+    grid-column: 1 / -1;
+}
+
+.month-divider-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #e0e0e0, transparent);
+    opacity: 0.6;
+}
+
+.month-divider-label {
+    padding: 0 16px;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+    white-space: nowrap;
+}
+
+/* Responsive adjustments for month dividers */
+@media (max-width: 768px) {
+    .month-divider {
+        margin: 20px 0 12px 0;
+        padding: 0 8px;
+    }
+    
+    .month-divider-label {
+        font-size: 0.85em;
+        padding: 0 12px;
+    }
 }
