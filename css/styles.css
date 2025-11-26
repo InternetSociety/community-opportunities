@@ -305,7 +305,7 @@ body {
 
 header {
     text-align: center;
-    margin: 0 0 40px 0;
+    margin: 0 0 20px 0;
     padding: 60px 20px;
     background-image: url('../img/header-background.webp');
     background-position: center center;
@@ -399,6 +399,10 @@ section {
     padding: 20px; /* Offset for sticky nav */
     margin: auto;
     max-width: 1024px;
+}
+
+section#community-events {
+    padding: 0 20px;
 }
 
 .section-header {

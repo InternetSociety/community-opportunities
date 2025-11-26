@@ -762,5 +762,47 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Filter toggle functionality
+    const filterToggleBtn = document.getElementById('filter-toggle-btn');
+    const filtersSection = document.querySelector('.filters-section');
+    
+    console.log('Filter button found:', filterToggleBtn);
+    console.log('Filters section found:', filtersSection);
+    
+    if (filterToggleBtn && filtersSection) {
+        // Set initial state - hidden by default
+        filtersSection.classList.remove('show');
+        console.log('Initial state set - filters hidden');
+        
+        // Handle toggle click
+        filterToggleBtn.addEventListener('click', function(e) {
+            console.log('Filter button clicked!');
+            e.preventDefault();
+            e.stopPropagation();
+            if (filtersSection.classList.contains('show')) {
+                filtersSection.classList.remove('show');
+                console.log('Filters hidden');
+            } else {
+                filtersSection.classList.add('show');
+                console.log('Filters shown');
+            }
+        });
+        
+        // Close filters when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!filtersSection.contains(e.target) && e.target !== filterToggleBtn && !filterToggleBtn.contains(e.target)) {
+                filtersSection.classList.remove('show');
+                console.log('Filters closed by outside click');
+            }
+        });
+        
+        // Prevent clicks inside filters from closing it
+        filtersSection.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    } else {
+        console.error('Filter button or section not found!');
+    }
+
     init();
 });
