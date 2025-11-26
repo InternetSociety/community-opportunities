@@ -37,7 +37,7 @@ END:DAYLIGHT
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:805f3f1f-2d3a-506b-b91f-b7d9da8d3478
-DTSTAMP:20251126T181103Z
+DTSTAMP:20240101T000000Z
 SUMMARY:Test event
 DESCRIPTION:This is the description of the event
 URL:https://internetsociety.org
@@ -46,7 +46,7 @@ DTEND;TZID=CET:20251127T150000
 END:VEVENT
 BEGIN:VEVENT
 UID:76edd7b4-4223-505a-9bfe-8551a9642594
-DTSTAMP:20251126T181103Z
+DTSTAMP:20240101T000000Z
 SUMMARY:Event with a longer name
 DESCRIPTION:Lorem ipsum dolor sit amet\, consectetur adipiscing elit\, sed do eiusmo
  d tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim v
@@ -58,7 +58,7 @@ DTEND;TZID=UTC:20251201T160000
 END:VEVENT
 BEGIN:VEVENT
 UID:36d06067-9dcf-57db-89f0-19f28b3b90d9
-DTSTAMP:20251126T181103Z
+DTSTAMP:20240101T000000Z
 SUMMARY:Multiple days
 DESCRIPTION:This event takes place during multiple days
 URL:https://internetsociety.org
