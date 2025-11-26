@@ -225,11 +225,32 @@ document.addEventListener('DOMContentLoaded', function () {
             let dateObj = null;
             let monthStr = '';
             let dayStr = '';
+            let dateRangeText = '';
             if (event.startDate) {
                 const [year, month, day] = event.startDate.split('-').map(Number);
                 dateObj = new Date(year, month - 1, day);
                 monthStr = dateObj.toLocaleDateString('en-US', { month: 'short' }).toUpperCase();
-                dayStr = dateObj.getDate().toString();
+                
+                if (event.endDate && event.endDate !== event.startDate) {
+                    // Multi-day event - show date range
+                    const [endYear, endMonth, endDay] = event.endDate.split('-').map(Number);
+                    const endDateObj = new Date(endYear, endMonth - 1, endDay);
+                    
+                    if (year === endYear && month === endMonth) {
+                        // Same month and year: "Dec 1-6"
+                        dayStr = `${day}-${endDay}`;
+                    } else if (year === endYear) {
+                        // Same year, different month: "Dec 1 - Jan 6"
+                        const endMonthStr = endDateObj.toLocaleDateString('en-US', { month: 'short' }).toUpperCase();
+                        dayStr = `${day} ${monthStr} - ${endDay} ${endMonthStr}`;
+                    } else {
+                        // Different year: "Dec 1, 2025 - Jan 6, 2026"
+                        dayStr = `${day} ${monthStr} ${year} - ${endDay} ${endDateObj.toLocaleDateString('en-US', { month: 'short' }).toUpperCase()} ${endYear}`;
+                    }
+                } else {
+                    // Single day event
+                    dayStr = dateObj.getDate().toString();
+                }
             }
 
             // Format time
@@ -338,12 +359,34 @@ document.addEventListener('DOMContentLoaded', function () {
             whenCell.className = 'event-when-cell';
 
             if (event.startDate) {
-                const dateObj = new Date(event.startDate);
-                const dateStr = dateObj.toLocaleDateString('en-US', {
-                    month: 'short',
-                    day: 'numeric',
-                    year: 'numeric'
-                });
+                let dateStr = '';
+                
+                if (event.endDate && event.endDate !== event.startDate) {
+                    // Multi-day event - show date range
+                    const startDateObj = new Date(event.startDate);
+                    const endDateObj = new Date(event.endDate);
+                    
+                    const startStr = startDateObj.toLocaleDateString('en-US', {
+                        month: 'short',
+                        day: 'numeric'
+                    });
+                    
+                    const endStr = endDateObj.toLocaleDateString('en-US', {
+                        month: 'short',
+                        day: 'numeric',
+                        year: 'numeric'
+                    });
+                    
+                    dateStr = `${startStr} - ${endStr}`;
+                } else {
+                    // Single day event
+                    const dateObj = new Date(event.startDate);
+                    dateStr = dateObj.toLocaleDateString('en-US', {
+                        month: 'short',
+                        day: 'numeric',
+                        year: 'numeric'
+                    });
+                }
 
                 const dateDiv = document.createElement('div');
                 dateDiv.textContent = dateStr;
