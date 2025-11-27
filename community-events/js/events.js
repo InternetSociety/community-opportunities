@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const header = document.createElement('h2');
         header.className = 'section-header';
-        header.innerHTML = '<i class="icon fa-solid fa-calendar-day"></i>Upcoming Events';
+        header.innerHTML = '<i class="icon fa-solid fa-calendar-day"></i>Upcoming events';
 
         const headerContainer = document.createElement('div');
         headerContainer.className = 'section-header-container';
