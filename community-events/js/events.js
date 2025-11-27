@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Render events
     function renderEvents(events) {
         container.innerHTML = '';
-        
+
         // Reset background index for consistent rendering
         backgroundIndex = 0;
 
@@ -218,12 +218,12 @@ document.addEventListener('DOMContentLoaded', function () {
         viewControls.className = 'view-controls';
         viewControls.innerHTML = `
             <div class="view-toggle" id="view-toggle" title="Toggle view">
-                <span class="view-option active" data-view="cards">
+                <button class="view-option active" data-view="cards" aria-label="Card View">
                     <i class="fas fa-square"></i>
-                </span>
-                <span class="view-option" data-view="table">
+                </button>
+                <button class="view-option" data-view="table" aria-label="Table View">
                     <i class="fas fa-table"></i>
-                </span>
+                </button>
             </div>
         `;
 
@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const [year, month] = event.startDate.split('-').map(Number);
                 const dateObj = new Date(year, month - 1, 1);
                 const currentMonth = dateObj.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
-                
+
                 if (currentMonth !== lastMonth) {
                     // Add subtle month divider
                     const monthDivider = document.createElement('div');
@@ -265,7 +265,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Card View - matching the screenshot style
             const card = document.createElement('div');
             card.className = 'action-card event-card';
-            
+
             // Set alternating background image
             const backgroundImage = getAlternatingBackgroundImage();
 
@@ -278,12 +278,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 const [year, month, day] = event.startDate.split('-').map(Number);
                 dateObj = new Date(year, month - 1, day);
                 monthStr = dateObj.toLocaleDateString('en-US', { month: 'short' }).toUpperCase();
-                
+
                 if (event.endDate && event.endDate !== event.startDate) {
                     // Multi-day event - show date range
                     const [endYear, endMonth, endDay] = event.endDate.split('-').map(Number);
                     const endDateObj = new Date(endYear, endMonth - 1, endDay);
-                    
+
                     if (year === endYear && month === endMonth) {
                         // Same month and year: "Dec 1-6"
                         dayStr = `${day}-${endDay}`;
@@ -307,9 +307,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 event.startTime || '';
 
             // Build card content matching screenshot style
+            const headerTag = event.registrationUrl ? 'a' : 'div';
+            const headerAttrs = event.registrationUrl ? ` href="${event.registrationUrl}" target="_blank" rel="noopener noreferrer"` : '';
+
             card.innerHTML = `
-                ${event.startDate && event.startDate !== 'Ongoing' ? `<button class="event-calendar-btn add-to-calendar" data-title="${event.title}" data-date="${event.startDate}" data-time="${event.startTime || ''}" data-timezone="${event.timeZone || ''}" data-description="${event.description || ''}" data-link="${event.registrationUrl || ''}" title="Add to calendar"><i class="fa-solid fa-calendar-plus"></i></button>` : ''}
-                <div class="event-card-header"${event.registrationUrl ? ` onclick="window.open('${event.registrationUrl}', '_blank')"` : ''}${event.registrationUrl ? ' style="cursor: pointer;"' : ''}>
+                ${event.startDate && event.startDate !== 'Ongoing' ? `<button class="event-calendar-btn add-to-calendar" data-title="${event.title}" data-date="${event.startDate}" data-time="${event.startTime || ''}" data-timezone="${event.timeZone || ''}" data-description="${event.description || ''}" data-link="${event.registrationUrl || ''}" title="Add to calendar" aria-label="Add to calendar"><i class="fa-solid fa-calendar-plus"></i></button>` : ''}
+                <${headerTag} class="event-card-header"${headerAttrs}>
                     <div class="event-cover-image" style="background-image: url('${backgroundImage}');">
                         ${dateObj ? `
                         <div class="event-date-badge">
@@ -318,7 +321,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         </div>
                         ` : ''}
                         <div class="event-cover-content">
-                            <h3 class="event-title">${event.registrationUrl ? `<a href="${event.registrationUrl}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">${event.title}</a>` : event.title}</h3>
+                            <h3 class="event-title">${event.title}</h3>
                         </div>
                     </div>
                     <div class="event-content">
@@ -334,7 +337,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         </div>
                         ${event.organizer ? `<div class="event-organizer"><i class="fa-solid fa-users"></i> ${event.organizer}</div>` : ''}
                     </div>
-                </div>
+                </${headerTag}>
             `;
             cardGrid.appendChild(card);
         });
@@ -414,23 +417,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (event.startDate) {
                 let dateStr = '';
-                
+
                 if (event.endDate && event.endDate !== event.startDate) {
                     // Multi-day event - show date range
                     const startDateObj = new Date(event.startDate);
                     const endDateObj = new Date(event.endDate);
-                    
+
                     const startStr = startDateObj.toLocaleDateString('en-US', {
                         month: 'short',
                         day: 'numeric'
                     });
-                    
+
                     const endStr = endDateObj.toLocaleDateString('en-US', {
                         month: 'short',
                         day: 'numeric',
                         year: 'numeric'
                     });
-                    
+
                     dateStr = `${startStr} - ${endStr}`;
                 } else {
                     // Single day event
@@ -601,12 +604,44 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Subscription dialog functionality
+    let lastFocusedElement;
+
+    function trapFocus(modal) {
+        const focusableElements = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        const firstFocusable = focusableElements[0];
+        const lastFocusable = focusableElements[focusableElements.length - 1];
+
+        modal.addEventListener('keydown', function (e) {
+            if (e.key === 'Tab') {
+                if (e.shiftKey) {
+                    if (document.activeElement === firstFocusable) {
+                        e.preventDefault();
+                        lastFocusable.focus();
+                    }
+                } else {
+                    if (document.activeElement === lastFocusable) {
+                        e.preventDefault();
+                        firstFocusable.focus();
+                    }
+                }
+            }
+        });
+
+        // Focus the first element
+        if (firstFocusable) {
+            firstFocusable.focus();
+        }
+    }
+
     function showSubscriptionDialog(feedType, feedUrl) {
         // Remove any existing subscription modal
         const existingModal = document.getElementById('subscription-modal');
         if (existingModal) {
             existingModal.remove();
         }
+
+        // Store currently focused element
+        lastFocusedElement = document.activeElement;
 
         // Create modal HTML
         const modal = document.createElement('div');
@@ -698,6 +733,7 @@ document.addEventListener('DOMContentLoaded', function () {
             modal.style.display = 'flex';
             modal.classList.add('show');
             document.body.style.overflow = 'hidden';
+            trapFocus(modal);
         });
 
         // Add event listeners for modal
@@ -777,6 +813,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.body.style.overflow = '';
             }
             modal.remove();
+
+            // Restore focus
+            if (lastFocusedElement) {
+                lastFocusedElement.focus();
+            }
         }, 200);
     }
 
@@ -812,32 +853,37 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (addEventBtn && modal) {
         // Open modal when Add Event button is clicked
-        addEventBtn.addEventListener('click', function() {
+        addEventBtn.addEventListener('click', function () {
+            lastFocusedElement = document.activeElement;
             modal.style.display = 'flex';
             document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            trapFocus(modal);
         });
 
         // Close modal when close button is clicked
         if (closeModalBtn) {
-            closeModalBtn.addEventListener('click', function() {
+            closeModalBtn.addEventListener('click', function () {
                 modal.style.display = 'none';
                 document.body.style.overflow = 'auto'; // Restore scrolling
+                if (lastFocusedElement) lastFocusedElement.focus();
             });
         }
 
         // Close modal when clicking outside the modal content
-        modal.addEventListener('click', function(e) {
+        modal.addEventListener('click', function (e) {
             if (e.target === modal) {
                 modal.style.display = 'none';
                 document.body.style.overflow = 'auto'; // Restore scrolling
+                if (lastFocusedElement) lastFocusedElement.focus();
             }
         });
 
         // Close modal with Escape key
-        document.addEventListener('keydown', function(e) {
+        document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape' && modal.style.display === 'flex') {
                 modal.style.display = 'none';
                 document.body.style.overflow = 'auto'; // Restore scrolling
+                if (lastFocusedElement) lastFocusedElement.focus();
             }
         });
     }
@@ -845,13 +891,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // Filter toggle functionality
     const filterToggleBtn = document.getElementById('filter-toggle-btn');
     const filtersSection = document.querySelector('.filters-section');
-    
+
     if (filterToggleBtn && filtersSection) {
         // Set initial state - hidden by default
         filtersSection.classList.remove('show');
-        
+
         // Handle toggle click
-        filterToggleBtn.addEventListener('click', function(e) {
+        filterToggleBtn.addEventListener('click', function (e) {
             e.preventDefault();
             e.stopPropagation();
             if (filtersSection.classList.contains('show')) {
@@ -860,16 +906,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 filtersSection.classList.add('show');
             }
         });
-        
+
         // Close filters when clicking outside
-        document.addEventListener('click', function(e) {
+        document.addEventListener('click', function (e) {
             if (!filtersSection.contains(e.target) && e.target !== filterToggleBtn && !filterToggleBtn.contains(e.target)) {
                 filtersSection.classList.remove('show');
             }
         });
-        
+
         // Prevent clicks inside filters from closing it
-        filtersSection.addEventListener('click', function(e) {
+        filtersSection.addEventListener('click', function (e) {
             e.stopPropagation();
         });
     }

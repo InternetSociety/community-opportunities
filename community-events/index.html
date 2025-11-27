@@ -7,7 +7,7 @@
     <title>Internet Society: Community Events</title>
     <link rel="icon"
         href="https://www.internetsociety.org/wp-content/themes/isoc/dist/images/favicon/android-icon-192x192.png">
-    
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3Q37DYR3P1"></script>
     <script src="../js/analytics.js"></script>
@@ -88,22 +88,18 @@
                     </select>
                 </div>
             </div>
-            <div class="event-count" id="event-count">Showing 0 upcoming events</div>
+            <div class="event-count" id="event-count" aria-live="polite">Showing 0 upcoming events</div>
         </div>
 
         <!-- Modal Dialog for Smartsheet Form -->
         <div id="event-form-modal" class="modal" style="display: none;">
             <div class="modal-content">
-                <button class="modal-close-outside" id="close-modal">
+                <button class="modal-close-outside" id="close-modal" aria-label="Close">
                     <i class="fas fa-times"></i>
                 </button>
                 <div class="modal-body">
-                    <iframe 
-                        src="https://app.smartsheet.com/b/form/dce8f6c15f1c4a3488952e2d670e4582" 
-                        width="100%" 
-                        height="600px" 
-                        frameborder="0"
-                        title="Add your event form">
+                    <iframe src="https://app.smartsheet.com/b/form/dce8f6c15f1c4a3488952e2d670e4582" width="100%"
+                        height="600px" frameborder="0" title="Add your event form">
                     </iframe>
                 </div>
             </div>
