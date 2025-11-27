@@ -802,7 +802,7 @@ document.addEventListener('DOMContentLoaded', function () {
         types.forEach(type => {
             const section = document.createElement('section');
             section.className = `dynamic-section ${currentViewMode === 'table' ? 'view-table' : ''}`;
-            section.id = slugify(type);
+            section.id = ISOC.Utils.slugify(type);
 
             // Get opportunities for this type
             const typeOpportunities = opps.filter(o => o.Type === type);
@@ -1009,7 +1009,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <i class="icon fa-regular fa-calendar"></i>
                 <div>
                     <strong>Date:</strong>
-                    <span class="date-date">${formatDate(o.date)}</span>
+                    <span class="date-date">${ISOC.Utils.formatDate(o.date)}</span>
                 </div>
             </li>` : '';
 

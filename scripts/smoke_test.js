@@ -73,6 +73,48 @@ function runSmokeTest() {
                 const content = fs.readFileSync(cssFile, 'utf8');
                 return content.includes(':root') && content.includes('--isoc-blue');
             }
+        },
+        {
+            name: 'main.js properly uses ISOC.Utils namespace',
+            test: () => {
+                const mainFile = path.join(__dirname, '../js/main.js');
+                const content = fs.readFileSync(mainFile, 'utf8');
+
+                // Check for utility functions called without namespace
+                const utilFunctions = ['formatDate', 'slugify', 'isDateInPast', 'generateICS', 'downloadFile'];
+                const problems = [];
+
+                utilFunctions.forEach(func => {
+                    // Match function calls but exclude ISOC.Utils.functionName
+                    const regex = new RegExp(`(?<!ISOC\\.Utils\\.)\\b${func}\\(`, 'g');
+                    const matches = content.match(regex);
+                    if (matches) {
+                        problems.push(`${func} called ${matches.length} time(s) without ISOC.Utils namespace`);
+                    }
+                });
+
+                if (problems.length > 0) {
+                    console.log(`   ⚠️  Issues found: ${problems.join(', ')}`);
+                    return false;
+                }
+                return true;
+            }
+        },
+        {
+            name: 'Social preview metadata exists in index.html',
+            test: () => {
+                const indexFile = path.join(__dirname, '../index.html');
+                const content = fs.readFileSync(indexFile, 'utf8');
+                return content.includes('og:image') && content.includes('twitter:card');
+            }
+        },
+        {
+            name: 'Social preview metadata exists in community-events/index.html',
+            test: () => {
+                const eventsFile = path.join(__dirname, '../community-events/index.html');
+                const content = fs.readFileSync(eventsFile, 'utf8');
+                return content.includes('og:image') && content.includes('twitter:card');
+            }
         }
     ];
 
