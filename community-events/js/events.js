@@ -160,9 +160,24 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Get alternating background image for event cards
+    let backgroundIndex = 0;
+    function getAlternatingBackgroundImage() {
+        const backgrounds = [
+            '../img/event-bg-white.jpg',
+            '../img/event-bg-neutral.jpg'
+        ];
+        const bg = backgrounds[backgroundIndex % backgrounds.length];
+        backgroundIndex++;
+        return bg;
+    }
+
     // Render events
     function renderEvents(events) {
         container.innerHTML = '';
+        
+        // Reset background index for consistent rendering
+        backgroundIndex = 0;
 
         if (events.length === 0) {
             container.innerHTML = `
@@ -250,6 +265,9 @@ document.addEventListener('DOMContentLoaded', function () {
             // Card View - matching the screenshot style
             const card = document.createElement('div');
             card.className = 'action-card event-card';
+            
+            // Set alternating background image
+            const backgroundImage = getAlternatingBackgroundImage();
 
             // Parse and format date
             let dateObj = null;
@@ -291,20 +309,24 @@ document.addEventListener('DOMContentLoaded', function () {
             // Build card content matching screenshot style
             card.innerHTML = `
                 ${event.startDate && event.startDate !== 'Ongoing' ? `<button class="event-calendar-btn add-to-calendar" data-title="${event.title}" data-date="${event.startDate}" data-time="${event.startTime || ''}" data-timezone="${event.timeZone || ''}" data-description="${event.description || ''}" data-link="${event.registrationUrl || ''}" title="Add to calendar"><i class="fa-solid fa-calendar-plus"></i></button>` : ''}
-                <div class="event-card-header"${event.registrationUrl ? ` onclick="window.open('${event.registrationUrl}', '_blank')" style="cursor: pointer;"` : ''}>
-                    ${dateObj ? `
-                    <div class="event-date-badge">
-                        <div class="event-month">${monthStr}</div>
-                        <div class="event-day">${dayStr}</div>
+                <div class="event-card-header"${event.registrationUrl ? ` onclick="window.open('${event.registrationUrl}', '_blank')"` : ''}${event.registrationUrl ? ' style="cursor: pointer;"' : ''}>
+                    <div class="event-cover-image" style="background-image: url('${backgroundImage}');">
+                        ${dateObj ? `
+                        <div class="event-date-badge">
+                            <div class="event-month">${monthStr}</div>
+                            <div class="event-day">${dayStr}</div>
+                        </div>
+                        ` : ''}
+                        <div class="event-cover-content">
+                            <h3 class="event-title">${event.registrationUrl ? `<a href="${event.registrationUrl}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">${event.title}</a>` : event.title}</h3>
+                        </div>
                     </div>
-                    ` : ''}
                     <div class="event-content">
                         <div class="event-badges">
                             ${event.type ? `<span class="event-type-badge">${event.type.toUpperCase()}</span>` : ''}
                             ${event.category ? `<span class="event-type-badge" style="background-color: #555;">${event.category.toUpperCase()}</span>` : ''}
                             ${event.language ? `<span class="event-type-badge" style="background-color: #6c757d;">${event.language.toUpperCase()}</span>` : ''}
                         </div>
-                        <h3 class="event-title">${event.registrationUrl ? `<a href="${event.registrationUrl}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">${event.title}</a>` : event.title}</h3>
                         <p class="event-description">${event.description || ''}</p>
                         <div class="event-meta-info">
                             ${timeStr ? `<div class="event-meta-item"><i class="fa-regular fa-clock"></i> ${timeStr}</div>` : ''}

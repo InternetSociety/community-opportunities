@@ -12,6 +12,79 @@
     height: 100%;
 }
 
+.event-card-header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cover image at the top of the card */
+.event-cover-image {
+    width: 100%;
+    height: 80px;
+    background-size: cover;
+    background-position: top left;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+}
+
+/* Cover content area with title overlay */
+.event-cover-content {
+    background: none;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    margin-left: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.event-cover-content .event-title {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #202020;
+    text-shadow: 0 1px 2px rgba(255,255,255,0.8);
+}
+
+.event-cover-content .event-title a {
+    color: #202020;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.event-cover-content .event-title a:hover {
+    color: var(--isoc-blue);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
+}
+
+/* Ensure text readability over cover image */
+.event-card-header .event-content {
+    background: white;
+    position: relative;
+    z-index: 2;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+}
+
+.event-card-header .event-date-badge {
+    background: rgba(248, 249, 250, 0.95);
+    backdrop-filter: blur(2px);
+    position: relative;
+    z-index: 3;
+    flex-shrink: 0;
+}
+
 .event-date-badge {
     background-color: #f8f9fa;
     padding: 8px 10px;
@@ -109,28 +182,6 @@
 /* Ensure white text for any badge with dark background */
 .event-type-badge[style*="background"] {
     color: #ffffff;
-}
-
-.event-title {
-    margin: 0;
-    font-size: 1.25em;
-    font-weight: 700;
-    line-height: 1.3;
-    color: #24366e;
-}
-
-.event-title a {
-    color: var(--isoc-black);
-    text-decoration: none;
-    transition: all 0.2s;
-    position: relative;
-}
-
-.event-title a:hover {
-    color: var(--isoc-blue);
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 2px;
 }
 
 .event-description {
@@ -288,16 +339,24 @@
         flex-direction: column;
     }
 
+    .event-cover-image {
+        height: 70px;
+        padding: 12px;
+    }
+
+    .event-cover-content {
+        margin-left: 12px;
+        padding: 0;
+    }
+
+    .event-cover-content .event-title {
+        font-size: 1em;
+    }
+
     .event-date-badge {
-        flex-direction: row;
-        border-right: none;
-        border-bottom: 1px solid #e9ecef;
-        padding: 8px 16px;
-        min-width: auto;
-        gap: 12px;
-        background-color: #fafbfc;
-        justify-content: flex-start;
-        width: 100%;
+        background: rgba(248, 249, 250, 0.95);
+        backdrop-filter: blur(2px);
+        flex-shrink: 0;
     }
 
     .event-month {
