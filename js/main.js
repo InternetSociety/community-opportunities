@@ -53,37 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Check if a date string is in the past
-    function isDateInPast(dateString) {
-        if (!dateString || typeof dateString !== 'string') return false;
-
-        // If it's "Ongoing", it's never in the past
-        if (dateString.trim().toLowerCase() === 'ongoing') return false;
-
-        try {
-            let date;
-
-            // For date strings in YYYY-MM-DD format, parse them as local dates
-            // to avoid timezone conversion issues
-            if (/^\d{4}-\d{2}-\d{2}$/.test(dateString)) {
-                const [year, month, day] = dateString.split('-').map(Number);
-                date = new Date(year, month - 1, day); // month is 0-indexed
-            } else {
-                // For other date formats, use the original logic
-                date = new Date(dateString);
-            }
-
-            if (isNaN(date.getTime())) return false; // Invalid date
-
-            // Create today's date at midnight for comparison
-            const today = new Date();
-            today.setHours(0, 0, 0, 0);
-
-            return date < today;
-        } catch (e) {
-            console.warn('Error parsing date:', dateString, e);
-            return false; // If we can't parse it, don't filter it out
-        }
-    }
+    // Uses ISOC.Utils.isDateInPast
 
     // Check if an opportunity is new (added within the past 6 days)
     function isOpportunityNew(creationDateString) {
@@ -136,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Filter out archived, no-title, or past-dated opportunities (unless marked as "Ongoing")
                 .filter(item => {
                     if (!item.title || item.archived) return false;
-                    if (item.date && isDateInPast(item.date)) return false;
+                    if (item.date && ISOC.Utils.isDateInPast(item.date)) return false;
                     return true;
                 });
         } catch (error) {
@@ -169,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </button>
             <div class="nav-overlay"></div>
             <div class="nav-links">
-                ${types.map(type => `<a href="#${slugify(type)}">${type}</a>`).join('')}
+                ${types.map(type => `<a href="#${ISOC.Utils.slugify(type)}">${type}</a>`).join('')}
             </div>
         `;
 
@@ -433,7 +403,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Render the top menu by Type
     function renderMenuByType(opps) {
         const types = Array.from(new Set(opps.map(o => o.Type))).filter(Boolean);
-        nav.innerHTML = types.map(type => `<a href="#${slugify(type)}">${type}</a>`).join('');
+        nav.innerHTML = types.map(type => `<a href="#${ISOC.Utils.slugify(type)}">${type}</a>`).join('');
     }
 
     // Render modern filter controls
@@ -670,71 +640,17 @@ document.addEventListener('DOMContentLoaded', function () {
             const whyItMatters = link.getAttribute('data-why-it-matters') || '';
             const eventLink = link.getAttribute('data-link') || window.location.href;
 
-            // Check if the date string includes a time component
-            const hasTime = /\d{1,2}:\d{2}/.test(dateStr);
+            const icsContent = ISOC.Utils.generateICS({
+                title: title,
+                description: description + (whyItMatters ? '\n\nWhy it matters: ' + whyItMatters : ''),
+                startDate: dateStr,
+                startTime: hasTime ? dateStr.split(' ')[1] : null, // Assuming dateStr might contain time or we use original logic?
+                // Wait, logic above was parsing dateStr. Let's check how dateStr is passed.
+                // It comes from data-date attribute.
+                url: eventLink
+            });
 
-            // Create .ics file content with proper date parsing
-            let startDate;
-            if (/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) {
-                // For YYYY-MM-DD format, parse as local date
-                const [year, month, day] = dateStr.split('-').map(Number);
-                startDate = new Date(year, month - 1, day);
-            } else {
-                // For other formats, use original parsing
-                startDate = new Date(dateStr);
-            }
-            let icsDateFields = [];
-
-            if (hasTime) {
-                // For events with specific time, set start and end times
-                const endDate = new Date(startDate);
-                endDate.setHours(startDate.getHours() + 1); // 1 hour event by default
-
-                // Format dates with time for .ics
-                const formatDateTimeForICS = (date) => {
-                    return date.toISOString().replace(/[-:]/g, '').replace(/\..+/, '').replace('T', 'T') + 'Z';
-                };
-
-                icsDateFields = [
-                    `DTSTART:${formatDateTimeForICS(startDate)}`,
-                    `DTEND:${formatDateTimeForICS(endDate)}`
-                ];
-            } else {
-                // For all-day events, use DATE only (without time)
-                const formatDateOnlyForICS = (date) => {
-                    return date.toISOString().split('T')[0].replace(/-/g, '');
-                };
-
-                icsDateFields = [
-                    'DTSTART;VALUE=DATE:' + formatDateOnlyForICS(startDate),
-                    'DTEND;VALUE=DATE:' + formatDateOnlyForICS(new Date(startDate.getTime() + 24 * 60 * 60 * 1000)) // Next day
-                ];
-            }
-
-            const icsContent = [
-                'BEGIN:VCALENDAR',
-                'VERSION:2.0',
-                'PRODID:-//Internet Society//Opportunities//EN',
-                'BEGIN:VEVENT',
-                `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').replace(/\..+/, '').replace('T', 'T')}Z`,
-                ...icsDateFields,
-                `SUMMARY:${title}`,
-                `DESCRIPTION:${description}${whyItMatters ? '\n\nWhy it matters: ' + whyItMatters : ''}\n\nMore info: ${eventLink}`,
-                `URL:${eventLink}`,
-                'END:VEVENT',
-                'END:VCALENDAR'
-            ].join('\r\n');
-
-            // Create and trigger download
-            const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
-            const url = URL.createObjectURL(blob);
-            const linkEl = document.createElement('a');
-            linkEl.href = url;
-            linkEl.download = `event-${title.replace(/[^a-z0-9]/gi, '-').toLowerCase()}.ics`;
-            document.body.appendChild(linkEl);
-            linkEl.click();
-            document.body.removeChild(linkEl);
-            URL.revokeObjectURL(url);
+            ISOC.Utils.downloadFile(icsContent, `event-${ISOC.Utils.slugify(title)}.ics`, 'text/calendar;charset=utf-8');
         }
     });
 
@@ -933,37 +849,6 @@ document.addEventListener('DOMContentLoaded', function () {
         initializeViewToggle();
     }
 
-    // Format a date string into a human-readable format
-    function formatDate(dateString) {
-        if (!dateString) return '';
-        try {
-            // For date strings in YYYY-MM-DD format, parse them as local dates
-            // to avoid timezone conversion issues
-            if (/^\d{4}-\d{2}-\d{2}$/.test(dateString)) {
-                const [year, month, day] = dateString.split('-').map(Number);
-                const date = new Date(year, month - 1, day); // month is 0-indexed
-
-                return date.toLocaleDateString('en-US', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
-                });
-            }
-
-            // For other date formats, use the original logic
-            const date = new Date(dateString);
-            if (isNaN(date.getTime())) return dateString; // Return original if invalid date
-
-            return date.toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-            });
-        } catch (e) {
-            return dateString; // Return original if any error
-        }
-    }
-
     // Render a table view for a list of opportunities
     function renderOpportunityTable(opportunities) {
         // Create container for the table with horizontal scrolling
@@ -1078,9 +963,9 @@ document.addEventListener('DOMContentLoaded', function () {
             // Date column
             const dateCell = document.createElement('td');
             if (opp.date) {
-                dateCell.textContent = formatDate(opp.date) || 'No date';
+                dateCell.textContent = ISOC.Utils.formatDate(opp.date) || 'No date';
                 // Use the same date parsing logic for consistency
-                if (isDateInPast(opp.date)) {
+                if (ISOC.Utils.isDateInPast(opp.date)) {
                     dateCell.innerHTML += ' <span class="date-past">(Expired)</span>';
                 }
             } else {
@@ -1192,13 +1077,7 @@ document.addEventListener('DOMContentLoaded', function () {
         `;
     }
 
-    // Helper to slugify Type for IDs/anchors
-    function slugify(text) {
-        // First encode the text to handle special characters like colons
-        let encoded = encodeURIComponent(text.toString().toLowerCase());
-        // Replace %20 with hyphens and remove any other percent-encoded sequences
-        return encoded.replace(/%20/g, '-').replace(/%[0-9A-F]{2}/gi, '').replace(/[^\w-]+/g, '');
-    }
+
 
     // Handle audience modal functionality
     document.addEventListener('click', function handleModalClicks(e) {

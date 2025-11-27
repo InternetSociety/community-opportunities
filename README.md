@@ -63,9 +63,37 @@ For GitHub Actions automation:
 2. **JSON data** → Feed generators → `opportunities.rss/ics`
 3. **JSON data** → Frontend → Filtered opportunities display
 
+## Development
+
+### Code Organization
+This project follows maintainability best practices:
+
+- **Shared utilities**: [js/utils.js](js/utils.js) contains common functions used across pages
+- **CSS variables**: Theme colors defined in [css/styles.css](css/styles.css):root
+- **JSDoc types**: IntelliSense support for better developer experience
+- **Data validation**: Run `node scripts/validate_data.js` before committing
+- **Smoke tests**: Run `node scripts/smoke_test.js` to verify functionality
+
+### Making Changes
+
+**Changing brand colors:**
+```css
+/* Edit css/styles.css */
+:root {
+    --isoc-blue: #NEW_COLOR;
+}
+```
+
+**Before committing:**
+```bash
+node scripts/validate_data.js  # Validate JSON data
+node scripts/smoke_test.js      # Run basic tests
+```
+
 ## Contributing
 
 1. Test locally before submitting PRs
 2. Follow existing code style and patterns
 3. Update documentation for any new features
 4. Ensure mobile responsiveness for UI changes
+5. Run validation and smoke tests

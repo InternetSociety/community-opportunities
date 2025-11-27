@@ -13,34 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
         format: ''
     };
 
-    // Format a date string into a human-readable format
-    function formatDate(dateString) {
-        if (!dateString) return '';
-        try {
-            // For date strings in YYYY-MM-DD format, parse them as local dates
-            if (/^\d{4}-\d{2}-\d{2}$/.test(dateString)) {
-                const [year, month, day] = dateString.split('-').map(Number);
-                const date = new Date(year, month - 1, day);
 
-                return date.toLocaleDateString('en-US', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
-                });
-            }
-
-            const date = new Date(dateString);
-            if (isNaN(date.getTime())) return dateString;
-
-            return date.toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-            });
-        } catch (e) {
-            return dateString;
-        }
-    }
 
     // Fetch events data
     async function fetchEvents() {
@@ -493,67 +466,15 @@ document.addEventListener('DOMContentLoaded', function () {
             const description = button.getAttribute('data-description');
             const eventLink = button.getAttribute('data-link') || window.location.href;
 
-            // Parse date
-            const [year, month, day] = dateStr.split('-').map(Number);
-            let startDate = new Date(year, month - 1, day);
+            const icsContent = ISOC.Utils.generateICS({
+                title: title,
+                description: description,
+                startDate: dateStr,
+                startTime: timeStr,
+                url: eventLink
+            });
 
-            // If there's a time, parse it
-            if (timeStr) {
-                const [hours, minutes] = timeStr.split(':').map(Number);
-                startDate.setHours(hours, minutes);
-            }
-
-            let icsDateFields = [];
-
-            if (timeStr) {
-                // For events with specific time
-                const endDate = new Date(startDate);
-                endDate.setHours(startDate.getHours() + 1); // 1 hour event by default
-
-                const formatDateTimeForICS = (date) => {
-                    return date.toISOString().replace(/[-:]/g, '').replace(/\..+/, '').replace('T', 'T') + 'Z';
-                };
-
-                icsDateFields = [
-                    `DTSTART:${formatDateTimeForICS(startDate)}`,
-                    `DTEND:${formatDateTimeForICS(endDate)}`
-                ];
-            } else {
-                // For all-day events
-                const formatDateOnlyForICS = (date) => {
-                    return date.toISOString().split('T')[0].replace(/-/g, '');
-                };
-
-                icsDateFields = [
-                    'DTSTART;VALUE=DATE:' + formatDateOnlyForICS(startDate),
-                    'DTEND;VALUE=DATE:' + formatDateOnlyForICS(new Date(startDate.getTime() + 24 * 60 * 60 * 1000))
-                ];
-            }
-
-            const icsContent = [
-                'BEGIN:VCALENDAR',
-                'VERSION:2.0',
-                'PRODID:-//Internet Society//Community Events//EN',
-                'BEGIN:VEVENT',
-                `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').replace(/\..+/, '').replace('T', 'T')}Z`,
-                ...icsDateFields,
-                `SUMMARY:${title}`,
-                `DESCRIPTION:${description}\\n\\nMore info: ${eventLink}`,
-                `URL:${eventLink}`,
-                'END:VEVENT',
-                'END:VCALENDAR'
-            ].join('\r\n');
-
-            // Create and trigger download
-            const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
-            const url = URL.createObjectURL(blob);
-            const linkEl = document.createElement('a');
-            linkEl.href = url;
-            linkEl.download = `event-${title.replace(/[^a-z0-9]/gi, '-').toLowerCase()}.ics`;
-            document.body.appendChild(linkEl);
-            linkEl.click();
-            document.body.removeChild(linkEl);
-            URL.revokeObjectURL(url);
+            ISOC.Utils.downloadFile(icsContent, `event-${ISOC.Utils.slugify(title)}.ics`, 'text/calendar;charset=utf-8');
         }
     });
 

@@ -132,15 +132,41 @@ jobs:
               write_csv(sheet_info['csv'], cols, rows_csv)
               write_json(sheet_info['json'], rows_json)
           PYCODE
-      - name: Commit & push if changed
+
+      - name: Check for data changes
+        id: check_changes
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
           CHANGED=$(git status --porcelain data/ community-events/data/)
           if [ -n "$CHANGED" ]; then
-            git add data/ community-events/data/
-            git commit -m 'chore: hourly refresh of data feeds'
-            git push
+            echo "has_changes=true" >> $GITHUB_OUTPUT
           else
-            echo 'No changes in data directories; skipping commit'
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo 'No changes in data directories; skipping validation and commit'
           fi
+
+      - name: Setup Node.js for validation
+        if: steps.check_changes.outputs.has_changes == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Node dependencies
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: npm install
+
+      - name: Validate generated data
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: node scripts/validate_data.js
+
+      - name: Run smoke tests
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: node scripts/smoke_test.js
+
+      - name: Commit & push if validation passed
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git add data/ community-events/data/
+          git commit -m 'chore: hourly refresh of data feeds'
+          git push

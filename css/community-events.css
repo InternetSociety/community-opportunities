@@ -484,7 +484,7 @@ a.event-card-header:hover .event-title {
 .event-filter {
     width: 100%;
     padding: 8px 12px;
-    border: 1px solid var(--isoc-border-color);
+    border: 1px solid var(--border-color);
     border-radius: 4px;
     font-size: 0.95em;
     background-color: white;
@@ -527,7 +527,7 @@ a.event-card-header:hover .event-title {
     gap: 6px;
     background-color: white;
     color: var(--isoc-blue);
-    border: 1px solid var(--isoc-border-color);
+    border: 1px solid var(--border-color);
     padding: 8px 16px;
     border-radius: 4px;
     font-size: 0.9em;
