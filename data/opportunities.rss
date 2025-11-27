@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:e3a82b223b66e4c5448cb68bec26ae88 -->
+<!-- DATA_FINGERPRINT:e12d638cd0c0b3cf8366f45b3be4663f -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Opportunities</title>
         <link>https://opportunities.internetsociety.org</link>
         <description>Latest opportunities to get involved with Internet Society initiatives</description>
         <language>en-us</language>
-        <lastBuildDate>Wed, 26 Nov 2025 18:11:03 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/data/opportunities.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>European Chapters Q4 Regional Call</title>
+                    <link>https://isoc.zoom.us/meeting/register/DHmLKvBuQ8Gmy8pkLaN-iQ</link>
+                    <description>We will hear from Sally Wentworth, ISOC CEO, learn about the most successful projects from our chapters during the past months, and break into conversations around membership engagement, project funding and policy &amp; advocacy plans for 2026.</description>
+                    <pubDate>Thu, 27 Nov 2025 07:56:54 GMT</pubDate>
+                    <guid isPermaLink="false">708f80f23fa006b1d83adddc7bd18357</guid>
+                    <category>Opportunity</category>
+                    <category>Events &amp; Working Sessions</category>
+                    <category>Europe</category>
+                </item>
+<item>
                     <title>Endorse ISOC Analysis of WSIS+20 Rev. 1</title>
                     <link>https://www.internetsociety.org/issues/internet-governance/wsis/endorse-contribution-to-wsis-20-rev-1/</link>
                     <description>In preparation for the WSIS+20 High-Level Meeting of the UN General Assembly (16-17 Dec), the Co-Facilitators of the WSIS+20 process United Nations is inviting contributions from all stakeholders to inform the process that follows the indicative roadmap shared by the WSIS+20 Co-Facilitators. It will guide the intergovernmental negotiations and the participation of other stakeholders.</description>

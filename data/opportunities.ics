@@ -40,4 +40,16 @@ DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20251231
 DTEND;VALUE=DATE:20251231
 END:VEVENT
+BEGIN:VEVENT
+UID:48e03155-1d68-5291-a1f3-4f66407e30d3
+SUMMARY:European Chapters Q4 Regional Call
+DESCRIPTION:We will hear from Sally Wentworth\, ISOC CEO\, learn about the most succ
+ essful projects from our chapters during the past months\, and break int
+ o conversations around membership engagement\, project funding and polic
+ y & advocacy plans for 2026.
+URL:https://isoc.zoom.us/meeting/register/DHmLKvBuQ8Gmy8pkLaN-iQ
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20251204
+DTEND;VALUE=DATE:20251204
+END:VEVENT
 END:VCALENDAR
