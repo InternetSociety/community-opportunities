@@ -5,11 +5,11 @@
 // grouped by Type, and implements filtering by region, internet issue, and who can get involved.
 
 // DOMContentLoaded ensures script runs after HTML is parsed
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Get DOM elements
     const container = document.querySelector('.container');
     const nav = document.querySelector('.top-nav');
-    
+
     // Path to the opportunities data
     const DATA_PATH = 'data/opportunities.json';
 
@@ -55,13 +55,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check if a date string is in the past
     function isDateInPast(dateString) {
         if (!dateString || typeof dateString !== 'string') return false;
-        
+
         // If it's "Ongoing", it's never in the past
         if (dateString.trim().toLowerCase() === 'ongoing') return false;
-        
+
         try {
             let date;
-            
+
             // For date strings in YYYY-MM-DD format, parse them as local dates
             // to avoid timezone conversion issues
             if (/^\d{4}-\d{2}-\d{2}$/.test(dateString)) {
@@ -71,31 +71,31 @@ document.addEventListener('DOMContentLoaded', function() {
                 // For other date formats, use the original logic
                 date = new Date(dateString);
             }
-            
+
             if (isNaN(date.getTime())) return false; // Invalid date
-            
+
             // Create today's date at midnight for comparison
             const today = new Date();
             today.setHours(0, 0, 0, 0);
-            
+
             return date < today;
         } catch (e) {
             console.warn('Error parsing date:', dateString, e);
             return false; // If we can't parse it, don't filter it out
         }
     }
-    
+
     // Check if an opportunity is new (added within the past 6 days)
     function isOpportunityNew(creationDateString) {
         if (!creationDateString || typeof creationDateString !== 'string') return false;
-        
+
         try {
             const creationDate = new Date(creationDateString);
             if (isNaN(creationDate.getTime())) return false; // Invalid date
-            
+
             const now = new Date();
             const sixDaysAgo = new Date(now.getTime() - (6 * 24 * 60 * 60 * 1000));
-            
+
             return creationDate >= sixDaysAgo;
         } catch (e) {
             console.warn('Error parsing creation date:', creationDateString, e);
@@ -133,12 +133,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 archived: item["Archived"] || item.archived || null,
                 creation_date: item["Creation date"] || item.creation_date || null
             }))
-            // Filter out archived, no-title, or past-dated opportunities (unless marked as "Ongoing")
-            .filter(item => {
-                if (!item.title || item.archived) return false;
-                if (item.date && isDateInPast(item.date)) return false;
-                return true;
-            });
+                // Filter out archived, no-title, or past-dated opportunities (unless marked as "Ongoing")
+                .filter(item => {
+                    if (!item.title || item.archived) return false;
+                    if (item.date && isDateInPast(item.date)) return false;
+                    return true;
+                });
         } catch (error) {
             console.error('Error fetching opportunities:', error);
             throw error;
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Render the navigation menu based on opportunity types
     function renderNavigation(opportunities) {
         if (!nav) return;
-        
+
         // Get unique types and sort them with Urgent first and Ongoing last
         const types = [...new Set(opportunities.map(opp => opp.Type).filter(Boolean))];
         types.sort((a, b) => {
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (b.toLowerCase().includes('ongoing')) return -1;
             return a.localeCompare(b);
         });
-        
+
         // Create the navigation HTML with hamburger menu
         const navHtml = `
             <a href="/" class="logo-link">
@@ -172,18 +172,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 ${types.map(type => `<a href="#${slugify(type)}">${type}</a>`).join('')}
             </div>
         `;
-        
+
         nav.innerHTML = navHtml;
-        
+
         // Get navigation elements
         const hamburger = nav.querySelector('.hamburger');
         const navLinks = nav.querySelector('.nav-links');
         const overlay = nav.querySelector('.nav-overlay');
         const logoLink = nav.querySelector('.logo-link');
-        
+
         // Add smooth scroll to top when clicking the logo
         if (logoLink) {
-            logoLink.addEventListener('click', function(e) {
+            logoLink.addEventListener('click', function (e) {
                 e.preventDefault();
                 window.scrollTo({
                     top: 0,
@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 closeMenu();
             });
         }
-        
+
         // Function to close the menu
         function closeMenu() {
             hamburger.setAttribute('aria-expanded', 'false');
@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', function() {
             overlay.classList.remove('active');
             document.body.style.overflow = ''; // Re-enable scrolling
         }
-        
+
         // Function to open the menu
         function openMenu() {
             hamburger.setAttribute('aria-expanded', 'true');
@@ -211,10 +211,10 @@ document.addEventListener('DOMContentLoaded', function() {
             overlay.classList.add('active');
             document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
         }
-        
+
         // Toggle menu on hamburger click
         if (hamburger && navLinks && overlay) {
-            hamburger.addEventListener('click', function() {
+            hamburger.addEventListener('click', function () {
                 const isExpanded = this.getAttribute('aria-expanded') === 'true';
                 if (isExpanded) {
                     closeMenu();
@@ -222,19 +222,19 @@ document.addEventListener('DOMContentLoaded', function() {
                     openMenu();
                 }
             });
-            
+
             // Close menu when clicking on overlay
             overlay.addEventListener('click', closeMenu);
-            
+
             // Close menu when clicking on a nav link
-            navLinks.addEventListener('click', function(e) {
+            navLinks.addEventListener('click', function (e) {
                 if (e.target.tagName === 'A' && window.innerWidth <= 1024) {
                     closeMenu();
                 }
             });
-            
+
             // Close menu when pressing Escape key
-            document.addEventListener('keydown', function(e) {
+            document.addEventListener('keydown', function (e) {
                 if (e.key === 'Escape' && navLinks.classList.contains('active')) {
                     closeMenu();
                 }
@@ -248,13 +248,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const opportunities = await fetchOpportunities();
             allOpportunities = opportunities;
             filteredOpportunities = [...allOpportunities];
-            
+
             // Load saved filters before rendering
             filters = loadFilters();
-            
+
             renderNavigation(opportunities);
             renderFilters(opportunities);
-            
+
             // Apply any saved filters
             if (filters.region || filters.issue || filters.who) {
                 applyFilters();
@@ -266,38 +266,66 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 renderSectionsByType(opportunities);
             }
-            
+
             // Initialize view toggle after sections are rendered
             initializeViewToggle();
-            
+
             // Initialize the filter toggle after everything is rendered
             const toggle = document.getElementById('filter-toggle');
             const headerFilterButton = document.getElementById('header-filter-button');
             const filterSection = document.getElementById('filter-section');
-            
+
+            // Focus management variables
+            let lastFocusedElement;
+
+            function trapFocus(element) {
+                const focusableElements = element.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+                const firstFocusable = focusableElements[0];
+                const lastFocusable = focusableElements[focusableElements.length - 1];
+
+                element.addEventListener('keydown', function (e) {
+                    if (e.key === 'Tab') {
+                        if (e.shiftKey) {
+                            if (document.activeElement === firstFocusable) {
+                                e.preventDefault();
+                                lastFocusable.focus();
+                            }
+                        } else {
+                            if (document.activeElement === lastFocusable) {
+                                e.preventDefault();
+                                firstFocusable.focus();
+                            }
+                        }
+                    }
+                });
+
+                // Focus first element
+                if (firstFocusable) firstFocusable.focus();
+            }
+
             if ((toggle || headerFilterButton) && filterSection) {
                 // Function to position the filter panel
                 const positionFilterPanel = (referenceElement) => {
                     const buttonRect = referenceElement.getBoundingClientRect();
                     const viewportHeight = window.innerHeight;
                     const viewportWidth = window.innerWidth;
-                    
+
                     // Calculate available space above the button (with minimum padding)
                     const minPadding = 20;
                     const spaceAbove = Math.max(buttonRect.top - minPadding, minPadding);
                     const spaceBelow = viewportHeight - buttonRect.bottom - minPadding;
-                    
+
                     // Set max height to be at least 300px but not more than 80vh
                     const maxHeight = Math.min(
                         Math.max(spaceAbove, 300), // At least 300px or available space above
                         viewportHeight * 0.8,     // But no more than 80% of viewport height
                         600                       // Absolute max of 600px
                     );
-                    
+
                     // Position the panel based on which button was clicked
                     filterSection.style.maxHeight = `${maxHeight}px`;
                     filterSection.style.minHeight = '200px'; // Ensure minimum height
-                    
+
                     if (referenceElement.id === 'header-filter-button') {
                         // Position below the header button, centered
                         filterSection.style.top = `${buttonRect.bottom + 10}px`;
@@ -311,31 +339,39 @@ document.addEventListener('DOMContentLoaded', function() {
                         filterSection.style.top = 'auto';
                         filterSection.style.left = 'auto';
                         filterSection.style.transform = 'none';
-                        
+
                         // Ensure the panel stays within viewport bounds
                         const panelWidth = Math.min(320, viewportWidth - 40);
                         filterSection.style.width = `${panelWidth}px`;
-                        const rightPos = Math.max(minPadding, viewportWidth - buttonRect.right - buttonRect.width/2);
+                        const rightPos = Math.max(minPadding, viewportWidth - buttonRect.right - buttonRect.width / 2);
                         filterSection.style.right = `${rightPos}px`;
                     }
                 };
-                
+
                 // Function to handle filter toggle
                 const handleFilterToggle = (referenceElement) => {
                     const isExpanded = filterSection.style.display === 'block';
-                    
+
                     if (!isExpanded) {
+                        // Store current focus
+                        lastFocusedElement = document.activeElement;
+
                         // Show the panel first to calculate dimensions
                         filterSection.style.display = 'block';
                         positionFilterPanel(referenceElement);
+
+                        // Trap focus inside
+                        trapFocus(filterSection);
                     } else {
                         filterSection.style.display = 'none';
+                        // Restore focus
+                        if (lastFocusedElement) lastFocusedElement.focus();
                     }
-                    
+
                     // Update button states
                     if (toggle) toggle.classList.toggle('active', !isExpanded);
                 };
-                
+
                 // Add event listeners to both buttons
                 if (toggle) {
                     toggle.addEventListener('click', (e) => {
@@ -343,14 +379,14 @@ document.addEventListener('DOMContentLoaded', function() {
                         handleFilterToggle(toggle);
                     });
                 }
-                
+
                 if (headerFilterButton) {
                     headerFilterButton.addEventListener('click', (e) => {
                         e.preventDefault();
                         handleFilterToggle(headerFilterButton);
                     });
                 }
-                
+
                 // Re-position on window resize
                 window.addEventListener('resize', () => {
                     if (filterSection.style.display === 'block') {
@@ -361,17 +397,30 @@ document.addEventListener('DOMContentLoaded', function() {
                         }
                     }
                 });
-                
+
                 // Show the toggle button after initialization
                 if (toggle) toggle.style.display = 'flex';
-                
+
                 // Close filter when clicking outside
                 document.addEventListener('click', (e) => {
-                    if (!filterSection.contains(e.target) && 
-                        (!toggle || !toggle.contains(e.target)) && 
+                    if (!filterSection.contains(e.target) &&
+                        (!toggle || !toggle.contains(e.target)) &&
                         (!headerFilterButton || !headerFilterButton.contains(e.target))) {
+
+                        if (filterSection.style.display === 'block') {
+                            filterSection.style.display = 'none';
+                            if (toggle) toggle.classList.remove('active');
+                            if (lastFocusedElement) lastFocusedElement.focus();
+                        }
+                    }
+                });
+
+                // Close on Escape
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && filterSection.style.display === 'block') {
                         filterSection.style.display = 'none';
                         if (toggle) toggle.classList.remove('active');
+                        if (lastFocusedElement) lastFocusedElement.focus();
                     }
                 });
             }
@@ -397,7 +446,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             return [...new Set(values)].filter(Boolean).sort();
         };
-        
+
         // Select filter options based on saved filters
         function selectSavedFilters() {
             if (filters.region) {
@@ -418,7 +467,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (option) option.classList.add('selected');
                 });
             }
-            
+
             // Update the selected arrays to match the UI
             updateActiveFilters();
         }
@@ -427,44 +476,46 @@ document.addEventListener('DOMContentLoaded', function() {
         const regions = unique(opps, 'region');
         const issues = unique(opps, 'internet_issue');
         const roles = unique(opps, 'who_can_get_involved');
-        
+
         // Store selected filters
         let selectedRegions = [];
         let selectedIssues = [];
         let selectedRoles = [];
-        
+
         // Create filter options
         function createFilterOption(value, type) {
-            const option = document.createElement('div');
+            const option = document.createElement('button');
             option.className = `filter-option ${type}`;
             option.textContent = value;
             option.dataset.value = value;
+            option.setAttribute('aria-pressed', 'false');
             option.addEventListener('click', () => {
                 option.classList.toggle('selected');
+                option.setAttribute('aria-pressed', option.classList.contains('selected'));
                 updateActiveFilters();
             });
             return option;
         }
-        
+
         // Populate filter sections
         const regionContainer = document.querySelector('.region-filters');
         regions.forEach(region => {
             regionContainer.appendChild(createFilterOption(region, 'region'));
         });
-        
+
         const issueContainer = document.querySelector('.issue-filters');
         issues.forEach(issue => {
             issueContainer.appendChild(createFilterOption(issue, 'issue'));
         });
-        
+
         const roleContainer = document.querySelector('.role-filters');
         roles.forEach(role => {
             roleContainer.appendChild(createFilterOption(role, 'role'));
         });
-        
+
         // Select any saved filters after populating the UI
         selectSavedFilters();
-        
+
         // Update active filters
         function updateActiveFilters() {
             selectedRegions = Array.from(document.querySelectorAll('.region-filters .selected'))
@@ -474,12 +525,12 @@ document.addEventListener('DOMContentLoaded', function() {
             selectedRoles = Array.from(document.querySelectorAll('.role-filters .selected'))
                 .map(el => el.dataset.value);
         }
-        
+
         // Get references to UI elements
         const filterToggle = document.getElementById('filter-toggle');
         const filterSection = document.getElementById('filter-section');
         const activeFiltersIndicator = document.getElementById('active-filters-indicator');
-        
+
         // Function to show active filters indicator
         function showActiveFiltersIndicator() {
             activeFiltersIndicator.classList.add('visible');
@@ -487,38 +538,38 @@ document.addEventListener('DOMContentLoaded', function() {
                 activeFiltersIndicator.classList.remove('visible');
             }, 3000); // Hide after 3 seconds
         }
-        
+
         // Function to update active filters count
         function updateActiveFiltersCount() {
             const activeFilterCount = [filters.region, filters.issue, filters.who]
                 .filter(Boolean).length;
-                
-            const indicatorText = activeFilterCount > 0 
+
+            const indicatorText = activeFilterCount > 0
                 ? `${activeFilterCount} filter${activeFilterCount > 1 ? 's' : ''} applied`
                 : 'All filters cleared';
-                
+
             activeFiltersIndicator.querySelector('span').textContent = indicatorText;
         }
-        
+
         // Apply filters
         document.getElementById('apply-filters').addEventListener('click', () => {
             filters.region = selectedRegions.length ? selectedRegions : null;
             filters.issue = selectedIssues.length ? selectedIssues : null;
             filters.who = selectedRoles.length ? selectedRoles : null;
-            
+
             // Save filters to localStorage
             saveFilters();
-            
+
             // Close the filter dialog
             filterSection.style.display = 'none';
             filterToggle.classList.remove('active');
-            
+
             // Apply filters and show visual feedback
             applyFilters();
             updateActiveFiltersCount();
             showActiveFiltersIndicator();
         });
-        
+
         // Reset filters
         document.getElementById('reset-filters').addEventListener('click', () => {
             document.querySelectorAll('.filter-option').forEach(opt => {
@@ -530,14 +581,14 @@ document.addEventListener('DOMContentLoaded', function() {
             filters.region = null;
             filters.issue = null;
             filters.who = null;
-            
+
             // Clear saved filters
             localStorage.removeItem('opportunityFilters');
-            
+
             // Close the filter dialog
             filterSection.style.display = 'none';
             filterToggle.classList.remove('active');
-            
+
             // Apply filters and show visual feedback
             applyFilters();
             updateActiveFiltersCount();
@@ -549,29 +600,29 @@ document.addEventListener('DOMContentLoaded', function() {
     function applyFilters() {
         filteredOpportunities = allOpportunities.filter(o => {
             // Check region filter
-            const regionMatch = !filters.region || 
-                (Array.isArray(o.region) 
+            const regionMatch = !filters.region ||
+                (Array.isArray(o.region)
                     ? o.region.some(r => filters.region.includes(r))
                     : filters.region.includes(o.region));
-            
+
             // Check issue filter
             const issueMatch = !filters.issue ||
                 (Array.isArray(o.internet_issue)
                     ? o.internet_issue.some(i => filters.issue.includes(i))
                     : filters.issue.includes(o.internet_issue));
-            
+
             // Check who can get involved filter - now always an array
-            const whoMatch = !filters.who || 
+            const whoMatch = !filters.who ||
                 o.who_can_get_involved.some(w => filters.who.includes(w));
-            
+
             return regionMatch && issueMatch && whoMatch;
         });
-        
+
         // Show/hide filter badges based on active filters
         const filterBadge = document.getElementById('filter-badge');
         const headerFilterBadge = document.getElementById('header-filter-badge');
         const hasActiveFilters = filters.region || filters.issue || filters.who;
-        
+
         if (filterBadge) {
             if (hasActiveFilters) {
                 filterBadge.style.display = 'block';
@@ -579,7 +630,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 filterBadge.style.display = 'none';
             }
         }
-        
+
         if (headerFilterBadge) {
             if (hasActiveFilters) {
                 headerFilterBadge.style.display = 'block';
@@ -587,29 +638,29 @@ document.addEventListener('DOMContentLoaded', function() {
                 headerFilterBadge.style.display = 'none';
             }
         }
-        
+
         renderSectionsByType(filteredOpportunities);
     }
-    
+
     // Initialize the application when DOM is loaded
     init();
-    
+
     // Add event delegation for subscription links
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', function (e) {
         // Handle subscription dialog links
         if (e.target.closest('.subscription-link')) {
             e.preventDefault();
             const link = e.target.closest('.subscription-link');
             const feedType = link.getAttribute('data-feed-type');
             const feedUrl = link.getAttribute('data-feed-url');
-            
+
             // Convert relative URL to absolute URL
             const absoluteUrl = feedUrl.startsWith('http') ? feedUrl : new URL(feedUrl, window.location.origin).href;
-            
+
             showSubscriptionDialog(feedType, absoluteUrl);
             return;
         }
-        
+
         if (e.target.closest('.add-to-calendar')) {
             e.preventDefault();
             const link = e.target.closest('.add-to-calendar');
@@ -618,10 +669,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const description = link.getAttribute('data-description');
             const whyItMatters = link.getAttribute('data-why-it-matters') || '';
             const eventLink = link.getAttribute('data-link') || window.location.href;
-            
+
             // Check if the date string includes a time component
             const hasTime = /\d{1,2}:\d{2}/.test(dateStr);
-            
+
             // Create .ics file content with proper date parsing
             let startDate;
             if (/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) {
@@ -633,17 +684,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 startDate = new Date(dateStr);
             }
             let icsDateFields = [];
-            
+
             if (hasTime) {
                 // For events with specific time, set start and end times
                 const endDate = new Date(startDate);
                 endDate.setHours(startDate.getHours() + 1); // 1 hour event by default
-                
+
                 // Format dates with time for .ics
                 const formatDateTimeForICS = (date) => {
                     return date.toISOString().replace(/[-:]/g, '').replace(/\..+/, '').replace('T', 'T') + 'Z';
                 };
-                
+
                 icsDateFields = [
                     `DTSTART:${formatDateTimeForICS(startDate)}`,
                     `DTEND:${formatDateTimeForICS(endDate)}`
@@ -653,13 +704,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 const formatDateOnlyForICS = (date) => {
                     return date.toISOString().split('T')[0].replace(/-/g, '');
                 };
-                
+
                 icsDateFields = [
                     'DTSTART;VALUE=DATE:' + formatDateOnlyForICS(startDate),
                     'DTEND;VALUE=DATE:' + formatDateOnlyForICS(new Date(startDate.getTime() + 24 * 60 * 60 * 1000)) // Next day
                 ];
             }
-            
+
             const icsContent = [
                 'BEGIN:VCALENDAR',
                 'VERSION:2.0',
@@ -673,7 +724,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'END:VEVENT',
                 'END:VCALENDAR'
             ].join('\r\n');
-            
+
             // Create and trigger download
             const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
             const url = URL.createObjectURL(blob);
@@ -686,15 +737,15 @@ document.addEventListener('DOMContentLoaded', function() {
             URL.revokeObjectURL(url);
         }
     });
-    
+
     function initializeViewToggle() {
         const viewToggle = document.getElementById('view-toggle');
         if (!viewToggle) return;
-        
+
         // Function to update all sections based on view mode
         const updateAllSections = (viewMode) => {
             console.log('Updating view to:', viewMode);
-            
+
             // Update sections visibility
             const sections = document.querySelectorAll('.dynamic-section');
             sections.forEach(section => {
@@ -714,7 +765,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 }
             });
-            
+
             // Update toggle button states
             document.querySelectorAll('.view-option').forEach(opt => {
                 if (opt.dataset.view === viewMode) {
@@ -723,25 +774,30 @@ document.addEventListener('DOMContentLoaded', function() {
                     opt.classList.remove('active');
                 }
             });
-            
+
             // Save preference to localStorage
             localStorage.setItem('opportunitiesViewMode', viewMode);
         };
-        
-        // Handle toggle clicks
-        viewToggle.addEventListener('click', function(e) {
+
+        // Handle toggle clicks with delegation
+        document.addEventListener('click', function (e) {
+            const viewToggle = e.target.closest('.view-toggle');
+            if (!viewToggle) return;
+
             const viewOption = e.target.closest('.view-option');
             if (!viewOption) return;
-            
+
+            e.preventDefault();
+
             const viewMode = viewOption.dataset.view;
             console.log('Toggle clicked, setting view to:', viewMode);
             updateAllSections(viewMode);
         });
-        
+
         // Initialize with saved preference or default to 'cards'
         const savedViewMode = localStorage.getItem('opportunitiesViewMode') || 'cards';
         console.log('Initializing view with:', savedViewMode);
-        
+
         // Force update to ensure consistent state
         requestAnimationFrame(() => {
             updateAllSections(savedViewMode);
@@ -752,10 +808,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function renderSectionsByType(opps) {
         // Get current view mode before removing anything
         const currentViewMode = localStorage.getItem('opportunitiesViewMode') || 'cards';
-        
+
         // Remove old sections
         container.querySelectorAll('section.dynamic-section').forEach(e => e.remove());
-        
+
         // Check if there are no opportunities to display
         if (opps.length === 0) {
             const noResults = document.createElement('div');
@@ -769,7 +825,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             `;
             container.appendChild(noResults);
-            
+
             // Add event listener to the reset button
             const resetBtn = document.getElementById('reset-filters-btn');
             if (resetBtn) {
@@ -780,7 +836,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (noResults) {
                         noResults.remove();
                     }
-                    
+
                     // Find and click the actual reset button in the filter panel
                     const resetButton = document.getElementById('reset-filters');
                     if (resetButton) {
@@ -798,7 +854,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 });
             }
-            
+
             // Show the filter badges to indicate active filters are causing no results
             const filterBadge = document.getElementById('filter-badge');
             const headerFilterBadge = document.getElementById('header-filter-badge');
@@ -813,10 +869,10 @@ document.addEventListener('DOMContentLoaded', function() {
             if (headerFilterBadge) {
                 headerFilterBadge.style.display = 'block';
             }
-            
+
             return; // Exit early since there are no opportunities to display
         }
-        
+
         // Get unique types and sort them with Urgent first and Ongoing last
         const types = Array.from(new Set(opps.map(o => o.Type))).filter(Boolean);
         types.sort((a, b) => {
@@ -826,21 +882,21 @@ document.addEventListener('DOMContentLoaded', function() {
             if (b.toLowerCase().includes('ongoing')) return -1;
             return a.localeCompare(b);
         });
-        
+
         types.forEach(type => {
             const section = document.createElement('section');
             section.className = `dynamic-section ${currentViewMode === 'table' ? 'view-table' : ''}`;
             section.id = slugify(type);
-            
+
             // Get opportunities for this type
             const typeOpportunities = opps.filter(o => o.Type === type);
             const isEventsSection = type.toLowerCase().includes('event');
-            
+
             // Determine icon based on section type
             const typeIcon = type.toLowerCase().includes('urgent') ? 'fa-triangle-exclamation' :
-                           type.toLowerCase().includes('event') ? 'fa-calendar-day' :
-                           type.toLowerCase().includes('survey') ? 'fa-clipboard-question' : 'fa-rocket';
-            
+                type.toLowerCase().includes('event') ? 'fa-calendar-day' :
+                    type.toLowerCase().includes('survey') ? 'fa-clipboard-question' : 'fa-rocket';
+
             // Create section header
             section.innerHTML = `
                 <div class="section-header-container">
@@ -861,10 +917,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     ` : ''}
                 </div>
             `;
-            
+
             // Append the section first
             container.appendChild(section);
-            
+
             // Then render and append the table to its container
             const tableContainer = section.querySelector('.table-container');
             if (tableContainer) {
@@ -872,11 +928,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 tableContainer.appendChild(table);
             }
         });
-        
+
         // Re-initialize the view toggle to ensure proper state
         initializeViewToggle();
     }
-    
+
     // Format a date string into a human-readable format
     function formatDate(dateString) {
         if (!dateString) return '';
@@ -886,19 +942,19 @@ document.addEventListener('DOMContentLoaded', function() {
             if (/^\d{4}-\d{2}-\d{2}$/.test(dateString)) {
                 const [year, month, day] = dateString.split('-').map(Number);
                 const date = new Date(year, month - 1, day); // month is 0-indexed
-                
-                return date.toLocaleDateString('en-US', { 
+
+                return date.toLocaleDateString('en-US', {
                     year: 'numeric',
                     month: 'long',
                     day: 'numeric'
                 });
             }
-            
+
             // For other date formats, use the original logic
             const date = new Date(dateString);
             if (isNaN(date.getTime())) return dateString; // Return original if invalid date
-            
-            return date.toLocaleDateString('en-US', { 
+
+            return date.toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric'
@@ -907,46 +963,46 @@ document.addEventListener('DOMContentLoaded', function() {
             return dateString; // Return original if any error
         }
     }
-    
+
     // Render a table view for a list of opportunities
     function renderOpportunityTable(opportunities) {
         // Create container for the table with horizontal scrolling
         const container = document.createElement('div');
         container.className = 'table-container';
-        
+
         const table = document.createElement('table');
         table.className = 'opportunity-table';
-        
+
         // Create table header
         const thead = document.createElement('thead');
         const headerRow = document.createElement('tr');
-        
+
         ['Title', 'Description', 'Date'].forEach(headerText => {
             const th = document.createElement('th');
             th.textContent = headerText;
             headerRow.appendChild(th);
         });
-        
+
         thead.appendChild(headerRow);
         table.appendChild(thead);
-        
+
         // Create table body
         const tbody = document.createElement('tbody');
-        
+
         opportunities.forEach(opp => {
             const row = document.createElement('tr');
-            
+
             // Title column with link and categories
             const titleCell = document.createElement('td');
             titleCell.className = 'title-column';
-            
+
             // Create title container
             const titleContainer = document.createElement('div');
             titleContainer.className = 'title-container';
-            
+
             // Check if this opportunity is new and create NEW pill
             const isNew = isOpportunityNew(opp.creation_date);
-            
+
             // Add title link or span
             if (opp.link) {
                 const titleLink = document.createElement('a');
@@ -955,7 +1011,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 titleLink.rel = 'noopener noreferrer';
                 titleLink.textContent = opp.title;
                 titleLink.className = 'title-link';
-                
+
                 // Add NEW pill if the opportunity is new
                 if (isNew) {
                     const newPill = document.createElement('span');
@@ -963,13 +1019,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     newPill.textContent = 'NEW';
                     titleLink.appendChild(newPill);
                 }
-                
+
                 titleContainer.appendChild(titleLink);
             } else {
                 const titleSpan = document.createElement('span');
                 titleSpan.className = 'title-text';
                 titleSpan.textContent = opp.title;
-                
+
                 // Add NEW pill if the opportunity is new
                 if (isNew) {
                     const newPill = document.createElement('span');
@@ -977,14 +1033,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     newPill.textContent = 'NEW';
                     titleSpan.appendChild(newPill);
                 }
-                
+
                 titleContainer.appendChild(titleSpan);
             }
-            
+
             // Add categories container
             const categoriesContainer = document.createElement('div');
             categoriesContainer.className = 'table-categories';
-            
+
             // Add region if available
             if (opp.region) {
                 const regionPill = document.createElement('span');
@@ -992,7 +1048,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 regionPill.textContent = opp.region;
                 categoriesContainer.appendChild(regionPill);
             }
-            
+
             // Add internet issue if available
             if (opp.internet_issue && opp.internet_issue.length > 0) {
                 opp.internet_issue.forEach(issue => {
@@ -1002,23 +1058,23 @@ document.addEventListener('DOMContentLoaded', function() {
                     categoriesContainer.appendChild(issuePill);
                 });
             }
-            
+
             // Removed who can get involved pills as per user request
-            
+
             // Add categories container to title container
             if (categoriesContainer.children.length > 0) {
                 titleContainer.appendChild(categoriesContainer);
             }
-            
+
             // Add title container to cell
             titleCell.appendChild(titleContainer);
             row.appendChild(titleCell);
-            
+
             // Description column (full text)
             const descCell = document.createElement('td');
             descCell.textContent = opp.opportunity_description || '';
             row.appendChild(descCell);
-            
+
             // Date column
             const dateCell = document.createElement('td');
             if (opp.date) {
@@ -1031,15 +1087,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 dateCell.textContent = 'Ongoing';
             }
             row.appendChild(dateCell);
-            
+
             // Action link is now part of the title
-            
+
             tbody.appendChild(row);
         });
-        
+
         table.appendChild(tbody);
         container.appendChild(table);
-        
+
         return container;
     }
 
@@ -1047,11 +1103,11 @@ document.addEventListener('DOMContentLoaded', function() {
     function renderOpportunityCard(o) {
         // Generate a unique ID for the modal
         const modalId = `audience-modal-${Math.random().toString(36).substr(2, 9)}`;
-        
+
         // Check if this opportunity is new (within 6 days)
         const isNew = isOpportunityNew(o.creation_date);
         const newPill = isNew ? '<span class="new-pill">NEW</span>' : '';
-        
+
         // Format tags for region and internet issue
         const tags = [];
         if (o.region) tags.push(`<span class="tag tag-region"><i class="fa-solid fa-map-marker-alt"></i> ${o.region}</span>`);
@@ -1060,10 +1116,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 tags.push(`<span class="tag tag-issue"><i class="fa-solid fa-globe"></i> ${issue}</span>`);
             });
         }
-        
+
         const tagsHtml = tags.length ? `<div class="card-tags">${tags.join('')}</div>` : '';
-        
-        const date = o.date ? 
+
+        const date = o.date ?
             `<li class="date">
                 <i class="icon fa-regular fa-calendar"></i>
                 <div>
@@ -1071,17 +1127,17 @@ document.addEventListener('DOMContentLoaded', function() {
                     <span class="date-date">${formatDate(o.date)}</span>
                 </div>
             </li>` : '';
-            
+
         // Format opportunity description
-        const description = o.opportunity_description ? 
+        const description = o.opportunity_description ?
             `<li><i class="icon fa-solid fa-bullseye"></i><strong>Opportunity:</strong> ${o.opportunity_description}</li>` : '';
-            
+
         // Format why it matters
-        const whyItMatters = o.why_it_matters ? 
+        const whyItMatters = o.why_it_matters ?
             `<li><i class="icon fa-solid fa-lightbulb"></i><strong>Why It Matters:</strong> ${o.why_it_matters}</li>` : '';
-            
+
         // Add calendar icon only for event-type opportunities
-        const calendarIcon = (o.Type && o.Type.toLowerCase().includes('event') && o.date && o.date !== 'Ongoing') ? 
+        const calendarIcon = (o.Type && o.Type.toLowerCase().includes('event') && o.date && o.date !== 'Ongoing') ?
             `<a href="#" class="add-to-calendar" 
                 data-title="${o.title}" 
                 data-date="${o.date}" 
@@ -1105,14 +1161,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 </ul>
                 <div class="card-footer">
                     ${o.link ? `<a href="${o.link}" target="_blank" rel="noopener noreferrer" class="cta-button">
-                        <i class="icon fa-solid ${o.action_text.toLowerCase().includes('sign') ? 'fa-pen-to-square' : 
-                                         o.action_text.toLowerCase().includes('submit') ? 'fa-file-lines' : 
-                                         o.action_text.toLowerCase().includes('apply') ? 'fa-user-plus' : 
-                                         o.action_text.toLowerCase().includes('register') ? 'fa-right-to-bracket' : 
-                                         o.action_text.toLowerCase().includes('learn') ? 'fa-circle-info' : 
-                                         o.action_text.toLowerCase().includes('express') ? 'fa-handshake-angle' : 
-                                         o.action_text.toLowerCase().includes('nominate') ? 'fa-award' : 
-                                         'fa-arrow-right'}"></i>${o.action_text || 'Learn More'}
+                        <i class="icon fa-solid ${o.action_text.toLowerCase().includes('sign') ? 'fa-pen-to-square' :
+                    o.action_text.toLowerCase().includes('submit') ? 'fa-file-lines' :
+                        o.action_text.toLowerCase().includes('apply') ? 'fa-user-plus' :
+                            o.action_text.toLowerCase().includes('register') ? 'fa-right-to-bracket' :
+                                o.action_text.toLowerCase().includes('learn') ? 'fa-circle-info' :
+                                    o.action_text.toLowerCase().includes('express') ? 'fa-handshake-angle' :
+                                        o.action_text.toLowerCase().includes('nominate') ? 'fa-award' :
+                                            'fa-arrow-right'}"></i>${o.action_text || 'Learn More'}
                     </a>` : ''}
                     ${o.who_can_get_involved && o.who_can_get_involved.length > 0 ? `
                         <div class="audience-link-container">
@@ -1148,9 +1204,9 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('click', function handleModalClicks(e) {
         // Only handle left mouse button clicks
         if (e.button !== 0) return;
-        
+
         const target = e.target;
-        
+
         // Open modal when clicking on audience link
         const audienceLink = target.closest('.audience-link');
         if (audienceLink) {
@@ -1162,12 +1218,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.querySelectorAll('.audience-modal.show').forEach(m => {
                     closeModal(m);
                 });
-                
+
                 // Move modal to body to ensure proper positioning
                 if (modal.parentNode !== document.body) {
                     document.body.appendChild(modal);
                 }
-                
+
                 // Show the modal
                 modal.style.display = 'flex';
                 // Small delay to allow display to update before adding show class
@@ -1178,7 +1234,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             return;
         }
-        
+
         // Close modal when clicking on close button
         if (target.closest('.audience-modal-close')) {
             e.preventDefault();
@@ -1188,7 +1244,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             return;
         }
-        
+
         // Close modal when clicking on the overlay (outside content)
         if (target.classList.contains('audience-modal')) {
             const modalContent = target.querySelector('.audience-modal-content');
@@ -1197,9 +1253,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
-    
+
     // Close modal with Escape key
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') {
             const openModal = document.querySelector('.audience-modal.show');
             if (openModal) {
@@ -1207,11 +1263,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
-    
+
     // Function to handle modal closing with proper cleanup
     function closeModal(modal) {
         if (!modal) return;
-        
+
         modal.classList.remove('show');
         // Wait for the transition to complete before hiding
         setTimeout(() => {
@@ -1222,7 +1278,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }, 200);
     }
-    
+
     // Subscription dialog functionality
     function showSubscriptionDialog(feedType, feedUrl) {
         // Remove any existing subscription modal
@@ -1230,18 +1286,18 @@ document.addEventListener('DOMContentLoaded', function() {
         if (existingModal) {
             existingModal.remove();
         }
-        
+
         // Create modal HTML
         const modal = document.createElement('div');
         modal.id = 'subscription-modal';
         modal.className = 'subscription-modal';
-        
+
         const isRSS = feedType === 'rss';
         const feedTitle = isRSS ? 'RSS Feed' : 'Calendar Feed (iCal)';
-        const feedDescription = isRSS 
+        const feedDescription = isRSS
             ? 'Stay updated with the latest Internet Society opportunities'
             : 'Add upcoming Internet Society events to your calendar';
-        
+
         // Popular RSS readers and calendar apps with verified subscription URLs
         const popularApps = isRSS ? [
             { name: 'Feedly', url: `https://feedly.com/i/subscription/feed/${encodeURIComponent(feedUrl)}`, icon: 'fas fa-rss' },
@@ -1251,7 +1307,7 @@ document.addEventListener('DOMContentLoaded', function() {
             { name: 'Google Calendar', url: `https://calendar.google.com/calendar/u/0/r?cid=${encodeURIComponent(feedUrl)}`, icon: 'fab fa-google' },
             { name: 'Apple Calendar', url: `webcal://${feedUrl.replace(/^https?:\/\//, '')}`, icon: 'fab fa-apple' }
         ];
-        
+
         modal.innerHTML = `
             <div class="subscription-modal-content">
                 <span class="subscription-modal-close">&times;</span>
@@ -1312,22 +1368,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>
         `;
-        
+
         // Add modal to body
         document.body.appendChild(modal);
-        
+
         // Show modal with animation
         requestAnimationFrame(() => {
             modal.style.display = 'flex';
             modal.classList.add('show');
             document.body.style.overflow = 'hidden';
         });
-        
+
         // Add event listeners for modal
         const closeBtn = modal.querySelector('.subscription-modal-close');
         const copyBtn = modal.querySelector('.copy-url-btn');
         const urlInput = modal.querySelector('.feed-url-input');
-        
+
         // Close modal handlers
         closeBtn.addEventListener('click', () => closeSubscriptionModal(modal));
         modal.addEventListener('click', (e) => {
@@ -1335,23 +1391,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 closeSubscriptionModal(modal);
             }
         });
-        
+
         // Copy URL functionality
         copyBtn.addEventListener('click', () => {
             urlInput.select();
             urlInput.setSelectionRange(0, 99999); // For mobile devices
-            
+
             try {
                 const successful = document.execCommand('copy');
                 if (successful) {
                     // Show success feedback
                     const originalText = copyBtn.querySelector('.copy-text').textContent;
                     const copyIcon = copyBtn.querySelector('i');
-                    
+
                     copyBtn.querySelector('.copy-text').textContent = 'Copied!';
                     copyIcon.className = 'fas fa-check';
                     copyBtn.classList.add('copied');
-                    
+
                     setTimeout(() => {
                         copyBtn.querySelector('.copy-text').textContent = originalText;
                         copyIcon.className = 'fas fa-copy';
@@ -1366,11 +1422,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     navigator.clipboard.writeText(feedUrl).then(() => {
                         const originalText = copyBtn.querySelector('.copy-text').textContent;
                         const copyIcon = copyBtn.querySelector('i');
-                        
+
                         copyBtn.querySelector('.copy-text').textContent = 'Copied!';
                         copyIcon.className = 'fas fa-check';
                         copyBtn.classList.add('copied');
-                        
+
                         setTimeout(() => {
                             copyBtn.querySelector('.copy-text').textContent = originalText;
                             copyIcon.className = 'fas fa-copy';
@@ -1385,13 +1441,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         });
-        
+
         // Allow clicking on input to select all
         urlInput.addEventListener('click', () => {
             urlInput.select();
         });
     }
-    
+
     function closeSubscriptionModal(modal) {
         modal.classList.remove('show');
         setTimeout(() => {
@@ -1402,9 +1458,9 @@ document.addEventListener('DOMContentLoaded', function() {
             modal.remove();
         }, 200);
     }
-    
+
     // Close subscription modal with Escape key
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') {
             const openModal = document.querySelector('.audience-modal.show');
             const openSubscriptionModal = document.querySelector('.subscription-modal.show');

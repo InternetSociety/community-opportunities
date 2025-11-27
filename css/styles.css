@@ -602,6 +602,11 @@ section#community-events {
     border-color: var(--isoc-blue);
 }
 
+.filter-toggle:focus {
+    outline: 2px solid var(--isoc-dark-blue);
+    outline-offset: 2px;
+}
+
 /* View Toggle Styles */
 .view-controls {
     display: flex;
@@ -655,6 +660,12 @@ section#community-events {
 .view-option.active {
     background-color: var(--isoc-blue);
     color: white;
+}
+
+.view-option:focus {
+    outline: 2px solid var(--isoc-blue);
+    outline-offset: -2px;
+    z-index: 1;
 }
 
 .view-option i {
@@ -757,6 +768,12 @@ section#community-events {
     transition: all 0.2s ease;
     font-size: 0.9em;
     user-select: none;
+    /* Button reset */
+    background: #f5f7fa;
+    border: 1px solid #e1e4e8;
+    font-family: inherit;
+    line-height: inherit;
+    text-align: left;
 }
 
 .filter-option:hover {
@@ -767,6 +784,12 @@ section#community-events {
     background: var(--isoc-blue);
     color: white;
     border-color: var(--isoc-blue);
+}
+
+.filter-option:focus {
+    outline: 2px solid var(--isoc-blue);
+    outline-offset: 2px;
+    z-index: 1;
 }
 
 .filter-option.region {

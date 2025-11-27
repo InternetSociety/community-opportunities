@@ -583,9 +583,17 @@ document.addEventListener('DOMContentLoaded', function () {
             localStorage.setItem('eventsViewMode', viewMode);
         };
 
-        viewToggle.addEventListener('click', function (e) {
+        // Use event delegation since the toggle is re-created when filtering
+        document.addEventListener('click', function (e) {
+            const viewToggle = e.target.closest('.view-toggle');
+            if (!viewToggle) return;
+
             const viewOption = e.target.closest('.view-option');
             if (!viewOption) return;
+
+            // Prevent default button behavior
+            e.preventDefault();
+
             updateView(viewOption.dataset.view);
         });
 
