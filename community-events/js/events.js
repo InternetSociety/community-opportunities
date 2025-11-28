@@ -80,7 +80,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Filter events based on current filters
     function filterEvents(events) {
+        const today = new Date();
+        today.setHours(0, 0, 0, 0); // Set to start of day for proper comparison
+        
         return events.filter(event => {
+            // Filter out past events
+            if (event.startDate && event.startDate !== 'Ongoing') {
+                const eventDate = new Date(event.startDate);
+                eventDate.setHours(0, 0, 0, 0);
+                if (eventDate < today) return false;
+            }
+            
+            // Apply existing filters
             if (currentFilters.region && event.region !== currentFilters.region) return false;
             if (currentFilters.type && event.type !== currentFilters.type) return false;
             if (currentFilters.category && event.category !== currentFilters.category) return false;
@@ -527,8 +538,9 @@ document.addEventListener('DOMContentLoaded', function () {
         allEvents = await fetchEvents();
         populateFilters(allEvents);
         initializeFilters();
-        renderEvents(allEvents);
-        updateEventCount(allEvents.length);
+        const filteredEvents = filterEvents(allEvents);
+        renderEvents(filteredEvents);
+        updateEventCount(filteredEvents.length);
         initializeViewToggle();
     }
 
