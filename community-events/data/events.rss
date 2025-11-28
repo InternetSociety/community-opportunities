@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:c8333d7c0534a2301061536d22ece5bc -->
+<!-- DATA_FINGERPRINT:5e34dc4634cf97c4d68dd340f9f7ec3c -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Events</title>
@@ -12,17 +12,27 @@
                     <title>Event with a longer name</title>
                     <link>https://internetsociety.org</link>
                     <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</description>
-                    <pubDate>Thu, 27 Nov 2025 00:36:28 GMT</pubDate>
+                    <pubDate>Fri, 28 Nov 2025 14:09:56 GMT</pubDate>
                     <guid isPermaLink="false">162ca4a90aca543231cc811042f07647</guid>
                     <category>Event</category>
                     <category>Training</category>
                     <category>Asia Pacific</category>
                 </item>
 <item>
+                    <title>Event form the form</title>
+                    <link>https://internetsociety.org</link>
+                    <description>I submited this from the form</description>
+                    <pubDate>Fri, 28 Nov 2025 14:09:56 GMT</pubDate>
+                    <guid isPermaLink="false">a8884033d8b2521a17aae5311dc59a85</guid>
+                    <category>Event</category>
+                    <category>Webinar</category>
+                    <category>Middle East</category>
+                </item>
+<item>
                     <title>Multiple days</title>
                     <link>https://internetsociety.org</link>
                     <description>This event takes place during multiple days</description>
-                    <pubDate>Thu, 27 Nov 2025 00:36:28 GMT</pubDate>
+                    <pubDate>Fri, 28 Nov 2025 14:09:56 GMT</pubDate>
                     <guid isPermaLink="false">f2a75bf0ff1a0827975f4e5a107b8ff1</guid>
                     <category>Event</category>
                     <category>Conference</category>
