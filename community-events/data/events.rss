@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:66f01fd3b623f31e3311a941e738a04d -->
+<!-- DATA_FINGERPRINT:e54b9d0ec58821f3702db1d16c384b29 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Events</title>
@@ -12,7 +12,7 @@
                     <title>5e édition du Forum national sur le DNS de l’Antic</title>
                     <link>https://www.antic.cm</link>
                     <description>This seminar aims to build the capacity of the personnel in charge of critical infrastructure and to further optimize the quality of services. The direct impact of this forum will be the improvement of the Internet connection in Cameroon and the enhancement of Internet security. The direct output of this seminar is the resolution of numerous Internet connection problems in Cameroon.&quot;</description>
-                    <pubDate>Mon, 01 Dec 2025 19:11:11 GMT</pubDate>
+                    <pubDate>Mon, 01 Dec 2025 19:16:17 GMT</pubDate>
                     <guid isPermaLink="false">127dea8ec5be27a37cbca767b338b3f3</guid>
                     <category>Event</category>
                     <category>Webinar</category>
@@ -22,8 +22,18 @@
                     <title>UK Internet Governance Forum 2025</title>
                     <link>https://ukigf.org.uk/events/uk-igf-2025/</link>
                     <description>One-day event in London focused on “Building Digital Governance Together,” exploring key issues like digital cooperation, trust, innovation, and universal digital rights to shape the future of internet governance in the UK</description>
-                    <pubDate>Mon, 01 Dec 2025 19:11:11 GMT</pubDate>
+                    <pubDate>Mon, 01 Dec 2025 19:16:17 GMT</pubDate>
                     <guid isPermaLink="false">d219ab91e74d0eb060481c6a0f39a1a3</guid>
+                    <category>Event</category>
+                    <category>Conference</category>
+                    <category>Europe</category>
+                </item>
+<item>
+                    <title>ISOC PT 2025 Internet Research Prize</title>
+                    <link>https://isoc.pt/entrega-do-premio-2025/</link>
+                    <description>Delivery of the ISOC PT 2025 Internet Research Prize and panel discussion on the Age Control proposals</description>
+                    <pubDate>Mon, 01 Dec 2025 19:16:17 GMT</pubDate>
+                    <guid isPermaLink="false">2e1fc316bb3a3f69fd0fee943f138f2c</guid>
                     <category>Event</category>
                     <category>Conference</category>
                     <category>Europe</category>
