@@ -9,6 +9,7 @@
     "format": "Online",
     "language": "French",
     "modificationDate": "2025-12-01T12:42:29Z",
+    "modifiedBy": "martin@isoc.org",
     "organizer": "Cameroon chapter",
     "region": "Africa",
     "registrationUrl": "https://www.antic.cm",
@@ -28,6 +29,7 @@
     "format": "Online",
     "language": "English",
     "modificationDate": "2025-12-01T12:39:20Z",
+    "modifiedBy": "martin@isoc.org",
     "organizer": "Ghana chapter",
     "region": "Africa",
     "registrationUrl": "https://us02web.zoom.us/j/86205975631?pwd=tcfdRf3B0pPGwNCQW8RTsaazSWYUy3.1",
@@ -36,5 +38,25 @@
     "timeZone": "UTC",
     "title": "How to Find Funders and Partners",
     "type": "Webinar"
+  },
+  {
+    "approved": true,
+    "category": "Internet Governance",
+    "creationDate": "2025-12-01T18:47:46Z",
+    "description": "One-day event in London focused on “Building Digital Governance Together,” exploring key issues like digital cooperation, trust, innovation, and universal digital rights to shape the future of internet governance in the UK",
+    "endDate": null,
+    "endTime": "17:00",
+    "format": "Hybrid",
+    "language": "English",
+    "modificationDate": "2025-12-01T18:48:48Z",
+    "modifiedBy": "martin@isoc.org",
+    "organizer": "United Kingdom Chapter",
+    "region": "Europe",
+    "registrationUrl": "https://ukigf.org.uk/events/uk-igf-2025/",
+    "startDate": "2025-12-11",
+    "startTime": "09:00",
+    "timeZone": "UTC",
+    "title": "UK Internet Governance Forum 2025",
+    "type": "Conference"
   }
 ]
