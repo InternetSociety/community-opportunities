@@ -58,5 +58,25 @@
     "timeZone": "UTC",
     "title": "UK Internet Governance Forum 2025",
     "type": "Conference"
+  },
+  {
+    "approved": true,
+    "category": "Community",
+    "creationDate": "2025-12-01T19:08:43Z",
+    "description": "Delivery of the ISOC PT 2025 Internet Research Prize and panel discussion on the Age Control proposals",
+    "endDate": null,
+    "endTime": "13:00",
+    "format": "Hybrid",
+    "language": "Portuguese",
+    "modificationDate": "2025-12-01T19:10:42Z",
+    "modifiedBy": "martin@isoc.org",
+    "organizer": "Portugal Chapter",
+    "region": "Europe",
+    "registrationUrl": "https://isoc.pt/entrega-do-premio-2025/",
+    "startDate": "2025-12-09",
+    "startTime": "11:00",
+    "timeZone": "WET",
+    "title": "ISOC PT 2025 Internet Research Prize",
+    "type": "Conference"
   }
 ]
