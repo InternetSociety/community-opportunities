@@ -59,4 +59,16 @@ URL:https://us02web.zoom.us/j/86205975631?pwd=tcfdRf3B0pPGwNCQW8RTsaazSWYUy3.1
 DTSTART;TZID=UTC:20251201T130000
 DTEND;TZID=UTC:20251201T140000
 END:VEVENT
+BEGIN:VEVENT
+UID:99249039-c1ec-5598-a352-2dfd011ff348
+DTSTAMP:20240101T000000Z
+SUMMARY:UK Internet Governance Forum 2025
+DESCRIPTION:One-day event in London focused on “Building Digital Governance Together
+ \,” exploring key issues like digital cooperation\, trust\, innovation\,
+  and universal digital rights to shape the future of internet governance
+  in the UK
+URL:https://ukigf.org.uk/events/uk-igf-2025/
+DTSTART;TZID=UTC:20251211T090000
+DTEND;TZID=UTC:20251211T170000
+END:VEVENT
 END:VCALENDAR
