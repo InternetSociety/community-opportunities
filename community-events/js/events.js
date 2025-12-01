@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
         region: '',
         type: '',
         category: '',
-        format: ''
+        format: '',
+        language: ''
     };
 
 
@@ -33,12 +34,14 @@ document.addEventListener('DOMContentLoaded', function () {
         const types = new Set();
         const categories = new Set();
         const formats = new Set();
+        const languages = new Set();
 
         events.forEach(event => {
             if (event.region) regions.add(event.region);
             if (event.type) types.add(event.type);
             if (event.category) categories.add(event.category);
             if (event.format) formats.add(event.format);
+            if (event.language) languages.add(event.language);
         });
 
         // Populate region filter
@@ -76,6 +79,15 @@ document.addEventListener('DOMContentLoaded', function () {
             option.textContent = format;
             formatFilter.appendChild(option);
         });
+
+        // Populate language filter
+        const languageFilter = document.getElementById('language-filter');
+        Array.from(languages).sort().forEach(language => {
+            const option = document.createElement('option');
+            option.value = language;
+            option.textContent = language;
+            languageFilter.appendChild(option);
+        });
     }
 
     // Filter events based on current filters
@@ -96,6 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (currentFilters.type && event.type !== currentFilters.type) return false;
             if (currentFilters.category && event.category !== currentFilters.category) return false;
             if (currentFilters.format && event.format !== currentFilters.format) return false;
+            if (currentFilters.language && event.language !== currentFilters.language) return false;
             return true;
         });
     }
@@ -114,6 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const typeFilter = document.getElementById('type-filter');
         const categoryFilter = document.getElementById('category-filter');
         const formatFilter = document.getElementById('format-filter');
+        const languageFilter = document.getElementById('language-filter');
 
         regionFilter.addEventListener('change', (e) => {
             currentFilters.region = e.target.value;
@@ -138,6 +152,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         formatFilter.addEventListener('change', (e) => {
             currentFilters.format = e.target.value;
+            const filteredEvents = filterEvents(allEvents);
+            renderEvents(filteredEvents);
+            updateEventCount(filteredEvents.length);
+        });
+
+        languageFilter.addEventListener('change', (e) => {
+            currentFilters.language = e.target.value;
             const filteredEvents = filterEvents(allEvents);
             renderEvents(filteredEvents);
             updateEventCount(filteredEvents.length);
