@@ -4,8 +4,8 @@ PRODID:-//Internet Society//Events//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VTIMEZONE
-TZID:CET
-X-LIC-LOCATION:CET
+TZID:WAT
+X-LIC-LOCATION:WAT
 BEGIN:STANDARD
 DTSTART:19701025T030000
 TZOFFSETFROM:+0200
@@ -36,42 +36,27 @@ TZNAME:CEST
 END:DAYLIGHT
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:805f3f1f-2d3a-506b-b91f-b7d9da8d3478
+UID:cb47cbc4-3aef-534a-aeee-510938ad3119
 DTSTAMP:20240101T000000Z
-SUMMARY:Test event
-DESCRIPTION:This is the description of the event
-URL:https://internetsociety.org
-DTSTART;TZID=CET:20251127T110000
-DTEND;TZID=CET:20251127T150000
+SUMMARY:5e édition du Forum national sur le DNS de l’Antic
+DESCRIPTION:This seminar aims to build the capacity of the personnel in charge of cr
+ itical infrastructure and to further optimize the quality of services. T
+ he direct impact of this forum will be the improvement of the Internet c
+ onnection in Cameroon and the enhancement of Internet security. The dire
+ ct output of this seminar is the resolution of numerous Internet connect
+ ion problems in Cameroon."
+URL:https://www.antic.cm
+DTSTART;TZID=WAT:20251210T110000
+DTEND;TZID=WAT:20251210T130000
 END:VEVENT
 BEGIN:VEVENT
-UID:76edd7b4-4223-505a-9bfe-8551a9642594
+UID:ca3a86f0-b19e-5b86-bf08-911a0aaf371b
 DTSTAMP:20240101T000000Z
-SUMMARY:Event with a longer name
-DESCRIPTION:Lorem ipsum dolor sit amet\, consectetur adipiscing elit\, sed do eiusmo
- d tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim v
- eniam\, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
- commodo consequat
-URL:https://internetsociety.org
-DTSTART;TZID=UTC:20251201T090000
-DTEND;TZID=UTC:20251201T160000
-END:VEVENT
-BEGIN:VEVENT
-UID:48179f1d-d428-56df-be8a-6cd43f689fb2
-DTSTAMP:20240101T000000Z
-SUMMARY:Event form the form
-DESCRIPTION:I submited this from the form
-URL:https://internetsociety.org
-DTSTART;TZID=UTC:20260106T180000
-DTEND;TZID=UTC:20260106T210000
-END:VEVENT
-BEGIN:VEVENT
-UID:36d06067-9dcf-57db-89f0-19f28b3b90d9
-DTSTAMP:20240101T000000Z
-SUMMARY:Multiple days
-DESCRIPTION:This event takes place during multiple days
-URL:https://internetsociety.org
-DTSTART;TZID=UTC:20251201T120000
-DTEND;TZID=UTC:20251206T183000
+SUMMARY:How to Find Funders and Partners
+DESCRIPTION:Webinar organized by Ghana chapter to educate others on how to find fund
+ ers and partners for their activities.
+URL:https://us02web.zoom.us/j/86205975631?pwd=tcfdRf3B0pPGwNCQW8RTsaazSWYUy3.1
+DTSTART;TZID=UTC:20251201T130000
+DTEND;TZID=UTC:20251201T140000
 END:VEVENT
 END:VCALENDAR
