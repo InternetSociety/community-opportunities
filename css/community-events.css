@@ -39,6 +39,7 @@
     z-index: 2;
     flex: 1;
     margin-left: 16px;
+    margin-right: 56px;
     display: flex;
     align-items: center;
 }
@@ -362,6 +363,7 @@ a.event-card-header:hover .event-title {
 
     .event-cover-content {
         margin-left: 12px;
+        margin-right: 48px;
         padding: 0;
     }
 
