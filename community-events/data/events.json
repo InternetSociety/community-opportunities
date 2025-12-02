@@ -78,5 +78,25 @@
     "timeZone": "WET",
     "title": "ISOC PT 2025 Internet Research Prize",
     "type": "Conference"
+  },
+  {
+    "approved": true,
+    "category": "Internet Governance",
+    "creationDate": "2025-12-02T04:36:19Z",
+    "description": "This webinar will explore how Universal Acceptance forms the foundation for a truly multilingual Internet, the challenges of regional language support, multilingual DNS, inclusion in digital platforms, and the transformative role of technology, design, and policy in shaping linguistic equity online.",
+    "endDate": null,
+    "endTime": "13:30",
+    "format": "Online",
+    "language": "English",
+    "modificationDate": "2025-12-02T08:38:16Z",
+    "modifiedBy": "martin@isoc.org",
+    "organizer": "India Mumbai Chapter",
+    "region": "Asia Pacific",
+    "registrationUrl": "https://docs.google.com/forms/d/1YRma6AO9meGW28bn0wHIyrhJjmy87IzML7DVtUsuc68/edit?chromeless=1",
+    "startDate": "2025-12-13",
+    "startTime": "12:30",
+    "timeZone": "UTC",
+    "title": "Universal Acceptance on a Multilingual Internet",
+    "type": "Webinar"
   }
 ]
