@@ -1,26 +1,6 @@
 [
   {
     "approved": true,
-    "category": "Connectivity",
-    "creationDate": "2025-12-01T11:46:30Z",
-    "description": "This seminar aims to build the capacity of the personnel in charge of critical infrastructure and to further optimize the quality of services. The direct impact of this forum will be the improvement of the Internet connection in Cameroon and the enhancement of Internet security. The direct output of this seminar is the resolution of numerous Internet connection problems in Cameroon.\"",
-    "endDate": null,
-    "endTime": "13:00",
-    "format": "Online",
-    "language": "French",
-    "modificationDate": "2025-12-01T12:42:29Z",
-    "modifiedBy": "martin@isoc.org",
-    "organizer": "Cameroon chapter",
-    "region": "Africa",
-    "registrationUrl": "https://www.antic.cm",
-    "startDate": "2025-12-10",
-    "startTime": "11:00",
-    "timeZone": "WAT",
-    "title": "5e édition du Forum national sur le DNS de l’Antic",
-    "type": "Webinar"
-  },
-  {
-    "approved": true,
     "category": "Community",
     "creationDate": "2025-12-01T12:37:25Z",
     "description": "Webinar organized by Ghana chapter to educate others on how to find funders and partners for their activities.",
