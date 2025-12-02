@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:ad56cb7f0f13bbf391d50266abdb5844 -->
+<!-- DATA_FINGERPRINT:e9db28e034c1a2420398f1ab3fc7029c -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Events</title>
@@ -9,6 +9,16 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/community-events/data/events.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>Universal Acceptance on a Multilingual Internet</title>
+                    <link>https://docs.google.com/forms/d/1YRma6AO9meGW28bn0wHIyrhJjmy87IzML7DVtUsuc68/edit?chromeless=1</link>
+                    <description>This webinar will explore how Universal Acceptance forms the foundation for a truly multilingual Internet, the challenges of regional language support, multilingual DNS, inclusion in digital platforms, and the transformative role of technology, design, and policy in shaping linguistic equity online.</description>
+                    <pubDate>Tue, 02 Dec 2025 04:36:19 GMT</pubDate>
+                    <guid isPermaLink="false">1859f5db4e1d46ce81a034d29981a35a</guid>
+                    <category>Event</category>
+                    <category>Webinar</category>
+                    <category>Asia Pacific</category>
+                </item>
+<item>
                     <title>ISOC PT 2025 Internet Research Prize</title>
                     <link>https://isoc.pt/entrega-do-premio-2025/</link>
                     <description>Delivery of the ISOC PT 2025 Internet Research Prize and panel discussion on the Age Control proposals</description>

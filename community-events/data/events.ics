@@ -97,4 +97,17 @@ URL:https://isoc.pt/entrega-do-premio-2025/
 DTSTART;TZID=WET:20251209T110000
 DTEND;TZID=WET:20251209T130000
 END:VEVENT
+BEGIN:VEVENT
+UID:5b41bd81-324d-52c8-8373-583c7cf3aff1
+DTSTAMP:20240101T000000Z
+SUMMARY:Universal Acceptance on a Multilingual Internet
+DESCRIPTION:This webinar will explore how Universal Acceptance forms the foundation 
+ for a truly multilingual Internet\, the challenges of regional language 
+ support\, multilingual DNS\, inclusion in digital platforms\, and the tr
+ ansformative role of technology\, design\, and policy in shaping linguis
+ tic equity online.
+URL:https://docs.google.com/forms/d/1YRma6AO9meGW28bn0wHIyrhJjmy87IzML7DVtUsuc68/edit?chromeless=1
+DTSTART;TZID=UTC:20251213T123000
+DTEND;TZID=UTC:20251213T133000
+END:VEVENT
 END:VCALENDAR
