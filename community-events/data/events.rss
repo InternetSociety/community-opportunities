@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:e9db28e034c1a2420398f1ab3fc7029c -->
+<!-- DATA_FINGERPRINT:3381676ddf1a4199edec02beb765170d -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Events</title>
@@ -44,16 +44,6 @@
                     <description>Webinar organized by Ghana chapter to educate others on how to find funders and partners for their activities.</description>
                     <pubDate>Mon, 01 Dec 2025 12:37:25 GMT</pubDate>
                     <guid isPermaLink="false">e74ca46c8497afd832db76dd52c2815f</guid>
-                    <category>Event</category>
-                    <category>Webinar</category>
-                    <category>Africa</category>
-                </item>
-<item>
-                    <title>5e édition du Forum national sur le DNS de l’Antic</title>
-                    <link>https://www.antic.cm</link>
-                    <description>This seminar aims to build the capacity of the personnel in charge of critical infrastructure and to further optimize the quality of services. The direct impact of this forum will be the improvement of the Internet connection in Cameroon and the enhancement of Internet security. The direct output of this seminar is the resolution of numerous Internet connection problems in Cameroon.&quot;</description>
-                    <pubDate>Mon, 01 Dec 2025 11:46:30 GMT</pubDate>
-                    <guid isPermaLink="false">077207d6370bfd8341079dc0ea56a3e3</guid>
                     <category>Event</category>
                     <category>Webinar</category>
                     <category>Africa</category>
