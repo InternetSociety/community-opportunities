@@ -205,12 +205,12 @@ a.event-card-header:hover .event-title {
     font-size: 0.9em;
     line-height: 1.4;
     margin: 0;
-    height: 2.8em;
-    /* Fixed height for exactly 2 lines */
+    height: 5.6em;
+    /* Fixed height for exactly 4 lines */
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
     -webkit-box-orient: vertical;
 }
 
