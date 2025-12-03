@@ -14,6 +14,138 @@ document.addEventListener('DOMContentLoaded', function () {
         language: ''
     };
 
+    // Mobile menu functionality
+    const nav = document.querySelector('.top-nav');
+    if (nav) {
+        // Get navigation elements
+        const hamburger = nav.querySelector('.hamburger');
+        const navLinks = nav.querySelector('.nav-links');
+        const overlay = nav.querySelector('.nav-overlay');
+        const logoLink = nav.querySelector('.logo-link');
+
+        // Function to update mobile menu with month links
+        function updateMobileMenuWithMonths(events) {
+            if (!navLinks) return;
+
+            // Get unique months from events, sorted chronologically
+            const monthsMap = new Map();
+            events.forEach(event => {
+                if (event.startDate && event.startDate !== 'Ongoing') {
+                    const [year, month] = event.startDate.split('-').map(Number);
+                    const dateObj = new Date(year, month - 1, 1);
+                    const monthYear = dateObj.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+                    const monthId = `month-${year}-${month.toString().padStart(2, '0')}`;
+                    monthsMap.set(monthId, monthYear);
+                }
+            });
+
+            // Convert to array and sort chronologically
+            const sortedMonths = Array.from(monthsMap.entries())
+                .sort(([aId], [bId]) => {
+                    const [aYear, aMonth] = aId.split('-').slice(1).map(Number);
+                    const [bYear, bMonth] = bId.split('-').slice(1).map(Number);
+                    return new Date(aYear, aMonth - 1) - new Date(bYear, bMonth - 1);
+                })
+                .map(([id, name]) => ({ id, name }));
+
+            // Build navigation HTML with month links
+            const navHtml = `
+                <a href="/">Opportunities</a>
+                <a href="#" class="active">Community Events</a>
+                ${sortedMonths.length > 0 ? '<div class="nav-month-divider"></div>' : ''}
+                ${sortedMonths.map(month => `<a href="#${month.id}" class="nav-month-link">${month.name}</a>`).join('')}
+            `;
+
+            navLinks.innerHTML = navHtml;
+        }
+
+        // Add smooth scroll to top when clicking the logo
+        if (logoLink) {
+            logoLink.addEventListener('click', function (e) {
+                if (window.location.pathname === '/' || window.location.pathname.endsWith('/community-events/')) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu if open
+                    closeMenu();
+                }
+            });
+        }
+
+        // Function to close the menu
+        function closeMenu() {
+            hamburger.setAttribute('aria-expanded', 'false');
+            hamburger.querySelector('i').className = 'fas fa-bars';
+            navLinks.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = ''; // Re-enable scrolling
+        }
+
+        // Function to open the menu
+        function openMenu() {
+            hamburger.setAttribute('aria-expanded', 'true');
+            hamburger.querySelector('i').className = 'fas fa-times';
+            navLinks.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+        }
+
+        // Toggle menu on hamburger click
+        if (hamburger && navLinks && overlay) {
+            hamburger.addEventListener('click', function () {
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                if (isExpanded) {
+                    closeMenu();
+                } else {
+                    openMenu();
+                }
+            });
+
+            // Close menu when clicking on overlay
+            overlay.addEventListener('click', closeMenu);
+
+            // Close menu when clicking on a nav link
+            navLinks.addEventListener('click', function (e) {
+                if (e.target.tagName === 'A' && window.innerWidth <= 1024) {
+                    // Special handling for month links - scroll to the month section
+                    if (e.target.classList.contains('nav-month-link')) {
+                        e.preventDefault();
+                        const targetId = e.target.getAttribute('href').substring(1);
+                        const targetElement = document.getElementById(targetId);
+                        
+                        if (targetElement) {
+                            // Close menu first
+                            closeMenu();
+                            // Then scroll to the target with offset for fixed header
+                            setTimeout(() => {
+                                const headerHeight = 60; // Height of fixed header
+                                const targetPosition = targetElement.offsetTop - headerHeight - 20; // 20px extra padding
+                                window.scrollTo({
+                                    top: targetPosition,
+                                    behavior: 'smooth'
+                                });
+                            }, 300); // Wait for menu to close
+                        }
+                    } else {
+                        closeMenu();
+                    }
+                }
+            });
+
+            // Close menu when pressing Escape key
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                    closeMenu();
+                }
+            });
+        }
+
+        // Store the update function globally so it can be called after events are loaded
+        window.updateMobileMenuWithMonths = updateMobileMenuWithMonths;
+    }
+
 
 
     // Fetch events data
@@ -134,6 +266,10 @@ document.addEventListener('DOMContentLoaded', function () {
             const filteredEvents = filterEvents(allEvents);
             renderEvents(filteredEvents);
             updateEventCount(filteredEvents.length);
+            // Update mobile menu with available months
+            if (window.updateMobileMenuWithMonths) {
+                window.updateMobileMenuWithMonths(filteredEvents);
+            }
         });
 
         typeFilter.addEventListener('change', (e) => {
@@ -141,6 +277,10 @@ document.addEventListener('DOMContentLoaded', function () {
             const filteredEvents = filterEvents(allEvents);
             renderEvents(filteredEvents);
             updateEventCount(filteredEvents.length);
+            // Update mobile menu with available months
+            if (window.updateMobileMenuWithMonths) {
+                window.updateMobileMenuWithMonths(filteredEvents);
+            }
         });
 
         categoryFilter.addEventListener('change', (e) => {
@@ -148,6 +288,10 @@ document.addEventListener('DOMContentLoaded', function () {
             const filteredEvents = filterEvents(allEvents);
             renderEvents(filteredEvents);
             updateEventCount(filteredEvents.length);
+            // Update mobile menu with available months
+            if (window.updateMobileMenuWithMonths) {
+                window.updateMobileMenuWithMonths(filteredEvents);
+            }
         });
 
         formatFilter.addEventListener('change', (e) => {
@@ -155,6 +299,10 @@ document.addEventListener('DOMContentLoaded', function () {
             const filteredEvents = filterEvents(allEvents);
             renderEvents(filteredEvents);
             updateEventCount(filteredEvents.length);
+            // Update mobile menu with available months
+            if (window.updateMobileMenuWithMonths) {
+                window.updateMobileMenuWithMonths(filteredEvents);
+            }
         });
 
         languageFilter.addEventListener('change', (e) => {
@@ -162,6 +310,10 @@ document.addEventListener('DOMContentLoaded', function () {
             const filteredEvents = filterEvents(allEvents);
             renderEvents(filteredEvents);
             updateEventCount(filteredEvents.length);
+            // Update mobile menu with available months
+            if (window.updateMobileMenuWithMonths) {
+                window.updateMobileMenuWithMonths(filteredEvents);
+            }
         });
     }
 
@@ -254,9 +406,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 const currentMonth = dateObj.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
 
                 if (currentMonth !== lastMonth) {
-                    // Add subtle month divider
+                    // Add subtle month divider with ID for navigation
                     const monthDivider = document.createElement('div');
                     monthDivider.className = 'month-divider';
+                    // Create ID for navigation targeting
+                    const monthId = `month-${year}-${month.toString().padStart(2, '0')}`;
+                    monthDivider.id = monthId;
                     monthDivider.innerHTML = `
                         <div class="month-divider-line"></div>
                         <div class="month-divider-label">${currentMonth}</div>
@@ -563,6 +718,11 @@ document.addEventListener('DOMContentLoaded', function () {
         renderEvents(filteredEvents);
         updateEventCount(filteredEvents.length);
         initializeViewToggle();
+        
+        // Update mobile menu with month navigation links
+        if (window.updateMobileMenuWithMonths) {
+            window.updateMobileMenuWithMonths(filteredEvents);
+        }
     }
 
     // Subscription dialog functionality

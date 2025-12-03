@@ -49,12 +49,12 @@
     font-size: 1.1em;
     font-weight: 700;
     line-height: 1.3;
-    color: #202020;
+    color: var(--isoc-blue);
     text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 .event-cover-content .event-title a {
-    color: #202020;
+    color: var(--isoc-blue);
     text-decoration: none;
     transition: all 0.2s;
 }
@@ -785,4 +785,37 @@ a.event-card-header:hover .event-title {
 .section-header-container {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
+}
+
+/* Mobile sidebar month navigation styles */
+.nav-month-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 15px 0;
+    width: 100%;
+}
+
+.nav-month-link {
+    color: var(--isoc-light-gray) !important;
+    text-decoration: none !important;
+    padding: 10px 15px !important;
+    margin: 3px 0 !important;
+    border-radius: 4px !important;
+    transition: background-color 0.2s ease !important;
+    font-size: 0.9em !important;
+    font-weight: 500 !important;
+    opacity: 0.9 !important;
+}
+
+.nav-month-link:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    opacity: 1 !important;
+}
+
+/* Only show month links on mobile */
+@media (min-width: 1025px) {
+    .nav-month-divider,
+    .nav-month-link {
+        display: none !important;
+    }
 }
