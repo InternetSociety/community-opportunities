@@ -78,5 +78,25 @@
     "timeZone": "UTC",
     "title": "Universal Acceptance on a Multilingual Internet",
     "type": "Webinar"
+  },
+  {
+    "approved": true,
+    "category": "Community",
+    "creationDate": "2025-12-02T20:34:50Z",
+    "description": "A critical event designed to challenge how we monitor and maintain underground sewer systems using cutting-edge, autonomous technology.",
+    "endDate": "2025-12-12",
+    "endTime": "13:00",
+    "format": "Hybrid",
+    "language": "English",
+    "modificationDate": "2025-12-03T14:58:06Z",
+    "modifiedBy": "martin@isoc.org",
+    "organizer": "AI SIG",
+    "region": "Asia Pacific",
+    "registrationUrl": "https://www.ai-workshops.org/",
+    "startDate": "2025-12-11",
+    "startTime": "06:00",
+    "timeZone": "UTC",
+    "title": "AI SIG \"Wire-Free Sewer Vision\" Hybrid Hackathon",
+    "type": "Workshop"
   }
 ]
