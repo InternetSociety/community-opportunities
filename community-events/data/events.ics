@@ -80,4 +80,14 @@ URL:https://docs.google.com/forms/d/1YRma6AO9meGW28bn0wHIyrhJjmy87IzML7DVtUsuc68
 DTSTART;TZID=UTC:20251213T123000
 DTEND;TZID=UTC:20251213T133000
 END:VEVENT
+BEGIN:VEVENT
+UID:3b5a6a6f-d8fa-536f-8abc-112f20a98896
+DTSTAMP:20240101T000000Z
+SUMMARY:AI SIG "Wire-Free Sewer Vision" Hybrid Hackathon
+DESCRIPTION:A critical event designed to challenge how we monitor and maintain under
+ ground sewer systems using cutting-edge\, autonomous technology.
+URL:https://www.ai-workshops.org/
+DTSTART;TZID=UTC:20251211T060000
+DTEND;TZID=UTC:20251212T130000
+END:VEVENT
 END:VCALENDAR
