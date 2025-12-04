@@ -16,17 +16,6 @@ DTSTART;VALUE=DATE:20251231
 DTEND;VALUE=DATE:20251231
 END:VEVENT
 BEGIN:VEVENT
-UID:39c4b903-f052-56ae-8a65-66570dd1b260
-SUMMARY:Community Day Latin America and the Caribbean
-DESCRIPTION:This session will take a strategic look at how community-led efforts hav
- e transformed the Internet ecosystem in four key areas: Connectivity\, O
- nline safety\, Technical Community\, Accesibility and Public Policy.
-URL:https://events.zoom.us/ev/Au5TmShdER2hiwJsvmoWYlgngPoDAwCQD0cNXl9NctvPY_xN1dEO~AhwEJ-6x_T1PLQPwpKbvIPg4GGxljiFvMzO2Ql1CJuOimJAjbHLCSxIBiA
-DTSTAMP:20240101T000000Z
-DTSTART;VALUE=DATE:20251203
-DTEND;VALUE=DATE:20251203
-END:VEVENT
-BEGIN:VEVENT
 UID:5a9f01f3-0d49-5b31-a9bb-e474620c19f7
 SUMMARY:Endorse ISOC Analysis of WSIS+20 Rev. 1
 DESCRIPTION:In preparation for the WSIS+20 High-Level Meeting of the UN General Asse
