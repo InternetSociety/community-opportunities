@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:fd0263631fe04c3a49bd296c5552c3f2 -->
+<!-- DATA_FINGERPRINT:e2668a222c5644c266696755fe5e1dc6 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Opportunities</title>
@@ -9,11 +9,31 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/data/opportunities.rss" rel="self" type="application/rss+xml" />
         <item>
-                    <title>European Chapters Q4 Regional Call</title>
+                    <title>Asia-Pacific Q4 Regional Call</title>
+                    <link>https://isoc.zoom.us/meeting/register/dDTgFTCVQW2f1dmN_xzePw</link>
+                    <description>This call will feature an introduction by our newly chartered Mongolia Chapter, announcement of our APAC Community Champ, and a member-led presentation of our 2026 Action Plan</description>
+                    <pubDate>Thu, 04 Dec 2025 08:44:43 GMT</pubDate>
+                    <guid isPermaLink="false">a4e4eb5cb8e93229f751b1178bd86b34</guid>
+                    <category>Opportunity</category>
+                    <category>Events &amp; Working Sessions</category>
+                    <category>Asia-Pacific</category>
+                </item>
+<item>
+                    <title>2026 Pulse Research Fellowship and Mentorship</title>
+                    <link>https://pulse.internetsociety.org/blog/apply-now-for-the-2026-pulse-research-fellowship-and-mentorship</link>
+                    <description>The Internet Society Pulse Research Fellowship and Mentorship is a six-month program that supports researchers in conducting data-driven analysis or developing tools that contribute to an open, globally connected, secure, and trustworthy Internet. The fellowship has been running for three years, and we introduced a mentor scheme in 2025.</description>
+                    <pubDate>Thu, 04 Dec 2025 08:40:05 GMT</pubDate>
+                    <guid isPermaLink="false">29720ec843a964be7dd2c6de28f16c82</guid>
+                    <category>Opportunity</category>
+                    <category>Funding &amp; Support</category>
+                    <category>Global</category>
+                </item>
+<item>
+                    <title>Europe Q4 Regional Call</title>
                     <link>https://isoc.zoom.us/meeting/register/DHmLKvBuQ8Gmy8pkLaN-iQ</link>
                     <description>We will hear from Sally Wentworth, ISOC CEO, learn about the most successful projects from our chapters during the past months, and break into conversations around membership engagement, project funding and policy &amp; advocacy plans for 2026.</description>
                     <pubDate>Thu, 27 Nov 2025 07:56:54 GMT</pubDate>
-                    <guid isPermaLink="false">708f80f23fa006b1d83adddc7bd18357</guid>
+                    <guid isPermaLink="false">5d8718e90953f3b70664b44f1973dbca</guid>
                     <category>Opportunity</category>
                     <category>Events &amp; Working Sessions</category>
                     <category>Europe</category>

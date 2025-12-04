@@ -30,8 +30,8 @@ DTSTART;VALUE=DATE:20251231
 DTEND;VALUE=DATE:20251231
 END:VEVENT
 BEGIN:VEVENT
-UID:48e03155-1d68-5291-a1f3-4f66407e30d3
-SUMMARY:European Chapters Q4 Regional Call
+UID:b49c16b9-35a2-516f-99b3-e2fe6e2a072f
+SUMMARY:Europe Q4 Regional Call
 DESCRIPTION:We will hear from Sally Wentworth\, ISOC CEO\, learn about the most succ
  essful projects from our chapters during the past months\, and break int
  o conversations around membership engagement\, project funding and polic
@@ -40,5 +40,29 @@ URL:https://isoc.zoom.us/meeting/register/DHmLKvBuQ8Gmy8pkLaN-iQ
 DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20251204
 DTEND;VALUE=DATE:20251204
+END:VEVENT
+BEGIN:VEVENT
+UID:fef46484-b7b1-503f-9d02-ecdd9c56e79c
+SUMMARY:2026 Pulse Research Fellowship and Mentorship
+DESCRIPTION:The Internet Society Pulse Research Fellowship and Mentorship is a six-m
+ onth program that supports researchers in conducting data-driven analysi
+ s or developing tools that contribute to an open\, globally connected\, 
+ secure\, and trustworthy Internet. The fellowship has been running for t
+ hree years\, and we introduced a mentor scheme in 2025.
+URL:https://pulse.internetsociety.org/blog/apply-now-for-the-2026-pulse-research-fellowship-and-mentorship
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20251223
+DTEND;VALUE=DATE:20251223
+END:VEVENT
+BEGIN:VEVENT
+UID:8c76d7fe-b0a8-52ed-b587-9ec79eafa898
+SUMMARY:Asia-Pacific Q4 Regional Call
+DESCRIPTION:This call will feature an introduction by our newly chartered Mongolia C
+ hapter\, announcement of our APAC Community Champ\, and a member-led pre
+ sentation of our 2026 Action Plan
+URL:https://isoc.zoom.us/meeting/register/dDTgFTCVQW2f1dmN_xzePw
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20251208
+DTEND;VALUE=DATE:20251208
 END:VEVENT
 END:VCALENDAR
