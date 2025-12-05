@@ -30,18 +30,6 @@ DTSTART;VALUE=DATE:20251231
 DTEND;VALUE=DATE:20251231
 END:VEVENT
 BEGIN:VEVENT
-UID:b49c16b9-35a2-516f-99b3-e2fe6e2a072f
-SUMMARY:Europe Q4 Regional Call
-DESCRIPTION:We will hear from Sally Wentworth\, ISOC CEO\, learn about the most succ
- essful projects from our chapters during the past months\, and break int
- o conversations around membership engagement\, project funding and polic
- y & advocacy plans for 2026.
-URL:https://isoc.zoom.us/meeting/register/DHmLKvBuQ8Gmy8pkLaN-iQ
-DTSTAMP:20240101T000000Z
-DTSTART;VALUE=DATE:20251204
-DTEND;VALUE=DATE:20251204
-END:VEVENT
-BEGIN:VEVENT
 UID:fef46484-b7b1-503f-9d02-ecdd9c56e79c
 SUMMARY:2026 Pulse Research Fellowship and Mentorship
 DESCRIPTION:The Internet Society Pulse Research Fellowship and Mentorship is a six-m
