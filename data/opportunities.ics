@@ -42,15 +42,4 @@ DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20251223
 DTEND;VALUE=DATE:20251223
 END:VEVENT
-BEGIN:VEVENT
-UID:8c76d7fe-b0a8-52ed-b587-9ec79eafa898
-SUMMARY:Asia-Pacific Q4 Regional Call
-DESCRIPTION:This call will feature an introduction by our newly chartered Mongolia C
- hapter\, announcement of our APAC Community Champ\, and a member-led pre
- sentation of our 2026 Action Plan
-URL:https://isoc.zoom.us/meeting/register/dDTgFTCVQW2f1dmN_xzePw
-DTSTAMP:20240101T000000Z
-DTSTART;VALUE=DATE:20251208
-DTEND;VALUE=DATE:20251208
-END:VEVENT
 END:VCALENDAR
