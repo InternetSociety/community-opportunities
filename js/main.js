@@ -129,6 +129,52 @@ document.addEventListener('DOMContentLoaded', function () {
             return a.localeCompare(b);
         });
 
+        // Convert to objects for easier manipulation
+        const menuItems = types.map(type => ({
+            label: type,
+            href: `#${ISOC.Utils.slugify(type)}`
+        }));
+
+        // Define the Community Events item
+        const communityEventsItem = {
+            label: 'Community Events',
+            href: '/community-events/'
+        };
+
+        // Find position for "Community Events"
+        // 1. If "Events" category exists, place after it
+        const eventsIndex = menuItems.findIndex(item => item.label === 'Events');
+
+        if (eventsIndex !== -1) {
+            menuItems.splice(eventsIndex + 1, 0, communityEventsItem);
+        } else {
+            // 2. If "Events" doesn't exist, place where it would be alphabetically
+            // logic: skip "Urgent", stop before "Ongoing" or any item alphabetically > "Events"
+            let insertIndex = menuItems.length; // Default to end
+
+            for (let i = 0; i < menuItems.length; i++) {
+                const label = menuItems[i].label;
+                const lowerLabel = label.toLowerCase();
+
+                // Skip Urgent items (they stay at top)
+                if (lowerLabel.includes('urgent')) continue;
+
+                // If we hit Ongoing, insert here (Events comes before Ongoing)
+                if (lowerLabel.includes('ongoing')) {
+                    insertIndex = i;
+                    break;
+                }
+
+                // If we found an item that comes after "Events" alphabetically
+                if (label.localeCompare('Events') > 0) {
+                    insertIndex = i;
+                    break;
+                }
+            }
+
+            menuItems.splice(insertIndex, 0, communityEventsItem);
+        }
+
         // Create the navigation HTML with hamburger menu
         const navHtml = `
             <a href="/" class="logo-link">
@@ -139,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </button>
             <div class="nav-overlay"></div>
             <div class="nav-links">
-                ${types.map(type => `<a href="#${ISOC.Utils.slugify(type)}">${type}</a>`).join('')}
+                ${menuItems.map(item => `<a href="${item.href}">${item.label}</a>`).join('')}
             </div>
         `;
 
