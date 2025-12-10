@@ -875,6 +875,10 @@ document.addEventListener('DOMContentLoaded', function () {
                             <i class="fas fa-calendar-alt"></i>
                             Discover all upcoming events
                         </a>
+                        <a href="/community-events/" class="discover-all-button community-events-btn">
+                            <i class="fas fa-users"></i>
+                            Community Events
+                        </a>
                     </div>
                     ` : ''}
                 </div>
