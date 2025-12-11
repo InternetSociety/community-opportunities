@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:06417702a4e08623472f716760f6fa39 -->
+<!-- DATA_FINGERPRINT:001bcbe787a253db208e7deda65c0528 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Events</title>
@@ -9,6 +9,16 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/community-events/data/events.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>LINUX Para Uso Cotidiano</title>
+                    <link>https://www.isoc.pr</link>
+                    <description>Este seminario introduce a Linux como una herramienta útil para el uso cotidiano. Se presentará el trasfondo operativo del sistema, las diferencias entre diversas distribuciones y cómo obtenerlas e instalarlas en distintas plataformas. Incluye demostraciones prácticas del entorno Linux y una sesión interactiva de preguntas y respuestas para aclarar dudas y guiar a quienes deseen comenzar a utilizar este sistema operativo en su vida diaria.</description>
+                    <pubDate>Wed, 10 Dec 2025 17:28:49 GMT</pubDate>
+                    <guid isPermaLink="false">8ee9bf5e4deba0dc26624ef3cf716abf</guid>
+                    <category>Event</category>
+                    <category>Webinar</category>
+                    <category>Latin America &amp; Caribbean</category>
+                </item>
+<item>
                     <title>AI SIG &quot;Wire-Free Sewer Vision&quot; Hybrid Hackathon</title>
                     <link>https://www.ai-workshops.org/</link>
                     <description>A critical event designed to challenge how we monitor and maintain underground sewer systems using cutting-edge, autonomous technology.</description>
