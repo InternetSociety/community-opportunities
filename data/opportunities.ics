@@ -4,6 +4,18 @@ PRODID:-//Internet Society//Opportunities//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
+UID:aaf88dbd-6d7d-59ba-b6c2-d548e5e557c3
+SUMMARY:WSIS+20 Working Group
+DESCRIPTION:Join our WSIS+20 Working Group and help shape the future of our Internet
+  vision and global policy. The WSIS+20 review is a key moment for digita
+ l development. Its outcomes will guide future UN action and stakeholder 
+ involvement.
+URL:https://community.internetsociety.org/s/group/0F9UO000000088r0AA/wsis20-2025-working-group
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20251218
+DTEND;VALUE=DATE:20251218
+END:VEVENT
+BEGIN:VEVENT
 UID:e8a36a52-a853-5f0e-93d4-356db407c9cd
 SUMMARY:Donate: Let's work together to build the Internet we want!
 DESCRIPTION:What sets the Internet Society apart is that we do more than advocate. W
