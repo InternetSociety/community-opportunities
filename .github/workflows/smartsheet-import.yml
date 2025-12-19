@@ -88,20 +88,49 @@ jobs:
           # Initialize Smartsheet client
           token = os.environ['SMARTSHEET_TOKEN']
           ss = smartsheet.Smartsheet(token)
+          ss.errors_as_exceptions(True)
 
           for sheet_info in SHEETS:
               print(f"Processing sheet {sheet_info['id']}")
-              sheet = ss.Sheets.get_sheet(sheet_info['id'])
-              cols = [col.title for col in sheet.columns if col.title != 'organizer_email']
+              
+              # Pagination logic
+              all_rows = []
+              page_number = 1
+              page_size = 5000 # Maximize page size to reduce API calls
+              
+              while True:
+                  print(f"  Fetching page {page_number}...")
+                  response = ss.Sheets.get_sheet(
+                      sheet_info['id'], 
+                      page=page_number, 
+                      page_size=page_size, 
+                      include='rowPermalink'
+                  )
+                  
+                  all_rows.extend(response.rows)
+                  
+                  if len(all_rows) >= response.total_row_count:
+                      break
+                      
+                  page_number += 1
+
+              print(f"  Total rows fetched: {len(all_rows)}")
+              
+              # Use the first response to get columns definition
+              # We can reuse 'response' from the last loop iteration or fetch columns separately if needed.
+              # But columns are consistent across pages.
+              sheet_columns = response.columns
+
+              cols = [col.title for col in sheet_columns if col.title != 'organizer_email']
 
               rows_csv = []
               rows_json = []
               skipped_rows = 0
               required_fields = ['title', 'startDate', 'region', 'type', 'category', 'format']
               
-              for row in sheet.rows:
+              for row in all_rows:
                   cell_map = {cell.column_id: cell.value for cell in row.cells}
-                  row_dict = {col.title: cell_map.get(col.id, '') for col in sheet.columns}
+                  row_dict = {col.title: cell_map.get(col.id, '') for col in sheet_columns}
                   
                   # Skip row if any required field is empty or None
                   if not is_valid_row(row_dict, required_fields):
@@ -120,7 +149,7 @@ jobs:
                       
                   # Only include columns that exist in the sheet (excluding organizer_email)
                   row_data = []
-                  for col in sheet.columns:
+                  for col in sheet_columns:
                       if col.title != 'organizer_email':
                           row_data.append(cell_map.get(col.id, ''))
                   rows_csv.append(row_data)
