@@ -29,17 +29,4 @@ DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20251231
 DTEND;VALUE=DATE:20251231
 END:VEVENT
-BEGIN:VEVENT
-UID:fef46484-b7b1-503f-9d02-ecdd9c56e79c
-SUMMARY:2026 Pulse Research Fellowship and Mentorship
-DESCRIPTION:The Internet Society Pulse Research Fellowship and Mentorship is a six-m
- onth program that supports researchers in conducting data-driven analysi
- s or developing tools that contribute to an open\, globally connected\, 
- secure\, and trustworthy Internet. The fellowship has been running for t
- hree years\, and we introduced a mentor scheme in 2025.
-URL:https://pulse.internetsociety.org/blog/apply-now-for-the-2026-pulse-research-fellowship-and-mentorship
-DTSTAMP:20240101T000000Z
-DTSTART;VALUE=DATE:20251223
-DTEND;VALUE=DATE:20251223
-END:VEVENT
 END:VCALENDAR
