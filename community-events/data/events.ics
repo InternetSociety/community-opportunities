@@ -121,4 +121,38 @@ URL:https://www.isoc.pr
 DTSTART;TZID=AST:20251217T143000
 DTEND;TZID=AST:20251217T173000
 END:VEVENT
+BEGIN:VEVENT
+UID:2b245c37-2436-5f2c-883b-1d01bf1cc866
+DTSTAMP:20240101T000000Z
+SUMMARY:Global Community Call: "The Internet in 2026: Our Collective Agenda" (Ea
+ rly UTC)
+DESCRIPTION:Join us for our first Global Community Call of 2026 as we start the year
+  together.  We’ll share: • Internet Society’s 2026 Action Plan prioritie
+ s and how they connect to global and local Internet challenges • Perspec
+ tives from members around the world • Resources\, training\, and ways to
+  get involved throughout the year  This call will help you explore which
+  Internet issues matter most to you and how you can contribute in 2026. 
+  Interpretation available in English\, French\, and Spanish.  Come curio
+ us. Leave inspired. Stay connected.
+URL:https://isoc.zoom.us/meeting/register/L0RCWZPpSkq3I4GC642sPQ#/registration
+DTSTART;TZID=UTC:20260129T130000
+DTEND;TZID=UTC:20260129T150000
+END:VEVENT
+BEGIN:VEVENT
+UID:14b73e1f-67de-5f18-b456-6cfaac24482f
+DTSTAMP:20240101T000000Z
+SUMMARY:Global Community Call: "The Internet in 2026: Our Collective Agenda" (La
+ te UTC)
+DESCRIPTION:Join us for our first Global Community Call of 2026 as we start the year
+  together.  We’ll share: • Internet Society’s 2026 Action Plan prioritie
+ s and how they connect to global and local Internet challenges • Perspec
+ tives from members around the world • Resources\, training\, and ways to
+  get involved throughout the year  This call will help you explore which
+  Internet issues matter most to you and how you can contribute in 2026. 
+  Interpretation available in English\, French\, and Spanish.  Come curio
+ us. Leave inspired. Stay connected.
+URL:https://isoc.zoom.us/meeting/register/PRE4Xw4RSlej3CgtMOX5ZA
+DTSTART;TZID=UTC:20260129T180000
+DTEND;TZID=UTC:20260129T200000
+END:VEVENT
 END:VCALENDAR

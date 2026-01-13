@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:001bcbe787a253db208e7deda65c0528 -->
+<!-- DATA_FINGERPRINT:d7d284704ef09207cfe3ef875001aea0 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Events</title>
@@ -9,6 +9,26 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/community-events/data/events.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>Global Community Call: &quot;The Internet in 2026: Our Collective Agenda&quot; (Late UTC)</title>
+                    <link>https://isoc.zoom.us/meeting/register/PRE4Xw4RSlej3CgtMOX5ZA</link>
+                    <description>Join us for our first Global Community Call of 2026 as we start the year together.  We’ll share: • Internet Society’s 2026 Action Plan priorities and how they connect to global and local Internet challenges • Perspectives from members around the world • Resources, training, and ways to get involved throughout the year  This call will help you explore which Internet issues matter most to you and how you can contribute in 2026.  Interpretation available in English, French, and Spanish.  Come curious. Leave inspired. Stay connected.</description>
+                    <pubDate>Tue, 13 Jan 2026 14:34:51 GMT</pubDate>
+                    <guid isPermaLink="false">381e0f46c2d29b78b05b5e541aeae6bb</guid>
+                    <category>Event</category>
+                    <category>Meetup</category>
+                    <category>Global</category>
+                </item>
+<item>
+                    <title>Global Community Call: &quot;The Internet in 2026: Our Collective Agenda&quot; (Early UTC)</title>
+                    <link>https://isoc.zoom.us/meeting/register/L0RCWZPpSkq3I4GC642sPQ#/registration</link>
+                    <description>Join us for our first Global Community Call of 2026 as we start the year together.  We’ll share: • Internet Society’s 2026 Action Plan priorities and how they connect to global and local Internet challenges • Perspectives from members around the world • Resources, training, and ways to get involved throughout the year  This call will help you explore which Internet issues matter most to you and how you can contribute in 2026.  Interpretation available in English, French, and Spanish.  Come curious. Leave inspired. Stay connected.</description>
+                    <pubDate>Tue, 13 Jan 2026 14:26:24 GMT</pubDate>
+                    <guid isPermaLink="false">99c393947c11eb22357d1e267b7d296f</guid>
+                    <category>Event</category>
+                    <category>Meetup</category>
+                    <category>Global</category>
+                </item>
+<item>
                     <title>LINUX Para Uso Cotidiano</title>
                     <link>https://www.isoc.pr</link>
                     <description>Este seminario introduce a Linux como una herramienta útil para el uso cotidiano. Se presentará el trasfondo operativo del sistema, las diferencias entre diversas distribuciones y cómo obtenerlas e instalarlas en distintas plataformas. Incluye demostraciones prácticas del entorno Linux y una sesión interactiva de preguntas y respuestas para aclarar dudas y guiar a quienes deseen comenzar a utilizar este sistema operativo en su vida diaria.</description>
