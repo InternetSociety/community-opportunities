@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:7f9c92320a6cc994fa292c9fb6209166 -->
+<!-- DATA_FINGERPRINT:001bcbe787a253db208e7deda65c0528 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Events</title>
@@ -9,26 +9,6 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/community-events/data/events.rss" rel="self" type="application/rss+xml" />
         <item>
-                    <title>Global Community Call: &quot;The Internet in 2026: Our Collective Agenda&quot; (Late UTC)</title>
-                    <link>https://isoc.zoom.us/meeting/register/PRE4Xw4RSlej3CgtMOX5ZA</link>
-                    <description>Join our first Global Community Call of 2026! We&#39;ll share Internet Society&#39;s 2026 priorities, hear from members worldwide, and explore ways to get involved.</description>
-                    <pubDate>Tue, 13 Jan 2026 14:34:51 GMT</pubDate>
-                    <guid isPermaLink="false">c51b1a1f4aa3f046db4cd3a0264650a8</guid>
-                    <category>Event</category>
-                    <category>Meetup</category>
-                    <category>Global</category>
-                </item>
-<item>
-                    <title>Global Community Call: &quot;The Internet in 2026: Our Collective Agenda&quot; (Early UTC)</title>
-                    <link>https://isoc.zoom.us/meeting/register/L0RCWZPpSkq3I4GC642sPQ#/registration</link>
-                    <description>Join our first Global Community Call of 2026! We&#39;ll share Internet Society&#39;s 2026 priorities, hear from members worldwide, and explore ways to get involved.</description>
-                    <pubDate>Tue, 13 Jan 2026 14:26:24 GMT</pubDate>
-                    <guid isPermaLink="false">27fa8a6ba9427723d78c6bad97d36ce9</guid>
-                    <category>Event</category>
-                    <category>Meetup</category>
-                    <category>Global</category>
-                </item>
-<item>
                     <title>LINUX Para Uso Cotidiano</title>
                     <link>https://www.isoc.pr</link>
                     <description>Este seminario introduce a Linux como una herramienta útil para el uso cotidiano. Se presentará el trasfondo operativo del sistema, las diferencias entre diversas distribuciones y cómo obtenerlas e instalarlas en distintas plataformas. Incluye demostraciones prácticas del entorno Linux y una sesión interactiva de preguntas y respuestas para aclarar dudas y guiar a quienes deseen comenzar a utilizar este sistema operativo en su vida diaria.</description>
