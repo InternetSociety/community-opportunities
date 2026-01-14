@@ -620,13 +620,13 @@
     "Archived": null,
     "Creation date": "2026-01-14T09:56:03Z",
     "Date": "2026-01-29",
-    "Internet Issue": null,
-    "Link": null,
-    "Opportunity [Description]": null,
+    "Internet Issue": "Community",
+    "Link": "https://isoc.zoom.us/meeting/register/PRE4Xw4RSlej3CgtMOX5ZA",
+    "Opportunity [Description]": "This global community call brings members together to explore the 2026 Action Plan, connect global priorities with local realities, and learn from one another’s regional challenges and interests. Participants will be introduced to key resources and begin shaping how they can contribute in ways that align with their context and passions.",
     "Outreach Activity [Title]": "Think Global Call: “The Internet in 2026: Our Collective Agenda” (Late UTC)",
-    "Region": null,
-    "Type": null,
-    "Who Can Get Involved": null,
-    "Why It Matters": null
+    "Region": "Global",
+    "Type": "Events & Working Sessions",
+    "Who Can Get Involved": "Individual Members, Chapter Members, Chapter Leaders, ChAC, ChaC Steering Committee, Organization Members, OMAC Chairs, Alumni, Fellows, Internet Pioneers, Other",
+    "Why It Matters": "Shared understanding and early alignment are essential for meaningful action. This call helps members understand how their local work fits into the broader context, build capacity with the right tools, and lay the groundwork for collaboration and impact across regions."
   }
 ]
