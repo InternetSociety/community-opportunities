@@ -21,7 +21,12 @@ BEGIN:VEVENT
 UID:8752ddcb-f933-547b-a3d8-6993a4aa28d2
 SUMMARY:Think Global Call: “The Internet in 2026: Our Collective Agenda” (Late U
  TC)
-DESCRIPTION:
+DESCRIPTION:This global community call brings members together to explore the 2026 A
+ ction Plan\, connect global priorities with local realities\, and learn 
+ from one another’s regional challenges and interests. Participants will 
+ be introduced to key resources and begin shaping how they can contribute
+  in ways that align with their context and passions.
+URL:https://isoc.zoom.us/meeting/register/PRE4Xw4RSlej3CgtMOX5ZA
 DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20260129
 DTEND;VALUE=DATE:20260129
