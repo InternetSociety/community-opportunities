@@ -3,4 +3,27 @@ VERSION:2.0
 PRODID:-//Internet Society//Opportunities//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
+BEGIN:VEVENT
+UID:e9d5330f-251e-5fe8-acaa-32bd2fcfb191
+SUMMARY:Think Global Call: “The Internet in 2026: Our Collective Agenda” (Early 
+ UTC)
+DESCRIPTION:This global community call brings members together to explore the 2026 A
+ ction Plan\, connect global priorities with local realities\, and learn 
+ from one another’s regional challenges and interests. Participants will 
+ be introduced to key resources and begin shaping how they can contribute
+  in ways that align with their context and passions.
+URL:https://isoc.zoom.us/meeting/register/L0RCWZPpSkq3I4GC642sPQ#/registration
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20260129
+DTEND;VALUE=DATE:20260129
+END:VEVENT
+BEGIN:VEVENT
+UID:8752ddcb-f933-547b-a3d8-6993a4aa28d2
+SUMMARY:Think Global Call: “The Internet in 2026: Our Collective Agenda” (Late U
+ TC)
+DESCRIPTION:
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20260129
+DTEND;VALUE=DATE:20260129
+END:VEVENT
 END:VCALENDAR
