@@ -118,5 +118,25 @@
     "timeZone": "AST",
     "title": "LINUX Para Uso Cotidiano",
     "type": "Webinar"
+  },
+  {
+    "approved": true,
+    "category": "Community",
+    "creationDate": "2026-01-14T16:04:19Z",
+    "description": "An intra-chapter event which showcases our young talent presenting on relevant topics",
+    "endDate": null,
+    "endTime": "19:00",
+    "format": "Online",
+    "language": "English",
+    "modificationDate": "2026-01-14T16:14:25Z",
+    "modifiedBy": "renteria@isoc.org",
+    "organizer": "ISOC India Mumbai Chapter",
+    "region": "Asia Pacific",
+    "registrationUrl": "https://forms.gle/xCjYZu6e4mNoY2ts7",
+    "startDate": "2026-01-24",
+    "startTime": "18:00",
+    "timeZone": "IST",
+    "title": "Budding Polymath",
+    "type": "Conference"
   }
 ]
