@@ -67,6 +67,22 @@ TZOFFSETTO:+0200
 TZNAME:CEST
 END:DAYLIGHT
 END:VTIMEZONE
+BEGIN:VTIMEZONE
+TZID:PST
+X-LIC-LOCATION:PST
+BEGIN:STANDARD
+DTSTART:19701025T030000
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:19700329T020000
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+END:DAYLIGHT
+END:VTIMEZONE
 BEGIN:VEVENT
 UID:ca3a86f0-b19e-5b86-bf08-911a0aaf371b
 DTSTAMP:20240101T000000Z
@@ -146,5 +162,34 @@ DESCRIPTION:An intra-chapter event which showcases our young talent presenting o
 URL:https://forms.gle/xCjYZu6e4mNoY2ts7
 DTSTART;TZID=IST:20260124T180000
 DTEND;TZID=IST:20260124T190000
+END:VEVENT
+BEGIN:VEVENT
+UID:da368207-73a5-5697-8ecf-e6261032d532
+DTSTAMP:20240101T000000Z
+SUMMARY:Meta-Layer Design Challenge
+DESCRIPTION:The Meta-Layer Design Challenge is a global\, week-long design challenge
+  exploring how learning\, collaboration\, and collective intelligence ca
+ n be supported above the existing Web through a shared civic interface l
+ ayer - the Meta-Layer. Rather than building new platforms\, participants
+  are invited to design concepts\, interfaces\, and governance models tha
+ t operate across websites using overlays\, shared context\, trust signal
+ s\, and community coordination. The challenge emphasizes human-centered 
+ design\, interoperability\, and public-interest outcomes. The Design Cha
+ llenge is part of Meta-Layer Week (January 21–28\, 2025)\, co-hosted wit
+ h Learning Planet. Activities include live sessions\, workshops\, demons
+ trations\, office hours\, and a final showcase. Participants may submit 
+ conceptual designs\, mockups\, diagrams\, governance proposals\, or ligh
+ tweight prototypes. No coding is required. Both a Student Track and an O
+ pen Track are offered\, with shared judging criteria focused on creativi
+ ty\, feasibility\, and relevance to collective learning and public-inter
+ est infrastructure. The challenge is relevant to Internet governance\, d
+ igital public infrastructure\, education\, and community-driven innovati
+ on\, and aligns with long-standing Internet Society interests in an open
+ \, trustworthy\, and people-centered Internet.  Audience: Students\, edu
+ cators\, designers\, technologists\, researchers\, and community organiz
+ ers
+URL:https://luma.com/lpml
+DTSTART;TZID=PST:20260121T113000
+DTEND;TZID=PST:20260128T130000
 END:VEVENT
 END:VCALENDAR
