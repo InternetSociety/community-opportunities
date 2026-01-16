@@ -138,5 +138,25 @@
     "timeZone": "IST",
     "title": "Budding Polymath",
     "type": "Conference"
+  },
+  {
+    "approved": true,
+    "category": "How the Internet Works",
+    "creationDate": "2026-01-15T19:19:19Z",
+    "description": "The Meta-Layer Design Challenge is a global, week-long design challenge exploring how learning, collaboration, and collective intelligence can be supported above the existing Web through a shared civic interface layer - the Meta-Layer. Rather than building new platforms, participants are invited to design concepts, interfaces, and governance models that operate across websites using overlays, shared context, trust signals, and community coordination. The challenge emphasizes human-centered design, interoperability, and public-interest outcomes. The Design Challenge is part of Meta-Layer Week (January 21–28, 2025), co-hosted with Learning Planet. Activities include live sessions, workshops, demonstrations, office hours, and a final showcase. Participants may submit conceptual designs, mockups, diagrams, governance proposals, or lightweight prototypes. No coding is required. Both a Student Track and an Open Track are offered, with shared judging criteria focused on creativity, feasibility, and relevance to collective learning and public-interest infrastructure. The challenge is relevant to Internet governance, digital public infrastructure, education, and community-driven innovation, and aligns with long-standing Internet Society interests in an open, trustworthy, and people-centered Internet.  Audience: Students, educators, designers, technologists, researchers, and community organizers",
+    "endDate": "2026-01-28",
+    "endTime": "13:00",
+    "format": "Online",
+    "language": "English",
+    "modificationDate": "2026-01-16T11:00:07Z",
+    "modifiedBy": "renteria@isoc.org",
+    "organizer": "SF Bay Chapter - Meta-Layer Working Group",
+    "region": "Global",
+    "registrationUrl": "https://luma.com/lpml",
+    "startDate": "2026-01-21",
+    "startTime": "11:30",
+    "timeZone": "PST",
+    "title": "Meta-Layer Design Challenge",
+    "type": "Workshop"
   }
 ]
