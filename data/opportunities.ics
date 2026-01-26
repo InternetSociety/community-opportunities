@@ -41,4 +41,34 @@ DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20260208
 DTEND;VALUE=DATE:20260208
 END:VEVENT
+BEGIN:VEVENT
+UID:0cc4c9fb-5ce6-5d29-9494-a9d219ea8bc4
+SUMMARY:Beyond the Net Grant Program
+DESCRIPTION:The Internet Society Foundation’s Beyond the Net Grant Program offers fu
+ nding to support Internet Society Chapters to implement innovative proje
+ cts that make a local impact by providing meaningful access to an open\,
+  trusted\, and globally-connected Internet\, as well as strengthening th
+ e Chapters’ presence in the surrounding community.
+URL:https://www.isocfoundation.org/grant-programme/beyond-the-net-grant-program/
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261015
+END:VEVENT
+BEGIN:VEVENT
+UID:b61af8b7-f17a-5e64-8c97-db96796720fd
+SUMMARY:Internet Governance Forum Events
+DESCRIPTION:The Internet Society Foundation’s Internet Governance Forum (IGF) fundin
+ g program supports the organization of United Nations (UN) IGF Secretari
+ at-recognized National and Regional Initiatives (NRIs) and National and 
+ Regional Schools on Internet Governance. The purpose of the IGF is to en
+ courage open\, non-commercial\, and inclusive multi-stakeholder dialogue
+  on issues related to Internet governance. The goal of Schools on Intern
+ et Governance is to ensure that diverse actors have the skills to partic
+ ipate in Internet governance structures and shape the future of the Inte
+ rnet.
+URL:https://www.isocfoundation.org/grant-programme/internet-governance-forum-events/
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261015
+END:VEVENT
 END:VCALENDAR

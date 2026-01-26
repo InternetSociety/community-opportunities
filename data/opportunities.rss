@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:81cbc4567a37ddceef52593404432f41 -->
+<!-- DATA_FINGERPRINT:af7634dd78b5748b598d9ccd1e26672b -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Opportunities</title>
@@ -9,6 +9,26 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/data/opportunities.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>Internet Governance Forum Events</title>
+                    <link>https://www.isocfoundation.org/grant-programme/internet-governance-forum-events/</link>
+                    <description>The Internet Society Foundation’s Internet Governance Forum (IGF) funding program supports the organization of United Nations (UN) IGF Secretariat-recognized National and Regional Initiatives (NRIs) and National and Regional Schools on Internet Governance. The purpose of the IGF is to encourage open, non-commercial, and inclusive multi-stakeholder dialogue on issues related to Internet governance. The goal of Schools on Internet Governance is to ensure that diverse actors have the skills to participate in Internet governance structures and shape the future of the Internet.</description>
+                    <pubDate>Mon, 26 Jan 2026 13:48:42 GMT</pubDate>
+                    <guid isPermaLink="false">143755e045eb62c4910544515e1b3f1c</guid>
+                    <category>Opportunity</category>
+                    <category>Funding &amp; Support</category>
+                    <category>Global</category>
+                </item>
+<item>
+                    <title>Beyond the Net Grant Program</title>
+                    <link>https://www.isocfoundation.org/grant-programme/beyond-the-net-grant-program/</link>
+                    <description>The Internet Society Foundation’s Beyond the Net Grant Program offers funding to support Internet Society Chapters to implement innovative projects that make a local impact by providing meaningful access to an open, trusted, and globally-connected Internet, as well as strengthening the Chapters’ presence in the surrounding community.</description>
+                    <pubDate>Mon, 26 Jan 2026 13:39:04 GMT</pubDate>
+                    <guid isPermaLink="false">c63ee1a927bcd523208651faf3a54824</guid>
+                    <category>Opportunity</category>
+                    <category>Funding &amp; Support</category>
+                    <category>Global</category>
+                </item>
+<item>
                     <title>ISOC@ APRICOT 2026</title>
                     <link>https://forms.internetsociety.org/isocapricot-2026</link>
                     <description>Join Internet Society community members, staff, and leadership for an evening of engaging conversations and networking.</description>
