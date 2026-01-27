@@ -32,16 +32,6 @@ DTSTART;VALUE=DATE:20260129
 DTEND;VALUE=DATE:20260129
 END:VEVENT
 BEGIN:VEVENT
-UID:53e49bb2-92e7-5cee-a860-9951000550d2
-SUMMARY:ISOC@ APRICOT 2026
-DESCRIPTION:Join Internet Society community members\, staff\, and leadership for an 
- evening of engaging conversations and networking.
-URL:https://forms.internetsociety.org/isocapricot-2026
-DTSTAMP:20240101T000000Z
-DTSTART;VALUE=DATE:20260208
-DTEND;VALUE=DATE:20260208
-END:VEVENT
-BEGIN:VEVENT
 UID:0cc4c9fb-5ce6-5d29-9494-a9d219ea8bc4
 SUMMARY:Beyond the Net Grant Program
 DESCRIPTION:The Internet Society Foundation’s Beyond the Net Grant Program offers fu
