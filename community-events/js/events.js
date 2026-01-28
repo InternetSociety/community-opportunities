@@ -228,13 +228,6 @@ document.addEventListener('DOMContentLoaded', function () {
         today.setHours(0, 0, 0, 0); // Set to start of day for proper comparison
         
         return events.filter(event => {
-            // Filter out past events
-            if (event.startDate && event.startDate !== 'Ongoing') {
-                const eventDate = new Date(event.startDate);
-                eventDate.setHours(0, 0, 0, 0);
-                if (eventDate < today) return false;
-            }
-            
             // Apply existing filters
             if (currentFilters.region && event.region !== currentFilters.region) return false;
             if (currentFilters.type && event.type !== currentFilters.type) return false;
@@ -243,6 +236,41 @@ document.addEventListener('DOMContentLoaded', function () {
             if (currentFilters.language && event.language !== currentFilters.language) return false;
             return true;
         });
+    }
+
+    // Get future events (events that haven't ended yet)
+    function getFutureEvents(events) {
+        const today = new Date();
+        today.setHours(0, 0, 0, 0); // Set to start of day for proper comparison
+        
+        return events.filter(event => {
+            // Filter out past events
+            if (event.startDate && event.startDate !== 'Ongoing') {
+                const eventDate = new Date(event.startDate);
+                eventDate.setHours(0, 0, 0, 0);
+                if (eventDate < today) return false;
+            }
+            return true;
+        });
+    }
+
+    // Get past events (events that have already ended)
+    function getPastEvents(events, limit = 6) {
+        const today = new Date();
+        today.setHours(0, 0, 0, 0); // Set to start of day for proper comparison
+        
+        return events
+            .filter(event => {
+                // Only include past events
+                if (event.startDate && event.startDate !== 'Ongoing') {
+                    const eventDate = new Date(event.startDate);
+                    eventDate.setHours(0, 0, 0, 0);
+                    return eventDate < today;
+                }
+                return false;
+            })
+            .sort((a, b) => new Date(b.startDate) - new Date(a.startDate)) // Sort by most recent first
+            .slice(0, limit); // Limit to specified number
     }
 
     // Update event count
@@ -264,55 +292,60 @@ document.addEventListener('DOMContentLoaded', function () {
         regionFilter.addEventListener('change', (e) => {
             currentFilters.region = e.target.value;
             const filteredEvents = filterEvents(allEvents);
+            const futureEvents = getFutureEvents(filteredEvents);
             renderEvents(filteredEvents);
-            updateEventCount(filteredEvents.length);
+            updateEventCount(futureEvents.length);
             // Update mobile menu with available months
             if (window.updateMobileMenuWithMonths) {
-                window.updateMobileMenuWithMonths(filteredEvents);
+                window.updateMobileMenuWithMonths(futureEvents);
             }
         });
 
         typeFilter.addEventListener('change', (e) => {
             currentFilters.type = e.target.value;
             const filteredEvents = filterEvents(allEvents);
+            const futureEvents = getFutureEvents(filteredEvents);
             renderEvents(filteredEvents);
-            updateEventCount(filteredEvents.length);
+            updateEventCount(futureEvents.length);
             // Update mobile menu with available months
             if (window.updateMobileMenuWithMonths) {
-                window.updateMobileMenuWithMonths(filteredEvents);
+                window.updateMobileMenuWithMonths(futureEvents);
             }
         });
 
         categoryFilter.addEventListener('change', (e) => {
             currentFilters.category = e.target.value;
             const filteredEvents = filterEvents(allEvents);
+            const futureEvents = getFutureEvents(filteredEvents);
             renderEvents(filteredEvents);
-            updateEventCount(filteredEvents.length);
+            updateEventCount(futureEvents.length);
             // Update mobile menu with available months
             if (window.updateMobileMenuWithMonths) {
-                window.updateMobileMenuWithMonths(filteredEvents);
+                window.updateMobileMenuWithMonths(futureEvents);
             }
         });
 
         formatFilter.addEventListener('change', (e) => {
             currentFilters.format = e.target.value;
             const filteredEvents = filterEvents(allEvents);
+            const futureEvents = getFutureEvents(filteredEvents);
             renderEvents(filteredEvents);
-            updateEventCount(filteredEvents.length);
+            updateEventCount(futureEvents.length);
             // Update mobile menu with available months
             if (window.updateMobileMenuWithMonths) {
-                window.updateMobileMenuWithMonths(filteredEvents);
+                window.updateMobileMenuWithMonths(futureEvents);
             }
         });
 
         languageFilter.addEventListener('change', (e) => {
             currentFilters.language = e.target.value;
             const filteredEvents = filterEvents(allEvents);
+            const futureEvents = getFutureEvents(filteredEvents);
             renderEvents(filteredEvents);
-            updateEventCount(filteredEvents.length);
+            updateEventCount(futureEvents.length);
             // Update mobile menu with available months
             if (window.updateMobileMenuWithMonths) {
-                window.updateMobileMenuWithMonths(filteredEvents);
+                window.updateMobileMenuWithMonths(futureEvents);
             }
         });
     }
@@ -336,20 +369,204 @@ document.addEventListener('DOMContentLoaded', function () {
         // Reset background index for consistent rendering
         backgroundIndex = 0;
 
-        if (events.length === 0) {
-            container.innerHTML = `
-                <div class="no-results">
-                    <div class="no-results-content">
-                        <h3>No events found</h3>
-                        <p>Try adjusting your filters or check back later for upcoming community events.</p>
+        // Get future and past events
+        const futureEvents = getFutureEvents(events);
+        const pastEvents = getPastEvents(events);
+
+        if (futureEvents.length <= 4) {
+            // Show upcoming events first
+            if (futureEvents.length > 0) {
+                // Sort events chronologically by start date
+                const sortedEvents = [...futureEvents].sort((a, b) => {
+                    if (!a.startDate) return 1;
+                    if (!b.startDate) return -1;
+                    return new Date(a.startDate) - new Date(b.startDate);
+                });
+
+                // Create section for events
+                const section = document.createElement('section');
+                section.className = 'dynamic-section';
+                section.id = 'community-events';
+
+                const sectionContent = document.createElement('div');
+                sectionContent.className = 'section-content';
+
+                const header = document.createElement('h2');
+                header.className = 'section-header';
+                header.innerHTML = '<i class="icon fa-solid fa-calendar-day"></i>Upcoming events';
+
+                const headerContainer = document.createElement('div');
+                headerContainer.className = 'section-header-container';
+                headerContainer.appendChild(header);
+
+                const viewControls = document.createElement('div');
+                viewControls.className = 'view-controls';
+                viewControls.innerHTML = `
+                    <div class="view-toggle" id="view-toggle" title="Toggle view">
+                        <button class="view-option active" data-view="cards" aria-label="Card View">
+                            <i class="fas fa-square"></i>
+                        </button>
+                        <button class="view-option" data-view="table" aria-label="Table View">
+                            <i class="fas fa-table"></i>
+                        </button>
                     </div>
-                </div>
-            `;
+                `;
+
+                headerContainer.appendChild(viewControls);
+                section.appendChild(headerContainer);
+
+                // Card Grid
+                const cardGrid = document.createElement('div');
+                cardGrid.className = 'card-grid';
+
+                // Table Container
+                const tableContainer = document.createElement('div');
+                tableContainer.className = 'table-container';
+
+                let lastMonth = '';
+                let lastYear = '';
+
+                sortedEvents.forEach(event => {
+                    // Check if we need to add a month divider
+                    if (event.startDate) {
+                        const [year, month] = event.startDate.split('-').map(Number);
+                        const dateObj = new Date(year, month - 1, 1);
+                        const currentMonth = dateObj.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+
+                        if (currentMonth !== lastMonth) {
+                            // Add subtle month divider with ID for navigation
+                            const monthDivider = document.createElement('div');
+                            monthDivider.className = 'month-divider';
+                            // Create ID for navigation targeting
+                            const monthId = `month-${year}-${month.toString().padStart(2, '0')}`;
+                            monthDivider.id = monthId;
+                            monthDivider.innerHTML = `
+                                <div class="month-divider-line"></div>
+                                <div class="month-divider-label">${currentMonth}</div>
+                                <div class="month-divider-line"></div>
+                            `;
+                            cardGrid.appendChild(monthDivider);
+                            lastMonth = currentMonth;
+                        }
+                    }
+
+                    // Card View - matching the screenshot style
+                    const card = document.createElement('div');
+                    card.className = 'action-card event-card';
+
+                    // Set alternating background image
+                    const backgroundImage = getAlternatingBackgroundImage();
+
+                    // Parse and format date
+                    let dateObj = null;
+                    let monthStr = '';
+                    let dayStr = '';
+                    let dateRangeText = '';
+                    if (event.startDate) {
+                        const [year, month, day] = event.startDate.split('-').map(Number);
+                        dateObj = new Date(year, month - 1, day);
+                        monthStr = dateObj.toLocaleDateString('en-US', { month: 'short' }).toUpperCase();
+
+                        if (event.endDate && event.endDate !== event.startDate) {
+                            // Multi-day event - show date range
+                            const [endYear, endMonth, endDay] = event.endDate.split('-').map(Number);
+                            const endDateObj = new Date(endYear, endMonth - 1, endDay);
+
+                            if (year === endYear && month === endMonth) {
+                                // Same month and year: "Dec 1-6"
+                                dayStr = `${day}-${endDay}`;
+                            } else if (year === endYear) {
+                                // Same year, different month: "Dec 1 - Jan 6"
+                                const endMonthStr = endDateObj.toLocaleDateString('en-US', { month: 'short' }).toUpperCase();
+                                dayStr = `${day} ${monthStr} - ${endDay} ${endMonthStr}`;
+                            } else {
+                                // Different year: "Dec 1, 2025 - Jan 6, 2026"
+                                dayStr = `${day} ${monthStr} ${year} - ${endDay} ${endDateObj.toLocaleDateString('en-US', { month: 'short' }).toUpperCase()} ${endYear}`;
+                            }
+                        } else {
+                            // Single day event
+                            dayStr = dateObj.getDate().toString();
+                        }
+                    }
+
+                    // Format time
+                    const timeStr = event.startTime && event.timeZone ?
+                        `${event.startTime} ${event.timeZone}` :
+                        event.startTime || '';
+
+                    // Build card content matching screenshot style
+                    const headerTag = event.registrationUrl ? 'a' : 'div';
+                    const headerAttrs = event.registrationUrl ? ` href="${event.registrationUrl}" target="_blank" rel="noopener noreferrer"` : '';
+
+                    card.innerHTML = `
+                        ${event.startDate && event.startDate !== 'Ongoing' ? `<button class="event-calendar-btn add-to-calendar" data-title="${event.title}" data-date="${event.startDate}" data-time="${event.startTime || ''}" data-timezone="${event.timeZone || ''}" data-description="${event.description || ''}" data-link="${event.registrationUrl || ''}" title="Add to calendar" aria-label="Add to calendar"><i class="fa-solid fa-calendar-plus"></i></button>` : ''}
+                        <${headerTag} class="event-card-header"${headerAttrs}>
+                            <div class="event-cover-image" style="background-image: url('${backgroundImage}');">
+                                ${dateObj ? `
+                                <div class="event-date-badge">
+                                    <div class="event-month">${monthStr}</div>
+                                    <div class="event-day">${dayStr}</div>
+                                </div>
+                                ` : ''}
+                                <div class="event-cover-content">
+                                    <h3 class="event-title">${event.title}</h3>
+                                </div>
+                            </div>
+                            <div class="event-content">
+                                <div class="event-badges">
+                                    ${event.type ? `<span class="event-type-badge">${event.type.toUpperCase()}</span>` : ''}
+                                    ${event.category ? `<span class="event-type-badge" style="background-color: #555;">${event.category.toUpperCase()}</span>` : ''}
+                                    ${event.language ? `<span class="event-type-badge" style="background-color: #6c757d;">${event.language.toUpperCase()}</span>` : ''}
+                                </div>
+                                <p class="event-description">${event.description || ''}</p>
+                                <div class="event-meta-info">
+                                    ${timeStr ? `<div class="event-meta-item"><i class="fa-regular fa-clock"></i> ${timeStr}</div>` : ''}
+                                    ${event.region ? `<div class="event-meta-item"><i class="fa-solid fa-location-dot"></i> ${event.region}${event.format === 'Online' ? ' (Online)' : ''}</div>` : ''}
+                                </div>
+                                ${event.organizer ? `<div class="event-organizer"><i class="fa-solid fa-users"></i> ${event.organizer}</div>` : ''}
+                            </div>
+                        </${headerTag}>
+                    `;
+                    cardGrid.appendChild(card);
+                });
+
+                // Build table matching main site style
+                const table = renderEventTable(futureEvents);
+                tableContainer.appendChild(table);
+
+                sectionContent.appendChild(cardGrid);
+                sectionContent.appendChild(tableContainer);
+                section.appendChild(sectionContent);
+                container.appendChild(section);
+            }
+
+            // Show past events if available
+            if (pastEvents.length > 0) {
+                const pastEventsSection = document.createElement('section');
+                pastEventsSection.className = 'dynamic-section past-events-section';
+                
+                const pastEventsHeader = document.createElement('h2');
+                pastEventsHeader.className = 'section-header';
+                pastEventsHeader.innerHTML = '<i class="icon fa-solid fa-history"></i>Past events';
+
+                const pastEventsContainer = document.createElement('div');
+                pastEventsContainer.className = 'past-events-container';
+
+                // Render past events in a compact format
+                pastEvents.forEach(event => {
+                    const pastEventCard = createPastEventCard(event);
+                    pastEventsContainer.appendChild(pastEventCard);
+                });
+
+                pastEventsSection.appendChild(pastEventsHeader);
+                pastEventsSection.appendChild(pastEventsContainer);
+                container.appendChild(pastEventsSection);
+            }
             return;
         }
 
         // Sort events chronologically by start date
-        const sortedEvents = [...events].sort((a, b) => {
+        const sortedEvents = [...futureEvents].sort((a, b) => {
             if (!a.startDate) return 1;
             if (!b.startDate) return -1;
             return new Date(a.startDate) - new Date(b.startDate);
@@ -503,13 +720,65 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         // Build table matching main site style
-        const table = renderEventTable(events);
+        const table = renderEventTable(futureEvents);
         tableContainer.appendChild(table);
 
         sectionContent.appendChild(cardGrid);
         sectionContent.appendChild(tableContainer);
         section.appendChild(sectionContent);
         container.appendChild(section);
+    }
+
+    // Create compact card for past events
+    function createPastEventCard(event) {
+        const card = document.createElement('div');
+        card.className = 'past-event-card';
+
+        // Parse and format date
+        let dateStr = '';
+        if (event.startDate) {
+            const dateObj = new Date(event.startDate);
+            dateStr = dateObj.toLocaleDateString('en-US', {
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric'
+            });
+        }
+
+        // Format time
+        const timeStr = event.startTime && event.timeZone ?
+            `${event.startTime} ${event.timeZone}` :
+            event.startTime || '';
+
+        // Create the content wrapper - use <a> tag if there's a registration URL
+        let contentWrapper;
+        if (event.registrationUrl) {
+            contentWrapper = document.createElement('a');
+            contentWrapper.href = event.registrationUrl;
+            contentWrapper.target = '_blank';
+            contentWrapper.rel = 'noopener noreferrer';
+            contentWrapper.className = 'past-event-content past-event-link';
+        } else {
+            contentWrapper = document.createElement('div');
+            contentWrapper.className = 'past-event-content';
+        }
+
+        contentWrapper.innerHTML = `
+            <h4 class="past-event-title">${event.title}</h4>
+            <div class="past-event-meta">
+                ${dateStr ? `<span class="past-event-date"><i class="fa-regular fa-calendar"></i> ${dateStr}</span>` : ''}
+                ${timeStr ? `<span class="past-event-time"><i class="fa-regular fa-clock"></i> ${timeStr}</span>` : ''}
+                ${event.region ? `<span class="past-event-region"><i class="fa-solid fa-location-dot"></i> ${event.region}</span>` : ''}
+            </div>
+            <div class="past-event-badges">
+                ${event.type ? `<span class="past-event-type">${event.type}</span>` : ''}
+                ${event.category ? `<span class="past-event-category">${event.category}</span>` : ''}
+            </div>
+            ${event.organizer ? `<div class="past-event-organizer"><i class="fa-solid fa-users"></i> ${event.organizer}</div>` : ''}
+        `;
+
+        card.appendChild(contentWrapper);
+        return card;
     }
 
     // Render event table with clean, scannable design
@@ -715,13 +984,14 @@ document.addEventListener('DOMContentLoaded', function () {
         populateFilters(allEvents);
         initializeFilters();
         const filteredEvents = filterEvents(allEvents);
+        const futureEvents = getFutureEvents(filteredEvents);
         renderEvents(filteredEvents);
-        updateEventCount(filteredEvents.length);
+        updateEventCount(futureEvents.length);
         initializeViewToggle();
         
         // Update mobile menu with month navigation links
         if (window.updateMobileMenuWithMonths) {
-            window.updateMobileMenuWithMonths(filteredEvents);
+            window.updateMobileMenuWithMonths(futureEvents);
         }
     }
 

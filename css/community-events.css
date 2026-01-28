@@ -819,3 +819,141 @@ a.event-card-header:hover .event-title {
         display: none !important;
     }
 }
+
+/* Past events section styles */
+.past-events-section {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px solid #e9ecef;
+}
+
+.past-events-section .section-header {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.past-events-section .section-header i {
+    color: #999;
+}
+
+.past-events-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.past-event-card {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 16px;
+    transition: all 0.2s ease;
+    opacity: 0.8;
+}
+
+.past-event-card:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.past-event-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.past-event-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.past-event-link:hover .past-event-title {
+    color: var(--isoc-blue);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+.past-event-title {
+    margin: 0;
+    font-size: 1em;
+    font-weight: 600;
+    color: #555;
+    line-height: 1.3;
+}
+
+.past-event-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 0.85em;
+    color: #777;
+}
+
+.past-event-meta span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.past-event-meta i {
+    color: #999;
+    font-size: 0.85em;
+}
+
+.past-event-badges {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+.past-event-type,
+.past-event-category {
+    background-color: #e9ecef;
+    color: #666;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.7em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.past-event-organizer {
+    font-size: 0.8em;
+    color: #888;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.past-event-organizer i {
+    color: #bbb;
+    font-size: 0.85em;
+}
+
+/* Responsive adjustments for past events */
+@media (max-width: 768px) {
+    .past-events-container {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .past-event-card {
+        padding: 14px;
+    }
+    
+    .past-event-meta {
+        gap: 10px;
+    }
+    
+    .past-events-section {
+        margin-top: 30px;
+        padding-top: 20px;
+    }
+}
