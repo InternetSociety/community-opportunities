@@ -4,34 +4,6 @@ PRODID:-//Internet Society//Opportunities//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:2b67948a-afce-5a20-bf12-2bb4e26125c5
-SUMMARY:Think Global Call: “The Internet in 2026: Our Collective Agenda” (13:00 
- UTC)
-DESCRIPTION:This global community call brings members together to explore the 2026 A
- ction Plan\, connect global priorities with local realities\, and learn 
- from one another’s regional challenges and interests. Participants will 
- be introduced to key resources and begin shaping how they can contribute
-  in ways that align with their context and passions.
-URL:https://isoc.zoom.us/meeting/register/L0RCWZPpSkq3I4GC642sPQ#/registration
-DTSTAMP:20240101T000000Z
-DTSTART;VALUE=DATE:20260129
-DTEND;VALUE=DATE:20260129
-END:VEVENT
-BEGIN:VEVENT
-UID:30aeb030-7b21-5555-bb49-d005e76a1355
-SUMMARY:Think Global Call: “The Internet in 2026: Our Collective Agenda” (18:00 
- UTC)
-DESCRIPTION:This global community call brings members together to explore the 2026 A
- ction Plan\, connect global priorities with local realities\, and learn 
- from one another’s regional challenges and interests. Participants will 
- be introduced to key resources and begin shaping how they can contribute
-  in ways that align with their context and passions.
-URL:https://isoc.zoom.us/meeting/register/PRE4Xw4RSlej3CgtMOX5ZA
-DTSTAMP:20240101T000000Z
-DTSTART;VALUE=DATE:20260129
-DTEND;VALUE=DATE:20260129
-END:VEVENT
-BEGIN:VEVENT
 UID:0cc4c9fb-5ce6-5d29-9494-a9d219ea8bc4
 SUMMARY:Beyond the Net Grant Program
 DESCRIPTION:The Internet Society Foundation’s Beyond the Net Grant Program offers fu
