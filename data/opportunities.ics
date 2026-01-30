@@ -33,4 +33,16 @@ DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261015
 END:VEVENT
+BEGIN:VEVENT
+UID:c1057906-7a71-5e14-8848-68c42352dc68
+SUMMARY:Early Career Fellowship 2026
+DESCRIPTION:The Early Career Fellowship is a six-month program for 15 fellows annual
+ ly\, offering mentorship from world-class experts\, alongside training i
+ n project management\, advocacy\, and diplomacy through seminars\, event
+ s\, and collaborative project work.
+URL:https://www.internetsociety.org/fellowships/early-career/
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20260217
+DTEND;VALUE=DATE:20260217
+END:VEVENT
 END:VCALENDAR
