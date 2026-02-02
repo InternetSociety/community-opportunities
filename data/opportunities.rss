@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:395c47da1bb0748a9beec110b4646463 -->
+<!-- DATA_FINGERPRINT:b6dde25ca72963f1aca415fefa1a751c -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Opportunities</title>
@@ -9,6 +9,16 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/data/opportunities.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>Pulse Internet Measurement Forum, Indonesia</title>
+                    <link>https://pulse.internetsociety.org/en/events/pulse-internet-measurement-forum-indonesia/</link>
+                    <description>The Pulse Internet Measurement Forum is a collaborative workshop focused on methods and indicators for measuring Internet connectivity in schools, with an emphasis on underserved and rural contexts.</description>
+                    <pubDate>Mon, 02 Feb 2026 14:38:02 GMT</pubDate>
+                    <guid isPermaLink="false">a5953c5b4263af8057107928652d9244</guid>
+                    <category>Opportunity</category>
+                    <category>Events &amp; Working Sessions</category>
+                    <category>Asia-Pacific</category>
+                </item>
+<item>
                     <title>Early Career Fellowship 2026</title>
                     <link>https://www.internetsociety.org/fellowships/early-career/</link>
                     <description>The Early Career Fellowship is a six-month program for 15 fellows annually, offering mentorship from world-class experts, alongside training in project management, advocacy, and diplomacy through seminars, events, and collaborative project work.</description>
