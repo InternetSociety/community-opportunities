@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:b6dde25ca72963f1aca415fefa1a751c -->
+<!-- DATA_FINGERPRINT:5b5eb4f1dde5f81566af19aed64ffce7 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Opportunities</title>
@@ -9,6 +9,26 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/data/opportunities.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>European Chapters Policy Call</title>
+                    <link>https://isoc.zoom.us/meeting/register/j4a7H9XnRJ2mmh9T6pDD5w#/registration</link>
+                    <description>A special thematic European Chapters Policy Call featuring a policy team update on 2026 Europe priorities plus an open chapter discussion focused on local context and cross-chapter collaboration.</description>
+                    <pubDate>Wed, 04 Feb 2026 08:56:07 GMT</pubDate>
+                    <guid isPermaLink="false">66a190229f3ab85890519f964f3a9f19</guid>
+                    <category>Opportunity</category>
+                    <category>Events &amp; Working Sessions</category>
+                    <category>Europe</category>
+                </item>
+<item>
+                    <title>European Chapters Policy Call</title>
+                    <link>https://opportunities.internetsociety.org</link>
+                    <description></description>
+                    <pubDate>Wed, 04 Feb 2026 08:54:27 GMT</pubDate>
+                    <guid isPermaLink="false">fade7ea26704a9202c4efadb6f674029</guid>
+                    <category>Opportunity</category>
+                    <category></category>
+                    <category></category>
+                </item>
+<item>
                     <title>Pulse Internet Measurement Forum, Indonesia</title>
                     <link>https://pulse.internetsociety.org/en/events/pulse-internet-measurement-forum-indonesia/</link>
                     <description>The Pulse Internet Measurement Forum is a collaborative workshop focused on methods and indicators for measuring Internet connectivity in schools, with an emphasis on underserved and rural contexts.</description>

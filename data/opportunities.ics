@@ -56,4 +56,23 @@ DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20260212
 DTEND;VALUE=DATE:20260212
 END:VEVENT
+BEGIN:VEVENT
+UID:1a4c992e-a194-5670-8c41-78745d7c7009
+SUMMARY:European Chapters Policy Call
+DESCRIPTION:A special thematic European Chapters Policy Call featuring a policy team
+  update on 2026 Europe priorities plus an open chapter discussion focuse
+ d on local context and cross-chapter collaboration.
+URL:https://isoc.zoom.us/meeting/register/j4a7H9XnRJ2mmh9T6pDD5w#/registration
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20260224
+DTEND;VALUE=DATE:20260224
+END:VEVENT
+BEGIN:VEVENT
+UID:1a4c992e-a194-5670-8c41-78745d7c7009
+SUMMARY:European Chapters Policy Call
+DESCRIPTION:
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20260224
+DTEND;VALUE=DATE:20260224
+END:VEVENT
 END:VCALENDAR
