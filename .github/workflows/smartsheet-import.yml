@@ -137,7 +137,7 @@ jobs:
                       skipped_rows += 1
                       continue
                       
-                  # Only include approved events for community events
+                  # Only include approved events for community-led events
                   if sheet_info['id'] == 4160691104599940:  # Community events sheet
                       if row_dict.get('approved') != True:
                           skipped_rows += 1

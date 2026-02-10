@@ -1,4 +1,4 @@
-/* Community Events Page Specific Styles */
+/* Community-led Events Page Specific Styles */
 
 /* Event card specific styles to match the screenshot */
 .event-card {
@@ -414,7 +414,7 @@ a.event-card-header:hover .event-title {
     }
 }
 
-/* Responsive 2-column grid for community events */
+/* Responsive 2-column grid for community-led events */
 #community-events .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));

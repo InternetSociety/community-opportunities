@@ -1,4 +1,4 @@
-// events.js - Dynamically loads and displays Community Events
+// events.js - Dynamically loads and displays Community-led Events
 // Author: ISOC Opportunities Dashboard
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Build navigation HTML with month links
             const navHtml = `
                 <a href="/">Opportunities</a>
-                <a href="#" class="active">Community Events</a>
+                <a href="#" class="active">Community-led Events</a>
                 ${sortedMonths.length > 0 ? '<div class="nav-month-divider"></div>' : ''}
                 ${sortedMonths.map(month => `<a href="#${month.id}" class="nav-month-link">${month.name}</a>`).join('')}
             `;
@@ -1043,8 +1043,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const isRSS = feedType === 'rss';
         const feedTitle = isRSS ? 'RSS Feed' : 'Calendar Feed (iCal)';
         const feedDescription = isRSS
-            ? 'Stay updated with the latest Internet Society community events'
-            : 'Add upcoming Internet Society community events to your calendar';
+            ? 'Stay updated with the latest Internet Society community-led events'
+            : 'Add upcoming Internet Society community-led events to your calendar';
 
         // Popular RSS readers and calendar apps with verified subscription URLs
         const popularApps = isRSS ? [

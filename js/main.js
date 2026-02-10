@@ -135,13 +135,13 @@ document.addEventListener('DOMContentLoaded', function () {
             href: `#${ISOC.Utils.slugify(type)}`
         }));
 
-        // Define the Community Events item
+        // Define the Community-led Events item
         const communityEventsItem = {
-            label: 'Community Events',
+            label: 'Community-led Events',
             href: '/community-events/'
         };
 
-        // Find position for "Community Events"
+        // Find position for "Community-led Events"
         // 1. If "Events" category exists, place after it
         const eventsIndex = menuItems.findIndex(item => item.label === 'Events');
 
@@ -877,7 +877,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         </a>
                         <a href="/community-events/" class="discover-all-button community-events-btn">
                             <i class="fas fa-users"></i>
-                            Community Events
+                            Community-led Events
                         </a>
                     </div>
                     ` : ''}
