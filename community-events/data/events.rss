@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:f894d194c9dda26dc74d44d6bb5e96be -->
+<!-- DATA_FINGERPRINT:069c264a6d9ec4a4a90ec7b121f2b1a2 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Events</title>
@@ -9,6 +9,16 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/community-events/data/events.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>Art by the Internet</title>
+                    <link>https://docs.google.com/forms/d/e/1FAIpQLSfnaaKL33mC1CS8XtuafsC-Wr_5icnS7XDWAsdEDYkV6-_X8g/viewform?usp=publish-editor</link>
+                    <description>A talk by DY Kim</description>
+                    <pubDate>Sun, 01 Feb 2026 05:24:54 GMT</pubDate>
+                    <guid isPermaLink="false">880e022495f4abf38c99aa602b6c79f5</guid>
+                    <category>Event</category>
+                    <category>Webinar</category>
+                    <category>Asia Pacific</category>
+                </item>
+<item>
                     <title>Meta-Layer Design Challenge</title>
                     <link>https://luma.com/lpml</link>
                     <description>The Meta-Layer Design Challenge is a global, week-long design challenge exploring how learning, collaboration, and collective intelligence can be supported above the existing Web through a shared civic interface layer - the Meta-Layer. Rather than building new platforms, participants are invited to design concepts, interfaces, and governance models that operate across websites using overlays, shared context, trust signals, and community coordination. The challenge emphasizes human-centered design, interoperability, and public-interest outcomes. The Design Challenge is part of Meta-Layer Week (January 21–28, 2025), co-hosted with Learning Planet. Activities include live sessions, workshops, demonstrations, office hours, and a final showcase. Participants may submit conceptual designs, mockups, diagrams, governance proposals, or lightweight prototypes. No coding is required. Both a Student Track and an Open Track are offered, with shared judging criteria focused on creativity, feasibility, and relevance to collective learning and public-interest infrastructure. The challenge is relevant to Internet governance, digital public infrastructure, education, and community-driven innovation, and aligns with long-standing Internet Society interests in an open, trustworthy, and people-centered Internet.  Audience: Students, educators, designers, technologists, researchers, and community organizers</description>
