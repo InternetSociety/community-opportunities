@@ -158,5 +158,25 @@
     "timeZone": "PST",
     "title": "Meta-Layer Design Challenge",
     "type": "Workshop"
+  },
+  {
+    "approved": true,
+    "category": "Community",
+    "creationDate": "2026-02-01T05:24:54Z",
+    "description": "A talk by DY Kim",
+    "endDate": "2026-02-07",
+    "endTime": "10:00",
+    "format": "Online",
+    "language": "English",
+    "modificationDate": "2026-02-11T12:19:10Z",
+    "modifiedBy": "renteria@isoc.org",
+    "organizer": "ISOC India Mumbai",
+    "region": "Asia Pacific",
+    "registrationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfnaaKL33mC1CS8XtuafsC-Wr_5icnS7XDWAsdEDYkV6-_X8g/viewform?usp=publish-editor",
+    "startDate": "2026-02-07",
+    "startTime": "09:00",
+    "timeZone": "UTC",
+    "title": "Art by the Internet",
+    "type": "Webinar"
   }
 ]
