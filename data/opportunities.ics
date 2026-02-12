@@ -84,4 +84,15 @@ DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20260216
 DTEND;VALUE=DATE:20260216
 END:VEVENT
+BEGIN:VEVENT
+UID:397bc9f9-fc9f-5555-8625-6e85c02735d8
+SUMMARY:Chapter Admin Funding
+DESCRIPTION:The Chapter Admin Funding program offers annual funding to support Inter
+ net Society chapters to manage their day-to-day activities and to maximi
+ ze their effectiveness.
+URL:https://www.isocfoundation.org/grant-programme/chapter-admin-funding/
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20260430
+DTEND;VALUE=DATE:20260430
+END:VEVENT
 END:VCALENDAR

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:eaf29d47b0bc16ebe071c8b451113c17 -->
+<!-- DATA_FINGERPRINT:ad19fff0ee58127652ba44cc50036225 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Opportunities</title>
@@ -9,6 +9,16 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/data/opportunities.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>Chapter Admin Funding</title>
+                    <link>https://www.isocfoundation.org/grant-programme/chapter-admin-funding/</link>
+                    <description>The Chapter Admin Funding program offers annual funding to support Internet Society chapters to manage their day-to-day activities and to maximize their effectiveness.</description>
+                    <pubDate>Thu, 12 Feb 2026 15:17:18 GMT</pubDate>
+                    <guid isPermaLink="false">80e02ad14c4ce39108bbc89b192d8bc5</guid>
+                    <category>Opportunity</category>
+                    <category>Funding &amp; Support</category>
+                    <category>Global</category>
+                </item>
+<item>
                     <title>European Chapters Policy Call</title>
                     <link>https://isoc.zoom.us/meeting/register/j4a7H9XnRJ2mmh9T6pDD5w#/registration</link>
                     <description>A special thematic European Chapters Policy Call featuring a policy team update on 2026 Europe priorities plus an open chapter discussion focused on local context and cross-chapter collaboration.</description>
