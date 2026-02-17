@@ -57,23 +57,6 @@ DTSTART;VALUE=DATE:20260224
 DTEND;VALUE=DATE:20260224
 END:VEVENT
 BEGIN:VEVENT
-UID:81f81f83-d217-5f43-9692-eef51d3efaf7
-SUMMARY:Middle East and Adjoining Countries School of Internet Governance (MEAC-
- SIG 2026)
-DESCRIPTION:The MEAC-SIG is a four-day in-person School on Internet Governance organ
- ized by the Internet Society\, ICANN and RIPE NCC. The program covers fu
- ndamental Internet governance issues. It  integrates the political\, leg
- al\, economic\, sociocultural\, and technological dimensions of Internet
-  governance into a coherent curriculum\, focusing on regional imperative
- s critical to the Middle East. The school will provide a pragmatic mix o
- f theoretical foundations\, presentation skills\, practical participant 
- engagement skills\, and interactive activities.
-URL:https://meacsig.org/call
-DTSTAMP:20240101T000000Z
-DTSTART;VALUE=DATE:20260216
-DTEND;VALUE=DATE:20260216
-END:VEVENT
-BEGIN:VEVENT
 UID:397bc9f9-fc9f-5555-8625-6e85c02735d8
 SUMMARY:Chapter Admin Funding
 DESCRIPTION:The Chapter Admin Funding program offers annual funding to support Inter
