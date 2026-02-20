@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:069c264a6d9ec4a4a90ec7b121f2b1a2 -->
+<!-- DATA_FINGERPRINT:83eb3cf8cc2bc467743bb8e2f9e896da -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Events</title>
@@ -9,6 +9,16 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/community-events/data/events.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>What does Digital Sovereignty means for the Civil Society?</title>
+                    <link>https://www.isoc.ch/events/public-policy-sessions-2026-what-does-digital-sovereignty-mean-for-the-civil-society/</link>
+                    <description>ISOC Switzerland Chapter’s yearly Public Policy Sessions event will be dedicated in 2026 on the concept of digital sovereignty, launching a long term campaign asking the question “What does digital sovereignty mean?” from the perspective of different actors. As a US-based organization defending digital rights across the world since the 90s, the Internet Society’s European Chapters can play a key role in making sure that the current wave of European claims on digital sovereignty will strengthen digital rights worldwide, while taking into account important challenges related to ecological sustainability, health, and resilience and key values like openness, privacy, and democracy. We are proud to welcome in Zurich 5 special guests with strong expertise on this topic from an academic and/or policy perspective, and active engagement with various civil society organizations, like ISOC Germany and Serbia, FSFE, Wikimedia, La Quadrature du Net. You will have also the chance to meet the growing ISOC Switzerland Chapter and its new home at the center of Zurich, the L200 space, and participate in the discussion!</description>
+                    <pubDate>Fri, 20 Feb 2026 16:22:15 GMT</pubDate>
+                    <guid isPermaLink="false">3d738e277fa91af986db1420bcc96d1f</guid>
+                    <category>Event</category>
+                    <category>Roundtable</category>
+                    <category>Europe</category>
+                </item>
+<item>
                     <title>Art by the Internet</title>
                     <link>https://docs.google.com/forms/d/e/1FAIpQLSfnaaKL33mC1CS8XtuafsC-Wr_5icnS7XDWAsdEDYkV6-_X8g/viewform?usp=publish-editor</link>
                     <description>A talk by DY Kim</description>

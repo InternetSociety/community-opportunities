@@ -83,6 +83,22 @@ TZOFFSETTO:+0200
 TZNAME:CEST
 END:DAYLIGHT
 END:VTIMEZONE
+BEGIN:VTIMEZONE
+TZID:CET
+X-LIC-LOCATION:CET
+BEGIN:STANDARD
+DTSTART:19701025T030000
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:19700329T020000
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+END:DAYLIGHT
+END:VTIMEZONE
 BEGIN:VEVENT
 UID:ca3a86f0-b19e-5b86-bf08-911a0aaf371b
 DTSTAMP:20240101T000000Z
@@ -200,5 +216,29 @@ DESCRIPTION:A talk by DY Kim
 URL:https://docs.google.com/forms/d/e/1FAIpQLSfnaaKL33mC1CS8XtuafsC-Wr_5icnS7XDWAsdEDYkV6-_X8g/viewform?usp=publish-editor
 DTSTART;TZID=UTC:20260207T090000
 DTEND;TZID=UTC:20260207T100000
+END:VEVENT
+BEGIN:VEVENT
+UID:baf43322-d618-5fb7-b734-a9611750a13e
+DTSTAMP:20240101T000000Z
+SUMMARY:What does Digital Sovereignty means for the Civil Society?
+DESCRIPTION:ISOC Switzerland Chapter’s yearly Public Policy Sessions event will be d
+ edicated in 2026 on the concept of digital sovereignty\, launching a lon
+ g term campaign asking the question “What does digital sovereignty mean?
+ ” from the perspective of different actors. As a US-based organization d
+ efending digital rights across the world since the 90s\, the Internet So
+ ciety’s European Chapters can play a key role in making sure that the cu
+ rrent wave of European claims on digital sovereignty will strengthen dig
+ ital rights worldwide\, while taking into account important challenges r
+ elated to ecological sustainability\, health\, and resilience and key va
+ lues like openness\, privacy\, and democracy. We are proud to welcome in
+  Zurich 5 special guests with strong expertise on this topic from an aca
+ demic and/or policy perspective\, and active engagement with various civ
+ il society organizations\, like ISOC Germany and Serbia\, FSFE\, Wikimed
+ ia\, La Quadrature du Net. You will have also the chance to meet the gro
+ wing ISOC Switzerland Chapter and its new home at the center of Zurich\,
+  the L200 space\, and participate in the discussion!
+URL:https://www.isoc.ch/events/public-policy-sessions-2026-what-does-digital-sovereignty-mean-for-the-civil-society/
+DTSTART;TZID=CET:20260327T183000
+DTEND;TZID=CET:20260327T210000
 END:VEVENT
 END:VCALENDAR
