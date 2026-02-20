@@ -168,9 +168,9 @@
     "endTime": "10:00",
     "format": "Online",
     "language": "English",
-    "modificationDate": "2026-02-11T12:19:10Z",
+    "modificationDate": "2026-02-20T16:30:02Z",
     "modifiedBy": "renteria@isoc.org",
-    "organizer": "ISOC India Mumbai",
+    "organizer": "ISOC India Mumbai Chapter",
     "region": "Asia Pacific",
     "registrationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfnaaKL33mC1CS8XtuafsC-Wr_5icnS7XDWAsdEDYkV6-_X8g/viewform?usp=publish-editor",
     "startDate": "2026-02-07",
@@ -178,5 +178,25 @@
     "timeZone": "UTC",
     "title": "Art by the Internet",
     "type": "Webinar"
+  },
+  {
+    "approved": true,
+    "category": "Policy",
+    "creationDate": "2026-02-20T16:22:15Z",
+    "description": "ISOC Switzerland Chapter’s yearly Public Policy Sessions event will be dedicated in 2026 on the concept of digital sovereignty, launching a long term campaign asking the question “What does digital sovereignty mean?” from the perspective of different actors. As a US-based organization defending digital rights across the world since the 90s, the Internet Society’s European Chapters can play a key role in making sure that the current wave of European claims on digital sovereignty will strengthen digital rights worldwide, while taking into account important challenges related to ecological sustainability, health, and resilience and key values like openness, privacy, and democracy. We are proud to welcome in Zurich 5 special guests with strong expertise on this topic from an academic and/or policy perspective, and active engagement with various civil society organizations, like ISOC Germany and Serbia, FSFE, Wikimedia, La Quadrature du Net. You will have also the chance to meet the growing ISOC Switzerland Chapter and its new home at the center of Zurich, the L200 space, and participate in the discussion!",
+    "endDate": null,
+    "endTime": "21:00",
+    "format": "Hybrid",
+    "language": "English",
+    "modificationDate": "2026-02-20T16:30:02Z",
+    "modifiedBy": "renteria@isoc.org",
+    "organizer": "ISOC Switzerland Chapter",
+    "region": "Europe",
+    "registrationUrl": "https://www.isoc.ch/events/public-policy-sessions-2026-what-does-digital-sovereignty-mean-for-the-civil-society/",
+    "startDate": "2026-03-27",
+    "startTime": "18:30",
+    "timeZone": "CET",
+    "title": "What does Digital Sovereignty means for the Civil Society?",
+    "type": "Roundtable"
   }
 ]
