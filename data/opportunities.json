@@ -728,7 +728,7 @@
     "Why It Matters": "The School on Internet Governance seeks to stimulate the regional Internet community and ensure effective participation in national, regional, and global Internet governance fora."
   },
   {
-    "Action [CTA]": "Apply for the Chapter Admin Funding",
+    "Action [CTA]": "Apply for the Chapter Admin Funding!",
     "Archived": null,
     "Creation date": "2026-02-12T15:17:18Z",
     "Date": "2026-04-30",
@@ -740,5 +740,47 @@
     "Type": "Funding & Support",
     "Who Can Get Involved": "Chapter Members, Chapter Leaders",
     "Why It Matters": "The Chapter Admin Funding provides operational support that allows volunteer-led chapters worldwide to maintain their legal status, manage daily activities, and focus on their mission of promoting an open, secure, and accessible internet."
+  },
+  {
+    "Action [CTA]": "Enrol in our Self-Paced Course!",
+    "Archived": null,
+    "Creation date": "2026-02-25T11:28:07Z",
+    "Date": "2026-12-31",
+    "Internet Issue": "Community",
+    "Link": "https://www.internetsociety.org/learning/chapter-management-essentials/",
+    "Opportunity [Description]": "This course helps you learn what it takes to successfully run an Internet Society chapter.",
+    "Outreach Activity [Title]": "ISOC Chapter Management Essentials",
+    "Region": "Global",
+    "Type": "Ongoing Opportunities",
+    "Who Can Get Involved": "Chapter Leaders",
+    "Why It Matters": "The ISOC Chapter Management Essentials course includes tips for engaging local communities to achieve our collective vision. It also covers topics such as fundraising, growing membership, developing activities, and communicating effectively."
+  },
+  {
+    "Action [CTA]": "Enrol in our Self-Paced Course!",
+    "Archived": null,
+    "Creation date": "2026-02-25T11:28:07Z",
+    "Date": "2026-12-31",
+    "Internet Issue": "Community",
+    "Link": "https://www.internetsociety.org/learning/foundation-grant-application-project-implementation/",
+    "Opportunity [Description]": "This course is designed for those interested in applying for grants through the Internet Society Foundation.",
+    "Outreach Activity [Title]": "Grant Application and Project Implementation Guidance",
+    "Region": "Global",
+    "Type": "Ongoing Opportunities",
+    "Who Can Get Involved": "Chapter Members, Chapter Leaders",
+    "Why It Matters": "You will learn how to design an impactful grant application that incorporates Monitoring, Evaluation, and Learning (MEL) principles, and will gain insight into how a grant project can positively change lives through an open, globally connected, secure and trustworthy Internet for all."
+  },
+  {
+    "Action [CTA]": "Enrol in our Self-Paced Courses!",
+    "Archived": null,
+    "Creation date": "2026-02-25T11:33:37Z",
+    "Date": "2026-12-31",
+    "Internet Issue": "About the Internet Society, Community, Policy, Connectivity, Internet Governance, Privacy, Security, How the Internet Works",
+    "Link": "https://www.internetsociety.org/learning/",
+    "Opportunity [Description]": "Our courses provide you with practical technical skills designed and delivered by Internet experts. You will gain knowledge and skills on how the Internet works, how it is governed, and how to keep the Internet and its users safe and secure.",
+    "Outreach Activity [Title]": "Learning@ Internet Society",
+    "Region": "Global",
+    "Type": "Ongoing Opportunities",
+    "Who Can Get Involved": "Individual Members, Chapter Members, Chapter Leaders, ChAC, ChaC Steering Committee, Organization Members, OMAC Chairs, Alumni, Fellows, Internet Pioneers, Other",
+    "Why It Matters": "Learning @ Internet Society empowers professionals with the knowledge you need to apply new skills, advance in your careers, and become Internet champions. The Internet Society is a global Internet education pioneer and has trained more than 100,000 learners worldwide."
   }
 ]
