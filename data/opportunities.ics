@@ -44,4 +44,36 @@ DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20260430
 DTEND;VALUE=DATE:20260430
 END:VEVENT
+BEGIN:VEVENT
+UID:c9d68294-0ffa-53d4-af53-0b8a3862c286
+SUMMARY:ISOC Chapter Management Essentials
+DESCRIPTION:This course helps you learn what it takes to successfully run an Interne
+ t Society chapter.
+URL:https://www.internetsociety.org/learning/chapter-management-essentials/
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20261231
+END:VEVENT
+BEGIN:VEVENT
+UID:986cbfdd-305a-52c6-b559-47a14d03b778
+SUMMARY:Grant Application and Project Implementation Guidance
+DESCRIPTION:This course is designed for those interested in applying for grants thro
+ ugh the Internet Society Foundation.
+URL:https://www.internetsociety.org/learning/foundation-grant-application-project-implementation/
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20261231
+END:VEVENT
+BEGIN:VEVENT
+UID:f820c1cb-3c90-52e3-8e30-18f0edf9e630
+SUMMARY:Learning@ Internet Society
+DESCRIPTION:Our courses provide you with practical technical skills designed and del
+ ivered by Internet experts. You will gain knowledge and skills on how th
+ e Internet works\, how it is governed\, and how to keep the Internet and
+  its users safe and secure.
+URL:https://www.internetsociety.org/learning/
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20261231
+END:VEVENT
 END:VCALENDAR

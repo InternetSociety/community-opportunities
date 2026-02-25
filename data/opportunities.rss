@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:03b360fd855c9e97249f4da9a42ed116 -->
+<!-- DATA_FINGERPRINT:488ea6e93d2052122cbe34563f553840 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Opportunities</title>
@@ -9,6 +9,36 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/data/opportunities.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>Learning@ Internet Society</title>
+                    <link>https://www.internetsociety.org/learning/</link>
+                    <description>Our courses provide you with practical technical skills designed and delivered by Internet experts. You will gain knowledge and skills on how the Internet works, how it is governed, and how to keep the Internet and its users safe and secure.</description>
+                    <pubDate>Wed, 25 Feb 2026 11:33:37 GMT</pubDate>
+                    <guid isPermaLink="false">eb98e82c4aed76525fff6e0eb8886b52</guid>
+                    <category>Opportunity</category>
+                    <category>Ongoing Opportunities</category>
+                    <category>Global</category>
+                </item>
+<item>
+                    <title>ISOC Chapter Management Essentials</title>
+                    <link>https://www.internetsociety.org/learning/chapter-management-essentials/</link>
+                    <description>This course helps you learn what it takes to successfully run an Internet Society chapter.</description>
+                    <pubDate>Wed, 25 Feb 2026 11:28:07 GMT</pubDate>
+                    <guid isPermaLink="false">5cd166c886f3c41fe3930656062f95dd</guid>
+                    <category>Opportunity</category>
+                    <category>Ongoing Opportunities</category>
+                    <category>Global</category>
+                </item>
+<item>
+                    <title>Grant Application and Project Implementation Guidance</title>
+                    <link>https://www.internetsociety.org/learning/foundation-grant-application-project-implementation/</link>
+                    <description>This course is designed for those interested in applying for grants through the Internet Society Foundation.</description>
+                    <pubDate>Wed, 25 Feb 2026 11:28:07 GMT</pubDate>
+                    <guid isPermaLink="false">3a2c9912647aec66bf533576389269c2</guid>
+                    <category>Opportunity</category>
+                    <category>Ongoing Opportunities</category>
+                    <category>Global</category>
+                </item>
+<item>
                     <title>Chapter Admin Funding</title>
                     <link>https://www.isocfoundation.org/grant-programme/chapter-admin-funding/</link>
                     <description>The Chapter Admin Funding program offers annual funding to support Internet Society chapters to manage their day-to-day activities and to maximize their effectiveness.</description>
