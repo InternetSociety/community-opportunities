@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:488ea6e93d2052122cbe34563f553840 -->
+<!-- DATA_FINGERPRINT:d19f8dfcabed8b858ac7d26fd51e530d -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Opportunities</title>
@@ -9,6 +9,16 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/data/opportunities.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>European Summer School on Internet Governance (EuroSSIG)</title>
+                    <link>https://eurossig.eu/eurossig/2026-edition/call-for-applications/</link>
+                    <description>The 2026 Summer School offers a unique multidisciplinary high level 48 hours academic programme. The programme is a balanced mixture of theoretical lectures with world leading academics as well as practical presentations from well-known experts working directly in the technical community, the market or in policy making organisations.</description>
+                    <pubDate>Thu, 26 Feb 2026 12:09:18 GMT</pubDate>
+                    <guid isPermaLink="false">2c96db0cae504d0b1bc5410c328cee27</guid>
+                    <category>Opportunity</category>
+                    <category>External (Non-ISOC)</category>
+                    <category>Europe</category>
+                </item>
+<item>
                     <title>Learning@ Internet Society</title>
                     <link>https://www.internetsociety.org/learning/</link>
                     <description>Our courses provide you with practical technical skills designed and delivered by Internet experts. You will gain knowledge and skills on how the Internet works, how it is governed, and how to keep the Internet and its users safe and secure.</description>
