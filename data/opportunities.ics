@@ -76,17 +76,4 @@ DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20261231
 END:VEVENT
-BEGIN:VEVENT
-UID:7ef86a19-785d-5948-b203-0bc0b2c377b1
-SUMMARY:European Summer School on Internet Governance (EuroSSIG)
-DESCRIPTION:The 2026 Summer School offers a unique multidisciplinary high level 48 h
- ours academic programme. The programme is a balanced mixture of theoreti
- cal lectures with world leading academics as well as practical presentat
- ions from well-known experts working directly in the technical community
- \, the market or in policy making organisations.
-URL:https://eurossig.eu/eurossig/2026-edition/call-for-applications/
-DTSTAMP:20240101T000000Z
-DTSTART;VALUE=DATE:20260331
-DTEND;VALUE=DATE:20260331
-END:VEVENT
 END:VCALENDAR
