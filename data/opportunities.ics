@@ -77,14 +77,17 @@ DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20261231
 END:VEVENT
 BEGIN:VEVENT
-UID:ffe5d4fe-656f-538f-82db-6c3d446d368e
-SUMMARY:Community-Centered Connectivity Grant Program
-DESCRIPTION:The Internet Society Foundation's CCC Grant Program funds organizations 
- developing community-driven Internet access solutions for digitally excl
- uded populations across three tracks: Catalyst\, Scaling\, and Systems.
-URL:https://www.isocfoundation.org/grant-programme/community-centered-connectivity/?_gl=1*ih4qzj*_up*MQ..*_gs*MQ..&gclid=Cj0KCQiAtfXMBhDzARIsAJ0jp3CcV5w6hO5lFq1_PzsIgC3VgcggLdh8yopFnr0FNmZIHDI6A_wMgcUaAo0AEALw_wcB&gbraid=0AAAAAoZgpagZqddoP4uj8LQ6NzMAnhn1T
+UID:381172c6-3881-5300-ae4e-f189768e392a
+SUMMARY:European Commission Consultation on AudioVisual Media Legislation
+DESCRIPTION:The European Commission is asking stakeholders -worldwide\, not limited 
+ to EU Member States- to collect in-depth evidence\, information\, data a
+ nd feedback from stakeholders on the impact of the current AVMSD and its
+  planned review. We encourage you to contribute to the consultation\, ta
+ king into account the Internet Society Policy Briefs on IP Blocking and 
+ Mandated DNS Blocking.
+URL:https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/15752-Audiovisual-media-services-evaluation-and-update-of-EU-rules/public-consultation_en
 DTSTAMP:20240101T000000Z
-DTSTART;VALUE=DATE:20260507
-DTEND;VALUE=DATE:20260507
+DTSTART;VALUE=DATE:20260501
+DTEND;VALUE=DATE:20260501
 END:VEVENT
 END:VCALENDAR
