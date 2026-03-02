@@ -17,8 +17,8 @@ DTSTART;VALUE=DATE:20261015
 DTEND;VALUE=DATE:20261015
 END:VEVENT
 BEGIN:VEVENT
-UID:b61af8b7-f17a-5e64-8c97-db96796720fd
-SUMMARY:Internet Governance Forum Events
+UID:7fa2ffd5-293d-5bf6-899e-8afc110ea08a
+SUMMARY:Internet Governance Forum Events Funding
 DESCRIPTION:The Internet Society Foundation’s Internet Governance Forum (IGF) fundin
  g program supports the organization of United Nations (UN) IGF Secretari
  at-recognized National and Regional Initiatives (NRIs) and National and 
@@ -75,5 +75,16 @@ URL:https://www.internetsociety.org/learning/
 DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20261231
+END:VEVENT
+BEGIN:VEVENT
+UID:ffe5d4fe-656f-538f-82db-6c3d446d368e
+SUMMARY:Community-Centered Connectivity Grant Program
+DESCRIPTION:The Internet Society Foundation's CCC Grant Program funds organizations 
+ developing community-driven Internet access solutions for digitally excl
+ uded populations across three tracks: Catalyst\, Scaling\, and Systems.
+URL:https://www.isocfoundation.org/grant-programme/community-centered-connectivity/?_gl=1*ih4qzj*_up*MQ..*_gs*MQ..&gclid=Cj0KCQiAtfXMBhDzARIsAJ0jp3CcV5w6hO5lFq1_PzsIgC3VgcggLdh8yopFnr0FNmZIHDI6A_wMgcUaAo0AEALw_wcB&gbraid=0AAAAAoZgpagZqddoP4uj8LQ6NzMAnhn1T
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20260507
+DTEND;VALUE=DATE:20260507
 END:VEVENT
 END:VCALENDAR

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:488ea6e93d2052122cbe34563f553840 -->
+<!-- DATA_FINGERPRINT:ab25887ff912ccfb417ce18adba0574c -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Opportunities</title>
@@ -9,6 +9,16 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/data/opportunities.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>Community-Centered Connectivity Grant Program</title>
+                    <link>https://www.isocfoundation.org/grant-programme/community-centered-connectivity/?_gl=1*ih4qzj*_up*MQ..*_gs*MQ..&amp;gclid=Cj0KCQiAtfXMBhDzARIsAJ0jp3CcV5w6hO5lFq1_PzsIgC3VgcggLdh8yopFnr0FNmZIHDI6A_wMgcUaAo0AEALw_wcB&amp;gbraid=0AAAAAoZgpagZqddoP4uj8LQ6NzMAnhn1T</link>
+                    <description>The Internet Society Foundation&#39;s CCC Grant Program funds organizations developing community-driven Internet access solutions for digitally excluded populations across three tracks: Catalyst, Scaling, and Systems.</description>
+                    <pubDate>Mon, 02 Mar 2026 09:10:28 GMT</pubDate>
+                    <guid isPermaLink="false">7d670f4607296ebc18ccd65e4d52c867</guid>
+                    <category>Opportunity</category>
+                    <category>Funding &amp; Support</category>
+                    <category>Global</category>
+                </item>
+<item>
                     <title>Learning@ Internet Society</title>
                     <link>https://www.internetsociety.org/learning/</link>
                     <description>Our courses provide you with practical technical skills designed and delivered by Internet experts. You will gain knowledge and skills on how the Internet works, how it is governed, and how to keep the Internet and its users safe and secure.</description>
@@ -49,11 +59,11 @@
                     <category>Global</category>
                 </item>
 <item>
-                    <title>Internet Governance Forum Events</title>
+                    <title>Internet Governance Forum Events Funding</title>
                     <link>https://www.isocfoundation.org/grant-programme/internet-governance-forum-events/</link>
                     <description>The Internet Society Foundation’s Internet Governance Forum (IGF) funding program supports the organization of United Nations (UN) IGF Secretariat-recognized National and Regional Initiatives (NRIs) and National and Regional Schools on Internet Governance. The purpose of the IGF is to encourage open, non-commercial, and inclusive multi-stakeholder dialogue on issues related to Internet governance. The goal of Schools on Internet Governance is to ensure that diverse actors have the skills to participate in Internet governance structures and shape the future of the Internet.</description>
                     <pubDate>Mon, 26 Jan 2026 13:48:42 GMT</pubDate>
-                    <guid isPermaLink="false">143755e045eb62c4910544515e1b3f1c</guid>
+                    <guid isPermaLink="false">f8e2c7e8dda5903f4495eea1438f3c59</guid>
                     <category>Opportunity</category>
                     <category>Funding &amp; Support</category>
                     <category>Global</category>
