@@ -103,4 +103,17 @@ DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20260331
 DTEND;VALUE=DATE:20260331
 END:VEVENT
+BEGIN:VEVENT
+UID:40f8b572-cb92-503c-87ef-d05c244b241d
+SUMMARY:Sustainable Peering Infrastructure Grant Program
+DESCRIPTION:The Internet Society Foundation’s Sustainable Peering Infrastructure (SP
+ I) Grant Program aims to support building sustainable\, community-led IX
+ Ps in places where they are needed\; enhance existing IXPs to realize th
+ eir full potential\; and further develop organizations and communities t
+ hat support peering and interconnection.
+URL:https://www.isocfoundation.org/grant-programme/sustainable-peering-infrastructure/
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20260423
+DTEND;VALUE=DATE:20260423
+END:VEVENT
 END:VCALENDAR
