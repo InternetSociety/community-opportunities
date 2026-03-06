@@ -116,4 +116,26 @@ DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20260423
 DTEND;VALUE=DATE:20260423
 END:VEVENT
+BEGIN:VEVENT
+UID:8e220ee4-30ca-5341-8059-4e02def7629d
+SUMMARY:Think Global Call: "Community Mobilization and How to Join" (13:00 UTC)
+DESCRIPTION:Join the second Global Community Call on 9 April 2026 in English\, Spani
+ sh\, and French) to hear about the Community Mobilization plan\, access 
+ resources and toolkits\, and connect with members worldwide.
+URL:https://isoc.zoom.us/meeting/register/EP5p7fbOQYCcdPrmzddUig
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20260409
+DTEND;VALUE=DATE:20260409
+END:VEVENT
+BEGIN:VEVENT
+UID:a9ceca87-b0c6-568f-a477-569735bd663b
+SUMMARY:Think Global Call: "Community Mobilization and How to Join" (18:00 UTC)
+DESCRIPTION:Join the second Global Community Call on 9 April 2026 in English\, Spani
+ sh\, and French) to hear about the Community Mobilization plan\, access 
+ resources and toolkits\, and connect with members worldwide.
+URL:https://isoc.zoom.us/meeting/register/6x7EgxPATJG1lufekzIVRw
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20260409
+DTEND;VALUE=DATE:20260409
+END:VEVENT
 END:VCALENDAR
