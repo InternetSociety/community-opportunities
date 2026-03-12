@@ -198,5 +198,25 @@
     "timeZone": "CET",
     "title": "What does Digital Sovereignty mean for the Civil Society?",
     "type": "Roundtable"
+  },
+  {
+    "approved": true,
+    "category": "Community",
+    "creationDate": "2026-03-11T21:33:08Z",
+    "description": "Register Idea Universal Acceptance is a global initiative focused on promoting the internationalization of national domain names (IDNs) and the email addresses associated with them (EAIs).",
+    "endDate": "2026-03-31",
+    "endTime": "17:00",
+    "format": "Hybrid",
+    "language": "Armenian, English",
+    "modificationDate": "2026-03-12T10:36:37Z",
+    "modifiedBy": "renteria@isoc.org",
+    "organizer": "ISOC Armenia Chapter as Co-organizer",
+    "region": "Europe",
+    "registrationUrl": "https://uaday.am/en/",
+    "startDate": "2026-03-31",
+    "startTime": "10:00",
+    "timeZone": "GST",
+    "title": "Universal Acceptance Day 2026- Regional Event",
+    "type": "Conference"
   }
 ]
