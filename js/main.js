@@ -187,6 +187,12 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="nav-links">
                 ${menuItems.map(item => `<a href="${item.href}">${item.label}</a>`).join('')}
             </div>
+            <div class="nav-more" hidden>
+                <button class="nav-more-toggle" type="button" aria-expanded="false" aria-label="Show more categories">
+                    <i class="fas fa-ellipsis" aria-hidden="true"></i>
+                </button>
+                <div class="nav-more-menu"></div>
+            </div>
         `;
 
         nav.innerHTML = navHtml;
@@ -196,6 +202,72 @@ document.addEventListener('DOMContentLoaded', function () {
         const navLinks = nav.querySelector('.nav-links');
         const overlay = nav.querySelector('.nav-overlay');
         const logoLink = nav.querySelector('.logo-link');
+        const moreContainer = nav.querySelector('.nav-more');
+        const moreToggle = nav.querySelector('.nav-more-toggle');
+        const moreMenu = nav.querySelector('.nav-more-menu');
+
+        function closeMoreMenu() {
+            if (!moreContainer || !moreToggle) return;
+            moreContainer.classList.remove('active');
+            moreToggle.setAttribute('aria-expanded', 'false');
+        }
+
+        function updateDesktopOverflowMenu() {
+            if (!navLinks || !moreContainer || !moreMenu || !moreToggle) return;
+
+            const isDesktop = window.innerWidth > 1024;
+            const links = Array.from(navLinks.querySelectorAll('a'));
+
+            links.forEach(link => {
+                link.hidden = false;
+            });
+
+            moreMenu.innerHTML = '';
+            moreContainer.hidden = true;
+            closeMoreMenu();
+
+            if (!isDesktop || links.length === 0) {
+                return;
+            }
+
+            const navWidth = nav.clientWidth;
+            const logoWidth = logoLink ? logoLink.offsetWidth : 0;
+            const hamburgerWidth = hamburger ? hamburger.offsetWidth : 0;
+            const navStyles = window.getComputedStyle(nav);
+            const navGap = parseFloat(navStyles.gap || '0');
+            const paddingLeft = parseFloat(navStyles.paddingLeft || '0');
+            const paddingRight = parseFloat(navStyles.paddingRight || '0');
+            const reservedWidth = logoWidth + hamburgerWidth + paddingLeft + paddingRight + (navGap * 2);
+            const availableWidth = Math.max(navWidth - reservedWidth, 0);
+
+            moreContainer.hidden = false;
+            const moreWidth = moreContainer.offsetWidth || 110;
+            let usedWidth = 0;
+            let hiddenStarted = false;
+
+            links.forEach((link, index) => {
+                const linkStyles = window.getComputedStyle(link);
+                const linkWidth = link.offsetWidth;
+                const marginLeft = parseFloat(linkStyles.marginLeft || '0');
+                const marginRight = parseFloat(linkStyles.marginRight || '0');
+                const gapBefore = index > 0 ? 8 : 0;
+                const requiredWidth = linkWidth + marginLeft + marginRight + gapBefore;
+                const remainingWidth = availableWidth - usedWidth;
+                const needsMoreButton = !hiddenStarted && index < links.length - 1;
+                const safeRemainingWidth = needsMoreButton ? remainingWidth - moreWidth - 8 : remainingWidth;
+
+                if (safeRemainingWidth >= requiredWidth) {
+                    usedWidth += requiredWidth;
+                    return;
+                }
+
+                hiddenStarted = true;
+                link.hidden = true;
+                moreMenu.appendChild(link.cloneNode(true));
+            });
+
+            moreContainer.hidden = moreMenu.children.length === 0;
+        }
 
         // Add smooth scroll to top when clicking the logo
         if (logoLink) {
@@ -256,6 +328,33 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
         }
+
+        if (moreToggle && moreContainer && moreMenu) {
+            moreToggle.addEventListener('click', function () {
+                const isExpanded = moreToggle.getAttribute('aria-expanded') === 'true';
+                if (isExpanded) {
+                    closeMoreMenu();
+                } else {
+                    moreContainer.classList.add('active');
+                    moreToggle.setAttribute('aria-expanded', 'true');
+                }
+            });
+
+            document.addEventListener('click', function (e) {
+                if (!moreContainer.contains(e.target)) {
+                    closeMoreMenu();
+                }
+            });
+
+            moreMenu.addEventListener('click', function (e) {
+                if (e.target.tagName === 'A') {
+                    closeMoreMenu();
+                }
+            });
+        }
+
+        window.addEventListener('resize', updateDesktopOverflowMenu);
+        updateDesktopOverflowMenu();
     }
 
     // Initialize the application
