@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:af5c52f1e1e4be964e5fc50295463ae3 -->
+<!-- DATA_FINGERPRINT:d57a45f8270c969944f7b3b3447d43f7 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Opportunities</title>
@@ -9,6 +9,16 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/data/opportunities.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>Community-Centered Connectivity Grant Program</title>
+                    <link>https://www.isocfoundation.org/grant-programme/community-centered-connectivity/</link>
+                    <description>The Internet Society Foundation’s Community-Centered Connectivity (CCC) Grant Program, a core part of the Internet Society’s work to help communities bridge the digital divide, aims to address these challenges by supporting organizations to develop and expand Internet access and increase adoption in digitally excluded communities.</description>
+                    <pubDate>Tue, 17 Mar 2026 10:10:15 GMT</pubDate>
+                    <guid isPermaLink="false">bb712f897651fdbe5aeb7816bfb22965</guid>
+                    <category>Opportunity</category>
+                    <category>Funding &amp; Support</category>
+                    <category>Global</category>
+                </item>
+<item>
                     <title>Think Global Call: &quot;Community Mobilization and How to Join&quot; (13:00 UTC)</title>
                     <link>https://isoc.zoom.us/meeting/register/EP5p7fbOQYCcdPrmzddUig</link>
                     <description>Join the second Global Community Call on 9 April 2026 in English, Spanish, and French to hear about the Community Mobilization plan, access resources and toolkits, and connect with members worldwide.</description>
