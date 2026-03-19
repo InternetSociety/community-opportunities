@@ -293,9 +293,9 @@ DTSTART;TZID=AST:20260603T190000
 DTEND;TZID=AST:20200624T213000
 END:VEVENT
 BEGIN:VEVENT
-UID:a6dd5dff-3cb3-5fa9-af1f-8b2ee532c9bd
+UID:34dc8824-4331-57e7-8b21-43030329d953
 DTSTAMP:20240101T000000Z
-SUMMARY:so Correcto de la Tecnología Digital
+SUMMARY:Uso Correcto de la Tecnología Digital
 DESCRIPTION:Este seminario ofrece una introducción práctica y accesible sobre cómo u
  tilizar la tecnología digital de forma segura\, responsable y eficiente.
 URL:https://us02web.zoom.us/webinar/register/WN_LmOb4aVCR8S_IDKWmTkGPQ
@@ -314,6 +314,6 @@ DESCRIPTION:Este seminario ofrece una introducción clara y estructurada a los f
  ramación y su aplicación en el mundo real.
 URL:https://us02web.zoom.us/webinar/register/WN_MMGWDawKRyKAH19YB2nBPQ
 DTSTART;TZID=AST:20260422T180000
-DTEND;TZID=AST:20250422T213000
+DTEND;TZID=AST:20260422T213000
 END:VEVENT
 END:VCALENDAR
