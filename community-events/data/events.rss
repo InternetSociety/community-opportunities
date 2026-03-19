@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:5f3441439a8618b79072ad6c53e66861 -->
+<!-- DATA_FINGERPRINT:ab7a9d836dd1229354388d6b2369ba0d -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Events</title>
@@ -9,6 +9,46 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/community-events/data/events.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>Lenguajes de Programación de Computadoras</title>
+                    <link>https://us02web.zoom.us/webinar/register/WN_MMGWDawKRyKAH19YB2nBPQ</link>
+                    <description>Este seminario ofrece una introducción clara y estructurada a los fundamentos de los lenguajes de programación, dirigido a quienes están interesados en comprender cómo funcionan las herramientas que impulsan el desarrollo de software. A través de conceptos básicos y ejemplos prácticos, se explican los elementos esenciales que componen los lenguajes de programación y su aplicación en el mundo real.</description>
+                    <pubDate>Thu, 19 Mar 2026 13:18:03 GMT</pubDate>
+                    <guid isPermaLink="false">69b26d8acfe1d727320baec74a5cad73</guid>
+                    <category>Event</category>
+                    <category>Webinar</category>
+                    <category>Latin America &amp; Caribbean</category>
+                </item>
+<item>
+                    <title>so Correcto de la Tecnología Digital</title>
+                    <link>https://us02web.zoom.us/webinar/register/WN_LmOb4aVCR8S_IDKWmTkGPQ</link>
+                    <description>Este seminario ofrece una introducción práctica y accesible sobre cómo utilizar la tecnología digital de forma segura, responsable y eficiente.</description>
+                    <pubDate>Thu, 19 Mar 2026 13:05:09 GMT</pubDate>
+                    <guid isPermaLink="false">50c88b0a3a6dfc95a251393f9407e157</guid>
+                    <category>Event</category>
+                    <category>Webinar</category>
+                    <category>Latin America &amp; Caribbean</category>
+                </item>
+<item>
+                    <title>IA para Planificación y Diseño de Redes- Junio</title>
+                    <link>https://www.ciapr.org/account/#calendar/event/56734</link>
+                    <description>El curso se divide en 4 secciónese - &gt; ¿Qué aprenderás? ➡️ Aplicar IA en redes (AIOps / AINetOps) ➡️ Analizar demanda con datos geoespaciales ➡️ Optimizar despliegues (ROI, CapEx, riesgo) ➡️ Evaluar herramientas con criterio técnico ➡️ Liderar procesos de adopción tecnológica</description>
+                    <pubDate>Thu, 19 Mar 2026 12:55:36 GMT</pubDate>
+                    <guid isPermaLink="false">d7f548e664e56e95e6c773df0ef53f49</guid>
+                    <category>Event</category>
+                    <category>Training</category>
+                    <category>Latin America &amp; Caribbean</category>
+                </item>
+<item>
+                    <title>Fundamentos de IA Aplicada a Redes- Mayo</title>
+                    <link>https://www.ciapr.org/account/#calendar/event/56734</link>
+                    <description>urso se divide en 4 secciónes -&gt; ¿Qué aprenderás? ➡️ Aplicar IA en redes (AIOps / AINetOps) ➡️ Analizar demanda con datos geoespaciales ➡️ Optimizar despliegues (ROI, CapEx, riesgo) ➡️ Evaluar herramientas con criterio técnico ➡️ Liderar procesos de adopción tecnológica</description>
+                    <pubDate>Thu, 19 Mar 2026 12:49:07 GMT</pubDate>
+                    <guid isPermaLink="false">19cdcbd617caa806442fa882169fcb8b</guid>
+                    <category>Event</category>
+                    <category>Training</category>
+                    <category>Latin America &amp; Caribbean</category>
+                </item>
+<item>
                     <title>Universal Acceptance Day 2026- Regional Event</title>
                     <link>https://uaday.am/en/</link>
                     <description>Register Idea Universal Acceptance is a global initiative focused on promoting the internationalization of national domain names (IDNs) and the email addresses associated with them (EAIs).</description>

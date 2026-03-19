@@ -268,4 +268,52 @@ URL:https://uaday.am/en/
 DTSTART;TZID=GST:20260331T100000
 DTEND;TZID=GST:20260331T170000
 END:VEVENT
+BEGIN:VEVENT
+UID:31edeb04-32be-5e80-b880-4defbb3cf9fe
+DTSTAMP:20240101T000000Z
+SUMMARY:Fundamentos de IA Aplicada a Redes- Mayo
+DESCRIPTION:urso se divide en 4 secciónes -> ¿Qué aprenderás? ➡️ Aplicar IA en redes
+  (AIOps / AINetOps) ➡️ Analizar demanda con datos geoespaciales ➡️ Optim
+ izar despliegues (ROI\, CapEx\, riesgo) ➡️ Evaluar herramientas con crit
+ erio técnico ➡️ Liderar procesos de adopción tecnológica
+URL:https://www.ciapr.org/account/#calendar/event/56734
+DTSTART;TZID=AST:20260505T190000
+DTEND;TZID=AST:20260526T213000
+END:VEVENT
+BEGIN:VEVENT
+UID:37f17209-0d4a-5615-8f29-809ae871bad9
+DTSTAMP:20240101T000000Z
+SUMMARY:IA para Planificación y Diseño de Redes- Junio
+DESCRIPTION:El curso se divide en 4 secciónese - > ¿Qué aprenderás? ➡️ Aplicar IA en
+  redes (AIOps / AINetOps) ➡️ Analizar demanda con datos geoespaciales ➡️
+  Optimizar despliegues (ROI\, CapEx\, riesgo) ➡️ Evaluar herramientas co
+ n criterio técnico ➡️ Liderar procesos de adopción tecnológica
+URL:https://www.ciapr.org/account/#calendar/event/56734
+DTSTART;TZID=AST:20260603T190000
+DTEND;TZID=AST:20200624T213000
+END:VEVENT
+BEGIN:VEVENT
+UID:a6dd5dff-3cb3-5fa9-af1f-8b2ee532c9bd
+DTSTAMP:20240101T000000Z
+SUMMARY:so Correcto de la Tecnología Digital
+DESCRIPTION:Este seminario ofrece una introducción práctica y accesible sobre cómo u
+ tilizar la tecnología digital de forma segura\, responsable y eficiente.
+URL:https://us02web.zoom.us/webinar/register/WN_LmOb4aVCR8S_IDKWmTkGPQ
+DTSTART;TZID=AST:20260325T183000
+DTEND;TZID=AST:20260325T213000
+END:VEVENT
+BEGIN:VEVENT
+UID:6004826e-abb9-580f-8752-fa6f8fbecdff
+DTSTAMP:20240101T000000Z
+SUMMARY:Lenguajes de Programación de Computadoras
+DESCRIPTION:Este seminario ofrece una introducción clara y estructurada a los fundam
+ entos de los lenguajes de programación\, dirigido a quienes están intere
+ sados en comprender cómo funcionan las herramientas que impulsan el desa
+ rrollo de software. A través de conceptos básicos y ejemplos prácticos\,
+  se explican los elementos esenciales que componen los lenguajes de prog
+ ramación y su aplicación en el mundo real.
+URL:https://us02web.zoom.us/webinar/register/WN_MMGWDawKRyKAH19YB2nBPQ
+DTSTART;TZID=AST:20260422T180000
+DTEND;TZID=AST:20250422T213000
+END:VEVENT
 END:VCALENDAR
