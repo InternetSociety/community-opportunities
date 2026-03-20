@@ -272,10 +272,9 @@ BEGIN:VEVENT
 UID:31edeb04-32be-5e80-b880-4defbb3cf9fe
 DTSTAMP:20240101T000000Z
 SUMMARY:Fundamentos de IA Aplicada a Redes- Mayo
-DESCRIPTION:urso se divide en 4 secciónes -> ¿Qué aprenderás? ➡️ Aplicar IA en redes
-  (AIOps / AINetOps) ➡️ Analizar demanda con datos geoespaciales ➡️ Optim
- izar despliegues (ROI\, CapEx\, riesgo) ➡️ Evaluar herramientas con crit
- erio técnico ➡️ Liderar procesos de adopción tecnológica
+DESCRIPTION:Este curso se divide en 4 secciones. Aprenderás a aplicar IA en redes\, 
+ analizar demanda con datos geoespaciales\, optimizar despliegues y lider
+ ar la adopción tecnológica.
 URL:https://www.ciapr.org/account/#calendar/event/56734
 DTSTART;TZID=AST:20260505T190000
 DTEND;TZID=AST:20260526T213000
@@ -284,10 +283,8 @@ BEGIN:VEVENT
 UID:37f17209-0d4a-5615-8f29-809ae871bad9
 DTSTAMP:20240101T000000Z
 SUMMARY:IA para Planificación y Diseño de Redes- Junio
-DESCRIPTION:El curso se divide en 4 secciónese - > ¿Qué aprenderás? ➡️ Aplicar IA en
-  redes (AIOps / AINetOps) ➡️ Analizar demanda con datos geoespaciales ➡️
-  Optimizar despliegues (ROI\, CapEx\, riesgo) ➡️ Evaluar herramientas co
- n criterio técnico ➡️ Liderar procesos de adopción tecnológica
+DESCRIPTION:El curso tiene 4 secciones donde aprenderás a aplicar IA en redes\, anal
+ izar demanda\, optimizar despliegues y liderar la adopción tecnológica.
 URL:https://www.ciapr.org/account/#calendar/event/56734
 DTSTART;TZID=AST:20260603T190000
 DTEND;TZID=AST:20260624T213000
