@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:ba529f0367a8ce953c681fe3e35afd87 -->
+<!-- DATA_FINGERPRINT:a73a0e08c82abd6c14dab38ffd229e9a -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Opportunities</title>
@@ -9,6 +9,16 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/data/opportunities.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>Alumni Regional Forum- Europe</title>
+                    <link>https://isoc.zoom.us/meeting/register/IFTgEfAXRv-vRtUy88PVuA#/registration</link>
+                    <description>This forum brings together alumni from the same region, in this case Europe, to discuss a regionally significant advocacy topic. Led by Law and Technology Lecturer Paola Cardozo Solano, this interactive session will cover the Digital Networks Act, the kinds of contributions that should be made, and why.</description>
+                    <pubDate>Thu, 02 Apr 2026 14:29:12 GMT</pubDate>
+                    <guid isPermaLink="false">6274857de676477fc1d8b0757647d15b</guid>
+                    <category>Opportunity</category>
+                    <category>Events &amp; Working Sessions</category>
+                    <category>Europe</category>
+                </item>
+<item>
                     <title>Mid Career Fellowship 2026</title>
                     <link>https://www.internetsociety.org/fellowships/mid-career/</link>
                     <description>The Mid Career Fellowship provides today’s leaders with the know-how to navigate volatility, uncertainty, complexity, and ambiguity (VUCA), knowing that their purpose, livelihood, and organizational goals are influenced or impacted by the Internet.</description>
