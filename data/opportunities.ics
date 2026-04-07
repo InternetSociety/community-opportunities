@@ -150,17 +150,4 @@ DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20260421
 DTEND;VALUE=DATE:20260421
 END:VEVENT
-BEGIN:VEVENT
-UID:3601efd1-bad2-5328-910e-9beafe16028e
-SUMMARY:Alumni Regional Forum- Europe
-DESCRIPTION:This forum brings together alumni from the same region\, in this case Eu
- rope\, to discuss a regionally significant advocacy topic. Led by Law an
- d Technology Lecturer Paola Cardozo Solano\, this interactive session wi
- ll cover the Digital Networks Act\, the kinds of contributions that shou
- ld be made\, and why.
-URL:https://isoc.zoom.us/meeting/register/IFTgEfAXRv-vRtUy88PVuA#/registration
-DTSTAMP:20240101T000000Z
-DTSTART;VALUE=DATE:20260429
-DTEND;VALUE=DATE:20260429
-END:VEVENT
 END:VCALENDAR
