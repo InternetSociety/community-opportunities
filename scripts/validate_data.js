@@ -48,9 +48,31 @@ function validateOpportunities(data) {
     }
 
     data.forEach((item, index) => {
+        // Smartsheet may occasionally emit an empty placeholder row.
+        // Ignore records with no meaningful values instead of failing CI.
+        const hasMeaningfulValue = Object.values(item).some(value => {
+            if (value === null || value === undefined) return false;
+            if (typeof value === 'string') return value.trim() !== '';
+            return true;
+        });
+        if (!hasMeaningfulValue) {
+            return;
+        }
+
         // Require title
         const title = item["Outreach Activity [Title]"] || item.title;
         if (!title || typeof title !== 'string' || title.trim() === '') {
+            // Treat untitled placeholder rows as ignorable when they only
+            // contain metadata fields that Smartsheet may auto-populate.
+            const substantiveFields = Object.entries(item).filter(([key, value]) => {
+                if (value === null || value === undefined) return false;
+                if (typeof value === 'string' && value.trim() === '') return false;
+                return !['Archived', 'Creation date'].includes(key);
+            });
+            if (substantiveFields.length <= 1) {
+                return;
+            }
+
             errors.push(`Item ${index}: Missing or empty title`);
         }
 
