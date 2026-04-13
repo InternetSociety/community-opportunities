@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:912b2edb6514614b7fe2d0e1ba918f17 -->
+<!-- DATA_FINGERPRINT:b2a12f166157bc5e56deadb2e8b4f53a -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Events</title>
@@ -57,6 +57,16 @@
                     <category>Event</category>
                     <category>Conference</category>
                     <category>Europe</category>
+                </item>
+<item>
+                    <title>South School on Internet Governance 2026</title>
+                    <link>https://gobernanzainternet.org/ssig2026/</link>
+                    <description>The South School on Internet Governance trains the next generation of thought leaders in all aspects of Internet Governance, with a global perspective and a special focus on Latin America and the Caribbean. The program prepares university and postgraduate students to navigate the complexities of Internet Governance, increase regional representation in international forums, and become active leaders in shaping the future of the Internet in their countries and across the region.</description>
+                    <pubDate>Fri, 27 Feb 2026 23:24:16 GMT</pubDate>
+                    <guid isPermaLink="false">516cfce9a1bc94006df63e45a9ee5166</guid>
+                    <category>Event</category>
+                    <category>Training</category>
+                    <category>Latin America &amp; Caribbean</category>
                 </item>
 <item>
                     <title>What does Digital Sovereignty mean for the Civil Society?</title>
