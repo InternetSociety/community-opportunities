@@ -168,4 +168,34 @@ DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20260522
 DTEND;VALUE=DATE:20260522
 END:VEVENT
+BEGIN:VEVENT
+UID:5a4689ca-9d9b-5aa9-8deb-39855e67c2c3
+SUMMARY:European Commission's Digital Networks Act (DNA) Consultation
+DESCRIPTION:The European Commission has opened a public consultation on the Digital 
+ Networks Act (DNA)—a proposal that could fundamentally reshape how Inter
+ net traffic is exchanged in Europe and beyond. We’re calling on the glob
+ al Internet Society community to respond\, reaffirming the principles of
+  an open\, globally connected Internet and outlining what’s at stake if 
+ this proposal is implemented.
+URL:https://www.internetsociety.org/community/news/defending-the-open-internet-in-the-dna-consultation/
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20260605
+DTEND;VALUE=DATE:20260605
+END:VEVENT
+BEGIN:VEVENT
+UID:ec39ebb2-5714-5559-9884-b31d90831ab8
+SUMMARY:Regional Working Groups
+DESCRIPTION:Our Regional Working Groups are community‑led spaces\, facilitated by a 
+ community expert. Internet Society members and staff discuss and collabo
+ rate on Internet policy and advocacy connected to four key themes: Safer
+  Internet\, Connectivity\, Open Internet\, Internet Governance. These gr
+ oups enable you to get directly involved with the issues that matter mos
+ t to you. You can also connect with peers across your region\, exchange 
+ knowledge\, and contribute to practical outputs such as policy briefs\, 
+ consultations\, research\, and community events.
+URL:https://www.internetsociety.org/community/news/join-a-regional-working-group/
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20261231
+END:VEVENT
 END:VCALENDAR

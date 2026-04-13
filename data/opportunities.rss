@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:5e1f3b8d9665e4a75d73562fcd977481 -->
+<!-- DATA_FINGERPRINT:2e849f394354d47f32d988bdbbd15943 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Opportunities</title>
@@ -9,6 +9,26 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/data/opportunities.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>Regional Working Groups</title>
+                    <link>https://www.internetsociety.org/community/news/join-a-regional-working-group/</link>
+                    <description>Our Regional Working Groups are community‑led spaces, facilitated by a community expert. Internet Society members and staff discuss and collaborate on Internet policy and advocacy connected to four key themes: Safer Internet, Connectivity, Open Internet, Internet Governance. These groups enable you to get directly involved with the issues that matter most to you. You can also connect with peers across your region, exchange knowledge, and contribute to practical outputs such as policy briefs, consultations, research, and community events.</description>
+                    <pubDate>Mon, 13 Apr 2026 11:28:42 GMT</pubDate>
+                    <guid isPermaLink="false">24a35f5d9a15359582f717bc64a3a945</guid>
+                    <category>Opportunity</category>
+                    <category>Ongoing Opportunities</category>
+                    <category>Africa, Asia-Pacific, Europe, Middle East, North America, Latin America and The Caribbean</category>
+                </item>
+<item>
+                    <title>European Commission&#39;s Digital Networks Act (DNA) Consultation</title>
+                    <link>https://www.internetsociety.org/community/news/defending-the-open-internet-in-the-dna-consultation/</link>
+                    <description>The European Commission has opened a public consultation on the Digital Networks Act (DNA)—a proposal that could fundamentally reshape how Internet traffic is exchanged in Europe and beyond. We’re calling on the global Internet Society community to respond, reaffirming the principles of an open, globally connected Internet and outlining what’s at stake if this proposal is implemented.</description>
+                    <pubDate>Mon, 13 Apr 2026 08:51:42 GMT</pubDate>
+                    <guid isPermaLink="false">4e74f9da974be41bae6f07bacfcad830</guid>
+                    <category>Opportunity</category>
+                    <category>Consultations &amp; Surveys</category>
+                    <category>Europe</category>
+                </item>
+<item>
                     <title>Research Grant Program</title>
                     <link>https://www.isocfoundation.org/grant-programme/research-grant-programme/</link>
                     <description>The Internet Society Foundation’s Research Program supports global research collaborations that advance understanding of the Internet and its value for all. Furthering our 2030 strategic objectives, the program fosters ideas and innovation that further the long-term goal of a world where people everywhere enjoy affordable, reliable, resilient Internet access and a safe, secure, and trustworthy online experience.</description>
