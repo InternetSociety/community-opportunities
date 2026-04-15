@@ -518,5 +518,25 @@
     "timeZone": "CST",
     "title": "Guatemala Internet Governance Forum 2026 (IGF Guatemala 2026)",
     "type": "Conference"
+  },
+  {
+    "approved": true,
+    "category": "Internet Governance",
+    "creationDate": "2026-04-15T12:18:46Z",
+    "description": "A networking and career-readiness event for engineering and tech students and young professionals, focused on preparing attendees for the transition from campus to career.",
+    "endDate": null,
+    "endTime": "14:00",
+    "format": "In-person",
+    "language": "English",
+    "modificationDate": "2026-04-15T12:34:35Z",
+    "modifiedBy": "renteria@isoc.org",
+    "organizer": "ISOC Trinidad and Tobago Chapter in collaboration with IEEE Young Professionals, CYICT and others",
+    "region": "Latin America & Caribbean",
+    "registrationUrl": "https://www.instagram.com/p/DWT9vIPjVzO/",
+    "startDate": "2026-03-28",
+    "startTime": "09:00",
+    "timeZone": "AST",
+    "title": "Student Transition & Elevation Partnership Event",
+    "type": "Meetup"
   }
 ]
