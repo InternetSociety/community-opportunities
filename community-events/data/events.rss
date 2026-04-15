@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:0dd812c89ac648d759afa00e971ad476 -->
+<!-- DATA_FINGERPRINT:82150a4db869152cd5b94256c1880522 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Events</title>
@@ -9,6 +9,16 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/community-events/data/events.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>Student Transition &amp; Elevation Partnership Event</title>
+                    <link>https://www.instagram.com/p/DWT9vIPjVzO/</link>
+                    <description>A networking and career-readiness event for engineering and tech students and young professionals, focused on preparing attendees for the transition from campus to career.</description>
+                    <pubDate>Wed, 15 Apr 2026 12:18:46 GMT</pubDate>
+                    <guid isPermaLink="false">6db7674a76cd52aeac652fdb94102151</guid>
+                    <category>Event</category>
+                    <category>Meetup</category>
+                    <category>Latin America &amp; Caribbean</category>
+                </item>
+<item>
                     <title>Guatemala Internet Governance Forum 2026 (IGF Guatemala 2026)</title>
                     <link>https://igf.gt/2020/</link>
                     <description>The Guatemala Internet Governance Forum (IGF Guatemala 2026) is a national multistakeholder platform bringing together government, academia, the private sector, civil society, and the technical community to discuss key internet governance issues. Topics include digital policy, cybersecurity, infrastructure, connectivity, artificial intelligence, and emerging technologies. The forum promotes open dialogue and collaboration to support a secure, resilient, and inclusive internet ecosystem in Guatemala and across Latin America and the Caribbean.</description>

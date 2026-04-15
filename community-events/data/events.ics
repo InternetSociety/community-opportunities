@@ -521,4 +521,15 @@ URL:https://igf.gt/2020/
 DTSTART;TZID=CST:20261008T100000
 DTEND;TZID=CST:20261008T160000
 END:VEVENT
+BEGIN:VEVENT
+UID:0b6bbae7-dd9f-5ded-ada7-e26cdc9513cc
+DTSTAMP:20240101T000000Z
+SUMMARY:Student Transition & Elevation Partnership Event
+DESCRIPTION:A networking and career-readiness event for engineering and tech student
+ s and young professionals\, focused on preparing attendees for the trans
+ ition from campus to career.
+URL:https://www.instagram.com/p/DWT9vIPjVzO/
+DTSTART;TZID=AST:20260328T090000
+DTEND;TZID=AST:20260328T140000
+END:VEVENT
 END:VCALENDAR
