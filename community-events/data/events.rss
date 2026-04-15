@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:b2a12f166157bc5e56deadb2e8b4f53a -->
+<!-- DATA_FINGERPRINT:0dd812c89ac648d759afa00e971ad476 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Events</title>
@@ -9,6 +9,106 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/community-events/data/events.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>Guatemala Internet Governance Forum 2026 (IGF Guatemala 2026)</title>
+                    <link>https://igf.gt/2020/</link>
+                    <description>The Guatemala Internet Governance Forum (IGF Guatemala 2026) is a national multistakeholder platform bringing together government, academia, the private sector, civil society, and the technical community to discuss key internet governance issues. Topics include digital policy, cybersecurity, infrastructure, connectivity, artificial intelligence, and emerging technologies. The forum promotes open dialogue and collaboration to support a secure, resilient, and inclusive internet ecosystem in Guatemala and across Latin America and the Caribbean.</description>
+                    <pubDate>Wed, 15 Apr 2026 01:11:16 GMT</pubDate>
+                    <guid isPermaLink="false">6f4aac792d1268fb4fb8ef5954020774</guid>
+                    <category>Event</category>
+                    <category>Conference</category>
+                    <category>Latin America &amp; Caribbean</category>
+                </item>
+<item>
+                    <title>Día Internacional de las Niñas en las TIC 2026 – Guatemala</title>
+                    <link>https://docs.google.com/forms/d/e/1FAIpQLSdIu5DdWe-yARlyj7TRc-wNcY4S_OorbT3ia-SPBHphxozUgA/viewform</link>
+                    <description>The International Girls in ICT Day 2026 in Guatemala aims to inspire and empower girls to explore careers in technology. The event will feature keynote presentations, interactive sessions, and discussions on artificial intelligence, digital skills, and the role of girls in shaping the digital future, promoting STEM education and digital inclusion across Latin America and the Caribbean.</description>
+                    <pubDate>Wed, 15 Apr 2026 00:46:51 GMT</pubDate>
+                    <guid isPermaLink="false">04c712a2593cb1e28b5b5e796e74c0e7</guid>
+                    <category>Event</category>
+                    <category>Workshop</category>
+                    <category>Latin America &amp; Caribbean</category>
+                </item>
+<item>
+                    <title>South School on Internet Governance (SSIG) Guatemala 2026</title>
+                    <link>https://gobernanzainternet.org/ssig2026/</link>
+                    <description>The South School on Internet Governance (SSIG) Guatemala 2026 is a capacity-building program designed to strengthen knowledge and skills on Internet governance among participants from Guatemala and the Latin America and Caribbean region. The program will address key topics such as Internet governance processes, multistakeholder participation, cybersecurity, Internet infrastructure, digital policy, and emerging technologies. This initiative promotes regional collaboration, technical and policy capacity development, and active participation in national and international Internet governance processes.</description>
+                    <pubDate>Wed, 15 Apr 2026 00:21:01 GMT</pubDate>
+                    <guid isPermaLink="false">362d1cca52dc03ae39cbf3e3c02d3d7d</guid>
+                    <category>Event</category>
+                    <category>Training</category>
+                    <category>Latin America &amp; Caribbean</category>
+                </item>
+<item>
+                    <title>ARGENSIG - Argentina School on Internet Governance</title>
+                    <link>https://argensig.org/argensig2026/</link>
+                    <description>ARGENSIG is based in Argentina but welcomes fellows from across Latin America, both onsite and hybrid. Its central objective is to train future internet governance leaders, covering the technical, political, economic, social, and legal dimensions of the digital ecosystem, combining a global perspective with a focus on the specific challenges of Argentina and the region.</description>
+                    <pubDate>Tue, 14 Apr 2026 23:25:30 GMT</pubDate>
+                    <guid isPermaLink="false">ac5df98208ed4301d7bca1227603ac2d</guid>
+                    <category>Event</category>
+                    <category>Training</category>
+                    <category>Latin America &amp; Caribbean</category>
+                </item>
+<item>
+                    <title>Legislación de menores en redes sociales Caso: Costa Rica</title>
+                    <link>https://us06web.zoom.us/j/82694638922</link>
+                    <description>Análisis sobre verificación de edad y la nueva legislación propuesta en Costa Rica para el control de uso de redes sociales en menores de edad.</description>
+                    <pubDate>Tue, 14 Apr 2026 21:05:02 GMT</pubDate>
+                    <guid isPermaLink="false">ed8c932b2ccf5bb5110b56e209128284</guid>
+                    <category>Event</category>
+                    <category>Webinar</category>
+                    <category>Latin America &amp; Caribbean</category>
+                </item>
+<item>
+                    <title>Grupo de Mediciones LAC - ISOC Uruguay Chapter</title>
+                    <link>https://meet.google.com/gqr-nmye-xvh</link>
+                    <description>Webinar organizado por Capítulo ISOC Uruguay para presentar avances del grupo a la comunidad regional</description>
+                    <pubDate>Tue, 14 Apr 2026 19:34:54 GMT</pubDate>
+                    <guid isPermaLink="false">7afa11f516ddce38ffc9dc5d3567ef75</guid>
+                    <category>Event</category>
+                    <category>Webinar</category>
+                    <category>Latin America &amp; Caribbean</category>
+                </item>
+<item>
+                    <title>Webinar sobre el proyecto MEDICIONES LAC</title>
+                    <link>https://mediciones-isoc-lac.onrender.com/</link>
+                    <description>Un proyecto colaborativo para entender mediciones en Internet en LAC y trabajar en la implementación del DNSSEC</description>
+                    <pubDate>Tue, 14 Apr 2026 19:15:23 GMT</pubDate>
+                    <guid isPermaLink="false">d160756b1e380279fe4b09fc06ed69c5</guid>
+                    <category>Event</category>
+                    <category>Webinar</category>
+                    <category>Latin America &amp; Caribbean</category>
+                </item>
+<item>
+                    <title>UA TechBoost 2026 LACNOG</title>
+                    <link>https://luma.com/6wlfz1hv</link>
+                    <description>UA TechBoost es una iniciativa estratégica enmarcada en el UA Day que busca impulsar la Aceptación Universal como pilar de un internet inclusivo y multilingüe. El evento reúne a líderes de ICANN, UNESCO, ISOC y LACNOG para coordinar la adopción de estándares que permitan reconocer nombres de dominio y correos electrónicos en cualquier idioma o escritura. Para América Latina, representa un puente clave entre la comunidad técnica y el sector académico, asegurando que la transformación digital de la región no deje a nadie atrás por barreras lingüísticas.</description>
+                    <pubDate>Tue, 14 Apr 2026 18:24:29 GMT</pubDate>
+                    <guid isPermaLink="false">efeeb4b2c185f9a94dd73440c23af139</guid>
+                    <category>Event</category>
+                    <category>Workshop</category>
+                    <category>Latin America &amp; Caribbean</category>
+                </item>
+<item>
+                    <title>Semana del Día de Internet</title>
+                    <link>https://diadeinternet.sv</link>
+                    <description>Del 18 al 23 de mayo de 2026, coordinamos una serie de eventos conmemorativos del Día de Internet en diversas sedes de la ciudad, incluyendo universidades y centros de eventos, abordando temáticas clave como Seguridad, Gobernanza y Conectividad</description>
+                    <pubDate>Tue, 14 Apr 2026 17:15:00 GMT</pubDate>
+                    <guid isPermaLink="false">c85635b1ec99a9ce37b9cfb93e1102ea</guid>
+                    <category>Event</category>
+                    <category>Conference</category>
+                    <category>Latin America &amp; Caribbean</category>
+                </item>
+<item>
+                    <title>Celebración del 30 Aniversario del Capítulo México</title>
+                    <link>http://isoc.mx</link>
+                    <description>El solemne acto de celebración del trigésimo aniversario del Capítulo México de la Internet Society abordará con los propios pioneros cómo se dio origen al primer backbone para el Internet Mexicano, además se reconocerá la trayectoria y aportes de los pioneros</description>
+                    <pubDate>Mon, 13 Apr 2026 19:35:53 GMT</pubDate>
+                    <guid isPermaLink="false">dc2d149aacf9a56a79b3443da052e2d6</guid>
+                    <category>Event</category>
+                    <category>Roundtable</category>
+                    <category>Latin America &amp; Caribbean</category>
+                </item>
+<item>
                     <title>Lenguajes de Programación de Computadoras</title>
                     <link>https://us02web.zoom.us/webinar/register/WN_MMGWDawKRyKAH19YB2nBPQ</link>
                     <description>Este seminario ofrece una introducción clara y estructurada a los fundamentos de los lenguajes de programación, dirigido a quienes están interesados en comprender cómo funcionan las herramientas que impulsan el desarrollo de software.</description>
