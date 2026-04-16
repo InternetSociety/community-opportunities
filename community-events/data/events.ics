@@ -434,14 +434,11 @@ BEGIN:VEVENT
 UID:f8ebd1cc-5254-58e4-acf3-ab96e5f1e323
 DTSTAMP:20240101T000000Z
 SUMMARY:UA TechBoost 2026 LACNOG
-DESCRIPTION:UA TechBoost es una iniciativa estratégica enmarcada en el UA Day que bu
- sca impulsar la Aceptación Universal como pilar de un internet inclusivo
-  y multilingüe. El evento reúne a líderes de ICANN\, UNESCO\, ISOC y LAC
- NOG para coordinar la adopción de estándares que permitan reconocer nomb
- res de dominio y correos electrónicos en cualquier idioma o escritura. P
- ara América Latina\, representa un puente clave entre la comunidad técni
- ca y el sector académico\, asegurando que la transformación digital de l
- a región no deje a nadie atrás por barreras lingüísticas.
+DESCRIPTION:UA TechBoost impulsa la Aceptación Universal para un internet inclusivo 
+ y multilingüe. Reúne a líderes de ICANN\, UNESCO\, ISOC y LACNOG para ad
+ optar estándares que reconozcan dominios y correos en cualquier idioma\,
+  asegurando que la transformación digital de América Latina no deje a na
+ die atrás por barreras lingüísticas.
 URL:https://luma.com/6wlfz1hv
 DTSTART;TZID=AST:20260423T080000
 DTEND;TZID=AST:20260423T120000
@@ -471,14 +468,10 @@ UID:c32d448d-8af1-5934-bfc4-d139586a4cb5
 DTSTAMP:20240101T000000Z
 SUMMARY:Conoce a COMTELCA\, Comisión Técnica Regional de Telecomunicaciones de C
  entroAmérica.
-DESCRIPTION:COMTELCA is the Regional Technical Telecommunications Commission\, a spe
- cialized body of the Central American Integration System (SICA) that coo
- rdinates and harmonizes telecommunications and ICT development across th
- e region. Its members are Mexico\, Guatemala\, El Salvador\, Honduras\, 
- Nicaragua\, Costa Rica\, Panama\, and the Dominican Republic. Its missio
- n is to promote regional integration through a shared legal framework\, 
- manage telecommunications systems\, and issue binding resolutions for it
- s member states.
+DESCRIPTION:COMTELCA is SICA's specialized body coordinating telecommunications and 
+ ICT across Central America. It unites Mexico\, Guatemala\, El Salvador\,
+  Honduras\, Nicaragua\, Costa Rica\, Panama\, and the Dominican Republic
+  through a shared legal framework and binding resolutions.
 URL:https://isoc.org.pa/
 DTSTART;TZID=EST:20260518T140000
 DTEND;TZID=EST:20260518T160000
@@ -497,12 +490,10 @@ BEGIN:VEVENT
 UID:21fe8d10-9ee7-5987-862a-c0e7094347f2
 DTSTAMP:20240101T000000Z
 SUMMARY:ARGENSIG - Argentina School on Internet Governance
-DESCRIPTION:ARGENSIG is based in Argentina but welcomes fellows from across Latin Am
- erica\, both onsite and hybrid. Its central objective is to train future
-  internet governance leaders\, covering the technical\, political\, econ
- omic\, social\, and legal dimensions of the digital ecosystem\, combinin
- g a global perspective with a focus on the specific challenges of Argent
- ina and the region.
+DESCRIPTION:ARGENSIG trains future internet governance leaders across Latin America 
+ — onsite and hybrid — covering the technical\, political\, economic\, so
+ cial\, and legal dimensions of the digital ecosystem\, with a focus on t
+ he challenges of Argentina and the region.
 URL:https://argensig.org/argensig2026/
 DTSTART;TZID=ART:20260908T100000
 DTEND;TZID=ART:20260910T180000
@@ -511,15 +502,11 @@ BEGIN:VEVENT
 UID:3bab76af-ba73-57ff-bdbf-5ff074f83860
 DTSTAMP:20240101T000000Z
 SUMMARY:South School on Internet Governance (SSIG) Guatemala 2026
-DESCRIPTION:The South School on Internet Governance (SSIG) Guatemala 2026 is a capac
- ity-building program designed to strengthen knowledge and skills on Inte
- rnet governance among participants from Guatemala and the Latin America 
- and Caribbean region. The program will address key topics such as Intern
- et governance processes\, multistakeholder participation\, cybersecurity
- \, Internet infrastructure\, digital policy\, and emerging technologies.
-  This initiative promotes regional collaboration\, technical and policy 
- capacity development\, and active participation in national and internat
- ional Internet governance processes.
+DESCRIPTION:SSIG Guatemala 2026 strengthens internet governance knowledge across Lat
+ in America and the Caribbean\, covering cybersecurity\, digital policy\,
+  infrastructure\, and emerging technologies. It promotes regional collab
+ oration and active participation in national and international internet 
+ governance forums.
 URL:https://gobernanzainternet.org/ssig2026/
 DTSTART;TZID=CST:20260601T090000
 DTEND;TZID=CST:20260605T170000
@@ -528,12 +515,10 @@ BEGIN:VEVENT
 UID:8348191b-89fa-5192-9dad-8f561ad87a22
 DTSTAMP:20240101T000000Z
 SUMMARY:Día Internacional de las Niñas en las TIC 2026 – Guatemala
-DESCRIPTION:The International Girls in ICT Day 2026 in Guatemala aims to inspire and
-  empower girls to explore careers in technology. The event will feature 
- keynote presentations\, interactive sessions\, and discussions on artifi
- cial intelligence\, digital skills\, and the role of girls in shaping th
- e digital future\, promoting STEM education and digital inclusion across
-  Latin America and the Caribbean.
+DESCRIPTION:International Girls in ICT Day 2026 in Guatemala inspires girls to explo
+ re technology careers through keynotes\, interactive sessions\, and disc
+ ussions on AI\, digital skills\, and STEM education\, promoting digital 
+ inclusion across Latin America and the Caribbean.
 URL:https://docs.google.com/forms/d/e/1FAIpQLSdIu5DdWe-yARlyj7TRc-wNcY4S_OorbT3ia-SPBHphxozUgA/viewform
 DTSTART;TZID=CST:20260423T090000
 DTEND;TZID=CST:20260423T120000
@@ -542,14 +527,11 @@ BEGIN:VEVENT
 UID:db6d8960-5d4e-5ff8-8d4e-5313b7b4d241
 DTSTAMP:20240101T000000Z
 SUMMARY:Guatemala Internet Governance Forum 2026 (IGF Guatemala 2026)
-DESCRIPTION:The Guatemala Internet Governance Forum (IGF Guatemala 2026) is a nation
- al multistakeholder platform bringing together government\, academia\, t
- he private sector\, civil society\, and the technical community to discu
- ss key internet governance issues. Topics include digital policy\, cyber
- security\, infrastructure\, connectivity\, artificial intelligence\, and
-  emerging technologies. The forum promotes open dialogue and collaborati
- on to support a secure\, resilient\, and inclusive internet ecosystem in
-  Guatemala and across Latin America and the Caribbean.
+DESCRIPTION:IGF Guatemala 2026 is a national multistakeholder platform uniting gover
+ nment\, academia\, private sector\, civil society\, and the technical co
+ mmunity to discuss digital policy\, cybersecurity\, infrastructure\, AI\
+ , and emerging technologies\, promoting an inclusive and resilient inter
+ net ecosystem across the region.
 URL:https://igf.gt/2020/
 DTSTART;TZID=CST:20261008T100000
 DTEND;TZID=CST:20261008T160000
@@ -570,13 +552,11 @@ UID:3526c0e1-c204-5ba5-8e32-24938d150e10
 DTSTAMP:20240101T000000Z
 SUMMARY:Más allá del acceso: ¿Qué significa ‘Internet significativo’ en educació
  n?”
-DESCRIPTION:En el Perú\, el acceso a Internet en las escuelas ha crecido\, pero no e
- s claro si realmente impulsa aprendizaje profundo\, pensamiento crítico 
- o agencia digital. En muchos casos\, la conectividad se reduce a consumo
-  pasivo\, sin transformar cómo los estudiantes aprenden o crean. Este we
- binar explora qué condiciones —pedagógicas\, institucionales y tecnológi
- cas— permiten convertir el acceso en capacidades reales y valor educativ
- o.
+DESCRIPTION:En Perú\, la conectividad escolar ha crecido\, pero no garantiza aprendi
+ zaje profundo ni agencia digital: en muchos casos se reduce a consumo pa
+ sivo. Este webinar explora qué condiciones pedagógicas\, institucionales
+  y tecnológicas convierten el acceso en capacidades reales y valor educa
+ tivo.
 URL:https://isoc.pe/evento/mas-alla-del-acceso-que-significa-internet-significativo-en-educacion/
 DTSTART;TZID=EST:20260527T183000
 DTEND;TZID=EST:20260527T200000
@@ -586,14 +566,10 @@ UID:ef150795-a3d4-593a-b852-c421d5ebfe9f
 DTSTAMP:20240101T000000Z
 SUMMARY:Connecting Rural Suriname: Internet Access for Indigenous and Tribal Peo
  ples for Distance Learning and Digital Inclusion
-DESCRIPTION:This project aims to bring reliable internet access to rural Indigenous 
- and Tribal Peoples (ITPs) communities in Suriname to support an existing
-  distance learning programme for children. While the initiative already 
- has an LMS\, educational content\, and digital resources in place\, conn
- ectivity in the interior remains weak. We will work with local providers
-  to establish stable\, safe\, and responsible internet access — enabling
-  communities to fully participate and benefit from greater digital inclu
- sion.
+DESCRIPTION:This project brings reliable internet access to rural Indigenous and Tri
+ bal communities in Suriname\, supporting an existing distance learning p
+ rogramme. Working with local providers\, we will establish stable\, safe
+  connectivity to enable full participation in digital inclusion.
 URL:https://isocsuriname.sr/
 DTSTART;TZID=UTC-3:20260610T150000
 DTEND;TZID=UTC-3:20260610T160000
@@ -614,14 +590,11 @@ BEGIN:VEVENT
 UID:0368aca4-6aee-53f4-9c19-ec500233734b
 DTSTAMP:20240101T000000Z
 SUMMARY:Conectividad Centrada en la Comunidad - - Internet segura
-DESCRIPTION:Este evento online es perfecto para quienes quieren aprender cómo manten
- er su comunidad conectada de forma segura. Descubre consejos prácticos y
-  herramientas para navegar la red con confianza y proteger tu informació
- n\, abordaremos los desafíos comunitarios y la importancia del despliegu
- e de Internet para comunidades urbanas y rurales\, desde el punto de vis
- ta de las comunidades y sus perspectivas. ¡No te lo pierdas y sé parte d
- e una experiencia donde la seguridad en Internet y la colaboración comun
- itaria son protagonistas!
+DESCRIPTION:Este evento online enseña cómo mantener tu comunidad conectada de forma 
+ segura. Descubre herramientas prácticas para navegar con confianza\, pro
+ teger tu información y abordar los desafíos del despliegue de internet e
+ n comunidades urbanas y rurales. ¡Sé parte de una experiencia donde la s
+ eguridad y la colaboración comunitaria son protagonistas!
 URL:https://www.eventbrite.com.ar/e/conectividad-centrada-en-la-comunidad-internet-segura-tickets-1987424169190?aff=oddtdtcreator
 DTSTART;TZID=ART:20260804T170000
 DTEND;TZID=ART:20260804T180000
