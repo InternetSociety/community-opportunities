@@ -391,7 +391,7 @@ DTSTART;TZID=AST:20260422T180000
 DTEND;TZID=AST:20260422T213000
 END:VEVENT
 BEGIN:VEVENT
-UID:3ad795c6-d5f3-5567-80e7-b3423868ea45
+UID:3e5bd71d-5430-567e-a02e-8184a56973ee
 DTSTAMP:20240101T000000Z
 SUMMARY:Celebración del 30 Aniversario del Capítulo México
 DESCRIPTION:El solemne acto de celebración del trigésimo aniversario del Capítulo Mé
@@ -399,8 +399,8 @@ DESCRIPTION:El solemne acto de celebración del trigésimo aniversario del Capí
  o origen al primer backbone para el Internet Mexicano\, además se recono
  cerá la trayectoria y aportes de los pioneros
 URL:http://isoc.mx
-DTSTART;TZID=CST:20260521T110000
-DTEND;TZID=CST:20260521T140000
+DTSTART;TZID=CST:20260520T110000
+DTEND;TZID=CST:20260520T140000
 END:VEVENT
 BEGIN:VEVENT
 UID:59052d65-1253-5976-b778-5c6ea2154583
@@ -449,6 +449,23 @@ DESCRIPTION:Webinar organizado por Capítulo ISOC Uruguay para presentar avances
 URL:https://meet.google.com/gqr-nmye-xvh
 DTSTART;TZID=BRT:20250807T170000
 DTEND;TZID=BRT:20250807T180000
+END:VEVENT
+BEGIN:VEVENT
+UID:c32d448d-8af1-5934-bfc4-d139586a4cb5
+DTSTAMP:20240101T000000Z
+SUMMARY:Conoce a COMTELCA\, Comisión Técnica Regional de Telecomunicaciones de C
+ entroAmérica.
+DESCRIPTION:COMTELCA is the Regional Technical Telecommunications Commission\, a spe
+ cialized body of the Central American Integration System (SICA) that coo
+ rdinates and harmonizes telecommunications and ICT development across th
+ e region. Its members are Mexico\, Guatemala\, El Salvador\, Honduras\, 
+ Nicaragua\, Costa Rica\, Panama\, and the Dominican Republic. Its missio
+ n is to promote regional integration through a shared legal framework\, 
+ manage telecommunications systems\, and issue binding resolutions for it
+ s member states.
+URL:https://isoc.org.pa/
+DTSTART;TZID=EST:20260518T140000
+DTEND;TZID=EST:20260518T160000
 END:VEVENT
 BEGIN:VEVENT
 UID:e9bde345-5915-51f6-b606-c7348a80370e

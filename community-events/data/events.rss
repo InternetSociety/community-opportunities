@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:82150a4db869152cd5b94256c1880522 -->
+<!-- DATA_FINGERPRINT:966f2fe0d34b4fa23b54c25736ac3e4e -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Events</title>
@@ -69,6 +69,16 @@
                     <category>Latin America &amp; Caribbean</category>
                 </item>
 <item>
+                    <title>Conoce a COMTELCA, Comisión Técnica Regional de Telecomunicaciones de CentroAmérica.</title>
+                    <link>https://isoc.org.pa/</link>
+                    <description>COMTELCA is the Regional Technical Telecommunications Commission, a specialized body of the Central American Integration System (SICA) that coordinates and harmonizes telecommunications and ICT development across the region. Its members are Mexico, Guatemala, El Salvador, Honduras, Nicaragua, Costa Rica, Panama, and the Dominican Republic. Its mission is to promote regional integration through a shared legal framework, manage telecommunications systems, and issue binding resolutions for its member states.</description>
+                    <pubDate>Tue, 14 Apr 2026 20:50:48 GMT</pubDate>
+                    <guid isPermaLink="false">a7daaf20bfc53ee063ceba68e452b538</guid>
+                    <category>Event</category>
+                    <category>Webinar</category>
+                    <category>Latin America &amp; Caribbean</category>
+                </item>
+<item>
                     <title>Grupo de Mediciones LAC - ISOC Uruguay Chapter</title>
                     <link>https://meet.google.com/gqr-nmye-xvh</link>
                     <description>Webinar organizado por Capítulo ISOC Uruguay para presentar avances del grupo a la comunidad regional</description>
@@ -113,7 +123,7 @@
                     <link>http://isoc.mx</link>
                     <description>El solemne acto de celebración del trigésimo aniversario del Capítulo México de la Internet Society abordará con los propios pioneros cómo se dio origen al primer backbone para el Internet Mexicano, además se reconocerá la trayectoria y aportes de los pioneros</description>
                     <pubDate>Mon, 13 Apr 2026 19:35:53 GMT</pubDate>
-                    <guid isPermaLink="false">dc2d149aacf9a56a79b3443da052e2d6</guid>
+                    <guid isPermaLink="false">9657112ef9f8af1eedaa22059ae78d77</guid>
                     <category>Event</category>
                     <category>Roundtable</category>
                     <category>Latin America &amp; Caribbean</category>
