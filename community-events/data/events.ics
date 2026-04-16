@@ -357,13 +357,9 @@ BEGIN:VEVENT
 UID:8a2aec85-e81a-5f53-87be-11d97ea597fd
 DTSTAMP:20240101T000000Z
 SUMMARY:South School on Internet Governance 2026
-DESCRIPTION:The South School on Internet Governance trains the next generation of th
- ought leaders in all aspects of Internet Governance\, with a global pers
- pective and a special focus on Latin America and the Caribbean. The prog
- ram prepares university and postgraduate students to navigate the comple
- xities of Internet Governance\, increase regional representation in inte
- rnational forums\, and become active leaders in shaping the future of th
- e Internet in their countries and across the region.
+DESCRIPTION:The South School on Internet Governance trains future thought leaders in
+  Latin America and the Caribbean\, preparing students to engage in inter
+ national forums and shape the future of the internet in the region.
 URL:https://gobernanzainternet.org/ssig2026/
 DTSTART;TZID=CST:20260601T090000
 DTEND;TZID=CST:20260601T180000
@@ -426,10 +422,9 @@ BEGIN:VEVENT
 UID:3e5bd71d-5430-567e-a02e-8184a56973ee
 DTSTAMP:20240101T000000Z
 SUMMARY:Celebración del 30 Aniversario del Capítulo México
-DESCRIPTION:El solemne acto de celebración del trigésimo aniversario del Capítulo Mé
- xico de la Internet Society abordará con los propios pioneros cómo se di
- o origen al primer backbone para el Internet Mexicano\, además se recono
- cerá la trayectoria y aportes de los pioneros
+DESCRIPTION:La celebración del trigésimo aniversario del Capítulo México de Internet
+  Society reunirá a sus pioneros para recordar el origen del primer backb
+ one de internet mexicano y reconocer su trayectoria y aportes.
 URL:http://isoc.mx
 DTSTART;TZID=CST:20260520T110000
 DTEND;TZID=CST:20260520T140000
@@ -441,7 +436,7 @@ SUMMARY:Semana del Día de Internet
 DESCRIPTION:Del 18 al 23 de mayo de 2026\, coordinamos una serie de eventos conmemor
  ativos del Día de Internet en diversas sedes de la ciudad\, incluyendo u
  niversidades y centros de eventos\, abordando temáticas clave como Segur
- idad\, Gobernanza y Conectividad
+ idad\, Gobernanza y Conectividad.
 URL:https://diadeinternet.sv
 DTSTART;TZID=CST:20260518T080000
 DTEND;TZID=CST:20260523T170000
@@ -542,9 +537,8 @@ DTSTAMP:20240101T000000Z
 SUMMARY:Guatemala Internet Governance Forum 2026 (IGF Guatemala 2026)
 DESCRIPTION:IGF Guatemala 2026 is a national multistakeholder platform uniting gover
  nment\, academia\, private sector\, civil society\, and the technical co
- mmunity to discuss digital policy\, cybersecurity\, infrastructure\, AI\
- , and emerging technologies\, promoting an inclusive and resilient inter
- net ecosystem across the region.
+ mmunity to discuss digital policy\, cybersecurity\, AI\, and emerging te
+ chnologies\, promoting an inclusive internet ecosystem.
 URL:https://igf.gt/2020/
 DTSTART;TZID=CST:20261008T100000
 DTEND;TZID=CST:20261008T160000
@@ -659,10 +653,10 @@ BEGIN:VEVENT
 UID:08635ad9-0835-51af-8c29-67dc5d29faa0
 DTSTAMP:20240101T000000Z
 SUMMARY:Trust & Safety Online: Encryption and Internet Policy in the Caribbean
-DESCRIPTION:Governments across the region are passing online safety and age verifica
- tion laws\, but what do they mean for your privacy? Join ISOC Jamaica fo
- r a conversation on encryption\, the changing regulatory landscape\, and
-  how the LAC community can shape a safer internet.
+DESCRIPTION:What do new online safety and age verification laws mean for your privac
+ y? Join ISOC Jamaica for a conversation on encryption\, the changing reg
+ ulatory landscape\, and how the LAC community can shape a safer internet
+ .
 URL:https://meet.google.com/yur-stgs-scx
 DTSTART;TZID=EST:20260521T140000
 DTEND;TZID=EST:20260521T150000
