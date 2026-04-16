@@ -450,11 +450,10 @@ BEGIN:VEVENT
 UID:f8ebd1cc-5254-58e4-acf3-ab96e5f1e323
 DTSTAMP:20240101T000000Z
 SUMMARY:UA TechBoost 2026 LACNOG
-DESCRIPTION:UA TechBoost impulsa la Aceptación Universal para un internet inclusivo 
- y multilingüe. Reúne a líderes de ICANN\, UNESCO\, ISOC y LACNOG para ad
- optar estándares que reconozcan dominios y correos en cualquier idioma\,
-  asegurando que la transformación digital de América Latina no deje a na
- die atrás por barreras lingüísticas.
+DESCRIPTION:UA TechBoost reúne a líderes de ICANN\, UNESCO\, ISOC y LACNOG para impu
+ lsar estándares que reconozcan dominios y correos en cualquier idioma\, 
+ asegurando que la transformación digital de América Latina llegue a todo
+ s.
 URL:https://luma.com/6wlfz1hv
 DTSTART;TZID=AST:20260423T080000
 DTEND;TZID=AST:20260423T120000
@@ -464,7 +463,7 @@ UID:575ec56b-5c43-5a2a-a742-0a85aa95116c
 DTSTAMP:20240101T000000Z
 SUMMARY:Webinar sobre el proyecto MEDICIONES LAC
 DESCRIPTION:Un proyecto colaborativo para entender mediciones en Internet en LAC y t
- rabajar en la implementación del DNSSEC
+ rabajar en la implementación del DNSSEC.
 URL:https://mediciones-isoc-lac.onrender.com/
 DTSTART;TZID=EST:20260505T100000
 DTEND;TZID=EST:20260505T110000
@@ -474,7 +473,7 @@ UID:923174c7-084a-5095-995e-9be5594ec1ea
 DTSTAMP:20240101T000000Z
 SUMMARY:Grupo de Mediciones LAC - ISOC Uruguay Chapter
 DESCRIPTION:Webinar organizado por Capítulo ISOC Uruguay para presentar avances del 
- grupo a la comunidad regional
+ grupo a la comunidad regional.
 URL:https://meet.google.com/gqr-nmye-xvh
 DTSTART;TZID=BRT:20250807T170000
 DTEND;TZID=BRT:20250807T180000
@@ -485,9 +484,8 @@ DTSTAMP:20240101T000000Z
 SUMMARY:Conoce a COMTELCA\, Comisión Técnica Regional de Telecomunicaciones de C
  entroAmérica.
 DESCRIPTION:COMTELCA is SICA's specialized body coordinating telecommunications and 
- ICT across Central America. It unites Mexico\, Guatemala\, El Salvador\,
-  Honduras\, Nicaragua\, Costa Rica\, Panama\, and the Dominican Republic
-  through a shared legal framework and binding resolutions.
+ ICT across Central America\, uniting eight countries through a shared le
+ gal framework and binding resolutions.
 URL:https://isoc.org.pa/
 DTSTART;TZID=EST:20260518T140000
 DTEND;TZID=EST:20260518T160000
@@ -520,9 +518,8 @@ DTSTAMP:20240101T000000Z
 SUMMARY:South School on Internet Governance (SSIG) Guatemala 2026
 DESCRIPTION:SSIG Guatemala 2026 strengthens internet governance knowledge across Lat
  in America and the Caribbean\, covering cybersecurity\, digital policy\,
-  infrastructure\, and emerging technologies. It promotes regional collab
- oration and active participation in national and international internet 
- governance forums.
+  infrastructure\, and emerging technologies\, promoting regional collabo
+ ration and participation in governance forums.
 URL:https://gobernanzainternet.org/ssig2026/
 DTSTART;TZID=CST:20260601T090000
 DTEND;TZID=CST:20260605T170000
@@ -569,10 +566,9 @@ DTSTAMP:20240101T000000Z
 SUMMARY:Más allá del acceso: ¿Qué significa ‘Internet significativo’ en educació
  n?”
 DESCRIPTION:En Perú\, la conectividad escolar ha crecido\, pero no garantiza aprendi
- zaje profundo ni agencia digital: en muchos casos se reduce a consumo pa
- sivo. Este webinar explora qué condiciones pedagógicas\, institucionales
-  y tecnológicas convierten el acceso en capacidades reales y valor educa
- tivo.
+ zaje ni agencia digital. Este webinar explora qué condiciones pedagógica
+ s\, institucionales y tecnológicas convierten el acceso en capacidades r
+ eales.
 URL:https://isoc.pe/evento/mas-alla-del-acceso-que-significa-internet-significativo-en-educacion/
 DTSTART;TZID=EST:20260527T183000
 DTEND;TZID=EST:20260527T200000
@@ -584,8 +580,7 @@ SUMMARY:Connecting Rural Suriname: Internet Access for Indigenous and Tribal Peo
  ples for Distance Learning and Digital Inclusion
 DESCRIPTION:This project brings reliable internet access to rural Indigenous and Tri
  bal communities in Suriname\, supporting an existing distance learning p
- rogramme. Working with local providers\, we will establish stable\, safe
-  connectivity to enable full participation in digital inclusion.
+ rogramme through stable\, safe connectivity to enable digital inclusion.
 URL:https://isocsuriname.sr/
 DTSTART;TZID=BRT:20260610T150000
 DTEND;TZID=BRT:20260610T160000
@@ -618,11 +613,10 @@ BEGIN:VEVENT
 UID:84baa10d-e696-5ba8-acd8-7eacfed819b1
 DTSTAMP:20240101T000000Z
 SUMMARY:Resiliencia de Internet ante Conflictos y Desastres
-DESCRIPTION:Internet es una infraestructura crítica: ante desastres o conflictos\, l
- a conectividad puede marcar la diferencia. Este webinar explora los tres
-  pilares de resiliencia de Internet Society\, infraestructura robusta\, 
- preparación ante desastres y capacidad comunitaria\, para mantener redes
-  operativas cuando más se necesitan.
+DESCRIPTION:Internet es infraestructura crítica: ante desastres o conflictos\, la co
+ nectividad puede ser vital. Este webinar explora los tres pilares de res
+ iliencia de Internet Society para mantener redes operativas cuando más s
+ e necesitan.
 URL:https://us02web.zoom.us/webinar/register/WN_4qgJzlCcTwWiJWks64RCFA
 DTSTART;TZID=UTC:20260708T103000
 DTEND;TZID=UTC:20260708T120000
@@ -632,10 +626,10 @@ UID:355ebc6b-96bd-591d-b047-d638c196467a
 DTSTAMP:20240101T000000Z
 SUMMARY:Driving Sustainable Change: ISOC Haiti’s Community Network Model in Rivi
  ère Salée\, Baradères.
-DESCRIPTION:Led by ISOC Haiti Chapter\, this community network in Rivière Salée prov
- ides affordable internet to a rural community\, supporting education\, e
- conomic growth\, and digital inclusion. This presentation shares survey 
- findings and lessons learned to inform future initiatives.
+DESCRIPTION:13:06Led by ISOC Haiti Chapter\, this community network in Rivière Salée
+  provides affordable internet to a rural community\, supporting educatio
+ n\, economic growth\, and digital inclusion\, sharing lessons learned to
+  inform future initiatives.
 URL:https://www.rightscon.org/registration/
 DTSTART;TZID=ET:20260506T153000
 DTEND;TZID=ET:20260506T163000
@@ -667,8 +661,8 @@ DTSTAMP:20240101T000000Z
 SUMMARY:Trust & Safety Online: Encryption and Internet Policy in the Caribbean
 DESCRIPTION:Governments across the region are passing online safety and age verifica
  tion laws\, but what do they mean for your privacy? Join ISOC Jamaica fo
- r an open virtual conversation on encryption\, the changing regulatory l
- andscape\, and how the LAC community can shape a safer internet.
+ r a conversation on encryption\, the changing regulatory landscape\, and
+  how the LAC community can shape a safer internet.
 URL:https://meet.google.com/yur-stgs-scx
 DTSTART;TZID=EST:20260521T140000
 DTEND;TZID=EST:20260521T150000
