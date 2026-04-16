@@ -180,8 +180,24 @@ TZNAME:CEST
 END:DAYLIGHT
 END:VTIMEZONE
 BEGIN:VTIMEZONE
-TZID:UTC-3
-X-LIC-LOCATION:UTC-3
+TZID:ET
+X-LIC-LOCATION:ET
+BEGIN:STANDARD
+DTSTART:19701025T030000
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:19700329T020000
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VTIMEZONE
+TZID:CLST
+X-LIC-LOCATION:CLST
 BEGIN:STANDARD
 DTSTART:19701025T030000
 TZOFFSETFROM:+0200
@@ -571,8 +587,8 @@ DESCRIPTION:This project brings reliable internet access to rural Indigenous and
  rogramme. Working with local providers\, we will establish stable\, safe
   connectivity to enable full participation in digital inclusion.
 URL:https://isocsuriname.sr/
-DTSTART;TZID=UTC-3:20260610T150000
-DTEND;TZID=UTC-3:20260610T160000
+DTSTART;TZID=BRT:20260610T150000
+DTEND;TZID=BRT:20260610T160000
 END:VEVENT
 BEGIN:VEVENT
 UID:c59fa41c-3099-5321-9463-0cb02f481150
@@ -591,12 +607,70 @@ UID:0368aca4-6aee-53f4-9c19-ec500233734b
 DTSTAMP:20240101T000000Z
 SUMMARY:Conectividad Centrada en la Comunidad - - Internet segura
 DESCRIPTION:Este evento online enseña cómo mantener tu comunidad conectada de forma 
- segura. Descubre herramientas prácticas para navegar con confianza\, pro
- teger tu información y abordar los desafíos del despliegue de internet e
- n comunidades urbanas y rurales. ¡Sé parte de una experiencia donde la s
- eguridad y la colaboración comunitaria son protagonistas!
+ segura. Descubre herramientas prácticas para navegar con confianza y pro
+ teger tu información\, con foco en los desafíos del despliegue de intern
+ et en comunidades urbanas y rurales.
 URL:https://www.eventbrite.com.ar/e/conectividad-centrada-en-la-comunidad-internet-segura-tickets-1987424169190?aff=oddtdtcreator
 DTSTART;TZID=ART:20260804T170000
 DTEND;TZID=ART:20260804T180000
+END:VEVENT
+BEGIN:VEVENT
+UID:84baa10d-e696-5ba8-acd8-7eacfed819b1
+DTSTAMP:20240101T000000Z
+SUMMARY:Resiliencia de Internet ante Conflictos y Desastres
+DESCRIPTION:Internet es una infraestructura crítica: ante desastres o conflictos\, l
+ a conectividad puede marcar la diferencia. Este webinar explora los tres
+  pilares de resiliencia de Internet Society\, infraestructura robusta\, 
+ preparación ante desastres y capacidad comunitaria\, para mantener redes
+  operativas cuando más se necesitan.
+URL:https://us02web.zoom.us/webinar/register/WN_4qgJzlCcTwWiJWks64RCFA
+DTSTART;TZID=UTC:20260708T103000
+DTEND;TZID=UTC:20260708T120000
+END:VEVENT
+BEGIN:VEVENT
+UID:355ebc6b-96bd-591d-b047-d638c196467a
+DTSTAMP:20240101T000000Z
+SUMMARY:Driving Sustainable Change: ISOC Haiti’s Community Network Model in Rivi
+ ère Salée\, Baradères.
+DESCRIPTION:Led by ISOC Haiti Chapter\, this community network in Rivière Salée prov
+ ides affordable internet to a rural community\, supporting education\, e
+ conomic growth\, and digital inclusion. This presentation shares survey 
+ findings and lessons learned to inform future initiatives.
+URL:https://www.rightscon.org/registration/
+DTSTART;TZID=ET:20260506T153000
+DTEND;TZID=ET:20260506T163000
+END:VEVENT
+BEGIN:VEVENT
+UID:ca0f910b-2086-579a-8ed5-c9307f480bc8
+DTSTAMP:20240101T000000Z
+SUMMARY:Cifrado y Seguridad en Línea
+DESCRIPTION:"Si el cifrado es fuerte\, Internet es fuerte". El objetivo de esta pres
+ entación es empoderar a la audiencia para que comprenda que el cifrado e
+ s la herramienta técnica que garantiza una sociedad digital democrática 
+ y segura.
+URL:https://www.isoc.cl
+DTSTART;TZID=CLST:20261014T110000
+DTEND;TZID=CLST:20261014T130000
+END:VEVENT
+BEGIN:VEVENT
+UID:a88589ff-5d62-53ac-b51c-0eb8212014d8
+DTSTAMP:20240101T000000Z
+SUMMARY:CLNOG2026
+DESCRIPTION:Reunión de operadores de red de Chile.
+URL:https://clnog.cl
+DTSTART;TZID=CLST:20260612T140000
+DTEND;TZID=CLST:20260612T190000
+END:VEVENT
+BEGIN:VEVENT
+UID:08635ad9-0835-51af-8c29-67dc5d29faa0
+DTSTAMP:20240101T000000Z
+SUMMARY:Trust & Safety Online: Encryption and Internet Policy in the Caribbean
+DESCRIPTION:Governments across the region are passing online safety and age verifica
+ tion laws\, but what do they mean for your privacy? Join ISOC Jamaica fo
+ r an open virtual conversation on encryption\, the changing regulatory l
+ andscape\, and how the LAC community can shape a safer internet.
+URL:https://meet.google.com/yur-stgs-scx
+DTSTART;TZID=EST:20260521T140000
+DTEND;TZID=EST:20260521T150000
 END:VEVENT
 END:VCALENDAR

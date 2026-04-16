@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:fb611ded57673f9725a74fc9660cb455 -->
+<!-- DATA_FINGERPRINT:7e5f74305a49610a30fc3a3d47e88d8d -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Events</title>
@@ -9,11 +9,61 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/community-events/data/events.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>Trust &amp; Safety Online: Encryption and Internet Policy in the Caribbean</title>
+                    <link>https://meet.google.com/yur-stgs-scx</link>
+                    <description>Governments across the region are passing online safety and age verification laws, but what do they mean for your privacy? Join ISOC Jamaica for an open virtual conversation on encryption, the changing regulatory landscape, and how the LAC community can shape a safer internet.</description>
+                    <pubDate>Thu, 16 Apr 2026 04:49:45 GMT</pubDate>
+                    <guid isPermaLink="false">98d93034c378dc2e437386f32eb9d2fb</guid>
+                    <category>Event</category>
+                    <category>Webinar</category>
+                    <category>Latin America &amp; Caribbean</category>
+                </item>
+<item>
+                    <title>CLNOG2026</title>
+                    <link>https://clnog.cl</link>
+                    <description>Reunión de operadores de red de Chile.</description>
+                    <pubDate>Thu, 16 Apr 2026 03:25:19 GMT</pubDate>
+                    <guid isPermaLink="false">2f71eec33b77a8619cbb9bd839b95b8c</guid>
+                    <category>Event</category>
+                    <category>Conference</category>
+                    <category>Latin America &amp; Caribbean</category>
+                </item>
+<item>
+                    <title>Cifrado y Seguridad en Línea</title>
+                    <link>https://www.isoc.cl</link>
+                    <description>&quot;Si el cifrado es fuerte, Internet es fuerte&quot;. El objetivo de esta presentación es empoderar a la audiencia para que comprenda que el cifrado es la herramienta técnica que garantiza una sociedad digital democrática y segura.</description>
+                    <pubDate>Thu, 16 Apr 2026 03:19:26 GMT</pubDate>
+                    <guid isPermaLink="false">324b30bec1e260a4e7261efe726e3e86</guid>
+                    <category>Event</category>
+                    <category>Conference</category>
+                    <category>Latin America &amp; Caribbean</category>
+                </item>
+<item>
+                    <title>Driving Sustainable Change: ISOC Haiti’s Community Network Model in Rivière Salée, Baradères.</title>
+                    <link>https://www.rightscon.org/registration/</link>
+                    <description>Led by ISOC Haiti Chapter, this community network in Rivière Salée provides affordable internet to a rural community, supporting education, economic growth, and digital inclusion. This presentation shares survey findings and lessons learned to inform future initiatives.</description>
+                    <pubDate>Thu, 16 Apr 2026 03:07:55 GMT</pubDate>
+                    <guid isPermaLink="false">83d033abb75be87bbc2a4bcb439ac21c</guid>
+                    <category>Event</category>
+                    <category>Conference</category>
+                    <category>Latin America &amp; Caribbean</category>
+                </item>
+<item>
+                    <title>Resiliencia de Internet ante Conflictos y Desastres</title>
+                    <link>https://us02web.zoom.us/webinar/register/WN_4qgJzlCcTwWiJWks64RCFA</link>
+                    <description>Internet es una infraestructura crítica: ante desastres o conflictos, la conectividad puede marcar la diferencia. Este webinar explora los tres pilares de resiliencia de Internet Society, infraestructura robusta, preparación ante desastres y capacidad comunitaria, para mantener redes operativas cuando más se necesitan.</description>
+                    <pubDate>Wed, 15 Apr 2026 23:45:42 GMT</pubDate>
+                    <guid isPermaLink="false">a2306012897315c1e49c4f55bd27d64c</guid>
+                    <category>Event</category>
+                    <category>Webinar</category>
+                    <category>Latin America &amp; Caribbean</category>
+                </item>
+<item>
                     <title>Conectividad Centrada en la Comunidad - - Internet segura</title>
                     <link>https://www.eventbrite.com.ar/e/conectividad-centrada-en-la-comunidad-internet-segura-tickets-1987424169190?aff=oddtdtcreator</link>
-                    <description>Este evento online enseña cómo mantener tu comunidad conectada de forma segura. Descubre herramientas prácticas para navegar con confianza, proteger tu información y abordar los desafíos del despliegue de internet en comunidades urbanas y rurales. ¡Sé parte de una experiencia donde la seguridad y la colaboración comunitaria son protagonistas!</description>
+                    <description>Este evento online enseña cómo mantener tu comunidad conectada de forma segura. Descubre herramientas prácticas para navegar con confianza y proteger tu información, con foco en los desafíos del despliegue de internet en comunidades urbanas y rurales.</description>
                     <pubDate>Wed, 15 Apr 2026 19:04:14 GMT</pubDate>
-                    <guid isPermaLink="false">747a8079fb5ee7f6d7cba4becd61fc0a</guid>
+                    <guid isPermaLink="false">eeaa8ae735ee05ef703a9e9ac69159a5</guid>
                     <category>Event</category>
                     <category>Webinar</category>
                     <category>Latin America &amp; Caribbean</category>
