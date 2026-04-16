@@ -179,6 +179,22 @@ TZOFFSETTO:+0200
 TZNAME:CEST
 END:DAYLIGHT
 END:VTIMEZONE
+BEGIN:VTIMEZONE
+TZID:UTC-3
+X-LIC-LOCATION:UTC-3
+BEGIN:STANDARD
+DTSTART:19701025T030000
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:19700329T020000
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+END:DAYLIGHT
+END:VTIMEZONE
 BEGIN:VEVENT
 UID:ca3a86f0-b19e-5b86-bf08-911a0aaf371b
 DTSTAMP:20240101T000000Z
@@ -548,5 +564,66 @@ DESCRIPTION:A networking and career-readiness event for engineering and tech stu
 URL:https://www.instagram.com/p/DWT9vIPjVzO/
 DTSTART;TZID=AST:20260328T090000
 DTEND;TZID=AST:20260328T140000
+END:VEVENT
+BEGIN:VEVENT
+UID:3526c0e1-c204-5ba5-8e32-24938d150e10
+DTSTAMP:20240101T000000Z
+SUMMARY:Más allá del acceso: ¿Qué significa ‘Internet significativo’ en educació
+ n?”
+DESCRIPTION:En el Perú\, el acceso a Internet en las escuelas ha crecido\, pero no e
+ s claro si realmente impulsa aprendizaje profundo\, pensamiento crítico 
+ o agencia digital. En muchos casos\, la conectividad se reduce a consumo
+  pasivo\, sin transformar cómo los estudiantes aprenden o crean. Este we
+ binar explora qué condiciones —pedagógicas\, institucionales y tecnológi
+ cas— permiten convertir el acceso en capacidades reales y valor educativ
+ o.
+URL:https://isoc.pe/evento/mas-alla-del-acceso-que-significa-internet-significativo-en-educacion/
+DTSTART;TZID=EST:20260527T183000
+DTEND;TZID=EST:20260527T200000
+END:VEVENT
+BEGIN:VEVENT
+UID:ef150795-a3d4-593a-b852-c421d5ebfe9f
+DTSTAMP:20240101T000000Z
+SUMMARY:Connecting Rural Suriname: Internet Access for Indigenous and Tribal Peo
+ ples for Distance Learning and Digital Inclusion
+DESCRIPTION:This project aims to bring reliable internet access to rural Indigenous 
+ and Tribal Peoples (ITPs) communities in Suriname to support an existing
+  distance learning programme for children. While the initiative already 
+ has an LMS\, educational content\, and digital resources in place\, conn
+ ectivity in the interior remains weak. We will work with local providers
+  to establish stable\, safe\, and responsible internet access — enabling
+  communities to fully participate and benefit from greater digital inclu
+ sion.
+URL:https://isocsuriname.sr/
+DTSTART;TZID=UTC-3:20260610T150000
+DTEND;TZID=UTC-3:20260610T160000
+END:VEVENT
+BEGIN:VEVENT
+UID:c59fa41c-3099-5321-9463-0cb02f481150
+DTSTAMP:20240101T000000Z
+SUMMARY:Campaña Neutralidad de la Red
+DESCRIPTION:Generaremos y pondremos a disposición del resto de los capítulos una cam
+ paña con una serie de productos gráficos (vídeos e ilustraciones) para g
+ enerar conciencia sobre la importancia del principio de neutralidad de l
+ a red.
+URL:https://www.facebook.com/isochonduras
+DTSTART;TZID=CST:20260601T000000
+DTEND;TZID=CST:20260630T000000
+END:VEVENT
+BEGIN:VEVENT
+UID:0368aca4-6aee-53f4-9c19-ec500233734b
+DTSTAMP:20240101T000000Z
+SUMMARY:Conectividad Centrada en la Comunidad - - Internet segura
+DESCRIPTION:Este evento online es perfecto para quienes quieren aprender cómo manten
+ er su comunidad conectada de forma segura. Descubre consejos prácticos y
+  herramientas para navegar la red con confianza y proteger tu informació
+ n\, abordaremos los desafíos comunitarios y la importancia del despliegu
+ e de Internet para comunidades urbanas y rurales\, desde el punto de vis
+ ta de las comunidades y sus perspectivas. ¡No te lo pierdas y sé parte d
+ e una experiencia donde la seguridad en Internet y la colaboración comun
+ itaria son protagonistas!
+URL:https://www.eventbrite.com.ar/e/conectividad-centrada-en-la-comunidad-internet-segura-tickets-1987424169190?aff=oddtdtcreator
+DTSTART;TZID=ART:20260804T170000
+DTEND;TZID=ART:20260804T180000
 END:VEVENT
 END:VCALENDAR
