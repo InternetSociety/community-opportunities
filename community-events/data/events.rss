@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:2afbe47a430f206d7f0ab6a66c641e54 -->
+<!-- DATA_FINGERPRINT:c0a048c9a38e8ab2b13b6d71bbb85996 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Events</title>
@@ -9,6 +9,16 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/community-events/data/events.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>Taller Online: Blindaje Digital – De las llaves perdidas a la seguridad total</title>
+                    <link>https://isoc.bo</link>
+                    <description>¿Sientes que tienes demasiadas contraseñas y terminas usando siempre la misma? ¿Te preocupa quién puede leer tus mensajes o acceder a tus fotos? En este taller práctico y gratuito, aprenderemos a proteger nuestra vida digital de una manera sencilla, sin importar si tienes 15 o 75 años. La seguridad en internet no tiene por qué ser complicada.</description>
+                    <pubDate>Thu, 16 Apr 2026 13:46:47 GMT</pubDate>
+                    <guid isPermaLink="false">2e9b45f7d1795f441b7f75e243bb1e1e</guid>
+                    <category>Event</category>
+                    <category>Workshop</category>
+                    <category>Latin America &amp; Caribbean</category>
+                </item>
+<item>
                     <title>Trust &amp; Safety Online: Encryption and Internet Policy in the Caribbean</title>
                     <link>https://meet.google.com/yur-stgs-scx</link>
                     <description>What do new online safety and age verification laws mean for your privacy? Join ISOC Jamaica for a conversation on encryption, the changing regulatory landscape, and how the LAC community can shape a safer internet.</description>
