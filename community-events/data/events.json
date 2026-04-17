@@ -758,5 +758,25 @@
     "timeZone": "EST",
     "title": "Trust & Safety Online: Encryption and Internet Policy in the Caribbean",
     "type": "Webinar"
+  },
+  {
+    "approved": true,
+    "category": "Security",
+    "creationDate": "2026-04-16T13:46:47Z",
+    "description": "¿Sientes que tienes demasiadas contraseñas y terminas usando siempre la misma? ¿Te preocupa quién puede leer tus mensajes o acceder a tus fotos? En este taller práctico y gratuito, aprenderemos a proteger nuestra vida digital de una manera sencilla, sin importar si tienes 15 o 75 años. La seguridad en internet no tiene por qué ser complicada.",
+    "endDate": null,
+    "endTime": "21:15",
+    "format": "Online",
+    "language": "Spanish",
+    "modificationDate": "2026-04-17T07:53:52Z",
+    "modifiedBy": "renteria@isoc.org",
+    "organizer": "ISOC Bolivia Chapter",
+    "region": "Latin America & Caribbean",
+    "registrationUrl": "https://isoc.bo",
+    "startDate": "2026-10-21",
+    "startTime": "19:45",
+    "timeZone": "BOT",
+    "title": "Taller Online: Blindaje Digital – De las llaves perdidas a la seguridad total",
+    "type": "Workshop"
   }
 ]
