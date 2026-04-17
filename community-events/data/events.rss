@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:1ff50009e60f3585f1584c1ee9787ebf -->
+<!-- DATA_FINGERPRINT:2afbe47a430f206d7f0ab6a66c641e54 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Events</title>
@@ -54,6 +54,16 @@
                     <description>Internet es infraestructura crítica: ante desastres o conflictos, la conectividad puede ser vital. Este webinar explora los tres pilares de resiliencia de Internet Society para mantener redes operativas cuando más se necesitan.</description>
                     <pubDate>Wed, 15 Apr 2026 23:45:42 GMT</pubDate>
                     <guid isPermaLink="false">84ce15919ef93e6d184d46cca03a5aff</guid>
+                    <category>Event</category>
+                    <category>Webinar</category>
+                    <category>Latin America &amp; Caribbean</category>
+                </item>
+<item>
+                    <title>Why Encryption Matters To You</title>
+                    <link>https://isoc.vc/ and https://isoc.tt/</link>
+                    <description>This webinar will examine the importance of strong encryption tools for end users and will review potential encryption threats across select countries of the Caribbean.</description>
+                    <pubDate>Wed, 15 Apr 2026 20:11:37 GMT</pubDate>
+                    <guid isPermaLink="false">4a39979ed59ec37add9e756c3d7c4d0c</guid>
                     <category>Event</category>
                     <category>Webinar</category>
                     <category>Latin America &amp; Caribbean</category>

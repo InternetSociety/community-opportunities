@@ -604,6 +604,17 @@ DTSTART;TZID=ART:20260804T170000
 DTEND;TZID=ART:20260804T180000
 END:VEVENT
 BEGIN:VEVENT
+UID:269903e4-eb19-576c-b678-f1cd3e073016
+DTSTAMP:20240101T000000Z
+SUMMARY:Why Encryption Matters To You
+DESCRIPTION:This webinar will examine the importance of strong encryption tools for 
+ end users and will review potential encryption threats across select cou
+ ntries of the Caribbean.
+URL:https://isoc.vc/ and https://isoc.tt/
+DTSTART;TZID=AST:20261014T180000
+DTEND;TZID=AST:20261014T193000
+END:VEVENT
+BEGIN:VEVENT
 UID:84baa10d-e696-5ba8-acd8-7eacfed819b1
 DTSTAMP:20240101T000000Z
 SUMMARY:Resiliencia de Internet ante Conflictos y Desastres
