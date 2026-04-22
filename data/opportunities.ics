@@ -117,18 +117,6 @@ DTSTART;VALUE=DATE:20260507
 DTEND;VALUE=DATE:20260507
 END:VEVENT
 BEGIN:VEVENT
-UID:21315453-5f8e-512b-987f-ed01400ef638
-SUMMARY:Mid Career Fellowship 2026
-DESCRIPTION:The Mid Career Fellowship provides today’s leaders with the know-how to 
- navigate volatility\, uncertainty\, complexity\, and ambiguity (VUCA)\, 
- knowing that their purpose\, livelihood\, and organizational goals are i
- nfluenced or impacted by the Internet.
-URL:https://www.internetsociety.org/fellowships/mid-career/
-DTSTAMP:20240101T000000Z
-DTSTART;VALUE=DATE:20260421
-DTEND;VALUE=DATE:20260421
-END:VEVENT
-BEGIN:VEVENT
 UID:bf1733a2-3567-51e1-aedc-5a279b12c4d2
 SUMMARY:Llamada Regional de Miembros LAC- LAC Regional Member Call
 DESCRIPTION:Te invitamos a nuestra Llamada Regional para transformar discusiones glo
