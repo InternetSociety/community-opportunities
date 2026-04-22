@@ -200,4 +200,17 @@ DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20260511
 DTEND;VALUE=DATE:20260511
 END:VEVENT
+BEGIN:VEVENT
+UID:a14cbb63-0929-5f41-b964-2c9b6bc5c1ca
+SUMMARY:Moderated Courses- Learning @Internet Society
+DESCRIPTION:Moderated courses are offered through the Learning @ Internet Society on
+ line platform\,\nsupported by a moderator and a tutor. The moderator ens
+ ures all administrative issues are\naddressed\, and the tutor provides t
+ he technical expertise and answers all questions related\nto the subject
+  matter.
+URL:https://www.internetsociety.org/learning/
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20260719
+DTEND;VALUE=DATE:20260719
+END:VEVENT
 END:VCALENDAR
