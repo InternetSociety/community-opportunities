@@ -213,4 +213,18 @@ DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20260719
 DTEND;VALUE=DATE:20260719
 END:VEVENT
+BEGIN:VEVENT
+UID:24837a02-0932-5b8a-885a-a4abdb2aeea9
+SUMMARY:Keep Canada Protected - C-22 Letter Writing Campaign
+DESCRIPTION:Bill C-22\, An Act respecting lawful access\, would move Canada in the w
+ rong direction. If passed\, it would threaten the safety\, livelihoods\,
+  and national security of people across the country. The bill would intr
+ oduce “lawful access” powers that risk creating backdoors into our priva
+ te communications—weaknesses that could be exploited by criminals\, fore
+ ign adversaries\, and powerful data-harvesting companies.
+URL:https://www.internetsociety.org/community/news/keep-canada-protected/
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20260514
+DTEND;VALUE=DATE:20260514
+END:VEVENT
 END:VCALENDAR

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:3e2a6ec45d67858a0fae92f8af925fc9 -->
+<!-- DATA_FINGERPRINT:77092cf631b0ebdaaeda505f3e117e58 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Opportunities</title>
@@ -9,6 +9,16 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/data/opportunities.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>Keep Canada Protected - C-22 Letter Writing Campaign</title>
+                    <link>https://www.internetsociety.org/community/news/keep-canada-protected/</link>
+                    <description>Bill C-22, An Act respecting lawful access, would move Canada in the wrong direction. If passed, it would threaten the safety, livelihoods, and national security of people across the country. The bill would introduce “lawful access” powers that risk creating backdoors into our private communications—weaknesses that could be exploited by criminals, foreign adversaries, and powerful data-harvesting companies.</description>
+                    <pubDate>Wed, 22 Apr 2026 17:00:57 GMT</pubDate>
+                    <guid isPermaLink="false">aa250375d946ffa2e808cb0a4802486b</guid>
+                    <category>Opportunity</category>
+                    <category>Consultations &amp; Surveys</category>
+                    <category>North America</category>
+                </item>
+<item>
                     <title>Moderated Courses- Learning @Internet Society</title>
                     <link>https://www.internetsociety.org/learning/</link>
                     <description>Moderated courses are offered through the Learning @ Internet Society online platform,
