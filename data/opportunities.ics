@@ -93,18 +93,6 @@ DTSTART;VALUE=DATE:20260513
 DTEND;VALUE=DATE:20260513
 END:VEVENT
 BEGIN:VEVENT
-UID:5920253d-5898-59e6-a210-8f52ed89c49a
-SUMMARY:2026 Community Advocacy Fellowship
-DESCRIPTION:Launched in 2025\, the Community Advocacy Fellowship is a six-month advo
- cacy capacity‑building journey designed to help participants strengthen 
- their advocacy skills\, build regional connections\, and become effectiv
- e Internet advocates.
-URL:https://app.smartsheet.com/b/form/019d71dcedc87fcc8692fd23412c0e93
-DTSTAMP:20240101T000000Z
-DTSTART;VALUE=DATE:20260503
-DTEND;VALUE=DATE:20260503
-END:VEVENT
-BEGIN:VEVENT
 UID:90890b72-94b7-508c-ad7f-3db364d1a113
 SUMMARY:Research Grant Program
 DESCRIPTION:The Internet Society Foundation’s Research Program supports global resea
