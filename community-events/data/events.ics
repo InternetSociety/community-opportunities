@@ -702,4 +702,46 @@ URL:https://isoc.bo
 DTSTART;TZID=BOT:20261021T194500
 DTEND;TZID=BOT:20261021T211500
 END:VEVENT
+BEGIN:VEVENT
+UID:b1cc0727-61a0-5447-a2f7-35d993781a5d
+DTSTAMP:20240101T000000Z
+SUMMARY:Digital Rights & Online Safety Workshop 2026 "The Digital Rights & Onlin
+ e Safety Workshop"
+DESCRIPTION:A one-day in-person event (with online participation) bringing together 
+ 200 in-person participants\, teachers\, students\, parents\, school lead
+ ers\, and NGOs\,  to build practical skills in digital rights\, online s
+ afety\, cybersecurity\, and child protection. Sessions address cyberbull
+ ying\, online scams\, misinformation\, grooming\, and privacy risks. The
+  workshop closes with a Digital Safety Pledge and the launch of a Digita
+ l Safety Champions Network to sustain digital safety education in school
+ s and communities.
+URL:https://docs.google.com/forms/d/1pIg1sWuUrLD00Lb8L0ezFVIsZEefOQvbXys7a7UOQJ8/edit
+DTSTART;TZID=EST:20260427T083000
+DTEND;TZID=EST:20260427T163000
+END:VEVENT
+BEGIN:VEVENT
+UID:df0d7c64-fb35-50bf-9781-354222979ac1
+DTSTAMP:20240101T000000Z
+SUMMARY:Third Kenya National Community Networks Summit
+DESCRIPTION:A momentous event following summits in Siaya (2024) and Nairobi (2025)\,
+  featuring a 3-day Pre-Summit Digital Security and AI Clinic (community 
+ networks only) and a 2-day main summit. Under the theme "Innovating for 
+ Grassroots Digital Access and Community Connectivity\," the summit celeb
+ rates community-driven solutions — sharing best practices\, fostering co
+ llaboration\, and advocating for policies that support connectivity acro
+ ss Kenya.
+URL:https://www.isoc.or.ke/summit/
+DTSTART;TZID=UTC:20260513T090000
+DTEND;TZID=UTC:20260415T170000
+END:VEVENT
+BEGIN:VEVENT
+UID:82577362-e8c6-5315-acb7-9a7645215b01
+DTSTAMP:20240101T000000Z
+SUMMARY:AI\, Internet Governance\, and Bahrain’s Digital Future Webinar
+DESCRIPTION:This session will explore the evolving role of AI and internet governanc
+ e in shaping Bahrain’s digital landscape.
+URL:https://forms.office.com/pages/responsepage.aspx?id=nEdMaj_6yEe91dUZWbhY-ScwDD1WeU5Mo12tQ5BP7t5UOE1UWFdWNEpZOFZRTlo3WE5LUjhPUlFBWi4u&route=shorturl
+DTSTART;TZID=AST:20260512T170000
+DTEND;TZID=AST:20260512T180000
+END:VEVENT
 END:VCALENDAR

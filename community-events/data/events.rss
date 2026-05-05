@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:c0a048c9a38e8ab2b13b6d71bbb85996 -->
+<!-- DATA_FINGERPRINT:5e5f0b520f6f1e55abf6c4a962fdcc9c -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Events</title>
@@ -9,6 +9,36 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/community-events/data/events.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>AI, Internet Governance, and Bahrain’s Digital Future Webinar</title>
+                    <link>https://forms.office.com/pages/responsepage.aspx?id=nEdMaj_6yEe91dUZWbhY-ScwDD1WeU5Mo12tQ5BP7t5UOE1UWFdWNEpZOFZRTlo3WE5LUjhPUlFBWi4u&amp;route=shorturl</link>
+                    <description>This session will explore the evolving role of AI and internet governance in shaping Bahrain’s digital landscape.</description>
+                    <pubDate>Tue, 05 May 2026 12:19:43 GMT</pubDate>
+                    <guid isPermaLink="false">730a98f59f1930245d9756082f8ba905</guid>
+                    <category>Event</category>
+                    <category>Webinar</category>
+                    <category>Middle East</category>
+                </item>
+<item>
+                    <title>Third Kenya National Community Networks Summit</title>
+                    <link>https://www.isoc.or.ke/summit/</link>
+                    <description>A momentous event following summits in Siaya (2024) and Nairobi (2025), featuring a 3-day Pre-Summit Digital Security and AI Clinic (community networks only) and a 2-day main summit. Under the theme &quot;Innovating for Grassroots Digital Access and Community Connectivity,&quot; the summit celebrates community-driven solutions — sharing best practices, fostering collaboration, and advocating for policies that support connectivity across Kenya.</description>
+                    <pubDate>Sun, 26 Apr 2026 20:31:42 GMT</pubDate>
+                    <guid isPermaLink="false">0192f2df0825ccd2778b922cff053a40</guid>
+                    <category>Event</category>
+                    <category>Conference</category>
+                    <category>Africa</category>
+                </item>
+<item>
+                    <title>Digital Rights &amp; Online Safety Workshop 2026 &quot;The Digital Rights &amp; Online Safety Workshop&quot;</title>
+                    <link>https://docs.google.com/forms/d/1pIg1sWuUrLD00Lb8L0ezFVIsZEefOQvbXys7a7UOQJ8/edit</link>
+                    <description>A one-day in-person event (with online participation) bringing together 200 in-person participants, teachers, students, parents, school leaders, and NGOs,  to build practical skills in digital rights, online safety, cybersecurity, and child protection. Sessions address cyberbullying, online scams, misinformation, grooming, and privacy risks. The workshop closes with a Digital Safety Pledge and the launch of a Digital Safety Champions Network to sustain digital safety education in schools and communities.</description>
+                    <pubDate>Sat, 25 Apr 2026 20:45:45 GMT</pubDate>
+                    <guid isPermaLink="false">756507208c856c7ee3e767ff75c0e77d</guid>
+                    <category>Event</category>
+                    <category>Workshop</category>
+                    <category>Africa</category>
+                </item>
+<item>
                     <title>Taller Online: Blindaje Digital – De las llaves perdidas a la seguridad total</title>
                     <link>https://isoc.bo</link>
                     <description>¿Sientes que tienes demasiadas contraseñas y terminas usando siempre la misma? ¿Te preocupa quién puede leer tus mensajes o acceder a tus fotos? En este taller práctico y gratuito, aprenderemos a proteger nuestra vida digital de una manera sencilla, sin importar si tienes 15 o 75 años. La seguridad en internet no tiene por qué ser complicada.</description>
