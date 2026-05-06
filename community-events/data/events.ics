@@ -227,6 +227,22 @@ TZOFFSETTO:+0200
 TZNAME:CEST
 END:DAYLIGHT
 END:VTIMEZONE
+BEGIN:VTIMEZONE
+TZID:EAT
+X-LIC-LOCATION:EAT
+BEGIN:STANDARD
+DTSTART:19701025T030000
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:19700329T020000
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+END:DAYLIGHT
+END:VTIMEZONE
 BEGIN:VEVENT
 UID:ca3a86f0-b19e-5b86-bf08-911a0aaf371b
 DTSTAMP:20240101T000000Z
@@ -647,10 +663,10 @@ UID:355ebc6b-96bd-591d-b047-d638c196467a
 DTSTAMP:20240101T000000Z
 SUMMARY:Driving Sustainable Change: ISOC Haiti’s Community Network Model in Rivi
  ère Salée\, Baradères.
-DESCRIPTION:13:06Led by ISOC Haiti Chapter\, this community network in Rivière Salée
-  provides affordable internet to a rural community\, supporting educatio
- n\, economic growth\, and digital inclusion\, sharing lessons learned to
-  inform future initiatives.
+DESCRIPTION:Led by ISOC Haiti Chapter\, this community network in Rivière Salée prov
+ ides affordable internet to a rural community\, supporting education\, e
+ conomic growth\, and digital inclusion\, sharing lessons learned to info
+ rm future initiatives.
 URL:https://www.rightscon.org/registration/
 DTSTART;TZID=ET:20260506T153000
 DTEND;TZID=ET:20260506T163000
@@ -693,11 +709,9 @@ UID:b975bcec-0c46-5573-9d25-ceb4769e5078
 DTSTAMP:20240101T000000Z
 SUMMARY:Taller Online: Blindaje Digital – De las llaves perdidas a la seguridad 
  total
-DESCRIPTION:¿Sientes que tienes demasiadas contraseñas y terminas usando siempre la 
- misma? ¿Te preocupa quién puede leer tus mensajes o acceder a tus fotos?
-  En este taller práctico y gratuito\, aprenderemos a proteger nuestra vi
- da digital de una manera sencilla\, sin importar si tienes 15 o 75 años.
-  La seguridad en internet no tiene por qué ser complicada.
+DESCRIPTION:¿Cansado de contraseñas y preocupado por tu privacidad? En este taller g
+ ratuito aprenderemos a proteger tu vida digital de forma sencilla\, sin 
+ importar tu edad.
 URL:https://isoc.bo
 DTSTART;TZID=BOT:20261021T194500
 DTEND;TZID=BOT:20261021T211500
@@ -743,5 +757,17 @@ DESCRIPTION:This session will explore the evolving role of AI and internet gover
 URL:https://forms.office.com/pages/responsepage.aspx?id=nEdMaj_6yEe91dUZWbhY-ScwDD1WeU5Mo12tQ5BP7t5UOE1UWFdWNEpZOFZRTlo3WE5LUjhPUlFBWi4u&route=shorturl
 DTSTART;TZID=AST:20260512T170000
 DTEND;TZID=AST:20260512T180000
+END:VEVENT
+BEGIN:VEVENT
+UID:a3d526f9-30ff-59c1-b9ec-c5f246a8cdf7
+DTSTAMP:20240101T000000Z
+SUMMARY:Uganda Internet Governance Forum (UIGF)
+DESCRIPTION:The Uganda Internet Governance Forum (UIGF) is the nation's premier mult
+ i-stakeholder platform\, uniting policymakers\, innovators\, and civil s
+ ociety since 2006 to shape Uganda's digital future across innovation\, i
+ nclusion\, cybersecurity\, AI ethics\, and digital safety.
+URL:https://uigf.ug/
+DTSTART;TZID=EAT:20260730T080000
+DTEND;TZID=EAT:20260730T170000
 END:VEVENT
 END:VCALENDAR

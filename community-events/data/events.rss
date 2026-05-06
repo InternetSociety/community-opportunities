@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:5e5f0b520f6f1e55abf6c4a962fdcc9c -->
+<!-- DATA_FINGERPRINT:58154c01f75dec957b2b811777d679e3 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Events</title>
@@ -9,6 +9,16 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/community-events/data/events.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>Uganda Internet Governance Forum (UIGF)</title>
+                    <link>https://uigf.ug/</link>
+                    <description>The Uganda Internet Governance Forum (UIGF) is the nation&#39;s premier multi-stakeholder platform, uniting policymakers, innovators, and civil society since 2006 to shape Uganda&#39;s digital future across innovation, inclusion, cybersecurity, AI ethics, and digital safety.</description>
+                    <pubDate>Tue, 05 May 2026 17:02:57 GMT</pubDate>
+                    <guid isPermaLink="false">cc8e2a0bb9e58cbb2e57ec4204bfb814</guid>
+                    <category>Event</category>
+                    <category>Conference</category>
+                    <category>Africa</category>
+                </item>
+<item>
                     <title>AI, Internet Governance, and Bahrain’s Digital Future Webinar</title>
                     <link>https://forms.office.com/pages/responsepage.aspx?id=nEdMaj_6yEe91dUZWbhY-ScwDD1WeU5Mo12tQ5BP7t5UOE1UWFdWNEpZOFZRTlo3WE5LUjhPUlFBWi4u&amp;route=shorturl</link>
                     <description>This session will explore the evolving role of AI and internet governance in shaping Bahrain’s digital landscape.</description>
@@ -41,9 +51,9 @@
 <item>
                     <title>Taller Online: Blindaje Digital – De las llaves perdidas a la seguridad total</title>
                     <link>https://isoc.bo</link>
-                    <description>¿Sientes que tienes demasiadas contraseñas y terminas usando siempre la misma? ¿Te preocupa quién puede leer tus mensajes o acceder a tus fotos? En este taller práctico y gratuito, aprenderemos a proteger nuestra vida digital de una manera sencilla, sin importar si tienes 15 o 75 años. La seguridad en internet no tiene por qué ser complicada.</description>
+                    <description>¿Cansado de contraseñas y preocupado por tu privacidad? En este taller gratuito aprenderemos a proteger tu vida digital de forma sencilla, sin importar tu edad.</description>
                     <pubDate>Thu, 16 Apr 2026 13:46:47 GMT</pubDate>
-                    <guid isPermaLink="false">2e9b45f7d1795f441b7f75e243bb1e1e</guid>
+                    <guid isPermaLink="false">e50991e7175521ac5478ad8882a20cbf</guid>
                     <category>Event</category>
                     <category>Workshop</category>
                     <category>Latin America &amp; Caribbean</category>
@@ -81,9 +91,9 @@
 <item>
                     <title>Driving Sustainable Change: ISOC Haiti’s Community Network Model in Rivière Salée, Baradères.</title>
                     <link>https://www.rightscon.org/registration/</link>
-                    <description>13:06Led by ISOC Haiti Chapter, this community network in Rivière Salée provides affordable internet to a rural community, supporting education, economic growth, and digital inclusion, sharing lessons learned to inform future initiatives.</description>
+                    <description>Led by ISOC Haiti Chapter, this community network in Rivière Salée provides affordable internet to a rural community, supporting education, economic growth, and digital inclusion, sharing lessons learned to inform future initiatives.</description>
                     <pubDate>Thu, 16 Apr 2026 03:07:55 GMT</pubDate>
-                    <guid isPermaLink="false">d1e5a420107a24f6d94a54cd8dff3a81</guid>
+                    <guid isPermaLink="false">6be12b799a49e94bedc3a071b3a0fa18</guid>
                     <category>Event</category>
                     <category>Conference</category>
                     <category>Latin America &amp; Caribbean</category>
