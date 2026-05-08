@@ -66,19 +66,6 @@ DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20261231
 END:VEVENT
 BEGIN:VEVENT
-UID:ffe5d4fe-656f-538f-82db-6c3d446d368e
-SUMMARY:Community-Centered Connectivity Grant Program
-DESCRIPTION:The Internet Society Foundation’s Community-Centered Connectivity (CCC) 
- Grant Program\, a core part of the Internet Society’s work to help commu
- nities bridge the digital divide\, aims to address these challenges by s
- upporting organizations to develop and expand Internet access and increa
- se adoption in digitally excluded communities.
-URL:https://www.isocfoundation.org/grant-programme/community-centered-connectivity/
-DTSTAMP:20240101T000000Z
-DTSTART;VALUE=DATE:20260507
-DTEND;VALUE=DATE:20260507
-END:VEVENT
-BEGIN:VEVENT
 UID:bf1733a2-3567-51e1-aedc-5a279b12c4d2
 SUMMARY:Llamada Regional de Miembros LAC- LAC Regional Member Call
 DESCRIPTION:Te invitamos a nuestra Llamada Regional para transformar discusiones glo
