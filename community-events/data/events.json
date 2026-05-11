@@ -858,5 +858,25 @@
     "timeZone": "EAT",
     "title": "Uganda Internet Governance Forum (UIGF)",
     "type": "Conference"
+  },
+  {
+    "approved": true,
+    "category": "Internet Governance",
+    "creationDate": "2026-05-09T13:11:53Z",
+    "description": "Celebrate Global Accessibility Awareness Day 2026 with an interactive international conference bringing together global experts, policymakers, and accessibility champions to advocate for a digitally accessible world for everyone, everywhere.",
+    "endDate": null,
+    "endTime": "14:30",
+    "format": "Online",
+    "language": "English",
+    "modificationDate": "2026-05-11T07:46:39Z",
+    "modifiedBy": "renteria@isoc.org",
+    "organizer": "SG Accessibility",
+    "region": "Global",
+    "registrationUrl": "https://regiscert.com/upcoming_event.php",
+    "startDate": "2026-05-21",
+    "startTime": "10:30",
+    "timeZone": "UTC",
+    "title": "GAAD 2026: International Conference on Digital Accessibility, Inclusion and Innovation",
+    "type": "Conference"
   }
 ]
