@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:58154c01f75dec957b2b811777d679e3 -->
+<!-- DATA_FINGERPRINT:a4846279e1e41b3ab558dc9c035ab45e -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Events</title>
@@ -9,6 +9,16 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/community-events/data/events.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>GAAD 2026: International Conference on Digital Accessibility, Inclusion and Innovation</title>
+                    <link>https://regiscert.com/upcoming_event.php</link>
+                    <description>Celebrate Global Accessibility Awareness Day 2026 with an interactive international conference bringing together global experts, policymakers, and accessibility champions to advocate for a digitally accessible world for everyone, everywhere.</description>
+                    <pubDate>Sat, 09 May 2026 13:11:53 GMT</pubDate>
+                    <guid isPermaLink="false">bbe322ab4592d26d1a330c5af0ff8f81</guid>
+                    <category>Event</category>
+                    <category>Conference</category>
+                    <category>Global</category>
+                </item>
+<item>
                     <title>Uganda Internet Governance Forum (UIGF)</title>
                     <link>https://uigf.ug/</link>
                     <description>The Uganda Internet Governance Forum (UIGF) is the nation&#39;s premier multi-stakeholder platform, uniting policymakers, innovators, and civil society since 2006 to shape Uganda&#39;s digital future across innovation, inclusion, cybersecurity, AI ethics, and digital safety.</description>

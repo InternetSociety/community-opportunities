@@ -770,4 +770,17 @@ URL:https://uigf.ug/
 DTSTART;TZID=EAT:20260730T080000
 DTEND;TZID=EAT:20260730T170000
 END:VEVENT
+BEGIN:VEVENT
+UID:e7214818-c3a0-5ab6-af7c-e2afcc9b987c
+DTSTAMP:20240101T000000Z
+SUMMARY:GAAD 2026: International Conference on Digital Accessibility\, Inclusion
+  and Innovation
+DESCRIPTION:Celebrate Global Accessibility Awareness Day 2026 with an interactive in
+ ternational conference bringing together global experts\, policymakers\,
+  and accessibility champions to advocate for a digitally accessible worl
+ d for everyone\, everywhere.
+URL:https://regiscert.com/upcoming_event.php
+DTSTART;TZID=UTC:20260521T103000
+DTEND;TZID=UTC:20260521T143000
+END:VEVENT
 END:VCALENDAR
