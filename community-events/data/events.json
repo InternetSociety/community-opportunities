@@ -878,5 +878,25 @@
     "timeZone": "UTC",
     "title": "GAAD 2026: International Conference on Digital Accessibility, Inclusion and Innovation",
     "type": "Conference"
+  },
+  {
+    "approved": true,
+    "category": "Policy",
+    "creationDate": "2026-05-12T12:52:55Z",
+    "description": "Experts from industry, academia, and policy come together to explore the challenges and implications of an increasingly fragmented AI regulatory landscape, as governments around the world race to regulate artificial intelligence.",
+    "endDate": null,
+    "endTime": "18:00",
+    "format": "Hybrid",
+    "language": "English",
+    "modificationDate": "2026-05-12T13:09:44Z",
+    "modifiedBy": "renteria@isoc.org",
+    "organizer": "ISOC Singapore Chapter",
+    "region": "Asia Pacific",
+    "registrationUrl": "https://www.eventbrite.com/manage/events/1989080041950/details",
+    "startDate": "2026-05-14",
+    "startTime": "17:00",
+    "timeZone": "SST",
+    "title": "Navigating Fragmented AI Rules: Mapping Global Digital Policy",
+    "type": "Webinar"
   }
 ]
