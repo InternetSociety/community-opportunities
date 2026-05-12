@@ -243,6 +243,22 @@ TZOFFSETTO:+0200
 TZNAME:CEST
 END:DAYLIGHT
 END:VTIMEZONE
+BEGIN:VTIMEZONE
+TZID:SST
+X-LIC-LOCATION:SST
+BEGIN:STANDARD
+DTSTART:19701025T030000
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:19700329T020000
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+END:DAYLIGHT
+END:VTIMEZONE
 BEGIN:VEVENT
 UID:ca3a86f0-b19e-5b86-bf08-911a0aaf371b
 DTSTAMP:20240101T000000Z
@@ -782,5 +798,17 @@ DESCRIPTION:Celebrate Global Accessibility Awareness Day 2026 with an interactiv
 URL:https://us06web.zoom.us/meeting/register/ultb0n9YQmSTM-9Cmbt87A
 DTSTART;TZID=UTC:20260521T103000
 DTEND;TZID=UTC:20260521T143000
+END:VEVENT
+BEGIN:VEVENT
+UID:d243759b-52dd-5688-9a2a-187622915c48
+DTSTAMP:20240101T000000Z
+SUMMARY:Navigating Fragmented AI Rules: Mapping Global Digital Policy
+DESCRIPTION:Experts from industry\, academia\, and policy come together to explore t
+ he challenges and implications of an increasingly fragmented AI regulato
+ ry landscape\, as governments around the world race to regulate artifici
+ al intelligence.
+URL:https://www.eventbrite.com/manage/events/1989080041950/details
+DTSTART;TZID=SST:20260514T170000
+DTEND;TZID=SST:20260514T180000
 END:VEVENT
 END:VCALENDAR
