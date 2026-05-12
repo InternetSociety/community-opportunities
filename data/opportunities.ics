@@ -124,20 +124,6 @@ DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20261231
 END:VEVENT
 BEGIN:VEVENT
-UID:11b5c338-048b-5687-9689-cafb49186e33
-SUMMARY:Making the Most of the Internet Governance Forum
-DESCRIPTION:We're inviting our community to share input on how to make the most of t
- he Internet Governance Forum (IGF) — the UN's primary multistakeholder p
- latform for global Internet policy since 2005. Following the IGF's 20th 
- anniversary and its landmark elevation to a permanent UN forum after the
-  WSIS+20 review\, we'd like to hear your thoughts on how the IGF should 
- evolve and grow.
-URL:https://www.internetsociety.org/our-work/internet-governance/making-the-most-of-the-internet-governance-forum/
-DTSTAMP:20240101T000000Z
-DTSTART;VALUE=DATE:20260511
-DTEND;VALUE=DATE:20260511
-END:VEVENT
-BEGIN:VEVENT
 UID:a14cbb63-0929-5f41-b964-2c9b6bc5c1ca
 SUMMARY:Moderated Courses- Learning @Internet Society
 DESCRIPTION:Moderated courses are offered through the Learning @ Internet Society on
