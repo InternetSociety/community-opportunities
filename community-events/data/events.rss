@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:8a484edaf9379e114c122b1df0bd57de -->
+<!-- DATA_FINGERPRINT:e8c6838ff922d840f772103a2c031b37 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Events</title>
@@ -9,6 +9,16 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/community-events/data/events.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>ISOC Community Network Infrastructure SIG Day at Wireless Community Weekend</title>
+                    <link>https://wiki.freifunk.net/Wireless_Community_Weekend_2026:Topics#Saturday_2026_May_16</link>
+                    <description>The Community Network Infrastructure SIG, organizes Workshops, Talks, and BBQ Reception during the Wirless Community Weekend in Berlin.  Join our in person mapping workshop of community networks: Challenges, Learnings and Perspectives and join us for the BBQ Reception!</description>
+                    <pubDate>Thu, 14 May 2026 15:43:51 GMT</pubDate>
+                    <guid isPermaLink="false">57385b7c6d3d4d2df3b5005f10e5759c</guid>
+                    <category>Event</category>
+                    <category>Conference</category>
+                    <category>Europe</category>
+                </item>
+<item>
                     <title>Navigating Fragmented AI Rules: Mapping Global Digital Policy</title>
                     <link>https://www.eventbrite.com/manage/events/1989080041950/details</link>
                     <description>Experts from industry, academia, and policy come together to explore the challenges and implications of an increasingly fragmented AI regulatory landscape, as governments around the world race to regulate artificial intelligence.</description>

@@ -811,4 +811,17 @@ URL:https://www.eventbrite.com/manage/events/1989080041950/details
 DTSTART;TZID=SST:20260514T170000
 DTEND;TZID=SST:20260514T180000
 END:VEVENT
+BEGIN:VEVENT
+UID:354d51fb-54cc-5eea-8550-843f71c0d42d
+DTSTAMP:20240101T000000Z
+SUMMARY:ISOC Community Network Infrastructure SIG Day at Wireless Community Week
+ end
+DESCRIPTION:The Community Network Infrastructure SIG\, organizes Workshops\, Talks\,
+  and BBQ Reception during the Wirless Community Weekend in Berlin.  Join
+  our in person mapping workshop of community networks: Challenges\, Lear
+ nings and Perspectives and join us for the BBQ Reception!
+URL:https://wiki.freifunk.net/Wireless_Community_Weekend_2026:Topics#Saturday_2026_May_16
+DTSTART;TZID=CET:20260516T140000
+DTEND;TZID=CET:20260516T230000
+END:VEVENT
 END:VCALENDAR
