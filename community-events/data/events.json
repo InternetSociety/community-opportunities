@@ -898,5 +898,25 @@
     "timeZone": "SST",
     "title": "Navigating Fragmented AI Rules: Mapping Global Digital Policy",
     "type": "Webinar"
+  },
+  {
+    "approved": true,
+    "category": "Connectivity",
+    "creationDate": "2026-05-14T15:43:51Z",
+    "description": "The Community Network Infrastructure SIG, organizes Workshops, Talks, and BBQ Reception during the Wirless Community Weekend in Berlin.  Join our in person mapping workshop of community networks: Challenges, Learnings and Perspectives and join us for the BBQ Reception!",
+    "endDate": null,
+    "endTime": "23:00",
+    "format": "Hybrid",
+    "language": "English, German",
+    "modificationDate": "2026-05-15T08:38:35Z",
+    "modifiedBy": "renteria@isoc.org",
+    "organizer": "ISOC Community Network Infrastructures SIG",
+    "region": "Europe",
+    "registrationUrl": "https://wiki.freifunk.net/Wireless_Community_Weekend_2026:Topics#Saturday_2026_May_16",
+    "startDate": "2026-05-16",
+    "startTime": "14:00",
+    "timeZone": "CET",
+    "title": "ISOC Community Network Infrastructure SIG Day at Wireless Community Weekend",
+    "type": "Conference"
   }
 ]
