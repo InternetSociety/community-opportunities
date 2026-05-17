@@ -134,4 +134,19 @@ DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20260517
 DTEND;VALUE=DATE:20260517
 END:VEVENT
+BEGIN:VEVENT
+UID:05ddb7aa-e2ed-5ed7-ad9d-0522e4f4a8de
+SUMMARY:Chapters Capacity Strengthening Program 2026- Orientation Session
+DESCRIPTION:We're pleased to invite your chapter to the Chapters Capacity Strengthen
+ ing Program 2026\, delivered in partnership with Nonprofit Builder (NPB)
+ \, a global capacity-building hub for nonprofits and social enterprises.
+  Building on last year's pilot\, we adjusted the program based on concre
+ te chapter needs. All sessions are facilitated by specialists in the fie
+ ld\, available at no cost for Internet Society Chapters\, online\, and a
+ vailable in English\, French\, and Spanish.
+URL:https://us02web.zoom.us/meeting/register/Ufy2YD8RSR6B_LczMfd70w?utm_medium=email&_hsenc=p2ANqtz-_cauFMjOnrTTHNFZAql0AIHIsTbblwi_6beFwsW2SidjXCLFBAmGLWyi1XD0WlYKoixm_hcgSHvjbz0YlZ0qurWi7rnw&_hsmi=418810361&utm_content=418810361&utm_source=hs_email#/registration
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20260521
+DTEND;VALUE=DATE:20260521
+END:VEVENT
 END:VCALENDAR

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:738fa14c1df31683e00477c6bb224103 -->
+<!-- DATA_FINGERPRINT:d8ceb1de654970c0db91a24d3fedb5e5 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Opportunities</title>
@@ -9,6 +9,16 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/data/opportunities.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>Chapters Capacity Strengthening Program 2026- Orientation Session</title>
+                    <link>https://us02web.zoom.us/meeting/register/Ufy2YD8RSR6B_LczMfd70w?utm_medium=email&amp;_hsenc=p2ANqtz-_cauFMjOnrTTHNFZAql0AIHIsTbblwi_6beFwsW2SidjXCLFBAmGLWyi1XD0WlYKoixm_hcgSHvjbz0YlZ0qurWi7rnw&amp;_hsmi=418810361&amp;utm_content=418810361&amp;utm_source=hs_email#/registration</link>
+                    <description>We&#39;re pleased to invite your chapter to the Chapters Capacity Strengthening Program 2026, delivered in partnership with Nonprofit Builder (NPB), a global capacity-building hub for nonprofits and social enterprises. Building on last year&#39;s pilot, we adjusted the program based on concrete chapter needs. All sessions are facilitated by specialists in the field, available at no cost for Internet Society Chapters, online, and available in English, French, and Spanish.</description>
+                    <pubDate>Sun, 17 May 2026 11:25:00 GMT</pubDate>
+                    <guid isPermaLink="false">6d2dd7d7654f54be2d4140044790c032</guid>
+                    <category>Opportunity</category>
+                    <category>Urgent: Upcoming Deadlines</category>
+                    <category>Global</category>
+                </item>
+<item>
                     <title>Peering Fellowship 2026</title>
                     <link>https://www.internetsociety.org/fellowships/peering/</link>
                     <description>A six-month program equipping 20 professionals with the skills, knowledge, and tools to improve local Internet interconnection infrastructure and advocate for policies that make Internet access more affordable, reliable, and resilient.</description>
