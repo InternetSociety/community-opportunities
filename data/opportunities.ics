@@ -123,18 +123,6 @@ DTSTART;VALUE=DATE:20260719
 DTEND;VALUE=DATE:20260719
 END:VEVENT
 BEGIN:VEVENT
-UID:1912b6a3-b9f6-516a-8374-dd775c66461b
-SUMMARY:Peering Fellowship 2026
-DESCRIPTION:A six-month program equipping 20 professionals with the skills\, knowled
- ge\, and tools to improve local Internet interconnection infrastructure 
- and advocate for policies that make Internet access more affordable\, re
- liable\, and resilient.
-URL:https://www.internetsociety.org/fellowships/peering/
-DTSTAMP:20240101T000000Z
-DTSTART;VALUE=DATE:20260517
-DTEND;VALUE=DATE:20260517
-END:VEVENT
-BEGIN:VEVENT
 UID:05ddb7aa-e2ed-5ed7-ad9d-0522e4f4a8de
 SUMMARY:Chapters Capacity Strengthening Program 2026- Orientation Session
 DESCRIPTION:We're pleased to invite your chapter to the Chapters Capacity Strengthen
