@@ -140,10 +140,24 @@ END:VEVENT
 BEGIN:VEVENT
 UID:8d15d86a-0b54-57ba-9634-77c7bc7b87c1
 SUMMARY:MENA Chapters Regional Call
-DESCRIPTION:
+DESCRIPTION:Part of our community engagement journey\, the MENA Regional Call brings
+  together chapters and members across the region to translate global pri
+ orities into local action.
 URL:https://isoc.zoom.us/meeting/register/NzSiglheSpWFouy5KXspWw#/registration
 DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20260609
 DTEND;VALUE=DATE:20260609
+END:VEVENT
+BEGIN:VEVENT
+UID:00a2ef81-cb8a-5ef6-b30f-e5646b7e6f61
+SUMMARY:Africa Regional Call
+DESCRIPTION:The Africa regional calls bring together African Chapter leaders and mem
+ bers to share lived experiences in turning the Internet Society global p
+ riorities into local actions and Impact. These calls are part of our "Th
+ ink Global\, Act Local" Way of working.
+URL:https://isoc.zoom.us/meeting/register/bMZ0RyKCSIe5h6vI44hRQA#/registration
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20260610
+DTEND;VALUE=DATE:20260610
 END:VEVENT
 END:VCALENDAR
