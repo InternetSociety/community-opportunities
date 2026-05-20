@@ -160,4 +160,15 @@ DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20260610
 DTEND;VALUE=DATE:20260610
 END:VEVENT
+BEGIN:VEVENT
+UID:13142361-4fae-5754-be51-f9f31a0d1ea2
+SUMMARY:European Regional Call
+DESCRIPTION:We invite you and all your members to our first regional call of the yea
+ r\, which will be open to all Internet Society members in the European r
+ egion.
+URL:https://isoc.zoom.us/meeting/register/DxvZRBBXQLKGyht7mvsS0A#/registration
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20260623
+DTEND;VALUE=DATE:20260623
+END:VEVENT
 END:VCALENDAR
