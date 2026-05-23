@@ -66,20 +66,6 @@ DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20261231
 END:VEVENT
 BEGIN:VEVENT
-UID:90890b72-94b7-508c-ad7f-3db364d1a113
-SUMMARY:Research Grant Program
-DESCRIPTION:The Internet Society Foundation’s Research Program supports global resea
- rch collaborations that advance understanding of the Internet and its va
- lue for all. Furthering our 2030 strategic objectives\, the program fost
- ers ideas and innovation that further the long-term goal of a world wher
- e people everywhere enjoy affordable\, reliable\, resilient Internet acc
- ess and a safe\, secure\, and trustworthy online experience.
-URL:https://www.isocfoundation.org/grant-programme/research-grant-programme/
-DTSTAMP:20240101T000000Z
-DTSTART;VALUE=DATE:20260522
-DTEND;VALUE=DATE:20260522
-END:VEVENT
-BEGIN:VEVENT
 UID:5a4689ca-9d9b-5aa9-8deb-39855e67c2c3
 SUMMARY:European Commission's Digital Networks Act (DNA) Consultation
 DESCRIPTION:The European Commission has opened a public consultation on the Digital 
