@@ -109,8 +109,8 @@ DTSTART;VALUE=DATE:20260719
 DTEND;VALUE=DATE:20260719
 END:VEVENT
 BEGIN:VEVENT
-UID:8d15d86a-0b54-57ba-9634-77c7bc7b87c1
-SUMMARY:MENA Chapters Regional Call
+UID:c1be9853-dac3-5695-9ef0-ad10e81a8469
+SUMMARY:MENA Regional Call
 DESCRIPTION:Part of our community engagement journey\, the MENA Regional Call brings
   together chapters and members across the region to translate global pri
  orities into local action.
@@ -132,8 +132,8 @@ DTSTART;VALUE=DATE:20260610
 DTEND;VALUE=DATE:20260610
 END:VEVENT
 BEGIN:VEVENT
-UID:13142361-4fae-5754-be51-f9f31a0d1ea2
-SUMMARY:European Regional Call
+UID:b6515444-6816-5cd7-99ed-a221a993770c
+SUMMARY:Europe Regional Call
 DESCRIPTION:We invite you and all your members to our first regional call of the yea
  r\, which will be open to all Internet Society members in the European r
  egion.

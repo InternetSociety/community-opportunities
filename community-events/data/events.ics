@@ -275,6 +275,22 @@ TZOFFSETTO:+0200
 TZNAME:CEST
 END:DAYLIGHT
 END:VTIMEZONE
+BEGIN:VTIMEZONE
+TZID:PDT
+X-LIC-LOCATION:PDT
+BEGIN:STANDARD
+DTSTART:19701025T030000
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:19700329T020000
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+END:DAYLIGHT
+END:VTIMEZONE
 BEGIN:VEVENT
 UID:ca3a86f0-b19e-5b86-bf08-911a0aaf371b
 DTSTAMP:20240101T000000Z
@@ -341,7 +357,7 @@ DESCRIPTION:Este seminario introduce a Linux como una herramienta útil para el 
  y una sesión interactiva de preguntas y respuestas para aclarar dudas y 
  guiar a quienes deseen comenzar a utilizar este sistema operativo en su 
  vida diaria.
-URL:https://www.isoc.pr
+URL:https://www.isoc.pr/
 DTSTART;TZID=AST:20251217T143000
 DTEND;TZID=AST:20251217T173000
 END:VEVENT
@@ -489,7 +505,7 @@ SUMMARY:Celebración del 30 Aniversario del Capítulo México
 DESCRIPTION:La celebración del trigésimo aniversario del Capítulo México de Internet
   Society reunirá a sus pioneros para recordar el origen del primer backb
  one de internet mexicano y reconocer su trayectoria y aportes.
-URL:http://isoc.mx
+URL:http://isoc.mx/
 DTSTART;TZID=CST:20260520T110000
 DTEND;TZID=CST:20260520T140000
 END:VEVENT
@@ -501,7 +517,7 @@ DESCRIPTION:Del 18 al 23 de mayo de 2026\, coordinamos una serie de eventos conm
  ativos del Día de Internet en diversas sedes de la ciudad\, incluyendo u
  niversidades y centros de eventos\, abordando temáticas clave como Segur
  idad\, Gobernanza y Conectividad.
-URL:https://diadeinternet.sv
+URL:https://diadeinternet.sv/
 DTSTART;TZID=CST:20260518T080000
 DTEND;TZID=CST:20260523T170000
 END:VEVENT
@@ -656,9 +672,9 @@ DTSTART;TZID=CST:20260601T000000
 DTEND;TZID=CST:20260630T000000
 END:VEVENT
 BEGIN:VEVENT
-UID:0368aca4-6aee-53f4-9c19-ec500233734b
+UID:06e3c527-3135-5f2a-b715-174d1100998d
 DTSTAMP:20240101T000000Z
-SUMMARY:Conectividad Centrada en la Comunidad - - Internet segura
+SUMMARY:Conectividad Centrada en la Comunidad - Internet segura
 DESCRIPTION:Este evento online enseña cómo mantener tu comunidad conectada de forma 
  segura. Descubre herramientas prácticas para navegar con confianza y pro
  teger tu información\, con foco en los desafíos del despliegue de intern
@@ -674,7 +690,7 @@ SUMMARY:Why Encryption Matters To You
 DESCRIPTION:This webinar will examine the importance of strong encryption tools for 
  end users and will review potential encryption threats across select cou
  ntries of the Caribbean.
-URL:https://isoc.vc/ and https://isoc.tt/
+URL:https://isoc.vc/%20and%20https://isoc.tt/
 DTSTART;TZID=AST:20261014T180000
 DTEND;TZID=AST:20261014T193000
 END:VEVENT
@@ -711,7 +727,7 @@ DESCRIPTION:"Si el cifrado es fuerte\, Internet es fuerte". El objetivo de esta 
  entación es empoderar a la audiencia para que comprenda que el cifrado e
  s la herramienta técnica que garantiza una sociedad digital democrática 
  y segura.
-URL:https://www.isoc.cl
+URL:https://www.isoc.cl/
 DTSTART;TZID=CLST:20261014T110000
 DTEND;TZID=CLST:20261014T130000
 END:VEVENT
@@ -720,7 +736,7 @@ UID:a88589ff-5d62-53ac-b51c-0eb8212014d8
 DTSTAMP:20240101T000000Z
 SUMMARY:CLNOG2026
 DESCRIPTION:Reunión de operadores de red de Chile.
-URL:https://clnog.cl
+URL:https://clnog.cl/
 DTSTART;TZID=CLST:20260612T140000
 DTEND;TZID=CLST:20260612T190000
 END:VEVENT
@@ -744,7 +760,7 @@ SUMMARY:Taller Online: Blindaje Digital – De las llaves perdidas a la segurida
 DESCRIPTION:¿Cansado de contraseñas y preocupado por tu privacidad? En este taller g
  ratuito aprenderemos a proteger tu vida digital de forma sencilla\, sin 
  importar tu edad.
-URL:https://isoc.bo
+URL:https://isoc.bo/
 DTSTART;TZID=BOT:20261021T194500
 DTEND;TZID=BOT:20261021T211500
 END:VEVENT
@@ -851,5 +867,38 @@ DESCRIPTION:The Community Network Infrastructure SIG\, organizes Workshops\, Tal
 URL:https://wiki.freifunk.net/Wireless_Community_Weekend_2026:Topics#Saturday_2026_May_16
 DTSTART;TZID=CET:20260516T140000
 DTEND;TZID=CET:20260516T230000
+END:VEVENT
+BEGIN:VEVENT
+UID:600e974a-3d16-533e-bbeb-937eed4418e5
+DTSTAMP:20240101T000000Z
+SUMMARY:Internet Day San Francisco 2026
+DESCRIPTION:Regional event in support of the Internet
+URL:https://internetdaysf.org/
+DTSTART;TZID=PDT:20260529T130000
+DTEND;TZID=PDT:20260529T150000
+END:VEVENT
+BEGIN:VEVENT
+UID:32c33c20-f2dd-5ac6-a2cd-780a12fe3b55
+DTSTAMP:20240101T000000Z
+SUMMARY:Chronically Online: A Workshop on Digital Fatigue & Burnout
+DESCRIPTION:The ISOC Mumbai Chapter and YourSpace are hosting an online workshop on 
+ digital fatigue\, burnout\, and the emotional toll of always-online life
+  — and how to engage with technology more sustainably.
+URL:https://docs.google.com/forms/d/e/1FAIpQLSfubkWmI6IXe-AGEbP9qawVbjbzrXlBqiyWEZMbXOZ6Yanc3g/viewform
+DTSTART;TZID=IST:20260530T190000
+DTEND;TZID=IST:20260530T203000
+END:VEVENT
+BEGIN:VEVENT
+UID:88df1664-d87b-5e30-a26e-e6d386845138
+DTSTAMP:20240101T000000Z
+SUMMARY:The AI Innovation for Remote Regions – Flagship Hybrid Workshop
+DESCRIPTION:The AI Innovation for Remote Regions Hybrid Workshop brings together 80 
+ participants in Kenya to explore practical AI solutions for education\, 
+ agriculture\, and healthcare in underserved communities — with a focus o
+ n low-bandwidth tools\, youth and women's empowerment\, and cross-sector
+  collaboration.
+URL:https://Please%20for%20information%20registration%20send%20your%20name%20and%20email%20kermaktradingcompanylimitedker@gmail.com/
+DTSTART;TZID=EST:20260531T090000
+DTEND;TZID=EST:20260531T180000
 END:VEVENT
 END:VCALENDAR
