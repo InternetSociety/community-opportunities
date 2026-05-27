@@ -37,12 +37,30 @@ function sanitizeText(text) {
         .replace(/'/g, '&#39;');
 }
 
+function normalizeWebUrl(rawValue) {
+    if (rawValue === null || rawValue === undefined) return null;
+    const value = String(rawValue).trim();
+    if (!value) return null;
+    const hasScheme = /^https?:\/\//i.test(value);
+    const candidate = hasScheme ? value : `https://${value}`;
+    try {
+        const parsed = new URL(candidate);
+        const protocol = parsed.protocol.toLowerCase();
+        if ((protocol !== 'http:' && protocol !== 'https:') || !parsed.hostname || /\s/.test(parsed.hostname)) {
+            return null;
+        }
+        return parsed.toString();
+    } catch {
+        return null;
+    }
+}
+
 // Process opportunities data
 function processOpportunities(opportunities) {
     return opportunities.map(opp => ({
         title: opp['Outreach Activity [Title]'] || 'Untitled Opportunity',
         description: opp['Opportunity [Description]'] || '',
-        link: opp.Link || SITE_URL,
+        link: normalizeWebUrl(opp.Link) || SITE_URL,
         date: opp.Date,
         type: opp.Type || '',
         region: opp.Region || '',
@@ -56,7 +74,7 @@ function processEvents(events) {
     return events.map(event => ({
         title: event.title || 'Untitled Event',
         description: event.description || '',
-        link: event.registrationUrl || SITE_URL,
+        link: normalizeWebUrl(event.registrationUrl) || SITE_URL,
         date: event.startDate,
         type: event.type || '',
         region: event.region || '',

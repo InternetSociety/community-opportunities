@@ -138,6 +138,24 @@ function isValidFutureDate(dateString) {
     }
 }
 
+function normalizeWebUrl(rawValue) {
+    if (rawValue === null || rawValue === undefined) return null;
+    const value = String(rawValue).trim();
+    if (!value) return null;
+    const hasScheme = /^https?:\/\//i.test(value);
+    const candidate = hasScheme ? value : `https://${value}`;
+    try {
+        const parsed = new URL(candidate);
+        const protocol = parsed.protocol.toLowerCase();
+        if ((protocol !== 'http:' && protocol !== 'https:') || !parsed.hostname || /\s/.test(parsed.hostname)) {
+            return null;
+        }
+        return parsed.toString();
+    } catch {
+        return null;
+    }
+}
+
 // Generate iCal for events only
 function generateEventsICal(events) {
     if (!events || events.length === 0) {
@@ -275,7 +293,7 @@ function processOpportunities(opportunities) {
         description: opp['Opportunity [Description]'] || '',
         startDate: opp.Date,
         endDate: opp['End Date'],
-        link: opp.Link || '',
+        link: normalizeWebUrl(opp.Link) || '',
         type: opp.Type || '',
         region: opp.Region || '',
         isEvent: false
@@ -292,7 +310,7 @@ function processEvents(events) {
         startTime: event.startTime,
         endTime: event.endTime,
         timeZone: event.timeZone || 'UTC',
-        link: event.registrationUrl || '',
+        link: normalizeWebUrl(event.registrationUrl) || '',
         type: event.type || '',
         region: event.region || '',
         isEvent: true

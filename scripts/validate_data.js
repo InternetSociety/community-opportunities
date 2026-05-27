@@ -12,6 +12,7 @@ const OPPORTUNITIES_FILE = path.join(__dirname, '../data/opportunities.json');
 const EVENTS_FILE = path.join(__dirname, '../community-events/data/events.json');
 
 let hasErrors = false;
+let warningCount = 0;
 
 /**
  * @typedef {Object} ValidationResult
@@ -36,12 +37,52 @@ function isValidDate(dateStr) {
 }
 
 /**
+ * Normalize and validate a web URL.
+ * - Accepts URLs with http/https.
+ * - Auto-adds https:// when missing and host/path look valid.
+ * - Returns null when URL cannot be normalized to a safe web URL.
+ * @param {string} rawValue
+ * @returns {{ normalizedUrl: string|null, status: 'empty'|'valid'|'autofixed'|'invalid', reason?: string }}
+ */
+function normalizeWebUrl(rawValue) {
+    if (rawValue === null || rawValue === undefined) {
+        return { normalizedUrl: null, status: 'empty' };
+    }
+
+    const value = String(rawValue).trim();
+    if (!value) {
+        return { normalizedUrl: null, status: 'empty' };
+    }
+
+    const hasScheme = /^https?:\/\//i.test(value);
+    const candidate = hasScheme ? value : `https://${value}`;
+
+    try {
+        const parsed = new URL(candidate);
+        const protocol = parsed.protocol.toLowerCase();
+        if (protocol !== 'http:' && protocol !== 'https:') {
+            return { normalizedUrl: null, status: 'invalid', reason: 'unsupported protocol' };
+        }
+        if (!parsed.hostname || /\s/.test(parsed.hostname)) {
+            return { normalizedUrl: null, status: 'invalid', reason: 'invalid hostname' };
+        }
+        return {
+            normalizedUrl: parsed.toString(),
+            status: hasScheme ? 'valid' : 'autofixed'
+        };
+    } catch (err) {
+        return { normalizedUrl: null, status: 'invalid', reason: 'URL parse failed' };
+    }
+}
+
+/**
  * Validate opportunities.json
  * @param {Array} data 
  * @returns {ValidationResult}
  */
 function validateOpportunities(data) {
     const errors = [];
+    const warnings = [];
 
     if (!Array.isArray(data)) {
         return { valid: false, errors: ['Data must be an array'] };
@@ -84,14 +125,18 @@ function validateOpportunities(data) {
 
         // Link should be a valid URL if present
         const link = item["Link"] || item.link;
-        if (link && typeof link === 'string' && link.trim() && !link.startsWith('http')) {
-            errors.push(`Item ${index} ("${title}"): Link must start with http:// or https://`);
+        const normalized = normalizeWebUrl(link);
+        if (normalized.status === 'autofixed') {
+            warnings.push(`Item ${index} ("${title}"): Link missing protocol, auto-normalized to "${normalized.normalizedUrl}"`);
+        } else if (normalized.status === 'invalid') {
+            warnings.push(`Item ${index} ("${title}"): Link is invalid and will be ignored ("${String(link).trim()}")`);
         }
     });
 
     return {
         valid: errors.length === 0,
-        errors
+        errors,
+        warnings
     };
 }
 
@@ -102,6 +147,7 @@ function validateOpportunities(data) {
  */
 function validateEvents(data) {
     const errors = [];
+    const warnings = [];
 
     if (!Array.isArray(data)) {
         return { valid: false, errors: ['Data must be an array'] };
@@ -124,14 +170,18 @@ function validateEvents(data) {
         }
 
         // Registration URL should be valid if present
-        if (item.registrationUrl && typeof item.registrationUrl === 'string' && item.registrationUrl.trim() && !item.registrationUrl.startsWith('http')) {
-            errors.push(`Item ${index} ("${item.title}"): registrationUrl must start with http:// or https://`);
+        const normalized = normalizeWebUrl(item.registrationUrl);
+        if (normalized.status === 'autofixed') {
+            warnings.push(`Item ${index} ("${item.title}"): registrationUrl missing protocol, auto-normalized to "${normalized.normalizedUrl}"`);
+        } else if (normalized.status === 'invalid') {
+            warnings.push(`Item ${index} ("${item.title}"): registrationUrl is invalid and will be ignored ("${String(item.registrationUrl).trim()}")`);
         }
     });
 
     return {
         valid: errors.length === 0,
-        errors
+        errors,
+        warnings
     };
 }
 
@@ -150,6 +200,11 @@ if (fs.existsSync(OPPORTUNITIES_FILE)) {
             console.error(`❌ opportunities.json has ${result.errors.length} error(s):`);
             result.errors.forEach(err => console.error(`   - ${err}`));
             hasErrors = true;
+        }
+        if (result.warnings && result.warnings.length > 0) {
+            console.warn(`⚠️  opportunities.json has ${result.warnings.length} warning(s):`);
+            result.warnings.forEach(warn => console.warn(`   - ${warn}`));
+            warningCount += result.warnings.length;
         }
     } catch (err) {
         console.error(`❌ Failed to parse opportunities.json: ${err.message}`);
@@ -172,6 +227,11 @@ if (fs.existsSync(EVENTS_FILE)) {
             result.errors.forEach(err => console.error(`   - ${err}`));
             hasErrors = true;
         }
+        if (result.warnings && result.warnings.length > 0) {
+            console.warn(`⚠️  events.json has ${result.warnings.length} warning(s):`);
+            result.warnings.forEach(warn => console.warn(`   - ${warn}`));
+            warningCount += result.warnings.length;
+        }
     } catch (err) {
         console.error(`❌ Failed to parse events.json: ${err.message}`);
         hasErrors = true;
@@ -180,5 +240,6 @@ if (fs.existsSync(EVENTS_FILE)) {
     console.warn(`⚠️  events.json not found`);
 }
 
+console.log(`\nSummary: ${hasErrors ? 'errors present' : 'no blocking errors'}, ${warningCount} warning(s)`);
 console.log('\n' + (hasErrors ? '❌ Validation failed' : '✅ All validations passed'));
 process.exit(hasErrors ? 1 : 0);
