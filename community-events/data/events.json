@@ -998,5 +998,25 @@
     "timeZone": "EST",
     "title": "The AI Innovation for Remote Regions – Flagship Hybrid Workshop",
     "type": "Workshop"
+  },
+  {
+    "approved": true,
+    "category": "Connectivity",
+    "creationDate": "2026-06-09T15:10:08Z",
+    "description": "Agenda de la sesión: • Presentación del modelo CCC (Conectividad Centrada en la Comunidad) • Presentación del plan de trabajo del Grupo de Trabajo de Redes Comunitarias de LATAM y Caribe • Oportunidades de capacitación y fortalecimiento de capacidades",
+    "endDate": null,
+    "endTime": "17:00",
+    "format": "Online",
+    "language": "Español e Inglés",
+    "modificationDate": "2026-06-09T15:29:59Z",
+    "modifiedBy": "renteria@isoc.org",
+    "organizer": "ISOC Grupo de Trabajo de Redes Comunitarias LAC",
+    "region": "Latin America & Caribbean",
+    "registrationUrl": "https://isoc.zoom.us/meeting/register/rvTJusJZQq2ajorgArENrQ",
+    "startDate": "2026-06-10",
+    "startTime": "18:00",
+    "timeZone": "UTC",
+    "title": "Modelo de Conectividad Centrada en la Comunidad (CCC) y las iniciativas y oportunidades que el grupo de trabajo impulsará durante este año",
+    "type": "Webinar"
   }
 ]
