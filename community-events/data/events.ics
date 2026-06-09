@@ -901,4 +901,17 @@ URL:https://Please%20for%20information%20registration%20send%20your%20name%20and
 DTSTART;TZID=EST:20260531T090000
 DTEND;TZID=EST:20260531T180000
 END:VEVENT
+BEGIN:VEVENT
+UID:5c78ba10-c3f2-5850-8aa3-879d693a02d3
+DTSTAMP:20240101T000000Z
+SUMMARY:Modelo de Conectividad Centrada en la Comunidad (CCC) y las iniciativas 
+ y oportunidades que el grupo de trabajo impulsará durante este año
+DESCRIPTION:Agenda de la sesión: • Presentación del modelo CCC (Conectividad Centrad
+ a en la Comunidad) • Presentación del plan de trabajo del Grupo de Traba
+ jo de Redes Comunitarias de LATAM y Caribe • Oportunidades de capacitaci
+ ón y fortalecimiento de capacidades
+URL:https://isoc.zoom.us/meeting/register/rvTJusJZQq2ajorgArENrQ
+DTSTART;TZID=UTC:20260610T180000
+DTEND;TZID=UTC:20260610T170000
+END:VEVENT
 END:VCALENDAR
