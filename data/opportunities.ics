@@ -95,17 +95,6 @@ DTSTART;VALUE=DATE:20260719
 DTEND;VALUE=DATE:20260719
 END:VEVENT
 BEGIN:VEVENT
-UID:c1be9853-dac3-5695-9ef0-ad10e81a8469
-SUMMARY:MENA Regional Call
-DESCRIPTION:Part of our community engagement journey\, the MENA Regional Call brings
-  together chapters and members across the region to translate global pri
- orities into local action.
-URL:https://isoc.zoom.us/meeting/register/pxuYHFT0Sfiyq9VoI9gn_g
-DTSTAMP:20240101T000000Z
-DTSTART;VALUE=DATE:20260609
-DTEND;VALUE=DATE:20260609
-END:VEVENT
-BEGIN:VEVENT
 UID:00a2ef81-cb8a-5ef6-b30f-e5646b7e6f61
 SUMMARY:Africa Regional Call
 DESCRIPTION:The Africa regional calls bring together African Chapter leaders and mem
