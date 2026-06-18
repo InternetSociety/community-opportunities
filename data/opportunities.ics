@@ -106,6 +106,20 @@ DTSTART;VALUE=DATE:20260623
 DTEND;VALUE=DATE:20260623
 END:VEVENT
 BEGIN:VEVENT
+UID:4d0eed9c-44f1-5ebe-a554-1d6a0c3b07bf
+SUMMARY:Chapters Capacity Building Program 2026
+DESCRIPTION:The Chapters Capacity Building Program 2026 is a training series for Int
+ ernet Society chapter leaders\, delivered by Nonprofit Builder\, offered
+  at no cost for Internet Society chapters\, online across four tracks — 
+ Impact Measurement\, Conflict Resolution\, Leadership & Governance\, and
+  Financial Management — as weekly 2-hour workshops from June to October 
+ 2026\, in English\, French\, and Spanish.
+URL:https://docs.google.com/forms/d/e/1FAIpQLSedxE-AHa8mjh-2ggVzzztxr-buE1caKgH05dQvO9POY4xM4w/viewform
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20260702
+DTEND;VALUE=DATE:20260702
+END:VEVENT
+BEGIN:VEVENT
 UID:dd0ea06b-e984-5d03-a937-c5e75e09a75b
 SUMMARY:Chapter Leadership General Onboarding (13:00 UTC)
 DESCRIPTION:The Chapter Leadership General Onboarding is a 60-minute global session 
