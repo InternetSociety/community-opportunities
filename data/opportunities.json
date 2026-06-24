@@ -1104,5 +1104,47 @@
     "Type": "Events & Working Sessions",
     "Who Can Get Involved": "Chapter Leaders",
     "Why It Matters": "Los capítulos locales son la forma en que la misión de Internet Society cobra vida en comunidades de todo el mundo. Cuando los líderes están bien preparados desde el principio, son más seguros, más efectivos y están mejor posicionados para generar un impacto real sobre el terreno. Esta sesión sienta esa base."
+  },
+  {
+    "Action [CTA]": "Apply Now",
+    "Archived": null,
+    "Creation date": "2026-06-24T08:11:58Z",
+    "Date": "2026-08-04",
+    "Internet Issue": "Community, Security",
+    "Link": "https://www.isocfoundation.org/grant-programme/common-good-cyber-fund/",
+    "Opportunity [Description]": "Launched in 2025, the CGCF is a pooled fund — backed by a mix of governments and philanthropic donors — designed to sustain nonprofits strengthening the public-interest cybersecurity ecosystem.",
+    "Outreach Activity [Title]": "Common Good Cyber Fund Grant Program",
+    "Region": "Global",
+    "Type": "Funding & Support",
+    "Who Can Get Involved": "Other",
+    "Why It Matters": "Digital and cyber threats are rising in frequency and sophistication, yet the nonprofits defending journalists, NGOs, and human rights defenders remain severely underfunded and overstretched. CGCF addresses this by maintaining critical cybersecurity infrastructure, scaling protection against state-directed cyber activity and digital transnational repression, and advancing a safer Internet for civil society and vulnerable communities."
+  },
+  {
+    "Action [CTA]": "Apply Now",
+    "Archived": null,
+    "Creation date": "2026-06-24T08:11:58Z",
+    "Date": "2026-07-16",
+    "Internet Issue": "Privacy, Security",
+    "Link": "https://www.isocfoundation.org/grant-programme/global-encryption-day-events/",
+    "Opportunity [Description]": "An Internet Society Foundation funding program that supports community-led events celebrating and defending strong end-to-end encryption, held annually around Global Encryption Day on 21 October.",
+    "Outreach Activity [Title]": "Global Encryption Day Events Funding",
+    "Region": "Global",
+    "Type": "Funding & Support",
+    "Who Can Get Involved": "Other",
+    "Why It Matters": "Encryption is a core building block of a safe and trustworthy Internet, yet it faces growing policy threats worldwide. By bringing together civil society, technologists, businesses, and Internet users, this fund helps local and regional organizers convene their communities, strengthen public understanding of encryption's role in privacy and security, and amplify a clear message to governments: protect encryption, don't weaken it."
+  },
+  {
+    "Action [CTA]": "Send a letter to your MP and ask them to reject Bill C-22",
+    "Archived": null,
+    "Creation date": "2026-06-24T08:29:16Z",
+    "Date": "2026-07-01",
+    "Internet Issue": "Policy, Privacy, Security",
+    "Link": "https://www.internetsociety.org/our-work/internet-policy/keep-canada-protected/",
+    "Opportunity [Description]": "The government claims Bill C-22’s lawful access powers will help stop crime, but ‘just trust us’ isn’t enough to keep Canada safe online. Security doesn’t fail because people are malicious; it fails because people are human.",
+    "Outreach Activity [Title]": "Keep Canada Protected",
+    "Region": "North America",
+    "Type": "Consultations & Surveys",
+    "Who Can Get Involved": "Individual Members, Chapter Members, Chapter Leaders, ChAC, ChaC Steering Committee, Organization Members, OMAC Chairs, Alumni, Fellows, Internet Pioneers, Other",
+    "Why It Matters": "Creating backdoors to private communications and information gives a key to anyone who wants access, putting people, the economy, and national security at risk on and offline. A single slip-up can compromise everything."
   }
 ]
