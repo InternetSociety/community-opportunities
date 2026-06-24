@@ -95,17 +95,6 @@ DTSTART;VALUE=DATE:20260719
 DTEND;VALUE=DATE:20260719
 END:VEVENT
 BEGIN:VEVENT
-UID:b6515444-6816-5cd7-99ed-a221a993770c
-SUMMARY:Europe Regional Call
-DESCRIPTION:We invite you and all your members to our first regional call of the yea
- r\, which will be open to all Internet Society members in the European r
- egion.
-URL:https://isoc.zoom.us/meeting/register/DxvZRBBXQLKGyht7mvsS0A#/registration
-DTSTAMP:20240101T000000Z
-DTSTART;VALUE=DATE:20260623
-DTEND;VALUE=DATE:20260623
-END:VEVENT
-BEGIN:VEVENT
 UID:4d0eed9c-44f1-5ebe-a554-1d6a0c3b07bf
 SUMMARY:Chapters Capacity Building Program 2026
 DESCRIPTION:The Chapters Capacity Building Program 2026 is a training series for Int
