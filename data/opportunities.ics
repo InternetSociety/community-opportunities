@@ -132,4 +132,38 @@ DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20260715
 DTEND;VALUE=DATE:20260715
 END:VEVENT
+BEGIN:VEVENT
+UID:abca910d-43d3-5581-809a-9ddbdaf0228a
+SUMMARY:Common Good Cyber Fund Grant Program
+DESCRIPTION:Launched in 2025\, the CGCF is a pooled fund — backed by a mix of govern
+ ments and philanthropic donors — designed to sustain nonprofits strength
+ ening the public-interest cybersecurity ecosystem.
+URL:https://www.isocfoundation.org/grant-programme/common-good-cyber-fund/
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20260804
+DTEND;VALUE=DATE:20260804
+END:VEVENT
+BEGIN:VEVENT
+UID:634f987d-2e3f-5e57-99d9-ecebef9a72ce
+SUMMARY:Global Encryption Day Events Funding
+DESCRIPTION:An Internet Society Foundation funding program that supports community-l
+ ed events celebrating and defending strong end-to-end encryption\, held 
+ annually around Global Encryption Day on 21 October.
+URL:https://www.isocfoundation.org/grant-programme/global-encryption-day-events/
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20260716
+DTEND;VALUE=DATE:20260716
+END:VEVENT
+BEGIN:VEVENT
+UID:a8db117b-4235-5a7c-8165-2706ea62eb8f
+SUMMARY:Keep Canada Protected
+DESCRIPTION:The government claims Bill C-22’s lawful access powers will help stop cr
+ ime\, but ‘just trust us’ isn’t enough to keep Canada safe online. Secur
+ ity doesn’t fail because people are malicious\; it fails because people 
+ are human.
+URL:https://www.internetsociety.org/our-work/internet-policy/keep-canada-protected/
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20260701
+DTEND;VALUE=DATE:20260701
+END:VEVENT
 END:VCALENDAR

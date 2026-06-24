@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:40e29d483d95ed50f02ce79100eafba0 -->
+<!-- DATA_FINGERPRINT:efbb8fd184d334add345e8022e0ff4a3 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Opportunities</title>
@@ -9,6 +9,36 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/data/opportunities.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>Keep Canada Protected</title>
+                    <link>https://www.internetsociety.org/our-work/internet-policy/keep-canada-protected/</link>
+                    <description>The government claims Bill C-22’s lawful access powers will help stop crime, but ‘just trust us’ isn’t enough to keep Canada safe online. Security doesn’t fail because people are malicious; it fails because people are human.</description>
+                    <pubDate>Wed, 24 Jun 2026 08:29:16 GMT</pubDate>
+                    <guid isPermaLink="false">21cfd6aed146a8882d32e4c2b8a6a855</guid>
+                    <category>Opportunity</category>
+                    <category>Consultations &amp; Surveys</category>
+                    <category>North America</category>
+                </item>
+<item>
+                    <title>Common Good Cyber Fund Grant Program</title>
+                    <link>https://www.isocfoundation.org/grant-programme/common-good-cyber-fund/</link>
+                    <description>Launched in 2025, the CGCF is a pooled fund — backed by a mix of governments and philanthropic donors — designed to sustain nonprofits strengthening the public-interest cybersecurity ecosystem.</description>
+                    <pubDate>Wed, 24 Jun 2026 08:11:58 GMT</pubDate>
+                    <guid isPermaLink="false">0e8a9ff3a4e086865b0e6caf44623d72</guid>
+                    <category>Opportunity</category>
+                    <category>Funding &amp; Support</category>
+                    <category>Global</category>
+                </item>
+<item>
+                    <title>Global Encryption Day Events Funding</title>
+                    <link>https://www.isocfoundation.org/grant-programme/global-encryption-day-events/</link>
+                    <description>An Internet Society Foundation funding program that supports community-led events celebrating and defending strong end-to-end encryption, held annually around Global Encryption Day on 21 October.</description>
+                    <pubDate>Wed, 24 Jun 2026 08:11:58 GMT</pubDate>
+                    <guid isPermaLink="false">15eeb12676578b3f04f15fc1aed4cd2a</guid>
+                    <category>Opportunity</category>
+                    <category>Funding &amp; Support</category>
+                    <category>Global</category>
+                </item>
+<item>
                     <title>Incorporación General para Líderes de Capítulo (18:00 UTC)</title>
                     <link>https://isoc.zoom.us/meeting/register/l-bxOaYeREyH_NbM7HmcZQ</link>
                     <description>La Incorporación General para Líderes de Capítulo es una sesión global de 60 minutos que proporciona a los nuevos líderes de capítulo todo lo que necesitan para comenzar: desde comprender la misión de Internet Society hasta conocer sus responsabilidades y los recursos disponibles.</description>
