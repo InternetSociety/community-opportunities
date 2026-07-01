@@ -1018,5 +1018,25 @@
     "timeZone": "UTC",
     "title": "Modelo de Conectividad Centrada en la Comunidad (CCC) y las iniciativas y oportunidades que el grupo de trabajo impulsará durante este año",
     "type": "Webinar"
+  },
+  {
+    "approved": true,
+    "category": "Connectivity",
+    "creationDate": "2026-07-01T10:53:11Z",
+    "description": "Durante esta sesión exploraremos los marcos de licenciamiento, políticas habilitadoras y oportunidades de financiamiento que pueden apoyar el desarrollo, crecimiento y sostenibilidad de las redes comunitarias.",
+    "endDate": null,
+    "endTime": "18:00",
+    "format": "Online",
+    "language": "Español e Inglés",
+    "modificationDate": "2026-07-01T10:53:11Z",
+    "modifiedBy": "renteria@isoc.org",
+    "organizer": "ISOC Grupos de Trabajo de Redes Comunitarias de América Latina y el Caribe",
+    "region": "Latin America & Caribbean",
+    "registrationUrl": "https://isoc.zoom.us/meeting/register/1bj3iC2xQXKv8W-sKXRwjg",
+    "startDate": "2026-07-15",
+    "startTime": "17:00",
+    "timeZone": "UTC",
+    "title": "Sesión sobre Licenciamiento y Fondos para Redes Comunitarias/ Licensing and Funding for Community Networks Session",
+    "type": "Webinar"
   }
 ]
