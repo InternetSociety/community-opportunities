@@ -914,4 +914,16 @@ URL:https://isoc.zoom.us/meeting/register/rvTJusJZQq2ajorgArENrQ
 DTSTART;TZID=UTC:20260610T180000
 DTEND;TZID=UTC:20260610T170000
 END:VEVENT
+BEGIN:VEVENT
+UID:d95e0067-40d5-58c8-ba71-af30fd5089d8
+DTSTAMP:20240101T000000Z
+SUMMARY:Sesión sobre Licenciamiento y Fondos para Redes Comunitarias/ Licensing 
+ and Funding for Community Networks Session
+DESCRIPTION:Durante esta sesión exploraremos los marcos de licenciamiento\, política
+ s habilitadoras y oportunidades de financiamiento que pueden apoyar el d
+ esarrollo\, crecimiento y sostenibilidad de las redes comunitarias.
+URL:https://isoc.zoom.us/meeting/register/1bj3iC2xQXKv8W-sKXRwjg
+DTSTART;TZID=UTC:20260715T170000
+DTEND;TZID=UTC:20260715T180000
+END:VEVENT
 END:VCALENDAR

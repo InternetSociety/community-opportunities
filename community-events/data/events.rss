@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:ab8bd1e02130f06e0318744874a48798 -->
+<!-- DATA_FINGERPRINT:e3be8ca3f505dcb85d66142f348de5a7 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Events</title>
@@ -9,6 +9,16 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/community-events/data/events.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>Sesión sobre Licenciamiento y Fondos para Redes Comunitarias/ Licensing and Funding for Community Networks Session</title>
+                    <link>https://isoc.zoom.us/meeting/register/1bj3iC2xQXKv8W-sKXRwjg</link>
+                    <description>Durante esta sesión exploraremos los marcos de licenciamiento, políticas habilitadoras y oportunidades de financiamiento que pueden apoyar el desarrollo, crecimiento y sostenibilidad de las redes comunitarias.</description>
+                    <pubDate>Wed, 01 Jul 2026 10:53:11 GMT</pubDate>
+                    <guid isPermaLink="false">c1b3611bdc3bd278a5b1f17864c6d8bd</guid>
+                    <category>Event</category>
+                    <category>Webinar</category>
+                    <category>Latin America &amp; Caribbean</category>
+                </item>
+<item>
                     <title>Modelo de Conectividad Centrada en la Comunidad (CCC) y las iniciativas y oportunidades que el grupo de trabajo impulsará durante este año</title>
                     <link>https://isoc.zoom.us/meeting/register/rvTJusJZQq2ajorgArENrQ</link>
                     <description>Agenda de la sesión: • Presentación del modelo CCC (Conectividad Centrada en la Comunidad) • Presentación del plan de trabajo del Grupo de Trabajo de Redes Comunitarias de LATAM y Caribe • Oportunidades de capacitación y fortalecimiento de capacidades</description>
