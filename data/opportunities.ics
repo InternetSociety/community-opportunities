@@ -95,7 +95,7 @@ DTSTART;VALUE=DATE:20260719
 DTEND;VALUE=DATE:20260719
 END:VEVENT
 BEGIN:VEVENT
-UID:4d0eed9c-44f1-5ebe-a554-1d6a0c3b07bf
+UID:236dbd80-7a18-5940-ba4e-72c94d79afa2
 SUMMARY:Chapters Capacity Building Program 2026
 DESCRIPTION:The Chapters Capacity Building Program 2026 is a training series for Int
  ernet Society chapter leaders\, delivered by Nonprofit Builder\, offered
@@ -105,8 +105,8 @@ DESCRIPTION:The Chapters Capacity Building Program 2026 is a training series for
  2026\, in English\, French\, and Spanish.
 URL:https://docs.google.com/forms/d/e/1FAIpQLSedxE-AHa8mjh-2ggVzzztxr-buE1caKgH05dQvO9POY4xM4w/viewform
 DTSTAMP:20240101T000000Z
-DTSTART;VALUE=DATE:20260702
-DTEND;VALUE=DATE:20260702
+DTSTART;VALUE=DATE:20260709
+DTEND;VALUE=DATE:20260709
 END:VEVENT
 BEGIN:VEVENT
 UID:dd0ea06b-e984-5d03-a937-c5e75e09a75b
