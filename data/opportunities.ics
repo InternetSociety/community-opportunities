@@ -154,16 +154,4 @@ DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20260716
 DTEND;VALUE=DATE:20260716
 END:VEVENT
-BEGIN:VEVENT
-UID:a8db117b-4235-5a7c-8165-2706ea62eb8f
-SUMMARY:Keep Canada Protected
-DESCRIPTION:The government claims Bill C-22’s lawful access powers will help stop cr
- ime\, but ‘just trust us’ isn’t enough to keep Canada safe online. Secur
- ity doesn’t fail because people are malicious\; it fails because people 
- are human.
-URL:https://www.internetsociety.org/our-work/internet-policy/keep-canada-protected/
-DTSTAMP:20240101T000000Z
-DTSTART;VALUE=DATE:20260701
-DTEND;VALUE=DATE:20260701
-END:VEVENT
 END:VCALENDAR
