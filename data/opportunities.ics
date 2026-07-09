@@ -154,4 +154,16 @@ DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20260716
 DTEND;VALUE=DATE:20260716
 END:VEVENT
+BEGIN:VEVENT
+UID:b506a2b1-32fb-50cf-b08e-67089bb0fba5
+SUMMARY:Community Consultation - VPN Restrictions
+DESCRIPTION:This draft policy brief explores the growing efforts by some governments
+  to ban\, restrict\, or control the use of Virtual Private Networks (VPN
+ s)\, and provides principles and recommendations for addressing related 
+ policy concerns.
+URL:https://www.internetsociety.org/community/news-and-opportunities/community-consultation-open-on-vpn-restrictions-policy-brief/
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20260729
+DTEND;VALUE=DATE:20260729
+END:VEVENT
 END:VCALENDAR
