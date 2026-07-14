@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:0161d8602d32913f81e06605ed61441e -->
+<!-- DATA_FINGERPRINT:7142c73925cf7aa6aae2aeece33f0303 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Opportunities</title>
@@ -9,6 +9,26 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/data/opportunities.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>Open Door Call &quot;A Safer Internet Does Not Weaken the Safety Tools People Rely On – VPN Restrictions&quot; (07:00 UTC)</title>
+                    <link>https://isoc.zoom.us/meeting/register/edpkyDZHSmima191fGhqXA#/registration</link>
+                    <description>Join an Open-Door Call to discuss the draft policy brief “A Safer Internet Does Not Weaken the Safety Tools People Rely On – VPN Restrictions.” These interactive sessions provide an opportunity to share feedback, ask questions, and contribute expertise to help shape the final recommendations.</description>
+                    <pubDate>Tue, 14 Jul 2026 15:04:59 GMT</pubDate>
+                    <guid isPermaLink="false">0ff79004c1fd7484ad5f093903eb84fc</guid>
+                    <category>Opportunity</category>
+                    <category>Events &amp; Working Sessions</category>
+                    <category>Global</category>
+                </item>
+<item>
+                    <title>Open Door Call &quot;A Safer Internet Does Not Weaken the Safety Tools People Rely On – VPN Restrictions&quot; (12:00 UTC).</title>
+                    <link>https://isoc.zoom.us/meeting/register/way13apcQjKTNNo7nUlRRg#/registration</link>
+                    <description>Join an Open-Door Call to discuss the draft policy brief “A Safer Internet Does Not Weaken the Safety Tools People Rely On – VPN Restrictions.” These interactive sessions provide an opportunity to share feedback, ask questions, and contribute expertise to help shape the final recommendations.</description>
+                    <pubDate>Tue, 14 Jul 2026 14:49:49 GMT</pubDate>
+                    <guid isPermaLink="false">8036a58900cd9edc0c6b868495fa81eb</guid>
+                    <category>Opportunity</category>
+                    <category>Events &amp; Working Sessions</category>
+                    <category>Global</category>
+                </item>
+<item>
                     <title>APAC Regional Call</title>
                     <link>https://isoc.zoom.us/meeting/register/6NtGYzmRRuOqLhcQ5x0fAg#/registration</link>
                     <description>This edition of the APAC Regional Call will focus on Policy and Advocacy engagements, trends and priorities in the Asia Pacific region.</description>

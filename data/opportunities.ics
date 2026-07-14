@@ -176,4 +176,32 @@ DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20260814
 DTEND;VALUE=DATE:20260814
 END:VEVENT
+BEGIN:VEVENT
+UID:9de8889c-cfcf-5e25-a4e8-249d3f5a7c2f
+SUMMARY:Open Door Call "A Safer Internet Does Not Weaken the Safety Tools People
+  Rely On – VPN Restrictions" (12:00 UTC).
+DESCRIPTION:Join an Open-Door Call to discuss the draft policy brief “A Safer Intern
+ et Does Not Weaken the Safety Tools People Rely On – VPN Restrictions.” 
+ These interactive sessions provide an opportunity to share feedback\, as
+ k questions\, and contribute expertise to help shape the final recommend
+ ations.
+URL:https://isoc.zoom.us/meeting/register/way13apcQjKTNNo7nUlRRg#/registration
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20260715
+DTEND;VALUE=DATE:20260715
+END:VEVENT
+BEGIN:VEVENT
+UID:26756f70-e504-5872-bca1-9b24e8deb7ac
+SUMMARY:Open Door Call "A Safer Internet Does Not Weaken the Safety Tools People
+  Rely On – VPN Restrictions" (07:00 UTC)
+DESCRIPTION:Join an Open-Door Call to discuss the draft policy brief “A Safer Intern
+ et Does Not Weaken the Safety Tools People Rely On – VPN Restrictions.” 
+ These interactive sessions provide an opportunity to share feedback\, as
+ k questions\, and contribute expertise to help shape the final recommend
+ ations.
+URL:https://isoc.zoom.us/meeting/register/edpkyDZHSmima191fGhqXA#/registration
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20260721
+DTEND;VALUE=DATE:20260721
+END:VEVENT
 END:VCALENDAR
