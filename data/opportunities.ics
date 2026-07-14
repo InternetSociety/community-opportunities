@@ -166,4 +166,14 @@ DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20260729
 DTEND;VALUE=DATE:20260729
 END:VEVENT
+BEGIN:VEVENT
+UID:65fa4a15-01e6-58b2-b121-6b938f293812
+SUMMARY:APAC Regional Call
+DESCRIPTION:This edition of the APAC Regional Call will focus on Policy and Advocacy
+  engagements\, trends and priorities in the Asia Pacific region.
+URL:https://isoc.zoom.us/meeting/register/6NtGYzmRRuOqLhcQ5x0fAg#/registration
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20260814
+DTEND;VALUE=DATE:20260814
+END:VEVENT
 END:VCALENDAR

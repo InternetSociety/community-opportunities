@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:34e192d6c17ece7f776dfaf1451c2a02 -->
+<!-- DATA_FINGERPRINT:0161d8602d32913f81e06605ed61441e -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Opportunities</title>
@@ -9,6 +9,16 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/data/opportunities.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>APAC Regional Call</title>
+                    <link>https://isoc.zoom.us/meeting/register/6NtGYzmRRuOqLhcQ5x0fAg#/registration</link>
+                    <description>This edition of the APAC Regional Call will focus on Policy and Advocacy engagements, trends and priorities in the Asia Pacific region.</description>
+                    <pubDate>Tue, 14 Jul 2026 11:51:28 GMT</pubDate>
+                    <guid isPermaLink="false">ce5dda4773e445dc306ec28244c6a1f2</guid>
+                    <category>Opportunity</category>
+                    <category>Events &amp; Working Sessions</category>
+                    <category>Asia-Pacific</category>
+                </item>
+<item>
                     <title>Community Consultation - VPN Restrictions</title>
                     <link>https://www.internetsociety.org/community/news-and-opportunities/community-consultation-open-on-vpn-restrictions-policy-brief/</link>
                     <description>This draft policy brief explores the growing efforts by some governments to ban, restrict, or control the use of Virtual Private Networks (VPNs), and provides principles and recommendations for addressing related policy concerns.</description>
