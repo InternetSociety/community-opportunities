@@ -120,17 +120,6 @@ DTSTART;VALUE=DATE:20260804
 DTEND;VALUE=DATE:20260804
 END:VEVENT
 BEGIN:VEVENT
-UID:634f987d-2e3f-5e57-99d9-ecebef9a72ce
-SUMMARY:Global Encryption Day Events Funding
-DESCRIPTION:An Internet Society Foundation funding program that supports community-l
- ed events celebrating and defending strong end-to-end encryption\, held 
- annually around Global Encryption Day on 21 October.
-URL:https://www.isocfoundation.org/grant-programme/global-encryption-day-events/
-DTSTAMP:20240101T000000Z
-DTSTART;VALUE=DATE:20260716
-DTEND;VALUE=DATE:20260716
-END:VEVENT
-BEGIN:VEVENT
 UID:b506a2b1-32fb-50cf-b08e-67089bb0fba5
 SUMMARY:Community Consultation - VPN Restrictions
 DESCRIPTION:This draft policy brief explores the growing efforts by some governments
