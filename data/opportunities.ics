@@ -128,4 +128,28 @@ DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20260814
 DTEND;VALUE=DATE:20260814
 END:VEVENT
+BEGIN:VEVENT
+UID:a9d2b786-e530-539c-a37e-e32140c8de0d
+SUMMARY:Chapter Leadership General Onboarding (13:00 UTC)
+DESCRIPTION:The Chapter Leadership General Onboarding is a 60-minute global session 
+ giving new chapter leaders everything they need to get started — from un
+ derstanding the Internet Society's mission to knowing their responsibili
+ ties and the resources available to them.
+URL:https://isoc.zoom.us/meeting/register/1zaer8JkTqWKS5U6ucE9KQ
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20261014
+END:VEVENT
+BEGIN:VEVENT
+UID:ce867c27-e542-55e7-a10b-a023d008dcdb
+SUMMARY:Incorporación General para Líderes de Capítulo (18:00 UTC)
+DESCRIPTION:La Incorporación General para Líderes de Capítulo es una sesión global d
+ e 60 minutos que proporciona a los nuevos líderes de capítulo todo lo qu
+ e necesitan para comenzar: desde comprender la misión de Internet Societ
+ y hasta conocer sus responsabilidades y los recursos disponibles.
+URL:https://isoc.zoom.us/meeting/register/yZhCIExsT0GNmWLqztx8Lg
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20261014
+END:VEVENT
 END:VCALENDAR

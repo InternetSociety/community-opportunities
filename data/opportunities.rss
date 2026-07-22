@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:043e643ce83ece85cfa0f611d2b06bbc -->
+<!-- DATA_FINGERPRINT:9cb64c32bd87641240bf243eaed8cbc8 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Opportunities</title>
@@ -9,6 +9,26 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/data/opportunities.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>Incorporación General para Líderes de Capítulo (18:00 UTC)</title>
+                    <link>https://isoc.zoom.us/meeting/register/yZhCIExsT0GNmWLqztx8Lg</link>
+                    <description>La Incorporación General para Líderes de Capítulo es una sesión global de 60 minutos que proporciona a los nuevos líderes de capítulo todo lo que necesitan para comenzar: desde comprender la misión de Internet Society hasta conocer sus responsabilidades y los recursos disponibles.</description>
+                    <pubDate>Wed, 22 Jul 2026 13:18:57 GMT</pubDate>
+                    <guid isPermaLink="false">d9385dc9607e312be7436a16b7049422</guid>
+                    <category>Opportunity</category>
+                    <category>Funding &amp; Support</category>
+                    <category>Global</category>
+                </item>
+<item>
+                    <title>Chapter Leadership General Onboarding (13:00 UTC)</title>
+                    <link>https://isoc.zoom.us/meeting/register/1zaer8JkTqWKS5U6ucE9KQ</link>
+                    <description>The Chapter Leadership General Onboarding is a 60-minute global session giving new chapter leaders everything they need to get started — from understanding the Internet Society&#39;s mission to knowing their responsibilities and the resources available to them.</description>
+                    <pubDate>Wed, 22 Jul 2026 13:17:30 GMT</pubDate>
+                    <guid isPermaLink="false">ba035c8c96490a2b0692d52aaf09b796</guid>
+                    <category>Opportunity</category>
+                    <category>Funding &amp; Support</category>
+                    <category>Global</category>
+                </item>
+<item>
                     <title>APAC Regional Call</title>
                     <link>https://isoc.zoom.us/meeting/register/6NtGYzmRRuOqLhcQ5x0fAg#/registration</link>
                     <description>This edition of the APAC Regional Call will focus on Policy and Advocacy engagements, trends and priorities in the Asia Pacific region.</description>
