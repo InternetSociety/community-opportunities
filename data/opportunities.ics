@@ -152,4 +152,32 @@ DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20261014
 DTEND;VALUE=DATE:20261014
 END:VEVENT
+BEGIN:VEVENT
+UID:667ad1aa-d2e3-5897-8af0-fc3a4f2b8274
+SUMMARY:Open Door Call - Help Shape the Future of the Internet (ITU PP26) (12:00
+  UTC)
+DESCRIPTION:Be part of shaping the future of the Internet ahead of the 2026 ITU Plen
+ ipotentiary Conference (PP-26). These community open door calls is an op
+ en\, informal space to learn about Internet Society advocacy priorities\
+ , share what's happening on the ground in your region\, and connect with
+  peers working on similar issues.
+URL:https://isoc.zoom.us/meeting/register/WSKoNG7sRZuAuiC4HQ9bkw#/registration
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20260811
+DTEND;VALUE=DATE:20260811
+END:VEVENT
+BEGIN:VEVENT
+UID:ca1cfbf2-bafa-589f-a545-c6756b993ad3
+SUMMARY:Open Door Calls - Help Shape the Future of the Internet (ITU PP26) (07:0
+ 0 UTC)
+DESCRIPTION:Be part of shaping the future of the Internet ahead of the 2026 ITU Plen
+ ipotentiary Conference (PP-26). These community open door calls is an op
+ en\, informal space to learn about Internet Society advocacy priorities\
+ , share what's happening on the ground in your region\, and connect with
+  peers working on similar issues.
+URL:https://isoc.zoom.us/meeting/register/r1ijHfESQrC-VaEdQ6FEvQ#/registration
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20260813
+DTEND;VALUE=DATE:20260813
+END:VEVENT
 END:VCALENDAR
