@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:e3be8ca3f505dcb85d66142f348de5a7 -->
+<!-- DATA_FINGERPRINT:c1a93acfb1ed367d8f0e28f7f6f04cd3 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Events</title>
@@ -9,6 +9,16 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/community-events/data/events.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>Women In Technology Leadership Series - Beyond the Hype — Building a Durable Career in a Changing Technology Industry</title>
+                    <link>https://forms.gle/nXbM6j5RFh47iKhk9</link>
+                    <description>Join Rakshita Kulshrestha (Meta) for a conversation on AI, career growth, networking, and building a future-ready career in technology. Open to students and professionals from all backgrounds.</description>
+                    <pubDate>Wed, 22 Jul 2026 17:44:02 GMT</pubDate>
+                    <guid isPermaLink="false">88eb079c8fa6ec35d442767a867b4f51</guid>
+                    <category>Event</category>
+                    <category>Webinar</category>
+                    <category>Asia Pacific</category>
+                </item>
+<item>
                     <title>Sesión sobre Licenciamiento y Fondos para Redes Comunitarias/ Licensing and Funding for Community Networks Session</title>
                     <link>https://isoc.zoom.us/meeting/register/1bj3iC2xQXKv8W-sKXRwjg</link>
                     <description>Durante esta sesión exploraremos los marcos de licenciamiento, políticas habilitadoras y oportunidades de financiamiento que pueden apoyar el desarrollo, crecimiento y sostenibilidad de las redes comunitarias.</description>
