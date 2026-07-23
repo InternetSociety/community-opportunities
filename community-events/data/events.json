@@ -1038,5 +1038,25 @@
     "timeZone": "UTC",
     "title": "Sesión sobre Licenciamiento y Fondos para Redes Comunitarias/ Licensing and Funding for Community Networks Session",
     "type": "Webinar"
+  },
+  {
+    "approved": true,
+    "category": "Community",
+    "creationDate": "2026-07-22T17:44:02Z",
+    "description": "Join Rakshita Kulshrestha (Meta) for a conversation on AI, career growth, networking, and building a future-ready career in technology. Open to students and professionals from all backgrounds.",
+    "endDate": null,
+    "endTime": "12:00",
+    "format": "Online",
+    "language": "English",
+    "modificationDate": "2026-07-23T07:58:48Z",
+    "modifiedBy": "renteria@isoc.org",
+    "organizer": "ISOC India Mumbai Chapter",
+    "region": "Asia Pacific",
+    "registrationUrl": "https://forms.gle/nXbM6j5RFh47iKhk9",
+    "startDate": "2026-08-01",
+    "startTime": "11:00",
+    "timeZone": "IST",
+    "title": "Women In Technology Leadership Series - Beyond the Hype — Building a Durable Career in a Changing Technology Industry",
+    "type": "Webinar"
   }
 ]
