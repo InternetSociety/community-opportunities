@@ -82,20 +82,6 @@ DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20261231
 END:VEVENT
 BEGIN:VEVENT
-UID:0f7a171e-85eb-5697-8445-d38ce6af0c6f
-SUMMARY:Chapters Capacity Building Program 2026
-DESCRIPTION:The Chapters Capacity Building Program 2026 is a training series for Int
- ernet Society chapter leaders\, delivered by Nonprofit Builder\, offered
-  at no cost for Internet Society chapters\, online across four tracks — 
- Impact Measurement\, Conflict Resolution\, Leadership & Governance\, and
-  Financial Management — as weekly 2-hour workshops from June to October 
- 2026\, in English\, French\, and Spanish.
-URL:https://docs.google.com/forms/d/e/1FAIpQLSedxE-AHa8mjh-2ggVzzztxr-buE1caKgH05dQvO9POY4xM4w/viewform
-DTSTAMP:20240101T000000Z
-DTSTART;VALUE=DATE:20260723
-DTEND;VALUE=DATE:20260723
-END:VEVENT
-BEGIN:VEVENT
 UID:abca910d-43d3-5581-809a-9ddbdaf0228a
 SUMMARY:Common Good Cyber Fund Grant Program
 DESCRIPTION:Launched in 2025\, the CGCF is a pooled fund — backed by a mix of govern
