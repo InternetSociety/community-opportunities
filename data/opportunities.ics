@@ -82,17 +82,6 @@ DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20261231
 END:VEVENT
 BEGIN:VEVENT
-UID:abca910d-43d3-5581-809a-9ddbdaf0228a
-SUMMARY:Common Good Cyber Fund Grant Program
-DESCRIPTION:Launched in 2025\, the CGCF is a pooled fund — backed by a mix of govern
- ments and philanthropic donors — designed to sustain nonprofits strength
- ening the public-interest cybersecurity ecosystem.
-URL:https://www.isocfoundation.org/grant-programme/common-good-cyber-fund/
-DTSTAMP:20240101T000000Z
-DTSTART;VALUE=DATE:20260804
-DTEND;VALUE=DATE:20260804
-END:VEVENT
-BEGIN:VEVENT
 UID:65fa4a15-01e6-58b2-b121-6b938f293812
 SUMMARY:APAC Regional Call
 DESCRIPTION:This edition of the APAC Regional Call will focus on Policy and Advocacy
