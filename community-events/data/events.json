@@ -1058,5 +1058,25 @@
     "timeZone": "IST",
     "title": "Women In Technology Leadership Series - Beyond the Hype — Building a Durable Career in a Changing Technology Industry",
     "type": "Webinar"
+  },
+  {
+    "approved": true,
+    "category": "Connectivity",
+    "creationDate": "2026-08-11T23:28:48Z",
+    "description": "Ofrece los primeros pasos, que nos permitan identificar Comunidades sin Conectividad, y posteriormente acompañar el despliegue de sus Redes Comunitarias.",
+    "endDate": null,
+    "endTime": "19:00",
+    "format": "Online",
+    "language": "Español",
+    "modificationDate": "2026-08-12T10:22:57Z",
+    "modifiedBy": "renteria@isoc.org",
+    "organizer": "Redes Comunitarias, Conectividad Centrada en la Comunidad ISOC LAC Working Group",
+    "region": "Latin America & Caribbean",
+    "registrationUrl": "https://isoc.zoom.us/meeting/register/ue1vDR2yTjCKd-kwPR6hkQ",
+    "startDate": "2026-08-12",
+    "startTime": "18:00",
+    "timeZone": "UTC",
+    "title": "Evaluación para la preparación y despliegue de Redes Comunitarias, en Comunidades sin Conectividad",
+    "type": "Workshop"
   }
 ]
