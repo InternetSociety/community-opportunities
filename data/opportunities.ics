@@ -4,19 +4,6 @@ PRODID:-//Internet Society//Opportunities//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:0cc4c9fb-5ce6-5d29-9494-a9d219ea8bc4
-SUMMARY:Beyond the Net Grant Program
-DESCRIPTION:The Internet Society Foundation’s Beyond the Net Grant Program offers fu
- nding to support Internet Society Chapters to implement innovative proje
- cts that make a local impact by providing meaningful access to an open\,
-  trusted\, and globally-connected Internet\, as well as strengthening th
- e Chapters’ presence in the surrounding community.
-URL:https://www.isocfoundation.org/grant-programme/beyond-the-net-grant-program/
-DTSTAMP:20240101T000000Z
-DTSTART;VALUE=DATE:20261015
-DTEND;VALUE=DATE:20261015
-END:VEVENT
-BEGIN:VEVENT
 UID:7fa2ffd5-293d-5bf6-899e-8afc110ea08a
 SUMMARY:Internet Governance Forum Events Funding
 DESCRIPTION:The Internet Society Foundation’s Internet Governance Forum (IGF) fundin
