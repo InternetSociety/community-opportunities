@@ -950,4 +950,16 @@ URL:https://isoc.zoom.us/meeting/register/ue1vDR2yTjCKd-kwPR6hkQ
 DTSTART;TZID=UTC:20260812T180000
 DTEND;TZID=UTC:20260812T190000
 END:VEVENT
+BEGIN:VEVENT
+UID:36cc7adb-a68e-5810-978d-a4242f387bbb
+DTSTAMP:20240101T000000Z
+SUMMARY:Help Shape the Desirable Properties of a Layered Web
+DESCRIPTION:Internet co-pioneer Vint Cerf suggested that if we want to create the ne
+ xt level of the Internet\, we should identify its desirable properties. 
+ Contribute practical input to the desirable properties of a more open\, 
+ trustworthy\, and human-centered layered Web.
+URL:https://desirableproperties.org/challenge
+DTSTART;TZID=UTC:20260907T000000
+DTEND;TZID=UTC:20261201T000000
+END:VEVENT
 END:VCALENDAR
