@@ -1067,7 +1067,7 @@
     "Action [CTA]": "Register Now",
     "Archived": null,
     "Creation date": "2026-05-22T13:44:57Z",
-    "Date": "2026-07-23",
+    "Date": "2026-09-17",
     "Internet Issue": "Community",
     "Link": "https://docs.google.com/forms/d/e/1FAIpQLSedxE-AHa8mjh-2ggVzzztxr-buE1caKgH05dQvO9POY4xM4w/viewform",
     "Opportunity [Description]": "The Chapters Capacity Building Program 2026 is a training series for Internet Society chapter leaders, delivered by Nonprofit Builder, offered at no cost for Internet Society chapters, online across four tracks — Impact Measurement, Conflict Resolution, Leadership & Governance, and Financial Management — as weekly 2-hour workshops from June to October 2026, in English, French, and Spanish.",
@@ -1258,5 +1258,19 @@
     "Type": "Events & Working Sessions",
     "Who Can Get Involved": "Individual Members, Chapter Members, Chapter Leaders, Organization Members, Alumni, Fellows",
     "Why It Matters": "PP-26 will set the ITU's direction for the next four years, with major implications for the open Internet, multistakeholder governance, connectivity, and emerging technology policy — and your community insights can directly inform our global advocacy strategy."
+  },
+  {
+    "Action [CTA]": "Register Now",
+    "Archived": null,
+    "Creation date": "2026-09-10T14:52:45Z",
+    "Date": "2026-09-22",
+    "Internet Issue": "Community, Connectivity, Internet Governance",
+    "Link": "https://pulse.internetsociety.org/en/events/online-workshop-internet-frontiers-navigating-data-to-inform-public-discourse/",
+    "Opportunity [Description]": "Internet Frontiers is a collaborative workshop designed to break down the traditional silos preventing true digital equity in the United States and Canada\n\nParticipants will hear from people across the US and Canada, including Internet Society chapters, who are working to close the digital divide, whether in their local communities or continent-wide. Panelists will share stories of connecting the unconnected with a focus on how data shapes their work.",
+    "Outreach Activity [Title]": "Online Workshop: Internet Frontiers, Navigating Data to Inform Public Discourse",
+    "Region": "North America",
+    "Type": "Events & Working Sessions",
+    "Who Can Get Involved": "Individual Members, Chapter Members, Chapter Leaders, Organization Members, Alumni, Fellows, Internet Pioneers",
+    "Why It Matters": "While global conversations often focus on the next generation of satellite constellations and ultra-high-speed fiber, millions of people across North America remain marooned on the wrong side of the digital divide. Achieving universal access is not just a technical challenge; it is a complex puzzle involving regulatory bottlenecks, economic disparities, and data gaps."
   }
 ]
