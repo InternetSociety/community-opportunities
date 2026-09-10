@@ -69,6 +69,20 @@ DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20261231
 END:VEVENT
 BEGIN:VEVENT
+UID:bdcb624c-726c-5b75-8deb-76a447e890e6
+SUMMARY:Chapters Capacity Building Program 2026
+DESCRIPTION:The Chapters Capacity Building Program 2026 is a training series for Int
+ ernet Society chapter leaders\, delivered by Nonprofit Builder\, offered
+  at no cost for Internet Society chapters\, online across four tracks — 
+ Impact Measurement\, Conflict Resolution\, Leadership & Governance\, and
+  Financial Management — as weekly 2-hour workshops from June to October 
+ 2026\, in English\, French\, and Spanish.
+URL:https://docs.google.com/forms/d/e/1FAIpQLSedxE-AHa8mjh-2ggVzzztxr-buE1caKgH05dQvO9POY4xM4w/viewform
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20260917
+DTEND;VALUE=DATE:20260917
+END:VEVENT
+BEGIN:VEVENT
 UID:a9d2b786-e530-539c-a37e-e32140c8de0d
 SUMMARY:Chapter Leadership General Onboarding (13:00 UTC)
 DESCRIPTION:The Chapter Leadership General Onboarding is a 60-minute global session 
@@ -91,5 +105,21 @@ URL:https://isoc.zoom.us/meeting/register/yZhCIExsT0GNmWLqztx8Lg
 DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20261014
 DTEND;VALUE=DATE:20261014
+END:VEVENT
+BEGIN:VEVENT
+UID:cfd5f6da-0d12-5c15-b1e8-02c817913c64
+SUMMARY:Online Workshop: Internet Frontiers\, Navigating Data to Inform Public D
+ iscourse
+DESCRIPTION:Internet Frontiers is a collaborative workshop designed to break down th
+ e traditional silos preventing true digital equity in the United States 
+ and Canada\n\nParticipants will hear from people across the US and Canad
+ a\, including Internet Society chapters\, who are working to close the d
+ igital divide\, whether in their local communities or continent-wide. Pa
+ nelists will share stories of connecting the unconnected with a focus on
+  how data shapes their work.
+URL:https://pulse.internetsociety.org/en/events/online-workshop-internet-frontiers-navigating-data-to-inform-public-discourse/
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20260922
+DTEND;VALUE=DATE:20260922
 END:VEVENT
 END:VCALENDAR

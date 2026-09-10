@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:4f5db57cffe42b8be79c391f913b8860 -->
+<!-- DATA_FINGERPRINT:16d277ad4fc7f8b85dfa6989214983e3 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Opportunities</title>
@@ -9,6 +9,18 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/data/opportunities.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>Online Workshop: Internet Frontiers, Navigating Data to Inform Public Discourse</title>
+                    <link>https://pulse.internetsociety.org/en/events/online-workshop-internet-frontiers-navigating-data-to-inform-public-discourse/</link>
+                    <description>Internet Frontiers is a collaborative workshop designed to break down the traditional silos preventing true digital equity in the United States and Canada
+
+Participants will hear from people across the US and Canada, including Internet Society chapters, who are working to close the digital divide, whether in their local communities or continent-wide. Panelists will share stories of connecting the unconnected with a focus on how data shapes their work.</description>
+                    <pubDate>Thu, 10 Sep 2026 14:52:45 GMT</pubDate>
+                    <guid isPermaLink="false">da54afca98a6fa25b011a8ffb358b755</guid>
+                    <category>Opportunity</category>
+                    <category>Events &amp; Working Sessions</category>
+                    <category>North America</category>
+                </item>
+<item>
                     <title>Incorporación General para Líderes de Capítulo (18:00 UTC)</title>
                     <link>https://isoc.zoom.us/meeting/register/yZhCIExsT0GNmWLqztx8Lg</link>
                     <description>La Incorporación General para Líderes de Capítulo es una sesión global de 60 minutos que proporciona a los nuevos líderes de capítulo todo lo que necesitan para comenzar: desde comprender la misión de Internet Society hasta conocer sus responsabilidades y los recursos disponibles.</description>
@@ -26,6 +38,16 @@
                     <guid isPermaLink="false">ba035c8c96490a2b0692d52aaf09b796</guid>
                     <category>Opportunity</category>
                     <category>Funding &amp; Support</category>
+                    <category>Global</category>
+                </item>
+<item>
+                    <title>Chapters Capacity Building Program 2026</title>
+                    <link>https://docs.google.com/forms/d/e/1FAIpQLSedxE-AHa8mjh-2ggVzzztxr-buE1caKgH05dQvO9POY4xM4w/viewform</link>
+                    <description>The Chapters Capacity Building Program 2026 is a training series for Internet Society chapter leaders, delivered by Nonprofit Builder, offered at no cost for Internet Society chapters, online across four tracks — Impact Measurement, Conflict Resolution, Leadership &amp; Governance, and Financial Management — as weekly 2-hour workshops from June to October 2026, in English, French, and Spanish.</description>
+                    <pubDate>Fri, 22 May 2026 13:44:57 GMT</pubDate>
+                    <guid isPermaLink="false">c8e56688914aad47ccae1c103ad9f159</guid>
+                    <category>Opportunity</category>
+                    <category>Urgent: Upcoming Deadlines</category>
                     <category>Global</category>
                 </item>
 <item>
