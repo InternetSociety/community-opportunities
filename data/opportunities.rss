@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:16d277ad4fc7f8b85dfa6989214983e3 -->
+<!-- DATA_FINGERPRINT:a7b55be4ac7445aa5c1124dedd4c85b6 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Opportunities</title>
@@ -9,6 +9,16 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/data/opportunities.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>European Chapters Policy Call</title>
+                    <link>https://isoc.zoom.us/meeting/register/3UJJq837TPuv5IaJpWMBOg#/registration</link>
+                    <description></description>
+                    <pubDate>Tue, 15 Sep 2026 07:46:19 GMT</pubDate>
+                    <guid isPermaLink="false">7bf0116eabd39d03f5c021e644991eeb</guid>
+                    <category>Opportunity</category>
+                    <category></category>
+                    <category></category>
+                </item>
+<item>
                     <title>Online Workshop: Internet Frontiers, Navigating Data to Inform Public Discourse</title>
                     <link>https://pulse.internetsociety.org/en/events/online-workshop-internet-frontiers-navigating-data-to-inform-public-discourse/</link>
                     <description>Internet Frontiers is a collaborative workshop designed to break down the traditional silos preventing true digital equity in the United States and Canada
