@@ -125,7 +125,12 @@ END:VEVENT
 BEGIN:VEVENT
 UID:89fa74bd-a3f4-53cc-a9f7-6d94ecdea44c
 SUMMARY:European Chapters Policy Call
-DESCRIPTION:
+DESCRIPTION:The policy landscape across Europe continues to evolve rapidly\, shaping
+  discussions on issues such as digital rights\, cybersecurity\, connecti
+ vity\, and Internet governance. This session will provide an update on k
+ ey developments\, explore emerging trends\, and create space for partici
+ pants to exchange perspectives on the policy issues that matter most tod
+ ay.
 URL:https://isoc.zoom.us/meeting/register/3UJJq837TPuv5IaJpWMBOg#/registration
 DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20260924
