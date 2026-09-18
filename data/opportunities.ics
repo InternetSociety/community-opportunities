@@ -4,23 +4,6 @@ PRODID:-//Internet Society//Opportunities//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:7fa2ffd5-293d-5bf6-899e-8afc110ea08a
-SUMMARY:Internet Governance Forum Events Funding
-DESCRIPTION:The Internet Society Foundation’s Internet Governance Forum (IGF) fundin
- g program supports the organization of United Nations (UN) IGF Secretari
- at-recognized National and Regional Initiatives (NRIs) and National and 
- Regional Schools on Internet Governance. The purpose of the IGF is to en
- courage open\, non-commercial\, and inclusive multi-stakeholder dialogue
-  on issues related to Internet governance. The goal of Schools on Intern
- et Governance is to ensure that diverse actors have the skills to partic
- ipate in Internet governance structures and shape the future of the Inte
- rnet.
-URL:https://www.isocfoundation.org/grant-programme/internet-governance-forum-events/
-DTSTAMP:20240101T000000Z
-DTSTART;VALUE=DATE:20261015
-DTEND;VALUE=DATE:20261015
-END:VEVENT
-BEGIN:VEVENT
 UID:c9d68294-0ffa-53d4-af53-0b8a3862c286
 SUMMARY:ISOC Chapter Management Essentials
 DESCRIPTION:This course helps you learn what it takes to successfully run an Interne
