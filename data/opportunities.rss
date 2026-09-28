@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:9a6d5f8bf47da300c8ea08d356b26bd0 -->
+<!-- DATA_FINGERPRINT:46efec71675f3b4f7ff01d8fc141a689 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Opportunities</title>
@@ -9,6 +9,36 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/data/opportunities.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>Using Pulse to Support your Planning and Advocacy [16:00 UTC]</title>
+                    <link>https://isoc.zoom.us/meeting/register/4kCPO_70TiKWgCPRQuyMPg#/registration</link>
+                    <description>Join the Internet Society Pulse team to explore how Pulse data and insights can support planning, advocacy, research, and community initiatives. Learn about practical tools, resources, and opportunities to strengthen Internet measurement efforts in your region.</description>
+                    <pubDate>Mon, 28 Sep 2026 09:04:26 GMT</pubDate>
+                    <guid isPermaLink="false">388743345b0fd6f3b13740bb83a67e68</guid>
+                    <category>Opportunity</category>
+                    <category>Events &amp; Working Sessions</category>
+                    <category>Global</category>
+                </item>
+<item>
+                    <title>Using Pulse to Support your Planning and Advocacy [10:00 UTC]</title>
+                    <link>https://isoc.zoom.us/meeting/register/lBSjFcF0SGmb1FGylte31A#/registration</link>
+                    <description>Join the Internet Society Pulse team to explore how Pulse data and insights can support planning, advocacy, research, and community initiatives. Learn about practical tools, resources, and opportunities to strengthen Internet measurement efforts in your region.</description>
+                    <pubDate>Mon, 28 Sep 2026 09:02:40 GMT</pubDate>
+                    <guid isPermaLink="false">d21978ff37bafff062c5b6743ea2a3e4</guid>
+                    <category>Opportunity</category>
+                    <category>Events &amp; Working Sessions</category>
+                    <category>Global</category>
+                </item>
+<item>
+                    <title>Using Pulse to Support your Planning and Advocacy [4:00 UTC]</title>
+                    <link>https://isoc.zoom.us/meeting/register/L-4qaikzSh23ROPu9idCvQ#/registration</link>
+                    <description>Join the Internet Society Pulse team to explore how Pulse data and insights can support planning, advocacy, research, and community initiatives. Learn about practical tools, resources, and opportunities to strengthen Internet measurement efforts in your region.</description>
+                    <pubDate>Mon, 28 Sep 2026 08:52:46 GMT</pubDate>
+                    <guid isPermaLink="false">cb8834b6c5cede041f0f899e596f80cf</guid>
+                    <category>Opportunity</category>
+                    <category>Events &amp; Working Sessions</category>
+                    <category>Global</category>
+                </item>
+<item>
                     <title>Incorporación General para Líderes de Capítulo (18:00 UTC)</title>
                     <link>https://isoc.zoom.us/meeting/register/yZhCIExsT0GNmWLqztx8Lg</link>
                     <description>La Incorporación General para Líderes de Capítulo es una sesión global de 60 minutos que proporciona a los nuevos líderes de capítulo todo lo que necesitan para comenzar: desde comprender la misión de Internet Society hasta conocer sus responsabilidades y los recursos disponibles.</description>
