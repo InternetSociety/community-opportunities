@@ -1330,17 +1330,31 @@
     "Why It Matters": "Pulse provides evidence-based data that can help inform Action Plans, grant applications, advocacy efforts, and community-led initiatives to improve Internet access and resilience."
   },
   {
-    "Action [CTA]": null,
+    "Action [CTA]": "Register Now",
     "Archived": null,
-    "Creation date": null,
-    "Date": null,
-    "Internet Issue": null,
-    "Link": null,
-    "Opportunity [Description]": null,
-    "Outreach Activity [Title]": null,
-    "Region": null,
-    "Type": null,
-    "Who Can Get Involved": null,
-    "Why It Matters": null
+    "Creation date": "2026-10-08T11:57:46Z",
+    "Date": "2026-11-30",
+    "Internet Issue": "Community",
+    "Link": "https://isoc.zoom.us/meeting/register/_nhhawVgRESm7gF04erB3w",
+    "Opportunity [Description]": "Join us for our final Global Community Call of 2026 as we celebrate the people, stories, and achievements that brought our mission to life this year. Together, we'll recognize contributions from across the Internet Society community, hear inspiring stories of local impact, and look ahead to 2027.",
+    "Outreach Activity [Title]": "Think Global Call: \"Our Internet, Our Impact: 2026 Global Community Celebration\" (13:00 UTC)",
+    "Region": "Global",
+    "Type": "Events & Working Sessions",
+    "Who Can Get Involved": "Individual Members, Chapter Members, Chapter Leaders, ChAC, ChaC Steering Committee, Organization Members, OMAC Chairs, Alumni, Fellows, Internet Pioneers, Other",
+    "Why It Matters": "Guided by the theme Think Global, Act Local, we'll explore how individual and community action creates lasting change around the world.\n\nInterpretation available in English, French, and Spanish."
+  },
+  {
+    "Action [CTA]": "Register Now",
+    "Archived": null,
+    "Creation date": "2026-10-08T11:57:46Z",
+    "Date": "2026-11-30",
+    "Internet Issue": "Community",
+    "Link": "https://isoc.zoom.us/meeting/register/c7P4hlhKSYG8qQD5Xt8aBw",
+    "Opportunity [Description]": "Join us for our final Global Community Call of 2026 as we celebrate the people, stories, and achievements that brought our mission to life this year. Together, we'll recognize contributions from across the Internet Society community, hear inspiring stories of local impact, and look ahead to 2027.",
+    "Outreach Activity [Title]": "Think Global Call: \"Our Internet, Our Impact: 2026 Global Community Celebration\" (18:00 UTC)",
+    "Region": "Global",
+    "Type": "Events & Working Sessions",
+    "Who Can Get Involved": "Individual Members, Chapter Members, Chapter Leaders, ChAC, ChaC Steering Committee, Organization Members, OMAC Chairs, Alumni, Fellows, Internet Pioneers, Other",
+    "Why It Matters": "Guided by the theme Think Global, Act Local, we'll explore how individual and community action creates lasting change around the world.\n\nInterpretation available in English, French, and Spanish."
   }
 ]
