@@ -125,4 +125,32 @@ DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20261104
 DTEND;VALUE=DATE:20261104
 END:VEVENT
+BEGIN:VEVENT
+UID:faab95c9-52b8-59fb-9c6b-5a4aee911588
+SUMMARY:Think Global Call: "Our Internet\, Our Impact: 2026 Global Community Cel
+ ebration" (13:00 UTC)
+DESCRIPTION:Join us for our final Global Community Call of 2026 as we celebrate the 
+ people\, stories\, and achievements that brought our mission to life thi
+ s year. Together\, we'll recognize contributions from across the Interne
+ t Society community\, hear inspiring stories of local impact\, and look 
+ ahead to 2027.
+URL:https://isoc.zoom.us/meeting/register/_nhhawVgRESm7gF04erB3w
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261130
+END:VEVENT
+BEGIN:VEVENT
+UID:078fb566-1cde-5a62-a061-f55202482531
+SUMMARY:Think Global Call: "Our Internet\, Our Impact: 2026 Global Community Cel
+ ebration" (18:00 UTC)
+DESCRIPTION:Join us for our final Global Community Call of 2026 as we celebrate the 
+ people\, stories\, and achievements that brought our mission to life thi
+ s year. Together\, we'll recognize contributions from across the Interne
+ t Society community\, hear inspiring stories of local impact\, and look 
+ ahead to 2027.
+URL:https://isoc.zoom.us/meeting/register/c7P4hlhKSYG8qQD5Xt8aBw
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261130
+END:VEVENT
 END:VCALENDAR

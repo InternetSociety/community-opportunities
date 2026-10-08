@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:5e96f1c7a7ebe99547cfed0ed3de3baf -->
+<!-- DATA_FINGERPRINT:8650a3acdaf94076c2915a2dd1ec321d -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Opportunities</title>
@@ -9,6 +9,26 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/data/opportunities.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>Think Global Call: &quot;Our Internet, Our Impact: 2026 Global Community Celebration&quot; (13:00 UTC)</title>
+                    <link>https://isoc.zoom.us/meeting/register/_nhhawVgRESm7gF04erB3w</link>
+                    <description>Join us for our final Global Community Call of 2026 as we celebrate the people, stories, and achievements that brought our mission to life this year. Together, we&#39;ll recognize contributions from across the Internet Society community, hear inspiring stories of local impact, and look ahead to 2027.</description>
+                    <pubDate>Thu, 08 Oct 2026 11:57:46 GMT</pubDate>
+                    <guid isPermaLink="false">fa6046e101793b93d1ffbe334a279865</guid>
+                    <category>Opportunity</category>
+                    <category>Events &amp; Working Sessions</category>
+                    <category>Global</category>
+                </item>
+<item>
+                    <title>Think Global Call: &quot;Our Internet, Our Impact: 2026 Global Community Celebration&quot; (18:00 UTC)</title>
+                    <link>https://isoc.zoom.us/meeting/register/c7P4hlhKSYG8qQD5Xt8aBw</link>
+                    <description>Join us for our final Global Community Call of 2026 as we celebrate the people, stories, and achievements that brought our mission to life this year. Together, we&#39;ll recognize contributions from across the Internet Society community, hear inspiring stories of local impact, and look ahead to 2027.</description>
+                    <pubDate>Thu, 08 Oct 2026 11:57:46 GMT</pubDate>
+                    <guid isPermaLink="false">ebc83feb4f7bd6cc350ab81a561da867</guid>
+                    <category>Opportunity</category>
+                    <category>Events &amp; Working Sessions</category>
+                    <category>Global</category>
+                </item>
+<item>
                     <title>Using Pulse to Support your Planning and Advocacy [16:00 UTC]</title>
                     <link>https://isoc.zoom.us/meeting/register/4kCPO_70TiKWgCPRQuyMPg#/registration</link>
                     <description>Join the Internet Society Pulse team to explore how Pulse data and insights can support planning, advocacy, research, and community initiatives. Learn about practical tools, resources, and opportunities to strengthen Internet measurement efforts in your region.</description>
