@@ -962,4 +962,17 @@ URL:https://desirableproperties.org/challenge
 DTSTART;TZID=UTC:20261201T000000
 DTEND;TZID=UTC:20261201T230000
 END:VEVENT
+BEGIN:VEVENT
+UID:2aac8584-be11-583c-855a-10916959110f
+DTSTAMP:20240101T000000Z
+SUMMARY:From Enigma to Chat Control: Why Encryption Is Everyone’s Business
+DESCRIPTION:Marking Global Encryption Day 2026\, the Internet Society India Mumbai C
+ hapter presents “From Enigma to Chat Control: Why Encryption Is Everyone
+ ’s Business\,” an online talk with Jean F. Quéralt\, Founder and CEO of 
+ The IO Foundation\, followed by a moderated discussion and audience Q&A.
+  Free Registration.
+URL:https://us06web.zoom.us/meeting/register/OrkP8wZNSI-xDShuaX8jAA
+DTSTART;TZID=IST:20261021T180000
+DTEND;TZID=IST:20261021T190000
+END:VEVENT
 END:VCALENDAR

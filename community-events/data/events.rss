@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:90970a29e7aa9b72b8f2869a1c189c93 -->
+<!-- DATA_FINGERPRINT:57a7685a139f61ddbbd21b56bcddd9e3 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Events</title>
@@ -9,6 +9,16 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/community-events/data/events.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>From Enigma to Chat Control: Why Encryption Is Everyone’s Business</title>
+                    <link>https://us06web.zoom.us/meeting/register/OrkP8wZNSI-xDShuaX8jAA</link>
+                    <description>Marking Global Encryption Day 2026, the Internet Society India Mumbai Chapter presents “From Enigma to Chat Control: Why Encryption Is Everyone’s Business,” an online talk with Jean F. Quéralt, Founder and CEO of The IO Foundation, followed by a moderated discussion and audience Q&amp;A. Free Registration.</description>
+                    <pubDate>Tue, 13 Oct 2026 09:05:51 GMT</pubDate>
+                    <guid isPermaLink="false">41a3d055ee6507c4ad14fa227b13b02d</guid>
+                    <category>Event</category>
+                    <category>Webinar</category>
+                    <category>Asia Pacific</category>
+                </item>
+<item>
                     <title>Help Shape the Desirable Properties of a Layered Web</title>
                     <link>https://desirableproperties.org/challenge</link>
                     <description>Internet co-pioneer Vint Cerf suggested that if we want to create the next level of the Internet, we should identify its desirable properties. Contribute practical input to the desirable properties of a more open, trustworthy, and human-centered layered Web.</description>
