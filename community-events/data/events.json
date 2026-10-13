@@ -1098,5 +1098,25 @@
     "timeZone": "UTC",
     "title": "Help Shape the Desirable Properties of a Layered Web",
     "type": "Roundtable"
+  },
+  {
+    "approved": true,
+    "category": "Privacy",
+    "creationDate": "2026-10-13T09:05:51Z",
+    "description": "Marking Global Encryption Day 2026, the Internet Society India Mumbai Chapter presents “From Enigma to Chat Control: Why Encryption Is Everyone’s Business,” an online talk with Jean F. Quéralt, Founder and CEO of The IO Foundation, followed by a moderated discussion and audience Q&A. Free Registration.",
+    "endDate": null,
+    "endTime": "19:00",
+    "format": "Online",
+    "language": "English",
+    "modificationDate": "2026-10-13T11:24:51Z",
+    "modifiedBy": "renteria@isoc.org",
+    "organizer": "ISOC India Mumbai Chapter",
+    "region": "Asia Pacific",
+    "registrationUrl": "https://us06web.zoom.us/meeting/register/OrkP8wZNSI-xDShuaX8jAA",
+    "startDate": "2026-10-21",
+    "startTime": "18:00",
+    "timeZone": "IST",
+    "title": "From Enigma to Chat Control: Why Encryption Is Everyone’s Business",
+    "type": "Webinar"
   }
 ]
