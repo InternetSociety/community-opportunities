@@ -52,42 +52,6 @@ DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20261231
 END:VEVENT
 BEGIN:VEVENT
-UID:14f6a7d8-df09-5c2d-b222-fc14bee9409c
-SUMMARY:Using Pulse to Support your Planning and Advocacy [4:00 UTC]
-DESCRIPTION:Join the Internet Society Pulse team to explore how Pulse data and insig
- hts can support planning\, advocacy\, research\, and community initiativ
- es. Learn about practical tools\, resources\, and opportunities to stren
- gthen Internet measurement efforts in your region.
-URL:https://isoc.zoom.us/meeting/register/L-4qaikzSh23ROPu9idCvQ#/registration
-DTSTAMP:20240101T000000Z
-DTSTART;VALUE=DATE:20261104
-DTEND;VALUE=DATE:20261104
-END:VEVENT
-BEGIN:VEVENT
-UID:0d9ee95b-fa39-51ab-b74a-97e500dd0935
-SUMMARY:Using Pulse to Support your Planning and Advocacy [10:00 UTC]
-DESCRIPTION:Join the Internet Society Pulse team to explore how Pulse data and insig
- hts can support planning\, advocacy\, research\, and community initiativ
- es. Learn about practical tools\, resources\, and opportunities to stren
- gthen Internet measurement efforts in your region.
-URL:https://isoc.zoom.us/meeting/register/lBSjFcF0SGmb1FGylte31A#/registration
-DTSTAMP:20240101T000000Z
-DTSTART;VALUE=DATE:20261104
-DTEND;VALUE=DATE:20261104
-END:VEVENT
-BEGIN:VEVENT
-UID:cacd76d5-e1be-5db7-a0ef-53c0979b85a1
-SUMMARY:Using Pulse to Support your Planning and Advocacy [16:00 UTC]
-DESCRIPTION:Join the Internet Society Pulse team to explore how Pulse data and insig
- hts can support planning\, advocacy\, research\, and community initiativ
- es. Learn about practical tools\, resources\, and opportunities to stren
- gthen Internet measurement efforts in your region.
-URL:https://isoc.zoom.us/meeting/register/4kCPO_70TiKWgCPRQuyMPg#/registration
-DTSTAMP:20240101T000000Z
-DTSTART;VALUE=DATE:20261104
-DTEND;VALUE=DATE:20261104
-END:VEVENT
-BEGIN:VEVENT
 UID:faab95c9-52b8-59fb-9c6b-5a4aee911588
 SUMMARY:Think Global Call: "Our Internet\, Our Impact: 2026 Global Community Cel
  ebration" (13:00 UTC)
