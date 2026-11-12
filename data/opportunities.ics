@@ -79,4 +79,24 @@ DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261130
 END:VEVENT
+BEGIN:VEVENT
+UID:1b531763-cd5e-575c-9076-bcec41126e4d
+SUMMARY:Chapter Grants Information Session (13:00 UTC)
+DESCRIPTION:Join the Internet Society Foundation team to explore relevant informatio
+ n regarding their grants and how Chapters can get engaged.
+URL:https://isoc.zoom.us/meeting/register/lXlziACPTdSN_JfWdAo0pg#/registration
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261119
+END:VEVENT
+BEGIN:VEVENT
+UID:0717aee5-4e5f-5f4a-8586-089c25ea81a7
+SUMMARY:Chapter Grants Information Session (10:00 UTC)
+DESCRIPTION:Join the Internet Society Foundation team to explore relevant informatio
+ n regarding their grants and how Chapters can get engaged.
+URL:https://isoc.zoom.us/meeting/register/rYq92w3-QQmTRm1pPsloQQ
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20261202
+DTEND;VALUE=DATE:20261202
+END:VEVENT
 END:VCALENDAR
