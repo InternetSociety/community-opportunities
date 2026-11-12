@@ -99,4 +99,15 @@ DTSTAMP:20240101T000000Z
 DTSTART;VALUE=DATE:20261202
 DTEND;VALUE=DATE:20261202
 END:VEVENT
+BEGIN:VEVENT
+UID:348985a9-78d6-535a-9cdf-c286c9c6ae8f
+SUMMARY:Internet Day 2026
+DESCRIPTION:Join us for Internet Day 2026 on 19 November\, in Beirut or online\, to 
+ explore new Internet Society-funded research and connect around Communit
+ y Centered Connectivity.
+URL:https://isoc.zoom.us/meeting/register/jzMLJGgtSjeAvWzMhE6ilw#/registration
+DTSTAMP:20240101T000000Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261119
+END:VEVENT
 END:VCALENDAR

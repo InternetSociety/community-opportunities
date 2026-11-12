@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- DATA_FINGERPRINT:ee165f63eaeaf58def91ec426476002f -->
+<!-- DATA_FINGERPRINT:3821044f9a08a6f4db8deb25509b4a43 -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Internet Society Opportunities</title>
@@ -9,6 +9,16 @@
         <lastBuildDate>Mon, 01 Jan 2024 00:00:00 GMT</lastBuildDate>
         <atom:link href="https://opportunities.internetsociety.org/data/opportunities.rss" rel="self" type="application/rss+xml" />
         <item>
+                    <title>Internet Day 2026</title>
+                    <link>https://isoc.zoom.us/meeting/register/jzMLJGgtSjeAvWzMhE6ilw#/registration</link>
+                    <description>Join us for Internet Day 2026 on 19 November, in Beirut or online, to explore new Internet Society-funded research and connect around Community Centered Connectivity.</description>
+                    <pubDate>Thu, 12 Nov 2026 16:37:57 GMT</pubDate>
+                    <guid isPermaLink="false">9f5a78ee32b3a6cc69ffd83c882ccbd7</guid>
+                    <category>Opportunity</category>
+                    <category>Events &amp; Working Sessions</category>
+                    <category>Middle East</category>
+                </item>
+<item>
                     <title>Chapter Grants Information Session (13:00 UTC)</title>
                     <link>https://isoc.zoom.us/meeting/register/lXlziACPTdSN_JfWdAo0pg#/registration</link>
                     <description>Join the Internet Society Foundation team to explore relevant information regarding their grants and how Chapters can get engaged.</description>
